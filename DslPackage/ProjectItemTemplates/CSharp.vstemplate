@@ -1,2 +1,17 @@
-<!-- Placeholder for content that will be generated when the solution is built for the first time -->
-<VSTemplate xmlns="http://schemas.microsoft.com/developer/vstemplate/2005"/>
+﻿<!--DSL Tools Language Template-->
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<TemplateData>
+		<TemplateID>{9dc2ba2a-a18d-4fbd-91e4-5ece2487b33f}</TemplateID>
+		<Name Package="{f82e4fc8-f4fa-4b17-bb52-00e41545370e}" ID="103"/>
+		<Description Package="{f82e4fc8-f4fa-4b17-bb52-00e41545370e}" ID="102"/>
+		<Icon Package="{f82e4fc8-f4fa-4b17-bb52-00e41545370e}" ID="201" />
+		<ProjectType>CSharp</ProjectType>
+		<SortOrder>360</SortOrder>
+		<DefaultName>FMRMRCMMGProyectoIPS.FMRMRCMMG_DSLProyIPS</DefaultName>
+	</TemplateData>
+	<TemplateContent>
+		<ProjectItem TargetFileName="$fileinputname$.FMRMRCMMG_DSLProyIPS">FMRMRCMMG_DSLProyIPS.FMRMRCMMG_DSLProyIPS</ProjectItem>
+		<ProjectItem TargetFileName="$fileinputname$.FMRMRCMMG_DSLProyIPS.diagram">FMRMRCMMG_DSLProyIPS.diagram</ProjectItem>
+	</TemplateContent>
+</VSTemplate>
+

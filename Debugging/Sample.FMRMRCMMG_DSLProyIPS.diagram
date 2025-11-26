@@ -1,18 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <fMRMRCMMGProyectoIPSDiagram dslVersion="1.0.0.0" Id="cfff03ed-d2e0-4992-9fdc-9e6a01a8f5d0" absoluteBounds="0, 0, 11, 8.5" name="Sample">
-  <exampleModelMoniker Id="935bd0d9-df39-42b0-8de0-d57b1a331b44" />
+  <tapizMoniker Id="2ea417be-3bd0-42fe-a5f2-125af54914ce" />
   <nestedChildShapes>
-    <exampleShape Id="e295b4fc-aed4-4bdf-ba7f-6cd44cb69cc4" absoluteBounds="0.5, 1.75, 2, 0.75">
-      <exampleElementMoniker name="/935bd0d9-df39-42b0-8de0-d57b1a331b44/ExampleElement1" />
-    </exampleShape>
-    <exampleShape Id="9d1aed7c-9f4d-4430-b02a-534a4e5cc6c2" absoluteBounds="3, 0.5, 2, 0.75">
-      <exampleElementMoniker name="/935bd0d9-df39-42b0-8de0-d57b1a331b44/ExampleElement2" />
-    </exampleShape>
-    <exampleConnector Id="fd630e3e-f1cc-4bc9-a690-cad48af226de" edgePoints="[(1.5 : 1.75); (1.5 : 0.875); (3 : 0.875)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="9b8dc137-3a4d-443c-a18b-5e36e4edb57b">
+    <metaforaEntidad Id="3d4b3874-5974-4a09-8383-3da412b421a9" absoluteBounds="1.375, 1, 1.5, 1.5">
+      <entidadMoniker Id="c88b6acb-ec3d-449e-8f2a-ba19254f3bd8" />
+    </metaforaEntidad>
+    <metaforaRelacion Id="076732ac-f0a3-4c06-92a6-fddea72abff6" absoluteBounds="4.75, 3.125, 1.5, 1">
+      <relacionMoniker Id="600877cc-d37e-42ea-a66f-3634981dec2f" />
+    </metaforaRelacion>
+    <metaforaAtributo Id="46d591a6-b51b-43a7-a285-b81d38707894" absoluteBounds="1.5, 3.5, 1.25, 0.75">
+      <atributoMoniker Id="81a6fdb9-1f21-44ca-8a3e-634ae7b3f66f" />
+    </metaforaAtributo>
+    <conectorEntidadRelacion Id="f9e18b68-38dd-4f33-ab43-e2cd439e89d5" edgePoints="[(2.875 : 1.75); (5.5 : 1.75); (5.5 : 3.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <entidadReferencesRelacionMoniker Id="bb7241f3-6c4b-43d9-97ed-1a3ce8084abf" />
+      <relativeChildShapes />
       <nodes>
-        <exampleShapeMoniker Id="e295b4fc-aed4-4bdf-ba7f-6cd44cb69cc4" />
-        <exampleShapeMoniker Id="9d1aed7c-9f4d-4430-b02a-534a4e5cc6c2" />
+        <metaforaEntidadMoniker Id="3d4b3874-5974-4a09-8383-3da412b421a9" />
+        <metaforaRelacionMoniker Id="076732ac-f0a3-4c06-92a6-fddea72abff6" />
       </nodes>
-    </exampleConnector>
+    </conectorEntidadRelacion>
+    <conectorEntidadAtributo Id="99c2caba-f79e-423b-b857-71bed9ba3f97" edgePoints="[(2.125 : 2.5); (2.125 : 3.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <entidadReferencesAtributoMoniker Id="e4b047da-74d0-4910-b1ed-43dde1403332" />
+      <relativeChildShapes />
+      <nodes>
+        <metaforaEntidadMoniker Id="3d4b3874-5974-4a09-8383-3da412b421a9" />
+        <metaforaAtributoMoniker Id="46d591a6-b51b-43a7-a285-b81d38707894" />
+      </nodes>
+    </conectorEntidadAtributo>
+    <metaforaEntidad Id="4c1c5cc1-90a1-431c-acf9-8dd88bbb9cdd" absoluteBounds="8.5, 3, 1.5, 1.5">
+      <entidadMoniker Id="290a8c62-58fa-4e34-aaa6-b505e350e5f9" />
+    </metaforaEntidad>
+    <conectorEntidadRelacion Id="7d89519f-6e41-48e3-a050-bb345be33d8a" edgePoints="[(8.51049002711255 : 3.625); (6.25 : 3.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <entidadReferencesRelacionMoniker Id="3bff2978-2e3f-400f-bb45-4f3f314a9a41" />
+      <relativeChildShapes />
+      <nodes>
+        <metaforaEntidadMoniker Id="4c1c5cc1-90a1-431c-acf9-8dd88bbb9cdd" />
+        <metaforaRelacionMoniker Id="076732ac-f0a3-4c06-92a6-fddea72abff6" />
+      </nodes>
+    </conectorEntidadRelacion>
   </nestedChildShapes>
 </fMRMRCMMGProyectoIPSDiagram>

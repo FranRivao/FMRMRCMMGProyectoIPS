@@ -1,11 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<exampleModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="935bd0d9-df39-42b0-8de0-d57b1a331b44" xmlns="http://schemas.microsoft.com/dsltools/FMRMRCMMGProyectoIPS">
-  <elements>
-    <exampleElement Id="0c035ff3-4856-4001-ab86-d8ce2632f26f" name="ExampleElement1">
-      <targets>
-        <exampleElementMoniker name="/935bd0d9-df39-42b0-8de0-d57b1a331b44/ExampleElement2" />
-      </targets>
-    </exampleElement>
-    <exampleElement Id="302906fd-ba7b-4e42-9bbd-332de272f3db" name="ExampleElement2" />
-  </elements>
-</exampleModel>
+<tapiz xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="2ea417be-3bd0-42fe-a5f2-125af54914ce" xmlns="http://schemas.microsoft.com/dsltools/FMRMRCMMGProyectoIPS">
+  <entidad>
+    <tapizHasEntidad Id="b2545957-4b87-4bbf-9945-10b3b9d9bfa3">
+      <entidad Id="c88b6acb-ec3d-449e-8f2a-ba19254f3bd8">
+        <atributo>
+          <entidadReferencesAtributo Id="e4b047da-74d0-4910-b1ed-43dde1403332" cardinalidadOrigen="ceroAn" cardinalidadFin="ceroAn">
+            <atributoMoniker Id="81a6fdb9-1f21-44ca-8a3e-634ae7b3f66f" />
+          </entidadReferencesAtributo>
+        </atributo>
+        <relacion>
+          <entidadReferencesRelacion Id="bb7241f3-6c4b-43d9-97ed-1a3ce8084abf" cardinalidadOrigen="ceroAn" cardinalidadFin="ceroAn">
+            <relacionMoniker Id="600877cc-d37e-42ea-a66f-3634981dec2f" />
+          </entidadReferencesRelacion>
+        </relacion>
+      </entidad>
+    </tapizHasEntidad>
+    <tapizHasEntidad Id="ee8fe557-d972-44d8-b84a-9f7a4110dfbf">
+      <entidad Id="290a8c62-58fa-4e34-aaa6-b505e350e5f9">
+        <relacion>
+          <entidadReferencesRelacion Id="3bff2978-2e3f-400f-bb45-4f3f314a9a41" cardinalidadOrigen="ceroAn" cardinalidadFin="ceroAn">
+            <relacionMoniker Id="600877cc-d37e-42ea-a66f-3634981dec2f" />
+          </entidadReferencesRelacion>
+        </relacion>
+      </entidad>
+    </tapizHasEntidad>
+  </entidad>
+  <atributo>
+    <tapizHasAtributo Id="c61d5d86-44c2-4b3e-8fb5-8f5e47f206f3">
+      <atributo Id="81a6fdb9-1f21-44ca-8a3e-634ae7b3f66f" />
+    </tapizHasAtributo>
+  </atributo>
+  <relacion>
+    <tapizHasRelacion Id="1e975b30-278a-40f2-bff3-99e144e9cee2">
+      <relacion Id="600877cc-d37e-42ea-a66f-3634981dec2f" />
+    </tapizHasRelacion>
+  </relacion>
+</tapiz>
