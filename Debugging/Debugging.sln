@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 12
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Debugging", "Debugging.csproj", "{fd40d291-f4d9-4f25-a4d3-372cd9f6a142}"
+EndProject
+Global
+	GlobalSection(TextTemplating) = postSolution
+		TextTemplating = 1
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{fd40d291-f4d9-4f25-a4d3-372cd9f6a142}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{fd40d291-f4d9-4f25-a4d3-372cd9f6a142}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{fd40d291-f4d9-4f25-a4d3-372cd9f6a142}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{fd40d291-f4d9-4f25-a4d3-372cd9f6a142}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

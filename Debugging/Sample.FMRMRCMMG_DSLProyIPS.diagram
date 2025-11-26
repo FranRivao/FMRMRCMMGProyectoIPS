@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fMRMRCMMGProyectoIPSDiagram dslVersion="1.0.0.0" Id="cfff03ed-d2e0-4992-9fdc-9e6a01a8f5d0" absoluteBounds="0, 0, 11, 8.5" name="Sample">
+  <exampleModelMoniker Id="935bd0d9-df39-42b0-8de0-d57b1a331b44" />
+  <nestedChildShapes>
+    <exampleShape Id="e295b4fc-aed4-4bdf-ba7f-6cd44cb69cc4" absoluteBounds="0.5, 1.75, 2, 0.75">
+      <exampleElementMoniker name="/935bd0d9-df39-42b0-8de0-d57b1a331b44/ExampleElement1" />
+    </exampleShape>
+    <exampleShape Id="9d1aed7c-9f4d-4430-b02a-534a4e5cc6c2" absoluteBounds="3, 0.5, 2, 0.75">
+      <exampleElementMoniker name="/935bd0d9-df39-42b0-8de0-d57b1a331b44/ExampleElement2" />
+    </exampleShape>
+    <exampleConnector Id="fd630e3e-f1cc-4bc9-a690-cad48af226de" edgePoints="[(1.5 : 1.75); (1.5 : 0.875); (3 : 0.875)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="9b8dc137-3a4d-443c-a18b-5e36e4edb57b">
+      <nodes>
+        <exampleShapeMoniker Id="e295b4fc-aed4-4bdf-ba7f-6cd44cb69cc4" />
+        <exampleShapeMoniker Id="9d1aed7c-9f4d-4430-b02a-534a4e5cc6c2" />
+      </nodes>
+    </exampleConnector>
+  </nestedChildShapes>
+</fMRMRCMMGProyectoIPSDiagram>
