@@ -61,30 +61,6 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 namespace UPM_IPS.FMRMRCMMGProyectoIPS
 {
 	[DslValidation::ValidationState(DslValidation::ValidationState.Enabled)]
-	public partial class Relacion
-	{
-		/// <summary>
-		/// Checks that the relationships that have a multiplicity of One or OneMany do actually have a link.
-		/// </summary>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "Generated code.")]
-		[DslValidation::ValidationMethod(DslValidation::ValidationCategories.Open | DslValidation::ValidationCategories.Save | DslValidation::ValidationCategories.Menu)]
-		private void ValidateRelacionMultiplicity (DslValidation::ValidationContext context)
-		{
-			if (this.Entidad == null)
-			{
-				context.LogViolation(DslValidation::ViolationType.Error,
-					string.Format(global::System.Globalization.CultureInfo.CurrentCulture, 
-						UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel.SingletonResourceManager.GetString("MinimumMultiplicityMissingLink"), 
-						"Relacion", "", "Entidad"),
-						"DSL0001", this);
-			}
-		} // ValidateRelacionMultiplicity
-	} // class Relacion
-} // UPM_IPS.FMRMRCMMGProyectoIPS
-
-namespace UPM_IPS.FMRMRCMMGProyectoIPS
-{
-	[DslValidation::ValidationState(DslValidation::ValidationState.Enabled)]
 	public partial class AtributoKey
 	{
 		/// <summary>

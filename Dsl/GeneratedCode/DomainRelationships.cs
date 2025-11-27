@@ -355,23 +355,13 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		#endregion
 		#region Static methods to access Entidad of a Relacion
 		/// <summary>
-		/// Gets Entidad.
+		/// Gets a list of Entidad.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static Entidad GetEntidad(Relacion element)
+		public static DslModeling::LinkedElementCollection<Entidad> GetEntidad(Relacion element)
 		{
-			return DslModeling::DomainRoleInfo.GetLinkedElement(element, RelacionDomainRoleId) as Entidad;
-		}
-		
-		/// <summary>
-		/// Sets Entidad.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetEntidad(Relacion element, Entidad newEntidad)
-		{
-			DslModeling::DomainRoleInfo.SetLinkedElement(element, RelacionDomainRoleId, newEntidad);
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Entidad>, Entidad>(element, RelacionDomainRoleId);
 		}
 		#endregion
 		#region Relacion domain role code
@@ -387,7 +377,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		/// </summary>
 		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1/Relacion.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1/Relacion.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Entidad", PropertyDisplayNameKey="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1/Relacion.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Entidad", PropertyDisplayNameKey="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1/Relacion.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("4aca916a-50ce-4b5a-8fac-334ff36acc9c")]
 		public virtual Relacion Relacion
 		{
@@ -516,22 +506,13 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		#endregion
 		#region Relacion link accessor
 		/// <summary>
-		/// Get the EntidadReferencesRelacion1 link to a Relacion.
+		/// Get the list of EntidadReferencesRelacion1 links to a Relacion.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1 GetLinkToEntidad (global::UPM_IPS.FMRMRCMMGProyectoIPS.Relacion relacionInstance)
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1> GetLinksToEntidad ( global::UPM_IPS.FMRMRCMMGProyectoIPS.Relacion relacionInstance )
 		{
-			global::System.Collections.Generic.IList<global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1>(relacionInstance, global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1.RelacionDomainRoleId);
-			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Relacion not obeyed.");
-			if ( links.Count == 0 )
-			{
-				return null;
-			}
-			else
-			{
-				return links[0];
-			}
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1>(relacionInstance, global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1.RelacionDomainRoleId);
 		}
 		#endregion
 		#region EntidadReferencesRelacion1 instance accessors

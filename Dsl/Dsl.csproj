@@ -76,6 +76,7 @@
     <PackageReference Include="Microsoft.VisualStudio.TextTemplating.Modeling" Version="17.0.*-*" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Validation\Validation.cs" />
     <None Include="..\Key.snk">
       <Link>Key.snk</Link>
     </None>
@@ -83,9 +84,6 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>SerializationHelper.cs</LastGenOutput>
     </None>
-    <Compile Include="DesignerCustomization\Atributo.cs" />
-    <Compile Include="DesignerCustomization\Entidad.cs" />
-    <Compile Include="DesignerCustomization\Relacion.cs" />
     <Compile Include="GeneratedCode\ConnectionBuilders.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -258,5 +256,8 @@
     <Content Include="Resources\ExampleShapeToolBitmap.bmp" />
     <EmbeddedResource Include="Resources\ConnectorSourceSearch.cur" />
     <EmbeddedResource Include="Resources\ConnectorTargetSearch.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DesignerCustomization\" />
   </ItemGroup>
 </Project>

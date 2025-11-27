@@ -353,21 +353,17 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		}
 		#endregion
 		#region Entidad opposite domain role accessor
+		
 		/// <summary>
-		/// Gets or sets Entidad.
+		/// Gets a list of Entidad.
 		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1.Relacion
 		/// </summary>
-		public virtual Entidad Entidad
+		public virtual DslModeling::LinkedElementCollection<Entidad> Entidad
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1.RelacionDomainRoleId) as Entidad;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1.RelacionDomainRoleId, value);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Entidad>, Entidad>(global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1.RelacionDomainRoleId);
 			}
 		}
 		#endregion

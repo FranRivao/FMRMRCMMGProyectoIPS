@@ -112,6 +112,17 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ConnectionLine, linePen);
 		}
 		
+		/// <summary>
+		/// Gets the default line routing style for this connector.
+		/// </summary>
+		[global::System.CLSCompliant(false)]
+		protected override DslDiagrams::GraphObject.VGRoutingStyle DefaultRoutingStyle
+		{
+			get
+			{
+				return DslDiagrams::GraphObject.VGRoutingStyle.VGRouteStraight;
+			}
+		}
 		#endregion
 		
 		#region Constructors, domain class Id
@@ -212,7 +223,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			field1.AnchoringBehavior.MinimumWidthInCharacters = 1;
 			field1.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
 			field1.DefaultFontId = new DslDiagrams::StyleSetResourceId(string.Empty, "ShapeTextItalic, Underline8");			
-			DslDiagrams::Decorator decorator1 = new DslDiagrams::ConnectorDecorator(field1, DslDiagrams::ConnectorDecoratorPosition.TargetTop, DslDiagrams::PointD.Empty);
+			DslDiagrams::Decorator decorator1 = new DslDiagrams::ConnectorDecorator(field1, DslDiagrams::ConnectorDecoratorPosition.SourceTop, DslDiagrams::PointD.Empty);
 			decorators.Add(decorator1);
 				
 		}
@@ -344,6 +355,17 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			
 		}
 		
+		/// <summary>
+		/// Gets the default line routing style for this connector.
+		/// </summary>
+		[global::System.CLSCompliant(false)]
+		protected override DslDiagrams::GraphObject.VGRoutingStyle DefaultRoutingStyle
+		{
+			get
+			{
+				return DslDiagrams::GraphObject.VGRoutingStyle.VGRouteStraight;
+			}
+		}
 		#endregion
 		
 		#region Constructors, domain class Id

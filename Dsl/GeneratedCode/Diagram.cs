@@ -271,6 +271,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaEntidad.DecoratorsInitialized += MetaforaEntidadDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaAtributo.DecoratorsInitialized += MetaforaAtributoDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaRelacion.DecoratorsInitialized += MetaforaRelacionDecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaAtributoKey.DecoratorsInitialized += MetaforaAtributoKeyDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaAtributoRelacion.DecoratorsInitialized += MetaforaAtributoRelacionDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadRelacion1.DecoratorsInitialized += ConectorEntidadRelacion1DecoratorMap.OnDecoratorsInitialized;
 		}
@@ -318,6 +319,24 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		{
 			/// <summary>
 			/// Event handler called when decorator initialization is complete for MetaforaRelacion.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.FMRMRCMMGProyectoIPS.Elemento.nombreDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "nombreDec").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for MetaforaAtributoKey.
+		/// </summary>
+		internal static partial class MetaforaAtributoKeyDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for MetaforaAtributoKey.  Adds decorator mappings for this shape or connector.
 			/// </summary>
 			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
 			{

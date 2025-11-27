@@ -35,6 +35,14 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 	/// </summary>
 	internal abstract partial class FMRMRCMMGProyectoIPSDocDataBase : DslShell::ModelingDocData
 	{
+
+		#region Constraint ValidationController
+		/// <summary>
+		/// The controller for all validation that goes on in the package.
+		/// </summary>
+		private DslShell::VsValidationController validationController;
+		private DslShell::ErrorListObserver errorListObserver;
+		#endregion
 		/// <summary>
 		/// Document lock holder registered for the subordinate .diagram file.
 		/// </summary>
@@ -235,6 +243,38 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 
 		#endregion // ExtensionLocator
 
+		/// <summary>
+		/// The controller for all validation that goes on in the package.
+		/// </summary>
+		public DslShell::VsValidationController ValidationController
+		{
+			get
+			{
+				if (this.validationController == null)
+				{
+					this.validationController = this.CreateValidationController();
+					this.SetValidationExtensionRegistrar(this.validationController);
+					this.errorListObserver = new DslShell::ErrorListObserver(this.ServiceProvider);
+
+					// register the observer so we can show the error/warning/msg in the VS output window.
+					this.validationController.AddObserver(this.errorListObserver);
+				}
+				return this.validationController;
+			}
+		}
+
+		/// <summary>
+		/// Factory method to create a VSValidationController.
+		/// </summary>
+		protected virtual DslShell::VsValidationController CreateValidationController()
+		{
+			return new DslShell::VsValidationController(this.ServiceProvider, typeof(FMRMRCMMGProyectoIPSExplorerToolWindow));
+		}
+		/// <summary>
+		/// Add ValidationExtensionRegistrar to the ValidationController and handle related MEF Initialization operations
+		/// </summary>
+		/// <param name="validationController"></param>
+		partial void SetValidationExtensionRegistrar(DslValidation::ValidationController validationController);
 
 		/// <summary>
 		/// When the doc data is closed, make sure we reset the valiation messages 
@@ -245,6 +285,18 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		{
 			try
 			{
+				if (this.validationController != null)
+				{
+					this.validationController.ClearMessages();
+					// un-register our observer with the controller.
+					this.validationController.RemoveObserver(this.errorListObserver);
+					this.validationController = null;
+					if ( this.errorListObserver != null )
+					{
+						this.errorListObserver.Dispose();
+						this.errorListObserver = null;
+					}
+				}
 				if (this.diagramDocumentLockHolder != null)
 				{
 					this.diagramDocumentLockHolder.Dispose();
@@ -366,6 +418,67 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			}
 		}
 
+		/// <summary>
+		/// Called after the document is opened.
+		/// </summary>
+		/// <param name="e">Event Args.</param>
+		protected override void OnDocumentLoaded(global::System.EventArgs e)
+		{
+			base.OnDocumentLoaded(e);
+			this.OnDocumentLoaded();
+		}
+
+		/// <summary>
+		/// Called after the document is reloaded.
+		/// </summary>
+		protected override void OnDocumentReloaded(global::System.EventArgs e)
+		{
+			base.OnDocumentReloaded(e);
+			this.OnDocumentLoaded();
+		}
+		
+		/// <summary>
+		/// Called on both document load and reload.
+		/// </summary>
+		protected virtual void OnDocumentLoaded()
+		{
+			// Validate the document
+			this.ValidationController.Validate(this.GetAllElementsForValidation(), DslValidation::ValidationCategories.Open);
+
+		}
+
+
+		/// <summary>
+		/// Validate the model before the file is saved.
+		/// </summary>
+		protected override bool CanSave(bool allowUserInterface)
+		{
+			// If a silent check then use a temporary ValidationController that is not connected to the error list to avoid any unwanted UI updates
+			DslShell::VsValidationController vc = allowUserInterface ? this.ValidationController : this.CreateValidationController();
+			if (vc == null)
+			{
+				return true;
+			}
+
+			// We check Load category first, because any violation in this category will cause the saved file to be unloadable justifying a special 
+			// error message. If the Load category passes, we then check the normal Save category, and give the normal warning message if necessary.
+			bool unloadableError = !vc.Validate(this.GetAllElementsForValidation(), DslValidation::ValidationCategories.Load) && vc.ErrorMessages.Count != 0;
+			
+			// Prompt user for confirmation if there are validation errors and this is not a silent save
+			if (allowUserInterface)
+			{
+				vc.Validate(this.GetAllElementsForValidation(), DslValidation::ValidationCategories.Save);
+
+				if (vc.ErrorMessages.Count != 0)
+				{
+					string errorMsg = (unloadableError ? "UnloadableSaveValidationFailed" : "SaveValidationFailed");
+					global::System.Windows.Forms.DialogResult result = DslShell::PackageUtility.ShowMessageBox(this.ServiceProvider, global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel.SingletonResourceManager.GetString(errorMsg), VSShellInterop::OLEMSGBUTTON.OLEMSGBUTTON_YESNO, VSShellInterop::OLEMSGDEFBUTTON.OLEMSGDEFBUTTON_SECOND, VSShellInterop::OLEMSGICON.OLEMSGICON_WARNING);
+					return (result == global::System.Windows.Forms.DialogResult.Yes);
+				}
+			}
+			
+			return !unloadableError;
+		}
 
 			
 		/// <summary>

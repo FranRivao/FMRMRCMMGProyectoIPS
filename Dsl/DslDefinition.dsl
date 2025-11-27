@@ -190,13 +190,13 @@
     </GeometryShape>
   </Shapes>
   <Connectors>
-    <Connector Id="7b518e40-fc7c-4385-8e1b-ca221cb38292" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadAtributo" Name="ConectorEntidadAtributo" DisplayName="Conector Entidad Atributo" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Conector Entidad Atributo" DashStyle="Dot" />
+    <Connector Id="7b518e40-fc7c-4385-8e1b-ca221cb38292" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadAtributo" Name="ConectorEntidadAtributo" DisplayName="Conector Entidad Atributo" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Conector Entidad Atributo" DashStyle="Dot" RoutingStyle="Straight" />
     <Connector Id="76d3363b-b780-4156-bb69-0cccd2aa5687" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadRelacion" Name="ConectorEntidadRelacion" DisplayName="Conector Entidad Relacion" InheritanceModifier="Abstract" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Conector Entidad Relacion" Color="Gold" DashStyle="DashDotDot" Thickness="0.04125">
-      <ConnectorHasDecorators Position="TargetTop" OffsetFromShape="0" OffsetFromLine="0">
+      <ConnectorHasDecorators Position="SourceTop" OffsetFromShape="0" OffsetFromLine="0">
         <TextDecorator Name="cardinalidadDec" DisplayName="Cardinalidad Dec" DefaultText="cardinalidadDec" FontStyle="Italic, Underline" />
       </ConnectorHasDecorators>
     </Connector>
-    <Connector Id="af824879-0c61-467e-bc1f-400e060654e3" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadAtributoKey" Name="ConectorEntidadAtributoKey" DisplayName="Conector Entidad Atributo Key" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Conector Entidad Atributo Key" Color="Yellow" Thickness="0.05" />
+    <Connector Id="af824879-0c61-467e-bc1f-400e060654e3" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadAtributoKey" Name="ConectorEntidadAtributoKey" DisplayName="Conector Entidad Atributo Key" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Conector Entidad Atributo Key" Color="Yellow" Thickness="0.05" RoutingStyle="Straight" />
     <Connector Id="c9103a99-7c6c-46d0-bea6-1e5d2c471a30" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadRelacion1" Name="ConectorEntidadRelacion1" DisplayName="Conector Entidad Relacion1" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Conector Entidad Relacion1" Color="Gold" DashStyle="DashDotDot" Thickness="0.04125">
       <BaseConnector>
         <ConnectorMoniker Name="ConectorEntidadRelacion" />
@@ -442,6 +442,14 @@
         <ParentElementPath>
           <DomainPath>TapizHasElementoes.Tapiz/!Tapiz</DomainPath>
         </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="MetaforaAtributoKey/nombreDec" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Elemento/nombre" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
         <GeometryShapeMoniker Name="MetaforaAtributoKey" />
       </ShapeMap>
       <ShapeMap>
@@ -523,7 +531,7 @@
         <DomainClassMoniker Name="AtributoRelacion" />
       </ElementTool>
     </ToolboxTab>
-    <Validation UsesMenu="false" UsesOpen="false" UsesSave="false" UsesLoad="false" />
+    <Validation UsesMenu="false" UsesOpen="true" UsesSave="true" UsesLoad="false" />
     <DiagramMoniker Name="FMRMRCMMGProyectoIPSDiagram" />
   </Designer>
   <Explorer ExplorerGuid="4cd1a443-c1c0-4294-901b-b489d93f25c6" Title="FMRMRCMMGProyectoIPS Explorer">
