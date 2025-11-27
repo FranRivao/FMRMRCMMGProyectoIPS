@@ -1,38 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <tapiz xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="2ea417be-3bd0-42fe-a5f2-125af54914ce" xmlns="http://schemas.microsoft.com/dsltools/FMRMRCMMGProyectoIPS">
-  <entidad>
-    <tapizHasEntidad Id="b2545957-4b87-4bbf-9945-10b3b9d9bfa3">
-      <entidad Id="c88b6acb-ec3d-449e-8f2a-ba19254f3bd8">
+  <elementoes>
+    <tapizHasElementoes Id="eadc6458-9bd3-42d6-b678-e7a691d60ff2">
+      <entidad Id="d8804651-e9c2-4a22-ac83-af477b35f793" nombre="asdasdasd">
         <atributo>
-          <entidadReferencesAtributo Id="e4b047da-74d0-4910-b1ed-43dde1403332" cardinalidadOrigen="ceroAn" cardinalidadFin="ceroAn">
-            <atributoMoniker Id="81a6fdb9-1f21-44ca-8a3e-634ae7b3f66f" />
+          <entidadReferencesAtributo Id="d280a079-f2be-4585-b694-bc2f9304bdee">
+            <atributoMoniker Id="c8d245a4-e545-4f16-9abc-ef87ea40b94d" />
+          </entidadReferencesAtributo>
+          <entidadReferencesAtributo Id="4b790840-e783-452a-b9fc-c7c7ce7bbc1c">
+            <atributoMoniker Id="91ab0fc7-76ef-4bd2-816c-3d1838df3e56" />
           </entidadReferencesAtributo>
         </atributo>
         <relacion>
-          <entidadReferencesRelacion Id="bb7241f3-6c4b-43d9-97ed-1a3ce8084abf" cardinalidadOrigen="ceroAn" cardinalidadFin="ceroAn">
-            <relacionMoniker Id="600877cc-d37e-42ea-a66f-3634981dec2f" />
-          </entidadReferencesRelacion>
+          <entidadReferencesRelacion1 Id="f0296e05-d97c-49db-913d-6581fce51fd3" cardinalidad="ceroAn">
+            <relacionMoniker Id="e1f13eae-c842-4b20-9e7a-f3f5471cd0e9" />
+          </entidadReferencesRelacion1>
         </relacion>
+        <atributoKey>
+          <entidadReferencesAtributoKey Id="bf06c63b-f806-4ec3-bf6f-787f8e371ccc">
+            <atributoKeyMoniker Id="156970a4-8769-4b4d-9e1a-ad66a94f4f5d" />
+          </entidadReferencesAtributoKey>
+        </atributoKey>
       </entidad>
-    </tapizHasEntidad>
-    <tapizHasEntidad Id="ee8fe557-d972-44d8-b84a-9f7a4110dfbf">
-      <entidad Id="290a8c62-58fa-4e34-aaa6-b505e350e5f9">
-        <relacion>
-          <entidadReferencesRelacion Id="3bff2978-2e3f-400f-bb45-4f3f314a9a41" cardinalidadOrigen="ceroAn" cardinalidadFin="ceroAn">
-            <relacionMoniker Id="600877cc-d37e-42ea-a66f-3634981dec2f" />
-          </entidadReferencesRelacion>
-        </relacion>
-      </entidad>
-    </tapizHasEntidad>
-  </entidad>
-  <atributo>
-    <tapizHasAtributo Id="c61d5d86-44c2-4b3e-8fb5-8f5e47f206f3">
-      <atributo Id="81a6fdb9-1f21-44ca-8a3e-634ae7b3f66f" />
-    </tapizHasAtributo>
-  </atributo>
-  <relacion>
-    <tapizHasRelacion Id="1e975b30-278a-40f2-bff3-99e144e9cee2">
-      <relacion Id="600877cc-d37e-42ea-a66f-3634981dec2f" />
-    </tapizHasRelacion>
-  </relacion>
+    </tapizHasElementoes>
+    <tapizHasElementoes Id="ca9d4538-953c-4670-aaf9-de8ccae4703f">
+      <relacion Id="e1f13eae-c842-4b20-9e7a-f3f5471cd0e9" nombre="asdasdasd">
+        <atributoRelacion>
+          <relacionReferencesAtributoRelacion Id="bc1d4069-87c5-47e9-8cc9-89158eb1dd5c">
+            <atributoRelacionMoniker Id="487dad92-bdd3-4939-b85b-c20127009dd7" />
+          </relacionReferencesAtributoRelacion>
+        </atributoRelacion>
+      </relacion>
+    </tapizHasElementoes>
+    <tapizHasElementoes Id="018df6e3-be9e-4354-aa9a-798645bc3d89">
+      <atributo Id="c8d245a4-e545-4f16-9abc-ef87ea40b94d" nombre="asdasd" />
+    </tapizHasElementoes>
+    <tapizHasElementoes Id="e65cbcff-9306-4ef3-82f1-4465b4eefe2d">
+      <atributo Id="91ab0fc7-76ef-4bd2-816c-3d1838df3e56" nombre="dasda" />
+    </tapizHasElementoes>
+    <tapizHasElementoes Id="8359c481-1945-4614-beb0-0decd2dfaa21">
+      <entidad Id="3902073e-412a-406c-8e87-5b415c639524" />
+    </tapizHasElementoes>
+    <tapizHasElementoes Id="fc92eeb9-6c4f-4e77-9691-61fbf75ecd86">
+      <atributoRelacion Id="487dad92-bdd3-4939-b85b-c20127009dd7" nombre="asdasd" />
+    </tapizHasElementoes>
+    <tapizHasElementoes Id="132302d6-e585-4900-9477-9831e5a13ecb">
+      <atributoKey Id="156970a4-8769-4b4d-9e1a-ad66a94f4f5d" />
+    </tapizHasElementoes>
+  </elementoes>
 </tapiz>

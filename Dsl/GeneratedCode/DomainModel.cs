@@ -71,18 +71,25 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 				typeof(Entidad),
 				typeof(Atributo),
 				typeof(Relacion),
-				typeof(TapizHasEntidad),
-				typeof(TapizHasAtributo),
-				typeof(TapizHasRelacion),
+				typeof(Elemento),
+				typeof(AtributoKey),
+				typeof(AtributoRelacion),
 				typeof(EntidadReferencesAtributo),
-				typeof(EntidadReferencesRelacion),
+				typeof(EntidadReferencesRelacion1),
+				typeof(TapizHasElementoes),
+				typeof(EntidadReferencesAtributoKey),
+				typeof(RelacionReferencesAtributoRelacion),
 				typeof(FMRMRCMMGProyectoIPSDiagram),
 				typeof(ConectorEntidadAtributo),
-				typeof(Conector),
 				typeof(ConectorEntidadRelacion),
+				typeof(ConectorEntidadAtributoKey),
+				typeof(ConectorEntidadRelacion1),
+				typeof(ConectorRelacionAtributoRelacion),
 				typeof(MetaforaEntidad),
 				typeof(MetaforaAtributo),
 				typeof(MetaforaRelacion),
+				typeof(MetaforaAtributoKey),
+				typeof(MetaforaAtributoRelacion),
 				typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FixUpDiagram),
 				typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.DecoratorPropertyChanged),
 				typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.ConnectorRolePlayerChanged),
@@ -97,13 +104,8 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		{
 			return new DomainMemberInfo[]
 			{
-				new DomainMemberInfo(typeof(Entidad), "nombre", Entidad.nombreDomainPropertyId, typeof(Entidad.nombrePropertyHandler)),
-				new DomainMemberInfo(typeof(Atributo), "nombre", Atributo.nombreDomainPropertyId, typeof(Atributo.nombrePropertyHandler)),
-				new DomainMemberInfo(typeof(Relacion), "nombre", Relacion.nombreDomainPropertyId, typeof(Relacion.nombrePropertyHandler)),
-				new DomainMemberInfo(typeof(EntidadReferencesAtributo), "cardinalidadOrigen", EntidadReferencesAtributo.cardinalidadOrigenDomainPropertyId, typeof(EntidadReferencesAtributo.cardinalidadOrigenPropertyHandler)),
-				new DomainMemberInfo(typeof(EntidadReferencesAtributo), "cardinalidadFin", EntidadReferencesAtributo.cardinalidadFinDomainPropertyId, typeof(EntidadReferencesAtributo.cardinalidadFinPropertyHandler)),
-				new DomainMemberInfo(typeof(EntidadReferencesRelacion), "cardinalidadOrigen", EntidadReferencesRelacion.cardinalidadOrigenDomainPropertyId, typeof(EntidadReferencesRelacion.cardinalidadOrigenPropertyHandler)),
-				new DomainMemberInfo(typeof(EntidadReferencesRelacion), "cardinalidadFin", EntidadReferencesRelacion.cardinalidadFinDomainPropertyId, typeof(EntidadReferencesRelacion.cardinalidadFinPropertyHandler)),
+				new DomainMemberInfo(typeof(Elemento), "nombre", Elemento.nombreDomainPropertyId, typeof(Elemento.nombrePropertyHandler)),
+				new DomainMemberInfo(typeof(EntidadReferencesRelacion1), "cardinalidad", EntidadReferencesRelacion1.cardinalidadDomainPropertyId, typeof(EntidadReferencesRelacion1.cardinalidadPropertyHandler)),
 			};
 		}
 		/// <summary>
@@ -114,16 +116,16 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		{
 			return new DomainRolePlayerInfo[]
 			{
-				new DomainRolePlayerInfo(typeof(TapizHasEntidad), "Tapiz", TapizHasEntidad.TapizDomainRoleId),
-				new DomainRolePlayerInfo(typeof(TapizHasEntidad), "Entidad", TapizHasEntidad.EntidadDomainRoleId),
-				new DomainRolePlayerInfo(typeof(TapizHasAtributo), "Tapiz", TapizHasAtributo.TapizDomainRoleId),
-				new DomainRolePlayerInfo(typeof(TapizHasAtributo), "Atributo", TapizHasAtributo.AtributoDomainRoleId),
-				new DomainRolePlayerInfo(typeof(TapizHasRelacion), "Tapiz", TapizHasRelacion.TapizDomainRoleId),
-				new DomainRolePlayerInfo(typeof(TapizHasRelacion), "Relacion", TapizHasRelacion.RelacionDomainRoleId),
 				new DomainRolePlayerInfo(typeof(EntidadReferencesAtributo), "Entidad", EntidadReferencesAtributo.EntidadDomainRoleId),
 				new DomainRolePlayerInfo(typeof(EntidadReferencesAtributo), "Atributo", EntidadReferencesAtributo.AtributoDomainRoleId),
-				new DomainRolePlayerInfo(typeof(EntidadReferencesRelacion), "Entidad", EntidadReferencesRelacion.EntidadDomainRoleId),
-				new DomainRolePlayerInfo(typeof(EntidadReferencesRelacion), "Relacion", EntidadReferencesRelacion.RelacionDomainRoleId),
+				new DomainRolePlayerInfo(typeof(EntidadReferencesRelacion1), "Entidad", EntidadReferencesRelacion1.EntidadDomainRoleId),
+				new DomainRolePlayerInfo(typeof(EntidadReferencesRelacion1), "Relacion", EntidadReferencesRelacion1.RelacionDomainRoleId),
+				new DomainRolePlayerInfo(typeof(TapizHasElementoes), "Tapiz", TapizHasElementoes.TapizDomainRoleId),
+				new DomainRolePlayerInfo(typeof(TapizHasElementoes), "Elemento", TapizHasElementoes.ElementoDomainRoleId),
+				new DomainRolePlayerInfo(typeof(EntidadReferencesAtributoKey), "Entidad", EntidadReferencesAtributoKey.EntidadDomainRoleId),
+				new DomainRolePlayerInfo(typeof(EntidadReferencesAtributoKey), "AtributoKey", EntidadReferencesAtributoKey.AtributoKeyDomainRoleId),
+				new DomainRolePlayerInfo(typeof(RelacionReferencesAtributoRelacion), "Relacion", RelacionReferencesAtributoRelacion.RelacionDomainRoleId),
+				new DomainRolePlayerInfo(typeof(RelacionReferencesAtributoRelacion), "AtributoRelacion", RelacionReferencesAtributoRelacion.AtributoRelacionDomainRoleId),
 			};
 		}
 		#endregion
@@ -145,17 +147,23 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(11);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(18);
 				createElementMap.Add(typeof(Tapiz), 0);
 				createElementMap.Add(typeof(Entidad), 1);
 				createElementMap.Add(typeof(Atributo), 2);
 				createElementMap.Add(typeof(Relacion), 3);
-				createElementMap.Add(typeof(FMRMRCMMGProyectoIPSDiagram), 4);
-				createElementMap.Add(typeof(ConectorEntidadAtributo), 5);
-				createElementMap.Add(typeof(ConectorEntidadRelacion), 6);
-				createElementMap.Add(typeof(MetaforaEntidad), 7);
-				createElementMap.Add(typeof(MetaforaAtributo), 8);
-				createElementMap.Add(typeof(MetaforaRelacion), 9);
+				createElementMap.Add(typeof(AtributoKey), 4);
+				createElementMap.Add(typeof(AtributoRelacion), 5);
+				createElementMap.Add(typeof(FMRMRCMMGProyectoIPSDiagram), 6);
+				createElementMap.Add(typeof(ConectorEntidadAtributo), 7);
+				createElementMap.Add(typeof(ConectorEntidadAtributoKey), 8);
+				createElementMap.Add(typeof(ConectorEntidadRelacion1), 9);
+				createElementMap.Add(typeof(ConectorRelacionAtributoRelacion), 10);
+				createElementMap.Add(typeof(MetaforaEntidad), 11);
+				createElementMap.Add(typeof(MetaforaAtributo), 12);
+				createElementMap.Add(typeof(MetaforaRelacion), 13);
+				createElementMap.Add(typeof(MetaforaAtributoKey), 14);
+				createElementMap.Add(typeof(MetaforaAtributoRelacion), 15);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -173,12 +181,18 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 				case 1: return new Entidad(partition, propertyAssignments);
 				case 2: return new Atributo(partition, propertyAssignments);
 				case 3: return new Relacion(partition, propertyAssignments);
-				case 4: return new FMRMRCMMGProyectoIPSDiagram(partition, propertyAssignments);
-				case 5: return new ConectorEntidadAtributo(partition, propertyAssignments);
-				case 6: return new ConectorEntidadRelacion(partition, propertyAssignments);
-				case 7: return new MetaforaEntidad(partition, propertyAssignments);
-				case 8: return new MetaforaAtributo(partition, propertyAssignments);
-				case 9: return new MetaforaRelacion(partition, propertyAssignments);
+				case 4: return new AtributoKey(partition, propertyAssignments);
+				case 5: return new AtributoRelacion(partition, propertyAssignments);
+				case 6: return new FMRMRCMMGProyectoIPSDiagram(partition, propertyAssignments);
+				case 7: return new ConectorEntidadAtributo(partition, propertyAssignments);
+				case 8: return new ConectorEntidadAtributoKey(partition, propertyAssignments);
+				case 9: return new ConectorEntidadRelacion1(partition, propertyAssignments);
+				case 10: return new ConectorRelacionAtributoRelacion(partition, propertyAssignments);
+				case 11: return new MetaforaEntidad(partition, propertyAssignments);
+				case 12: return new MetaforaAtributo(partition, propertyAssignments);
+				case 13: return new MetaforaRelacion(partition, propertyAssignments);
+				case 14: return new MetaforaAtributoKey(partition, propertyAssignments);
+				case 15: return new MetaforaAtributoRelacion(partition, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -202,11 +216,11 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			if (createElementLinkMap == null)
 			{
 				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(5);
-				createElementLinkMap.Add(typeof(TapizHasEntidad), 0);
-				createElementLinkMap.Add(typeof(TapizHasAtributo), 1);
-				createElementLinkMap.Add(typeof(TapizHasRelacion), 2);
-				createElementLinkMap.Add(typeof(EntidadReferencesAtributo), 3);
-				createElementLinkMap.Add(typeof(EntidadReferencesRelacion), 4);
+				createElementLinkMap.Add(typeof(EntidadReferencesAtributo), 0);
+				createElementLinkMap.Add(typeof(EntidadReferencesRelacion1), 1);
+				createElementLinkMap.Add(typeof(TapizHasElementoes), 2);
+				createElementLinkMap.Add(typeof(EntidadReferencesAtributoKey), 3);
+				createElementLinkMap.Add(typeof(RelacionReferencesAtributoRelacion), 4);
 			}
 			int index;
 			if (!createElementLinkMap.TryGetValue(elementLinkType, out index))
@@ -221,11 +235,11 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			}
 			switch (index)
 			{
-				case 0: return new TapizHasEntidad(partition, roleAssignments, propertyAssignments);
-				case 1: return new TapizHasAtributo(partition, roleAssignments, propertyAssignments);
-				case 2: return new TapizHasRelacion(partition, roleAssignments, propertyAssignments);
-				case 3: return new EntidadReferencesAtributo(partition, roleAssignments, propertyAssignments);
-				case 4: return new EntidadReferencesRelacion(partition, roleAssignments, propertyAssignments);
+				case 0: return new EntidadReferencesAtributo(partition, roleAssignments, propertyAssignments);
+				case 1: return new EntidadReferencesRelacion1(partition, roleAssignments, propertyAssignments);
+				case 2: return new TapizHasElementoes(partition, roleAssignments, propertyAssignments);
+				case 3: return new EntidadReferencesAtributoKey(partition, roleAssignments, propertyAssignments);
+				case 4: return new RelacionReferencesAtributoRelacion(partition, roleAssignments, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -396,9 +410,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		public FMRMRCMMGProyectoIPSDeleteClosureBase()
 		{
 			#region Initialize DomainData Table
-			DomainRoles.Add(global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad.EntidadDomainRoleId, true);
-			DomainRoles.Add(global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo.AtributoDomainRoleId, true);
-			DomainRoles.Add(global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion.RelacionDomainRoleId, true);
+			DomainRoles.Add(global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes.ElementoDomainRoleId, true);
 			#endregion
 		}
 		/// <summary>

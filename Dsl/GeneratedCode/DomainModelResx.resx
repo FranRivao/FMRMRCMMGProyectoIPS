@@ -141,14 +141,6 @@
     <value>Entidad</value>
     <comment>DisplayName for DomainClass &apos;Entidad&apos;</comment>
   </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Entidad/nombre.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Entidad.Nombre</value>
-    <comment>Description for DomainProperty &apos;nombre&apos; on DomainClass &apos;Entidad&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Entidad/nombre.DisplayName" xml:space="preserve">
-    <value>Nombre</value>
-    <comment>DisplayName for DomainProperty &apos;nombre&apos; on DomainClass &apos;Entidad&apos;</comment>
-  </data>
   <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Atributo.Description" xml:space="preserve">
     <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Atributo</value>
     <comment>Description for DomainClass &apos;Atributo&apos;</comment>
@@ -156,14 +148,6 @@
   <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Atributo.DisplayName" xml:space="preserve">
     <value>Atributo</value>
     <comment>DisplayName for DomainClass &apos;Atributo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Atributo/nombre.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Atributo.Nombre</value>
-    <comment>Description for DomainProperty &apos;nombre&apos; on DomainClass &apos;Atributo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Atributo/nombre.DisplayName" xml:space="preserve">
-    <value>Nombre</value>
-    <comment>DisplayName for DomainProperty &apos;nombre&apos; on DomainClass &apos;Atributo&apos;</comment>
   </data>
   <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Relacion.Description" xml:space="preserve">
     <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Relacion</value>
@@ -173,109 +157,37 @@
     <value>Relacion</value>
     <comment>DisplayName for DomainClass &apos;Relacion&apos;</comment>
   </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Relacion/nombre.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Relacion.Nombre</value>
-    <comment>Description for DomainProperty &apos;nombre&apos; on DomainClass &apos;Relacion&apos;</comment>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Elemento.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Elemento</value>
+    <comment>Description for DomainClass &apos;Elemento&apos;</comment>
   </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Relacion/nombre.DisplayName" xml:space="preserve">
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Elemento.DisplayName" xml:space="preserve">
+    <value>Elemento</value>
+    <comment>DisplayName for DomainClass &apos;Elemento&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Elemento/nombre.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Elemento.Nombre</value>
+    <comment>Description for DomainProperty &apos;nombre&apos; on DomainClass &apos;Elemento&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Elemento/nombre.DisplayName" xml:space="preserve">
     <value>Nombre</value>
-    <comment>DisplayName for DomainProperty &apos;nombre&apos; on DomainClass &apos;Relacion&apos;</comment>
+    <comment>DisplayName for DomainProperty &apos;nombre&apos; on DomainClass &apos;Elemento&apos;</comment>
   </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad</value>
-    <comment>Description for DomainClass &apos;TapizHasEntidad&apos;</comment>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.AtributoKey.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.AtributoKey</value>
+    <comment>Description for DomainClass &apos;AtributoKey&apos;</comment>
   </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad.DisplayName" xml:space="preserve">
-    <value>Tapiz Has Entidad</value>
-    <comment>DisplayName for DomainClass &apos;TapizHasEntidad&apos;</comment>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.AtributoKey.DisplayName" xml:space="preserve">
+    <value>Atributo Key</value>
+    <comment>DisplayName for DomainClass &apos;AtributoKey&apos;</comment>
   </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad/Tapiz.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad.Tapiz</value>
-    <comment>Description for DomainRole &apos;Tapiz&apos; on DomainRelationship &apos;TapizHasEntidad&apos;</comment>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.AtributoRelacion.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.AtributoRelacion</value>
+    <comment>Description for DomainClass &apos;AtributoRelacion&apos;</comment>
   </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad/Tapiz.DisplayName" xml:space="preserve">
-    <value>Tapiz</value>
-    <comment>DisplayName for DomainRole &apos;Tapiz&apos; on DomainRelationship &apos;TapizHasEntidad&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad/Tapiz.PropertyDisplayName" xml:space="preserve">
-    <value>Entidad</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Tapiz&apos; on DomainRelationship &apos;TapizHasEntidad&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad/Entidad.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad.Entidad</value>
-    <comment>Description for DomainRole &apos;Entidad&apos; on DomainRelationship &apos;TapizHasEntidad&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad/Entidad.DisplayName" xml:space="preserve">
-    <value>Entidad</value>
-    <comment>DisplayName for DomainRole &apos;Entidad&apos; on DomainRelationship &apos;TapizHasEntidad&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad/Entidad.PropertyDisplayName" xml:space="preserve">
-    <value>Tapiz</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Entidad&apos; on DomainRelationship &apos;TapizHasEntidad&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo</value>
-    <comment>Description for DomainClass &apos;TapizHasAtributo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo.DisplayName" xml:space="preserve">
-    <value>Tapiz Has Atributo</value>
-    <comment>DisplayName for DomainClass &apos;TapizHasAtributo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo/Tapiz.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo.Tapiz</value>
-    <comment>Description for DomainRole &apos;Tapiz&apos; on DomainRelationship &apos;TapizHasAtributo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo/Tapiz.DisplayName" xml:space="preserve">
-    <value>Tapiz</value>
-    <comment>DisplayName for DomainRole &apos;Tapiz&apos; on DomainRelationship &apos;TapizHasAtributo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo/Tapiz.PropertyDisplayName" xml:space="preserve">
-    <value>Atributo</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Tapiz&apos; on DomainRelationship &apos;TapizHasAtributo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo/Atributo.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo.Atributo</value>
-    <comment>Description for DomainRole &apos;Atributo&apos; on DomainRelationship &apos;TapizHasAtributo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo/Atributo.DisplayName" xml:space="preserve">
-    <value>Atributo</value>
-    <comment>DisplayName for DomainRole &apos;Atributo&apos; on DomainRelationship &apos;TapizHasAtributo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo/Atributo.PropertyDisplayName" xml:space="preserve">
-    <value>Tapiz</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Atributo&apos; on DomainRelationship &apos;TapizHasAtributo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion</value>
-    <comment>Description for DomainClass &apos;TapizHasRelacion&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion.DisplayName" xml:space="preserve">
-    <value>Tapiz Has Relacion</value>
-    <comment>DisplayName for DomainClass &apos;TapizHasRelacion&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion/Tapiz.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion.Tapiz</value>
-    <comment>Description for DomainRole &apos;Tapiz&apos; on DomainRelationship &apos;TapizHasRelacion&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion/Tapiz.DisplayName" xml:space="preserve">
-    <value>Tapiz</value>
-    <comment>DisplayName for DomainRole &apos;Tapiz&apos; on DomainRelationship &apos;TapizHasRelacion&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion/Tapiz.PropertyDisplayName" xml:space="preserve">
-    <value>Relacion</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Tapiz&apos; on DomainRelationship &apos;TapizHasRelacion&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion/Relacion.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion.Relacion</value>
-    <comment>Description for DomainRole &apos;Relacion&apos; on DomainRelationship &apos;TapizHasRelacion&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion/Relacion.DisplayName" xml:space="preserve">
-    <value>Relacion</value>
-    <comment>DisplayName for DomainRole &apos;Relacion&apos; on DomainRelationship &apos;TapizHasRelacion&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion/Relacion.PropertyDisplayName" xml:space="preserve">
-    <value>Tapiz</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Relacion&apos; on DomainRelationship &apos;TapizHasRelacion&apos;</comment>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.AtributoRelacion.DisplayName" xml:space="preserve">
+    <value>Atributo Relacion</value>
+    <comment>DisplayName for DomainClass &apos;AtributoRelacion&apos;</comment>
   </data>
   <data name="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributo.Description" xml:space="preserve">
     <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributo</value>
@@ -284,22 +196,6 @@
   <data name="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributo.DisplayName" xml:space="preserve">
     <value>Entidad References Atributo</value>
     <comment>DisplayName for DomainClass &apos;EntidadReferencesAtributo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributo/cardinalidadOrigen.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributo.Cardinalidad Origen</value>
-    <comment>Description for DomainProperty &apos;cardinalidadOrigen&apos; on DomainClass &apos;EntidadReferencesAtributo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributo/cardinalidadOrigen.DisplayName" xml:space="preserve">
-    <value>Cardinalidad Origen</value>
-    <comment>DisplayName for DomainProperty &apos;cardinalidadOrigen&apos; on DomainClass &apos;EntidadReferencesAtributo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributo/cardinalidadFin.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributo.Cardinalidad Fin</value>
-    <comment>Description for DomainProperty &apos;cardinalidadFin&apos; on DomainClass &apos;EntidadReferencesAtributo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributo/cardinalidadFin.DisplayName" xml:space="preserve">
-    <value>Cardinalidad Fin</value>
-    <comment>DisplayName for DomainProperty &apos;cardinalidadFin&apos; on DomainClass &apos;EntidadReferencesAtributo&apos;</comment>
   </data>
   <data name="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributo/Entidad.Description" xml:space="preserve">
     <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributo.Entidad</value>
@@ -325,53 +221,141 @@
     <value>Entidad</value>
     <comment>PropertyDisplayName for DomainRole &apos;Atributo&apos; on DomainRelationship &apos;EntidadReferencesAtributo&apos;</comment>
   </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion</value>
-    <comment>Description for DomainClass &apos;EntidadReferencesRelacion&apos;</comment>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1</value>
+    <comment>Description for DomainClass &apos;EntidadReferencesRelacion1&apos;</comment>
   </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion.DisplayName" xml:space="preserve">
-    <value>Entidad References Relacion</value>
-    <comment>DisplayName for DomainClass &apos;EntidadReferencesRelacion&apos;</comment>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1.DisplayName" xml:space="preserve">
+    <value>Entidad References Relacion1</value>
+    <comment>DisplayName for DomainClass &apos;EntidadReferencesRelacion1&apos;</comment>
   </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion/cardinalidadOrigen.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion.Cardinalidad Origen</value>
-    <comment>Description for DomainProperty &apos;cardinalidadOrigen&apos; on DomainClass &apos;EntidadReferencesRelacion&apos;</comment>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1/cardinalidad.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1.Cardinalidad</value>
+    <comment>Description for DomainProperty &apos;cardinalidad&apos; on DomainClass &apos;EntidadReferencesRelacion1&apos;</comment>
   </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion/cardinalidadOrigen.DisplayName" xml:space="preserve">
-    <value>Cardinalidad Origen</value>
-    <comment>DisplayName for DomainProperty &apos;cardinalidadOrigen&apos; on DomainClass &apos;EntidadReferencesRelacion&apos;</comment>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1/cardinalidad.DisplayName" xml:space="preserve">
+    <value>Cardinalidad</value>
+    <comment>DisplayName for DomainProperty &apos;cardinalidad&apos; on DomainClass &apos;EntidadReferencesRelacion1&apos;</comment>
   </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion/cardinalidadFin.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion.Cardinalidad Fin</value>
-    <comment>Description for DomainProperty &apos;cardinalidadFin&apos; on DomainClass &apos;EntidadReferencesRelacion&apos;</comment>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1/Entidad.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1.Entidad</value>
+    <comment>Description for DomainRole &apos;Entidad&apos; on DomainRelationship &apos;EntidadReferencesRelacion1&apos;</comment>
   </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion/cardinalidadFin.DisplayName" xml:space="preserve">
-    <value>Cardinalidad Fin</value>
-    <comment>DisplayName for DomainProperty &apos;cardinalidadFin&apos; on DomainClass &apos;EntidadReferencesRelacion&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion/Entidad.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion.Entidad</value>
-    <comment>Description for DomainRole &apos;Entidad&apos; on DomainRelationship &apos;EntidadReferencesRelacion&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion/Entidad.DisplayName" xml:space="preserve">
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1/Entidad.DisplayName" xml:space="preserve">
     <value>Entidad</value>
-    <comment>DisplayName for DomainRole &apos;Entidad&apos; on DomainRelationship &apos;EntidadReferencesRelacion&apos;</comment>
+    <comment>DisplayName for DomainRole &apos;Entidad&apos; on DomainRelationship &apos;EntidadReferencesRelacion1&apos;</comment>
   </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion/Entidad.PropertyDisplayName" xml:space="preserve">
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1/Entidad.PropertyDisplayName" xml:space="preserve">
     <value>Relacion</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Entidad&apos; on DomainRelationship &apos;EntidadReferencesRelacion&apos;</comment>
+    <comment>PropertyDisplayName for DomainRole &apos;Entidad&apos; on DomainRelationship &apos;EntidadReferencesRelacion1&apos;</comment>
   </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion/Relacion.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion.Relacion</value>
-    <comment>Description for DomainRole &apos;Relacion&apos; on DomainRelationship &apos;EntidadReferencesRelacion&apos;</comment>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1/Relacion.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1.Relacion</value>
+    <comment>Description for DomainRole &apos;Relacion&apos; on DomainRelationship &apos;EntidadReferencesRelacion1&apos;</comment>
   </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion/Relacion.DisplayName" xml:space="preserve">
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1/Relacion.DisplayName" xml:space="preserve">
     <value>Relacion</value>
-    <comment>DisplayName for DomainRole &apos;Relacion&apos; on DomainRelationship &apos;EntidadReferencesRelacion&apos;</comment>
+    <comment>DisplayName for DomainRole &apos;Relacion&apos; on DomainRelationship &apos;EntidadReferencesRelacion1&apos;</comment>
   </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion/Relacion.PropertyDisplayName" xml:space="preserve">
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1/Relacion.PropertyDisplayName" xml:space="preserve">
     <value>Entidad</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Relacion&apos; on DomainRelationship &apos;EntidadReferencesRelacion&apos;</comment>
+    <comment>PropertyDisplayName for DomainRole &apos;Relacion&apos; on DomainRelationship &apos;EntidadReferencesRelacion1&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes</value>
+    <comment>Description for DomainClass &apos;TapizHasElementoes&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes.DisplayName" xml:space="preserve">
+    <value>Tapiz Has Elementoes</value>
+    <comment>DisplayName for DomainClass &apos;TapizHasElementoes&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes/Tapiz.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes.Tapiz</value>
+    <comment>Description for DomainRole &apos;Tapiz&apos; on DomainRelationship &apos;TapizHasElementoes&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes/Tapiz.DisplayName" xml:space="preserve">
+    <value>Tapiz</value>
+    <comment>DisplayName for DomainRole &apos;Tapiz&apos; on DomainRelationship &apos;TapizHasElementoes&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes/Tapiz.PropertyDisplayName" xml:space="preserve">
+    <value>Elementoes</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Tapiz&apos; on DomainRelationship &apos;TapizHasElementoes&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes/Elemento.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes.Elemento</value>
+    <comment>Description for DomainRole &apos;Elemento&apos; on DomainRelationship &apos;TapizHasElementoes&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes/Elemento.DisplayName" xml:space="preserve">
+    <value>Elemento</value>
+    <comment>DisplayName for DomainRole &apos;Elemento&apos; on DomainRelationship &apos;TapizHasElementoes&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes/Elemento.PropertyDisplayName" xml:space="preserve">
+    <value>Tapiz</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Elemento&apos; on DomainRelationship &apos;TapizHasElementoes&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey</value>
+    <comment>Description for DomainClass &apos;EntidadReferencesAtributoKey&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey.DisplayName" xml:space="preserve">
+    <value>Entidad References Atributo Key</value>
+    <comment>DisplayName for DomainClass &apos;EntidadReferencesAtributoKey&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey/Entidad.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey.Entidad</value>
+    <comment>Description for DomainRole &apos;Entidad&apos; on DomainRelationship &apos;EntidadReferencesAtributoKey&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey/Entidad.DisplayName" xml:space="preserve">
+    <value>Entidad</value>
+    <comment>DisplayName for DomainRole &apos;Entidad&apos; on DomainRelationship &apos;EntidadReferencesAtributoKey&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey/Entidad.PropertyDisplayName" xml:space="preserve">
+    <value>Atributo Key</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Entidad&apos; on DomainRelationship &apos;EntidadReferencesAtributoKey&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey/AtributoKey.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey.AtributoKey</value>
+    <comment>Description for DomainRole &apos;AtributoKey&apos; on DomainRelationship &apos;EntidadReferencesAtributoKey&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey/AtributoKey.DisplayName" xml:space="preserve">
+    <value>Atributo Key</value>
+    <comment>DisplayName for DomainRole &apos;AtributoKey&apos; on DomainRelationship &apos;EntidadReferencesAtributoKey&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey/AtributoKey.PropertyDisplayName" xml:space="preserve">
+    <value>Entidad</value>
+    <comment>PropertyDisplayName for DomainRole &apos;AtributoKey&apos; on DomainRelationship &apos;EntidadReferencesAtributoKey&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion</value>
+    <comment>Description for DomainClass &apos;RelacionReferencesAtributoRelacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion.DisplayName" xml:space="preserve">
+    <value>Relacion References Atributo Relacion</value>
+    <comment>DisplayName for DomainClass &apos;RelacionReferencesAtributoRelacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion/Relacion.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion.Relacion</value>
+    <comment>Description for DomainRole &apos;Relacion&apos; on DomainRelationship &apos;RelacionReferencesAtributoRelacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion/Relacion.DisplayName" xml:space="preserve">
+    <value>Relacion</value>
+    <comment>DisplayName for DomainRole &apos;Relacion&apos; on DomainRelationship &apos;RelacionReferencesAtributoRelacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion/Relacion.PropertyDisplayName" xml:space="preserve">
+    <value>Atributo Relacion</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Relacion&apos; on DomainRelationship &apos;RelacionReferencesAtributoRelacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion/AtributoRelacion.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion.AtributoRelacion</value>
+    <comment>Description for DomainRole &apos;AtributoRelacion&apos; on DomainRelationship &apos;RelacionReferencesAtributoRelacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion/AtributoRelacion.DisplayName" xml:space="preserve">
+    <value>Atributo Relacion</value>
+    <comment>DisplayName for DomainRole &apos;AtributoRelacion&apos; on DomainRelationship &apos;RelacionReferencesAtributoRelacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion/AtributoRelacion.PropertyDisplayName" xml:space="preserve">
+    <value>Relacion</value>
+    <comment>PropertyDisplayName for DomainRole &apos;AtributoRelacion&apos; on DomainRelationship &apos;RelacionReferencesAtributoRelacion&apos;</comment>
   </data>
   <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Cardinalidad/ceroAuno.DisplayName" xml:space="preserve">
     <value>ceroAuno</value>
@@ -441,6 +425,30 @@
     <value>nombreDec</value>
     <comment>Text decorator default text</comment>
   </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaAtributoKey.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaAtributoKey</value>
+    <comment>Description for DomainClass &apos;MetaforaAtributoKey&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaAtributoKey.DisplayName" xml:space="preserve">
+    <value>Metafora Atributo Key</value>
+    <comment>DisplayName for DomainClass &apos;MetaforaAtributoKey&apos;</comment>
+  </data>
+  <data name="MetaforaAtributoKeynombreDecDefaultText" xml:space="preserve">
+    <value>nombreDec</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaAtributoRelacion.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaAtributoRelacion</value>
+    <comment>Description for DomainClass &apos;MetaforaAtributoRelacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaAtributoRelacion.DisplayName" xml:space="preserve">
+    <value>Metafora Atributo Relacion</value>
+    <comment>DisplayName for DomainClass &apos;MetaforaAtributoRelacion&apos;</comment>
+  </data>
+  <data name="MetaforaAtributoRelacionnombreDecDefaultText" xml:space="preserve">
+    <value>nombreDec</value>
+    <comment>Text decorator default text</comment>
+  </data>
   <data name="UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadAtributo.Description" xml:space="preserve">
     <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadAtributo</value>
     <comment>Description for DomainClass &apos;ConectorEntidadAtributo&apos;</comment>
@@ -449,22 +457,6 @@
     <value>Conector Entidad Atributo</value>
     <comment>DisplayName for DomainClass &apos;ConectorEntidadAtributo&apos;</comment>
   </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Conector.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Conector</value>
-    <comment>Description for DomainClass &apos;Conector&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Conector.DisplayName" xml:space="preserve">
-    <value>Conector</value>
-    <comment>DisplayName for DomainClass &apos;Conector&apos;</comment>
-  </data>
-  <data name="ConectorcardinalidadOrigenDecDefaultText" xml:space="preserve">
-    <value>cardinalidadOrigenDec</value>
-    <comment>Text decorator default text</comment>
-  </data>
-  <data name="ConectorcardinalidadFinDecDefaultText" xml:space="preserve">
-    <value>cardinalidadFinDec</value>
-    <comment>Text decorator default text</comment>
-  </data>
   <data name="UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadRelacion.Description" xml:space="preserve">
     <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadRelacion</value>
     <comment>Description for DomainClass &apos;ConectorEntidadRelacion&apos;</comment>
@@ -472,6 +464,34 @@
   <data name="UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadRelacion.DisplayName" xml:space="preserve">
     <value>Conector Entidad Relacion</value>
     <comment>DisplayName for DomainClass &apos;ConectorEntidadRelacion&apos;</comment>
+  </data>
+  <data name="ConectorEntidadRelacioncardinalidadDecDefaultText" xml:space="preserve">
+    <value>cardinalidadDec</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadAtributoKey.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadAtributoKey</value>
+    <comment>Description for DomainClass &apos;ConectorEntidadAtributoKey&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadAtributoKey.DisplayName" xml:space="preserve">
+    <value>Conector Entidad Atributo Key</value>
+    <comment>DisplayName for DomainClass &apos;ConectorEntidadAtributoKey&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadRelacion1.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadRelacion1</value>
+    <comment>Description for DomainClass &apos;ConectorEntidadRelacion1&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadRelacion1.DisplayName" xml:space="preserve">
+    <value>Conector Entidad Relacion1</value>
+    <comment>DisplayName for DomainClass &apos;ConectorEntidadRelacion1&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.ConectorRelacionAtributoRelacion.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.ConectorRelacionAtributoRelacion</value>
+    <comment>Description for DomainClass &apos;ConectorRelacionAtributoRelacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.ConectorRelacionAtributoRelacion.DisplayName" xml:space="preserve">
+    <value>Conector Relacion Atributo Relacion</value>
+    <comment>DisplayName for DomainClass &apos;ConectorRelacionAtributoRelacion&apos;</comment>
   </data>
   <data name="FormatList" xml:space="preserve">
     <value>FMRMRCMMGProyectoIPS (*.FMRMRCMMG_DSLProyIPS)|*.FMRMRCMMG_DSLProyIPS</value>
@@ -517,12 +537,12 @@
     <value>Atributo Entidad Conector</value>
     <comment>Toolbox tooltip text</comment>
   </data>
-  <data name="EntidadRelacionConectorToolboxItem" xml:space="preserve">
-    <value>EntidadRelacionConector</value>
+  <data name="EntidadRelacionConector1ToolboxItem" xml:space="preserve">
+    <value>EntidadRelacionConector1</value>
     <comment>Toolbox item name</comment>
   </data>
-  <data name="EntidadRelacionConectorToolboxTooltip" xml:space="preserve">
-    <value>Entidad Relacion Conector</value>
+  <data name="EntidadRelacionConector1ToolboxTooltip" xml:space="preserve">
+    <value>Entidad Relacion Conector1</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="RelacionToolboxItem" xml:space="preserve">
@@ -531,6 +551,38 @@
   </data>
   <data name="RelacionToolboxTooltip" xml:space="preserve">
     <value>Relacion</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="EntidadAtributoKeyConectorToolboxItem" xml:space="preserve">
+    <value>EntidadAtributoKeyConector</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="EntidadAtributoKeyConectorToolboxTooltip" xml:space="preserve">
+    <value>Entidad Atributo Key Conector</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="AtributoKeyToolboxItem" xml:space="preserve">
+    <value>AtributoKey</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="AtributoKeyToolboxTooltip" xml:space="preserve">
+    <value>Atributo Key</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="RelacionAtributoRelacionConectorToolboxItem" xml:space="preserve">
+    <value>RelacionAtributoRelacionConector</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="RelacionAtributoRelacionConectorToolboxTooltip" xml:space="preserve">
+    <value>Relacion Atributo Relacion Conector</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="AtributoRelacionToolboxItem" xml:space="preserve">
+    <value>AtributoRelacion</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="AtributoRelacionToolboxTooltip" xml:space="preserve">
+    <value>Atributo Relacion</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="UnresolvedToolboxItem" xml:space="preserve">
@@ -659,7 +711,7 @@ A DomainClass can be serialized as a moniker only if
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="EntidadToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\ExampleConnectorToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
   <data name="AtributoToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
@@ -670,11 +722,27 @@ A DomainClass can be serialized as a moniker only if
     <value>..\Resources\ExampleConnectorToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
-  <data name="EntidadRelacionConectorToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+  <data name="EntidadRelacionConector1ToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\ExampleConnectorToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
   <data name="RelacionToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="EntidadAtributoKeyConectorToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleConnectorToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="AtributoKeyToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="RelacionAtributoRelacionConectorToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleConnectorToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="AtributoRelacionToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>

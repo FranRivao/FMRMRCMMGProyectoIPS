@@ -48,48 +48,18 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		{
 		}
 		#endregion
-		#region Entidad opposite domain role accessor
+		#region Elementoes opposite domain role accessor
 		
 		/// <summary>
-		/// Gets a list of Entidad.
-		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad.Tapiz
+		/// Gets a list of Elementoes.
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes.Tapiz
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Entidad> Entidad
+		public virtual DslModeling::LinkedElementCollection<Elemento> Elementoes
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Entidad>, Entidad>(global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad.TapizDomainRoleId);
-			}
-		}
-		#endregion
-		#region Atributo opposite domain role accessor
-		
-		/// <summary>
-		/// Gets a list of Atributo.
-		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo.Tapiz
-		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Atributo> Atributo
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Atributo>, Atributo>(global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo.TapizDomainRoleId);
-			}
-		}
-		#endregion
-		#region Relacion opposite domain role accessor
-		
-		/// <summary>
-		/// Gets a list of Relacion.
-		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion.Tapiz
-		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Relacion> Relacion
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Relacion>, Relacion>(global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion.TapizDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Elemento>, Elemento>(global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes.TapizDomainRoleId);
 			}
 		}
 		#endregion
@@ -113,17 +83,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			{
 				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.FMRMRCMMGProyectoIPS.Entidad.DomainClassId)) 
-				{
-					return true;
-				}
-				
-				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.FMRMRCMMGProyectoIPS.Atributo.DomainClassId)) 
-				{
-					return true;
-				}
-				
-				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.FMRMRCMMGProyectoIPS.Relacion.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.FMRMRCMMGProyectoIPS.Elemento.DomainClassId)) 
 				{
 					return true;
 				}
@@ -152,29 +112,11 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			if ( sourceElement == null ) throw new global::System.ArgumentNullException("sourceElement");
 		
 				
-			global::UPM_IPS.FMRMRCMMGProyectoIPS.Entidad sourceEntidad1 = sourceElement as global::UPM_IPS.FMRMRCMMGProyectoIPS.Entidad;
-			if (sourceEntidad1 != null)
+			global::UPM_IPS.FMRMRCMMGProyectoIPS.Elemento sourceElemento1 = sourceElement as global::UPM_IPS.FMRMRCMMGProyectoIPS.Elemento;
+			if (sourceElemento1 != null)
 			{
-				// Create link for path TapizHasEntidad.Entidad
-				this.Entidad.Add(sourceEntidad1);
-
-				return;
-			}
-				
-			global::UPM_IPS.FMRMRCMMGProyectoIPS.Atributo sourceAtributo2 = sourceElement as global::UPM_IPS.FMRMRCMMGProyectoIPS.Atributo;
-			if (sourceAtributo2 != null)
-			{
-				// Create link for path TapizHasAtributo.Atributo
-				this.Atributo.Add(sourceAtributo2);
-
-				return;
-			}
-				
-			global::UPM_IPS.FMRMRCMMGProyectoIPS.Relacion sourceRelacion3 = sourceElement as global::UPM_IPS.FMRMRCMMGProyectoIPS.Relacion;
-			if (sourceRelacion3 != null)
-			{
-				// Create link for path TapizHasRelacion.Relacion
-				this.Relacion.Add(sourceRelacion3);
+				// Create link for path TapizHasElementoes.Elementoes
+				this.Elementoes.Add(sourceElemento1);
 
 				return;
 			}
@@ -201,43 +143,15 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		{
 			if (sourceElement == null) throw new global::System.ArgumentNullException("sourceElement");
 				
-			global::UPM_IPS.FMRMRCMMGProyectoIPS.Entidad sourceEntidad1 = sourceElement as global::UPM_IPS.FMRMRCMMGProyectoIPS.Entidad;
-			if (sourceEntidad1 != null)
+			global::UPM_IPS.FMRMRCMMGProyectoIPS.Elemento sourceElemento1 = sourceElement as global::UPM_IPS.FMRMRCMMGProyectoIPS.Elemento;
+			if (sourceElemento1 != null)
 			{
-				// Delete link for path TapizHasEntidad.Entidad
+				// Delete link for path TapizHasElementoes.Elementoes
 				
-				foreach (DslModeling::ElementLink link in global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad.GetLinks((global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz)this, sourceEntidad1))
+				foreach (DslModeling::ElementLink link in global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes.GetLinks((global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz)this, sourceElemento1))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad.TapizDomainRoleId, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad.EntidadDomainRoleId);
-				}
-
-				return;
-			}
-				
-			global::UPM_IPS.FMRMRCMMGProyectoIPS.Atributo sourceAtributo2 = sourceElement as global::UPM_IPS.FMRMRCMMGProyectoIPS.Atributo;
-			if (sourceAtributo2 != null)
-			{
-				// Delete link for path TapizHasAtributo.Atributo
-				
-				foreach (DslModeling::ElementLink link in global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo.GetLinks((global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz)this, sourceAtributo2))
-				{
-					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo.TapizDomainRoleId, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo.AtributoDomainRoleId);
-				}
-
-				return;
-			}
-				
-			global::UPM_IPS.FMRMRCMMGProyectoIPS.Relacion sourceRelacion3 = sourceElement as global::UPM_IPS.FMRMRCMMGProyectoIPS.Relacion;
-			if (sourceRelacion3 != null)
-			{
-				// Delete link for path TapizHasRelacion.Relacion
-				
-				foreach (DslModeling::ElementLink link in global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion.GetLinks((global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz)this, sourceRelacion3))
-				{
-					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion.TapizDomainRoleId, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion.RelacionDomainRoleId);
+					link.Delete(global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes.TapizDomainRoleId, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes.ElementoDomainRoleId);
 				}
 
 				return;
@@ -259,7 +173,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("f14a95f1-18d8-4ddc-a899-463623caca02")]
-	public partial class Entidad : DslModeling::ModelElement
+	public partial class Entidad : Elemento
 	{
 		#region Constructors, domain class Id
 	
@@ -287,112 +201,6 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		{
 		}
 		#endregion
-		#region nombre domain property code
-		
-		/// <summary>
-		/// nombre domain property Id.
-		/// </summary>
-		public static readonly global::System.Guid nombreDomainPropertyId = new global::System.Guid(0x9590b44a, 0x0dc3, 0x4252, 0xb5, 0xb7, 0x7a, 0xc4, 0x6f, 0x1b, 0x2f, 0xa8);
-		
-		/// <summary>
-		/// Storage for nombre
-		/// </summary>
-		private global::System.String nombrePropertyStorage = string.Empty;
-		
-		/// <summary>
-		/// Gets or sets the value of nombre domain property.
-		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.Entidad.Nombre
-		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.Entidad/nombre.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.Entidad/nombre.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainObjectId("9590b44a-0dc3-4252-b5b7-7ac46f1b2fa8")]
-		public global::System.String nombre
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return nombrePropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				nombrePropertyHandler.Instance.SetValue(this, value);
-			}
-		}
-		/// <summary>
-		/// Value handler for the Entidad.nombre domain property.
-		/// </summary>
-		internal sealed partial class nombrePropertyHandler : DslModeling::DomainPropertyValueHandler<Entidad, global::System.String>
-		{
-			private nombrePropertyHandler() { }
-		
-			/// <summary>
-			/// Gets the singleton instance of the Entidad.nombre domain property value handler.
-			/// </summary>
-			public static readonly nombrePropertyHandler Instance = new nombrePropertyHandler();
-		
-			/// <summary>
-			/// Gets the Id of the Entidad.nombre domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return nombreDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(Entidad element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.nombrePropertyStorage;
-			}
-		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Entidad element, global::System.String newValue)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-		
-				global::System.String oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					ValueChanging(element, oldValue, newValue);
-					element.nombrePropertyStorage = newValue;
-					ValueChanged(element, oldValue, newValue);
-				}
-			}
-		}
-		
-		#endregion
-		#region Tapiz opposite domain role accessor
-		/// <summary>
-		/// Gets or sets Tapiz.
-		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad.Entidad
-		/// </summary>
-		public virtual Tapiz Tapiz
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad.EntidadDomainRoleId) as Tapiz;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad.EntidadDomainRoleId, value);
-			}
-		}
-		#endregion
 		#region Atributo opposite domain role accessor
 		
 		/// <summary>
@@ -409,21 +217,37 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		}
 		#endregion
 		#region Relacion opposite domain role accessor
+		
 		/// <summary>
-		/// Gets or sets Relacion.
-		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion.Entidad
+		/// Gets a list of Relacion.
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1.Entidad
 		/// </summary>
-		public virtual Relacion Relacion
+		public virtual DslModeling::LinkedElementCollection<Relacion> Relacion
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion.EntidadDomainRoleId) as Relacion;
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Relacion>, Relacion>(global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1.EntidadDomainRoleId);
+			}
+		}
+		#endregion
+		#region AtributoKey opposite domain role accessor
+		/// <summary>
+		/// Gets or sets AtributoKey.
+		/// Description for
+		/// UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey.Entidad
+		/// </summary>
+		public virtual AtributoKey AtributoKey
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey.EntidadDomainRoleId) as AtributoKey;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion.EntidadDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey.EntidadDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -440,7 +264,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("995157d2-720f-4224-9529-acb6d4eac32e")]
-	public partial class Atributo : DslModeling::ModelElement
+	public partial class Atributo : Elemento
 	{
 		#region Constructors, domain class Id
 	
@@ -466,112 +290,6 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		public Atributo(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
-		}
-		#endregion
-		#region nombre domain property code
-		
-		/// <summary>
-		/// nombre domain property Id.
-		/// </summary>
-		public static readonly global::System.Guid nombreDomainPropertyId = new global::System.Guid(0x569fb682, 0x90bb, 0x4a1a, 0xa8, 0x5a, 0xda, 0xef, 0xfc, 0xfe, 0xab, 0xe0);
-		
-		/// <summary>
-		/// Storage for nombre
-		/// </summary>
-		private global::System.String nombrePropertyStorage = string.Empty;
-		
-		/// <summary>
-		/// Gets or sets the value of nombre domain property.
-		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.Atributo.Nombre
-		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.Atributo/nombre.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.Atributo/nombre.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainObjectId("569fb682-90bb-4a1a-a85a-daeffcfeabe0")]
-		public global::System.String nombre
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return nombrePropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				nombrePropertyHandler.Instance.SetValue(this, value);
-			}
-		}
-		/// <summary>
-		/// Value handler for the Atributo.nombre domain property.
-		/// </summary>
-		internal sealed partial class nombrePropertyHandler : DslModeling::DomainPropertyValueHandler<Atributo, global::System.String>
-		{
-			private nombrePropertyHandler() { }
-		
-			/// <summary>
-			/// Gets the singleton instance of the Atributo.nombre domain property value handler.
-			/// </summary>
-			public static readonly nombrePropertyHandler Instance = new nombrePropertyHandler();
-		
-			/// <summary>
-			/// Gets the Id of the Atributo.nombre domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return nombreDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(Atributo element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.nombrePropertyStorage;
-			}
-		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Atributo element, global::System.String newValue)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-		
-				global::System.String oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					ValueChanging(element, oldValue, newValue);
-					element.nombrePropertyStorage = newValue;
-					ValueChanged(element, oldValue, newValue);
-				}
-			}
-		}
-		
-		#endregion
-		#region Tapiz opposite domain role accessor
-		/// <summary>
-		/// Gets or sets Tapiz.
-		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo.Atributo
-		/// </summary>
-		public virtual Tapiz Tapiz
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo.AtributoDomainRoleId) as Tapiz;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo.AtributoDomainRoleId, value);
-			}
 		}
 		#endregion
 		#region Entidad opposite domain role accessor
@@ -606,7 +324,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("f199dab1-e960-43df-a3b8-ad53816ee47a")]
-	public partial class Relacion : DslModeling::ModelElement
+	public partial class Relacion : Elemento
 	{
 		#region Constructors, domain class Id
 	
@@ -634,12 +352,78 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		{
 		}
 		#endregion
+		#region Entidad opposite domain role accessor
+		/// <summary>
+		/// Gets or sets Entidad.
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1.Relacion
+		/// </summary>
+		public virtual Entidad Entidad
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1.RelacionDomainRoleId) as Entidad;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1.RelacionDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region AtributoRelacion opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of AtributoRelacion.
+		/// Description for
+		/// UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion.Relacion
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<AtributoRelacion> AtributoRelacion
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<AtributoRelacion>, AtributoRelacion>(global::UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion.RelacionDomainRoleId);
+			}
+		}
+		#endregion
+	}
+}
+namespace UPM_IPS.FMRMRCMMGProyectoIPS
+{
+	/// <summary>
+	/// DomainClass Elemento
+	/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.Elemento
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.Elemento.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.Elemento.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("1b205573-ffcc-488e-b12e-a842290c05ef")]
+	public abstract partial class Elemento : DslModeling::ModelElement
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// Elemento domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x1b205573, 0xffcc, 0x488e, 0xb1, 0x2e, 0xa8, 0x42, 0x29, 0x0c, 0x05, 0xef);
+		/// <summary>
+		/// Constructor.
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		protected Elemento(DslModeling::Partition partition, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
 		#region nombre domain property code
 		
 		/// <summary>
 		/// nombre domain property Id.
 		/// </summary>
-		public static readonly global::System.Guid nombreDomainPropertyId = new global::System.Guid(0xed1ae1f2, 0x570f, 0x495a, 0xa6, 0x50, 0x64, 0x07, 0x28, 0x5e, 0xb1, 0x05);
+		public static readonly global::System.Guid nombreDomainPropertyId = new global::System.Guid(0x356ffcd9, 0xd00b, 0x496e, 0xa3, 0xcb, 0x00, 0xfb, 0x5b, 0xa0, 0x44, 0xe7);
 		
 		/// <summary>
 		/// Storage for nombre
@@ -648,11 +432,11 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		
 		/// <summary>
 		/// Gets or sets the value of nombre domain property.
-		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.Relacion.Nombre
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.Elemento.Nombre
 		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.Relacion/nombre.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.Relacion/nombre.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainObjectId("ed1ae1f2-570f-495a-a650-6407285eb105")]
+		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.Elemento/nombre.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.Elemento/nombre.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("356ffcd9-d00b-496e-a3cb-00fb5ba044e7")]
 		public global::System.String nombre
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
@@ -667,19 +451,19 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			}
 		}
 		/// <summary>
-		/// Value handler for the Relacion.nombre domain property.
+		/// Value handler for the Elemento.nombre domain property.
 		/// </summary>
-		internal sealed partial class nombrePropertyHandler : DslModeling::DomainPropertyValueHandler<Relacion, global::System.String>
+		internal sealed partial class nombrePropertyHandler : DslModeling::DomainPropertyValueHandler<Elemento, global::System.String>
 		{
 			private nombrePropertyHandler() { }
 		
 			/// <summary>
-			/// Gets the singleton instance of the Relacion.nombre domain property value handler.
+			/// Gets the singleton instance of the Elemento.nombre domain property value handler.
 			/// </summary>
 			public static readonly nombrePropertyHandler Instance = new nombrePropertyHandler();
 		
 			/// <summary>
-			/// Gets the Id of the Relacion.nombre domain property.
+			/// Gets the Id of the Elemento.nombre domain property.
 			/// </summary>
 			public sealed override global::System.Guid DomainPropertyId
 			{
@@ -695,7 +479,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(Relacion element)
+			public override sealed global::System.String GetValue(Elemento element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.nombrePropertyStorage;
@@ -706,7 +490,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Relacion element, global::System.String newValue)
+			public override sealed void SetValue(Elemento element, global::System.String newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
@@ -724,34 +508,141 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		#region Tapiz opposite domain role accessor
 		/// <summary>
 		/// Gets or sets Tapiz.
-		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion.Relacion
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes.Elemento
 		/// </summary>
 		public virtual Tapiz Tapiz
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion.RelacionDomainRoleId) as Tapiz;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes.ElementoDomainRoleId) as Tapiz;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion.RelacionDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes.ElementoDomainRoleId, value);
 			}
 		}
 		#endregion
-		#region Entidad opposite domain role accessor
+	}
+}
+namespace UPM_IPS.FMRMRCMMGProyectoIPS
+{
+	/// <summary>
+	/// DomainClass AtributoKey
+	/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.AtributoKey
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.AtributoKey.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.AtributoKey.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("8c1c5383-bfce-43be-bb1a-90df94270206")]
+	public partial class AtributoKey : Elemento
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// AtributoKey domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x8c1c5383, 0xbfce, 0x43be, 0xbb, 0x1a, 0x90, 0xdf, 0x94, 0x27, 0x02, 0x06);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public AtributoKey(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
 		
 		/// <summary>
-		/// Gets a list of Entidad.
-		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion.Relacion
+		/// Constructor
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Entidad> Entidad
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public AtributoKey(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Entidad opposite domain role accessor
+		/// <summary>
+		/// Gets or sets Entidad.
+		/// Description for
+		/// UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey.AtributoKey
+		/// </summary>
+		public virtual Entidad Entidad
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Entidad>, Entidad>(global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion.RelacionDomainRoleId);
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey.AtributoKeyDomainRoleId) as Entidad;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey.AtributoKeyDomainRoleId, value);
+			}
+		}
+		#endregion
+	}
+}
+namespace UPM_IPS.FMRMRCMMGProyectoIPS
+{
+	/// <summary>
+	/// DomainClass AtributoRelacion
+	/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.AtributoRelacion
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.AtributoRelacion.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.AtributoRelacion.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("6cc99eea-e373-4329-badc-f1be1a369ee4")]
+	public partial class AtributoRelacion : Elemento
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// AtributoRelacion domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x6cc99eea, 0xe373, 0x4329, 0xba, 0xdc, 0xf1, 0xbe, 0x1a, 0x36, 0x9e, 0xe4);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public AtributoRelacion(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public AtributoRelacion(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Relacion opposite domain role accessor
+		/// <summary>
+		/// Gets or sets Relacion.
+		/// Description for
+		/// UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion.AtributoRelacion
+		/// </summary>
+		public virtual Relacion Relacion
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion.AtributoRelacionDomainRoleId) as Relacion;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion.AtributoRelacionDomainRoleId, value);
 			}
 		}
 		#endregion

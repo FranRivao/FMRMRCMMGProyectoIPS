@@ -12,723 +12,6 @@ using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
 namespace UPM_IPS.FMRMRCMMGProyectoIPS
 {
 	/// <summary>
-	/// DomainRelationship TapizHasEntidad
-	/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad
-	/// </summary>
-	[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel))]
-	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainRelationship(IsEmbedding=true)]
-	[DslModeling::DomainObjectId("5e41c215-c6c7-4e55-bfd4-1bda1ff839af")]
-	public partial class TapizHasEntidad : DslModeling::ElementLink
-	{
-		#region Constructors, domain class Id
-		
-		/// <summary>
-		/// TapizHasEntidad domain class Id.
-		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x5e41c215, 0xc6c7, 0x4e55, 0xbf, 0xd4, 0x1b, 0xda, 0x1f, 0xf8, 0x39, 0xaf);
-	
-				
-		/// <summary>
-		/// Constructor
-		/// Creates a TapizHasEntidad link in the same Partition as the given Tapiz
-		/// </summary>
-		/// <param name="source">Tapiz to use as the source of the relationship.</param>
-		/// <param name="target">Entidad to use as the target of the relationship.</param>
-		public TapizHasEntidad(Tapiz source, Entidad target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(TapizHasEntidad.TapizDomainRoleId, source), new DslModeling::RoleAssignment(TapizHasEntidad.EntidadDomainRoleId, target)}, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public TapizHasEntidad(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public TapizHasEntidad(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public TapizHasEntidad(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(partition, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public TapizHasEntidad(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(partition, roleAssignments, propertyAssignments)
-		{
-		}
-		#endregion
-		#region Tapiz domain role code
-		
-		/// <summary>
-		/// Tapiz domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid TapizDomainRoleId = new global::System.Guid(0xa0f6320e, 0x4f4a, 0x4b43, 0xa6, 0xc6, 0x46, 0x88, 0xa8, 0xde, 0xc4, 0xb2);
-		
-		/// <summary>
-		/// DomainRole Tapiz
-		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad.Tapiz
-		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad/Tapiz.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad/Tapiz.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Entidad", PropertyDisplayNameKey="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad/Tapiz.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
-		[DslModeling::DomainObjectId("a0f6320e-4f4a-4b43-a6c6-4688a8dec4b2")]
-		public virtual Tapiz Tapiz
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (Tapiz)DslModeling::DomainRoleInfo.GetRolePlayer(this, TapizDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, TapizDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access Tapiz of a Entidad
-		/// <summary>
-		/// Gets Tapiz.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static Tapiz GetTapiz(Entidad element)
-		{
-			return DslModeling::DomainRoleInfo.GetLinkedElement(element, EntidadDomainRoleId) as Tapiz;
-		}
-		
-		/// <summary>
-		/// Sets Tapiz.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetTapiz(Entidad element, Tapiz newTapiz)
-		{
-			DslModeling::DomainRoleInfo.SetLinkedElement(element, EntidadDomainRoleId, newTapiz);
-		}
-		#endregion
-		#region Entidad domain role code
-		
-		/// <summary>
-		/// Entidad domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid EntidadDomainRoleId = new global::System.Guid(0xf011a26d, 0x000c, 0x4b05, 0xbe, 0x83, 0x5b, 0x79, 0xc0, 0xd6, 0x29, 0xcf);
-		
-		/// <summary>
-		/// DomainRole Entidad
-		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad.Entidad
-		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad/Entidad.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad/Entidad.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Tapiz", PropertyDisplayNameKey="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad/Entidad.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
-		[DslModeling::DomainObjectId("f011a26d-000c-4b05-be83-5b79c0d629cf")]
-		public virtual Entidad Entidad
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (Entidad)DslModeling::DomainRoleInfo.GetRolePlayer(this, EntidadDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, EntidadDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access Entidad of a Tapiz
-		/// <summary>
-		/// Gets a list of Entidad.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<Entidad> GetEntidad(Tapiz element)
-		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<Entidad>, Entidad>(element, TapizDomainRoleId);
-		}
-		#endregion
-		#region Tapiz link accessor
-		/// <summary>
-		/// Get the list of TapizHasEntidad links to a Tapiz.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad> GetLinksToEntidad ( global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz tapizInstance )
-		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad>(tapizInstance, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad.TapizDomainRoleId);
-		}
-		#endregion
-		#region Entidad link accessor
-		/// <summary>
-		/// Get the TapizHasEntidad link to a Entidad.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad GetLinkToTapiz (global::UPM_IPS.FMRMRCMMGProyectoIPS.Entidad entidadInstance)
-		{
-			global::System.Collections.Generic.IList<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad>(entidadInstance, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad.EntidadDomainRoleId);
-			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Entidad not obeyed.");
-			if ( links.Count == 0 )
-			{
-				return null;
-			}
-			else
-			{
-				return links[0];
-			}
-		}
-		#endregion
-		#region TapizHasEntidad instance accessors
-		
-		/// <summary>
-		/// Get any TapizHasEntidad links between a given Tapiz and a Entidad.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad> GetLinks( global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz source, global::UPM_IPS.FMRMRCMMGProyectoIPS.Entidad target )
-		{
-			global::System.Collections.Generic.List<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad>();
-			global::System.Collections.Generic.IList<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad>(source, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad.TapizDomainRoleId);
-			foreach ( global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad link in links )
-			{
-				if ( target.Equals(link.Entidad) )
-				{
-					outLinks.Add(link);
-				}
-			}
-			return outLinks.AsReadOnly();
-		}
-		/// <summary>
-		/// Get the one TapizHasEntidad link between a given Tapizand a Entidad.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad GetLink( global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz source, global::UPM_IPS.FMRMRCMMGProyectoIPS.Entidad target )
-		{
-			global::System.Collections.Generic.IList<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad>(source, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad.TapizDomainRoleId);
-			foreach ( global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasEntidad link in links )
-			{
-				if ( target.Equals(link.Entidad) )
-				{
-					return link;
-				}
-			}
-			return null;
-		}
-		
-		#endregion
-	}
-}
-namespace UPM_IPS.FMRMRCMMGProyectoIPS
-{
-	/// <summary>
-	/// DomainRelationship TapizHasAtributo
-	/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo
-	/// </summary>
-	[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel))]
-	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainRelationship(IsEmbedding=true)]
-	[DslModeling::DomainObjectId("18f8c16e-768b-4375-8153-1f3d446f70a6")]
-	public partial class TapizHasAtributo : DslModeling::ElementLink
-	{
-		#region Constructors, domain class Id
-		
-		/// <summary>
-		/// TapizHasAtributo domain class Id.
-		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x18f8c16e, 0x768b, 0x4375, 0x81, 0x53, 0x1f, 0x3d, 0x44, 0x6f, 0x70, 0xa6);
-	
-				
-		/// <summary>
-		/// Constructor
-		/// Creates a TapizHasAtributo link in the same Partition as the given Tapiz
-		/// </summary>
-		/// <param name="source">Tapiz to use as the source of the relationship.</param>
-		/// <param name="target">Atributo to use as the target of the relationship.</param>
-		public TapizHasAtributo(Tapiz source, Atributo target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(TapizHasAtributo.TapizDomainRoleId, source), new DslModeling::RoleAssignment(TapizHasAtributo.AtributoDomainRoleId, target)}, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public TapizHasAtributo(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public TapizHasAtributo(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public TapizHasAtributo(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(partition, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public TapizHasAtributo(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(partition, roleAssignments, propertyAssignments)
-		{
-		}
-		#endregion
-		#region Tapiz domain role code
-		
-		/// <summary>
-		/// Tapiz domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid TapizDomainRoleId = new global::System.Guid(0x59e21b10, 0xb584, 0x46cd, 0xa6, 0xba, 0x3e, 0x64, 0x97, 0xa7, 0x93, 0x24);
-		
-		/// <summary>
-		/// DomainRole Tapiz
-		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo.Tapiz
-		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo/Tapiz.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo/Tapiz.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Atributo", PropertyDisplayNameKey="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo/Tapiz.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
-		[DslModeling::DomainObjectId("59e21b10-b584-46cd-a6ba-3e6497a79324")]
-		public virtual Tapiz Tapiz
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (Tapiz)DslModeling::DomainRoleInfo.GetRolePlayer(this, TapizDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, TapizDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access Tapiz of a Atributo
-		/// <summary>
-		/// Gets Tapiz.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static Tapiz GetTapiz(Atributo element)
-		{
-			return DslModeling::DomainRoleInfo.GetLinkedElement(element, AtributoDomainRoleId) as Tapiz;
-		}
-		
-		/// <summary>
-		/// Sets Tapiz.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetTapiz(Atributo element, Tapiz newTapiz)
-		{
-			DslModeling::DomainRoleInfo.SetLinkedElement(element, AtributoDomainRoleId, newTapiz);
-		}
-		#endregion
-		#region Atributo domain role code
-		
-		/// <summary>
-		/// Atributo domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid AtributoDomainRoleId = new global::System.Guid(0xffc48bc8, 0xba3d, 0x4c99, 0x9e, 0x24, 0xf8, 0x5b, 0x55, 0x89, 0x96, 0xaf);
-		
-		/// <summary>
-		/// DomainRole Atributo
-		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo.Atributo
-		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo/Atributo.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo/Atributo.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Tapiz", PropertyDisplayNameKey="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo/Atributo.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
-		[DslModeling::DomainObjectId("ffc48bc8-ba3d-4c99-9e24-f85b558996af")]
-		public virtual Atributo Atributo
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (Atributo)DslModeling::DomainRoleInfo.GetRolePlayer(this, AtributoDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, AtributoDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access Atributo of a Tapiz
-		/// <summary>
-		/// Gets a list of Atributo.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<Atributo> GetAtributo(Tapiz element)
-		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<Atributo>, Atributo>(element, TapizDomainRoleId);
-		}
-		#endregion
-		#region Tapiz link accessor
-		/// <summary>
-		/// Get the list of TapizHasAtributo links to a Tapiz.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo> GetLinksToAtributo ( global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz tapizInstance )
-		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo>(tapizInstance, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo.TapizDomainRoleId);
-		}
-		#endregion
-		#region Atributo link accessor
-		/// <summary>
-		/// Get the TapizHasAtributo link to a Atributo.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo GetLinkToTapiz (global::UPM_IPS.FMRMRCMMGProyectoIPS.Atributo atributoInstance)
-		{
-			global::System.Collections.Generic.IList<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo>(atributoInstance, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo.AtributoDomainRoleId);
-			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Atributo not obeyed.");
-			if ( links.Count == 0 )
-			{
-				return null;
-			}
-			else
-			{
-				return links[0];
-			}
-		}
-		#endregion
-		#region TapizHasAtributo instance accessors
-		
-		/// <summary>
-		/// Get any TapizHasAtributo links between a given Tapiz and a Atributo.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo> GetLinks( global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz source, global::UPM_IPS.FMRMRCMMGProyectoIPS.Atributo target )
-		{
-			global::System.Collections.Generic.List<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo>();
-			global::System.Collections.Generic.IList<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo>(source, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo.TapizDomainRoleId);
-			foreach ( global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo link in links )
-			{
-				if ( target.Equals(link.Atributo) )
-				{
-					outLinks.Add(link);
-				}
-			}
-			return outLinks.AsReadOnly();
-		}
-		/// <summary>
-		/// Get the one TapizHasAtributo link between a given Tapizand a Atributo.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo GetLink( global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz source, global::UPM_IPS.FMRMRCMMGProyectoIPS.Atributo target )
-		{
-			global::System.Collections.Generic.IList<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo>(source, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo.TapizDomainRoleId);
-			foreach ( global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasAtributo link in links )
-			{
-				if ( target.Equals(link.Atributo) )
-				{
-					return link;
-				}
-			}
-			return null;
-		}
-		
-		#endregion
-	}
-}
-namespace UPM_IPS.FMRMRCMMGProyectoIPS
-{
-	/// <summary>
-	/// DomainRelationship TapizHasRelacion
-	/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion
-	/// </summary>
-	[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel))]
-	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainRelationship(IsEmbedding=true)]
-	[DslModeling::DomainObjectId("01c4fbee-7ffb-4940-97d0-482a3a601e38")]
-	public partial class TapizHasRelacion : DslModeling::ElementLink
-	{
-		#region Constructors, domain class Id
-		
-		/// <summary>
-		/// TapizHasRelacion domain class Id.
-		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x01c4fbee, 0x7ffb, 0x4940, 0x97, 0xd0, 0x48, 0x2a, 0x3a, 0x60, 0x1e, 0x38);
-	
-				
-		/// <summary>
-		/// Constructor
-		/// Creates a TapizHasRelacion link in the same Partition as the given Tapiz
-		/// </summary>
-		/// <param name="source">Tapiz to use as the source of the relationship.</param>
-		/// <param name="target">Relacion to use as the target of the relationship.</param>
-		public TapizHasRelacion(Tapiz source, Relacion target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(TapizHasRelacion.TapizDomainRoleId, source), new DslModeling::RoleAssignment(TapizHasRelacion.RelacionDomainRoleId, target)}, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public TapizHasRelacion(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public TapizHasRelacion(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public TapizHasRelacion(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(partition, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public TapizHasRelacion(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(partition, roleAssignments, propertyAssignments)
-		{
-		}
-		#endregion
-		#region Tapiz domain role code
-		
-		/// <summary>
-		/// Tapiz domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid TapizDomainRoleId = new global::System.Guid(0xc1bf1103, 0x84a2, 0x479f, 0x9a, 0x24, 0xa1, 0xfc, 0xa0, 0xe3, 0x93, 0x30);
-		
-		/// <summary>
-		/// DomainRole Tapiz
-		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion.Tapiz
-		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion/Tapiz.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion/Tapiz.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Relacion", PropertyDisplayNameKey="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion/Tapiz.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
-		[DslModeling::DomainObjectId("c1bf1103-84a2-479f-9a24-a1fca0e39330")]
-		public virtual Tapiz Tapiz
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (Tapiz)DslModeling::DomainRoleInfo.GetRolePlayer(this, TapizDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, TapizDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access Tapiz of a Relacion
-		/// <summary>
-		/// Gets Tapiz.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static Tapiz GetTapiz(Relacion element)
-		{
-			return DslModeling::DomainRoleInfo.GetLinkedElement(element, RelacionDomainRoleId) as Tapiz;
-		}
-		
-		/// <summary>
-		/// Sets Tapiz.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetTapiz(Relacion element, Tapiz newTapiz)
-		{
-			DslModeling::DomainRoleInfo.SetLinkedElement(element, RelacionDomainRoleId, newTapiz);
-		}
-		#endregion
-		#region Relacion domain role code
-		
-		/// <summary>
-		/// Relacion domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid RelacionDomainRoleId = new global::System.Guid(0xd9919e3d, 0x444e, 0x4cce, 0xad, 0x52, 0x5f, 0x42, 0x51, 0xe2, 0xde, 0x0f);
-		
-		/// <summary>
-		/// DomainRole Relacion
-		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion.Relacion
-		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion/Relacion.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion/Relacion.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Tapiz", PropertyDisplayNameKey="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion/Relacion.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
-		[DslModeling::DomainObjectId("d9919e3d-444e-4cce-ad52-5f4251e2de0f")]
-		public virtual Relacion Relacion
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (Relacion)DslModeling::DomainRoleInfo.GetRolePlayer(this, RelacionDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, RelacionDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access Relacion of a Tapiz
-		/// <summary>
-		/// Gets a list of Relacion.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<Relacion> GetRelacion(Tapiz element)
-		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<Relacion>, Relacion>(element, TapizDomainRoleId);
-		}
-		#endregion
-		#region Tapiz link accessor
-		/// <summary>
-		/// Get the list of TapizHasRelacion links to a Tapiz.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion> GetLinksToRelacion ( global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz tapizInstance )
-		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion>(tapizInstance, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion.TapizDomainRoleId);
-		}
-		#endregion
-		#region Relacion link accessor
-		/// <summary>
-		/// Get the TapizHasRelacion link to a Relacion.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion GetLinkToTapiz (global::UPM_IPS.FMRMRCMMGProyectoIPS.Relacion relacionInstance)
-		{
-			global::System.Collections.Generic.IList<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion>(relacionInstance, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion.RelacionDomainRoleId);
-			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Relacion not obeyed.");
-			if ( links.Count == 0 )
-			{
-				return null;
-			}
-			else
-			{
-				return links[0];
-			}
-		}
-		#endregion
-		#region TapizHasRelacion instance accessors
-		
-		/// <summary>
-		/// Get any TapizHasRelacion links between a given Tapiz and a Relacion.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion> GetLinks( global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz source, global::UPM_IPS.FMRMRCMMGProyectoIPS.Relacion target )
-		{
-			global::System.Collections.Generic.List<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion>();
-			global::System.Collections.Generic.IList<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion>(source, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion.TapizDomainRoleId);
-			foreach ( global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion link in links )
-			{
-				if ( target.Equals(link.Relacion) )
-				{
-					outLinks.Add(link);
-				}
-			}
-			return outLinks.AsReadOnly();
-		}
-		/// <summary>
-		/// Get the one TapizHasRelacion link between a given Tapizand a Relacion.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion GetLink( global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz source, global::UPM_IPS.FMRMRCMMGProyectoIPS.Relacion target )
-		{
-			global::System.Collections.Generic.IList<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion>(source, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion.TapizDomainRoleId);
-			foreach ( global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasRelacion link in links )
-			{
-				if ( target.Equals(link.Relacion) )
-				{
-					return link;
-				}
-			}
-			return null;
-		}
-		
-		#endregion
-	}
-}
-namespace UPM_IPS.FMRMRCMMGProyectoIPS
-{
-	/// <summary>
 	/// DomainRelationship EntidadReferencesAtributo
 	/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributo
 	/// </summary>
@@ -893,182 +176,6 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			return GetRoleCollection<DslModeling::LinkedElementCollection<Atributo>, Atributo>(element, EntidadDomainRoleId);
 		}
 		#endregion
-		#region cardinalidadOrigen domain property code
-		
-		/// <summary>
-		/// cardinalidadOrigen domain property Id.
-		/// </summary>
-		public static readonly global::System.Guid cardinalidadOrigenDomainPropertyId = new global::System.Guid(0x334b4c9a, 0x3079, 0x405f, 0xae, 0xc6, 0x16, 0x46, 0xbd, 0x90, 0xa7, 0xf5);
-		
-		/// <summary>
-		/// Storage for cardinalidadOrigen
-		/// </summary>
-		private Cardinalidad cardinalidadOrigenPropertyStorage;
-		
-		/// <summary>
-		/// Gets or sets the value of cardinalidadOrigen domain property.
-		/// Description for
-		/// UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributo.Cardinalidad Origen
-		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributo/cardinalidadOrigen.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributo/cardinalidadOrigen.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainObjectId("334b4c9a-3079-405f-aec6-1646bd90a7f5")]
-		public Cardinalidad cardinalidadOrigen
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return cardinalidadOrigenPropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				cardinalidadOrigenPropertyHandler.Instance.SetValue(this, value);
-			}
-		}
-		/// <summary>
-		/// Value handler for the EntidadReferencesAtributo.cardinalidadOrigen domain property.
-		/// </summary>
-		internal sealed partial class cardinalidadOrigenPropertyHandler : DslModeling::DomainPropertyValueHandler<EntidadReferencesAtributo, Cardinalidad>
-		{
-			private cardinalidadOrigenPropertyHandler() { }
-		
-			/// <summary>
-			/// Gets the singleton instance of the EntidadReferencesAtributo.cardinalidadOrigen domain property value handler.
-			/// </summary>
-			public static readonly cardinalidadOrigenPropertyHandler Instance = new cardinalidadOrigenPropertyHandler();
-		
-			/// <summary>
-			/// Gets the Id of the EntidadReferencesAtributo.cardinalidadOrigen domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return cardinalidadOrigenDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed Cardinalidad GetValue(EntidadReferencesAtributo element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.cardinalidadOrigenPropertyStorage;
-			}
-		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(EntidadReferencesAtributo element, Cardinalidad newValue)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-		
-				Cardinalidad oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					ValueChanging(element, oldValue, newValue);
-					element.cardinalidadOrigenPropertyStorage = newValue;
-					ValueChanged(element, oldValue, newValue);
-				}
-			}
-		}
-		
-		#endregion
-		#region cardinalidadFin domain property code
-		
-		/// <summary>
-		/// cardinalidadFin domain property Id.
-		/// </summary>
-		public static readonly global::System.Guid cardinalidadFinDomainPropertyId = new global::System.Guid(0x87b5ae37, 0x1a19, 0x4772, 0xa8, 0x7e, 0x75, 0x88, 0x4f, 0x85, 0x48, 0xfb);
-		
-		/// <summary>
-		/// Storage for cardinalidadFin
-		/// </summary>
-		private Cardinalidad cardinalidadFinPropertyStorage;
-		
-		/// <summary>
-		/// Gets or sets the value of cardinalidadFin domain property.
-		/// Description for
-		/// UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributo.Cardinalidad Fin
-		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributo/cardinalidadFin.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributo/cardinalidadFin.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainObjectId("87b5ae37-1a19-4772-a87e-75884f8548fb")]
-		public Cardinalidad cardinalidadFin
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return cardinalidadFinPropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				cardinalidadFinPropertyHandler.Instance.SetValue(this, value);
-			}
-		}
-		/// <summary>
-		/// Value handler for the EntidadReferencesAtributo.cardinalidadFin domain property.
-		/// </summary>
-		internal sealed partial class cardinalidadFinPropertyHandler : DslModeling::DomainPropertyValueHandler<EntidadReferencesAtributo, Cardinalidad>
-		{
-			private cardinalidadFinPropertyHandler() { }
-		
-			/// <summary>
-			/// Gets the singleton instance of the EntidadReferencesAtributo.cardinalidadFin domain property value handler.
-			/// </summary>
-			public static readonly cardinalidadFinPropertyHandler Instance = new cardinalidadFinPropertyHandler();
-		
-			/// <summary>
-			/// Gets the Id of the EntidadReferencesAtributo.cardinalidadFin domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return cardinalidadFinDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed Cardinalidad GetValue(EntidadReferencesAtributo element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.cardinalidadFinPropertyStorage;
-			}
-		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(EntidadReferencesAtributo element, Cardinalidad newValue)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-		
-				Cardinalidad oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					ValueChanging(element, oldValue, newValue);
-					element.cardinalidadFinPropertyStorage = newValue;
-					ValueChanged(element, oldValue, newValue);
-				}
-			}
-		}
-		
-		#endregion
 		#region Entidad link accessor
 		/// <summary>
 		/// Get the list of EntidadReferencesAtributo links to a Entidad.
@@ -1144,33 +251,33 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 namespace UPM_IPS.FMRMRCMMGProyectoIPS
 {
 	/// <summary>
-	/// DomainRelationship EntidadReferencesRelacion
-	/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion
+	/// DomainRelationship EntidadReferencesRelacion1
+	/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1
 	/// </summary>
-	[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship()]
 	[DslModeling::DomainObjectId("1c746e4a-f643-4439-ac6d-749791b5910c")]
-	public partial class EntidadReferencesRelacion : DslModeling::ElementLink
+	public partial class EntidadReferencesRelacion1 : DslModeling::ElementLink
 	{
 		#region Constructors, domain class Id
 		
 		/// <summary>
-		/// EntidadReferencesRelacion domain class Id.
+		/// EntidadReferencesRelacion1 domain class Id.
 		/// </summary>
 		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x1c746e4a, 0xf643, 0x4439, 0xac, 0x6d, 0x74, 0x97, 0x91, 0xb5, 0x91, 0x0c);
 	
 				
 		/// <summary>
 		/// Constructor
-		/// Creates a EntidadReferencesRelacion link in the same Partition as the given Entidad
+		/// Creates a EntidadReferencesRelacion1 link in the same Partition as the given Entidad
 		/// </summary>
 		/// <param name="source">Entidad to use as the source of the relationship.</param>
 		/// <param name="target">Relacion to use as the target of the relationship.</param>
-		public EntidadReferencesRelacion(Entidad source, Relacion target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(EntidadReferencesRelacion.EntidadDomainRoleId, source), new DslModeling::RoleAssignment(EntidadReferencesRelacion.RelacionDomainRoleId, target)}, null)
+		public EntidadReferencesRelacion1(Entidad source, Relacion target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(EntidadReferencesRelacion1.EntidadDomainRoleId, source), new DslModeling::RoleAssignment(EntidadReferencesRelacion1.RelacionDomainRoleId, target)}, null)
 		{
 		}
 		
@@ -1179,7 +286,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		/// </summary>
 		/// <param name="store">Store where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public EntidadReferencesRelacion(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+		public EntidadReferencesRelacion1(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
 			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
 		{
 		}
@@ -1190,7 +297,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		/// <param name="store">Store where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
 		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public EntidadReferencesRelacion(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+		public EntidadReferencesRelacion1(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
 		{
 		}
@@ -1200,7 +307,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		/// </summary>
 		/// <param name="partition">Partition where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public EntidadReferencesRelacion(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+		public EntidadReferencesRelacion1(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
 			: base(partition, roleAssignments, null)
 		{
 		}
@@ -1211,7 +318,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		/// <param name="partition">Partition where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
 		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public EntidadReferencesRelacion(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+		public EntidadReferencesRelacion1(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, roleAssignments, propertyAssignments)
 		{
 		}
@@ -1225,11 +332,11 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		
 		/// <summary>
 		/// DomainRole Entidad
-		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion.Entidad
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1.Entidad
 		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion/Entidad.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion/Entidad.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Relacion", PropertyDisplayNameKey="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion/Entidad.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1/Entidad.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1/Entidad.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Relacion", PropertyDisplayNameKey="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1/Entidad.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("4f9a326e-578b-486e-85e5-421d7582cb11")]
 		public virtual Entidad Entidad
 		{
@@ -1248,13 +355,23 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		#endregion
 		#region Static methods to access Entidad of a Relacion
 		/// <summary>
-		/// Gets a list of Entidad.
+		/// Gets Entidad.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<Entidad> GetEntidad(Relacion element)
+		public static Entidad GetEntidad(Relacion element)
 		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<Entidad>, Entidad>(element, RelacionDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, RelacionDomainRoleId) as Entidad;
+		}
+		
+		/// <summary>
+		/// Sets Entidad.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetEntidad(Relacion element, Entidad newEntidad)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, RelacionDomainRoleId, newEntidad);
 		}
 		#endregion
 		#region Relacion domain role code
@@ -1266,11 +383,11 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		
 		/// <summary>
 		/// DomainRole Relacion
-		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion.Relacion
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1.Relacion
 		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion/Relacion.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion/Relacion.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Entidad", PropertyDisplayNameKey="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion/Relacion.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1/Relacion.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1/Relacion.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Entidad", PropertyDisplayNameKey="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1/Relacion.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("4aca916a-50ce-4b5a-8fac-334ff36acc9c")]
 		public virtual Relacion Relacion
 		{
@@ -1289,79 +406,69 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		#endregion
 		#region Static methods to access Relacion of a Entidad
 		/// <summary>
-		/// Gets Relacion.
+		/// Gets a list of Relacion.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static Relacion GetRelacion(Entidad element)
+		public static DslModeling::LinkedElementCollection<Relacion> GetRelacion(Entidad element)
 		{
-			return DslModeling::DomainRoleInfo.GetLinkedElement(element, EntidadDomainRoleId) as Relacion;
-		}
-		
-		/// <summary>
-		/// Sets Relacion.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetRelacion(Entidad element, Relacion newRelacion)
-		{
-			DslModeling::DomainRoleInfo.SetLinkedElement(element, EntidadDomainRoleId, newRelacion);
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Relacion>, Relacion>(element, EntidadDomainRoleId);
 		}
 		#endregion
-		#region cardinalidadOrigen domain property code
+		#region cardinalidad domain property code
 		
 		/// <summary>
-		/// cardinalidadOrigen domain property Id.
+		/// cardinalidad domain property Id.
 		/// </summary>
-		public static readonly global::System.Guid cardinalidadOrigenDomainPropertyId = new global::System.Guid(0xda72d8fb, 0x802b, 0x4583, 0xbd, 0xea, 0xff, 0xa2, 0x2c, 0x2c, 0xbf, 0x80);
+		public static readonly global::System.Guid cardinalidadDomainPropertyId = new global::System.Guid(0xabdbfea6, 0xa66f, 0x470f, 0x95, 0x88, 0x24, 0x40, 0x5e, 0x45, 0xfa, 0x1a);
 		
 		/// <summary>
-		/// Storage for cardinalidadOrigen
+		/// Storage for cardinalidad
 		/// </summary>
-		private Cardinalidad cardinalidadOrigenPropertyStorage;
+		private Cardinalidad cardinalidadPropertyStorage;
 		
 		/// <summary>
-		/// Gets or sets the value of cardinalidadOrigen domain property.
+		/// Gets or sets the value of cardinalidad domain property.
 		/// Description for
-		/// UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion.Cardinalidad Origen
+		/// UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1.Cardinalidad
 		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion/cardinalidadOrigen.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion/cardinalidadOrigen.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainObjectId("da72d8fb-802b-4583-bdea-ffa22c2cbf80")]
-		public Cardinalidad cardinalidadOrigen
+		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1/cardinalidad.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1/cardinalidad.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("abdbfea6-a66f-470f-9588-24405e45fa1a")]
+		public Cardinalidad cardinalidad
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return cardinalidadOrigenPropertyStorage;
+				return cardinalidadPropertyStorage;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				cardinalidadOrigenPropertyHandler.Instance.SetValue(this, value);
+				cardinalidadPropertyHandler.Instance.SetValue(this, value);
 			}
 		}
 		/// <summary>
-		/// Value handler for the EntidadReferencesRelacion.cardinalidadOrigen domain property.
+		/// Value handler for the EntidadReferencesRelacion1.cardinalidad domain property.
 		/// </summary>
-		internal sealed partial class cardinalidadOrigenPropertyHandler : DslModeling::DomainPropertyValueHandler<EntidadReferencesRelacion, Cardinalidad>
+		internal sealed partial class cardinalidadPropertyHandler : DslModeling::DomainPropertyValueHandler<EntidadReferencesRelacion1, Cardinalidad>
 		{
-			private cardinalidadOrigenPropertyHandler() { }
+			private cardinalidadPropertyHandler() { }
 		
 			/// <summary>
-			/// Gets the singleton instance of the EntidadReferencesRelacion.cardinalidadOrigen domain property value handler.
+			/// Gets the singleton instance of the EntidadReferencesRelacion1.cardinalidad domain property value handler.
 			/// </summary>
-			public static readonly cardinalidadOrigenPropertyHandler Instance = new cardinalidadOrigenPropertyHandler();
+			public static readonly cardinalidadPropertyHandler Instance = new cardinalidadPropertyHandler();
 		
 			/// <summary>
-			/// Gets the Id of the EntidadReferencesRelacion.cardinalidadOrigen domain property.
+			/// Gets the Id of the EntidadReferencesRelacion1.cardinalidad domain property.
 			/// </summary>
 			public sealed override global::System.Guid DomainPropertyId
 			{
 				[global::System.Diagnostics.DebuggerStepThrough]
 				get
 				{
-					return cardinalidadOrigenDomainPropertyId;
+					return cardinalidadDomainPropertyId;
 				}
 			}
 			
@@ -1370,10 +477,10 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed Cardinalidad GetValue(EntidadReferencesRelacion element)
+			public override sealed Cardinalidad GetValue(EntidadReferencesRelacion1 element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.cardinalidadOrigenPropertyStorage;
+				return element.cardinalidadPropertyStorage;
 			}
 		
 			/// <summary>
@@ -1381,7 +488,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(EntidadReferencesRelacion element, Cardinalidad newValue)
+			public override sealed void SetValue(EntidadReferencesRelacion1 element, Cardinalidad newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
@@ -1389,95 +496,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
-					element.cardinalidadOrigenPropertyStorage = newValue;
-					ValueChanged(element, oldValue, newValue);
-				}
-			}
-		}
-		
-		#endregion
-		#region cardinalidadFin domain property code
-		
-		/// <summary>
-		/// cardinalidadFin domain property Id.
-		/// </summary>
-		public static readonly global::System.Guid cardinalidadFinDomainPropertyId = new global::System.Guid(0x6da12f1d, 0x7316, 0x49cf, 0x82, 0xde, 0xcf, 0xdf, 0x25, 0xac, 0x17, 0x02);
-		
-		/// <summary>
-		/// Storage for cardinalidadFin
-		/// </summary>
-		private Cardinalidad cardinalidadFinPropertyStorage;
-		
-		/// <summary>
-		/// Gets or sets the value of cardinalidadFin domain property.
-		/// Description for
-		/// UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion.Cardinalidad Fin
-		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion/cardinalidadFin.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion/cardinalidadFin.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainObjectId("6da12f1d-7316-49cf-82de-cfdf25ac1702")]
-		public Cardinalidad cardinalidadFin
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return cardinalidadFinPropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				cardinalidadFinPropertyHandler.Instance.SetValue(this, value);
-			}
-		}
-		/// <summary>
-		/// Value handler for the EntidadReferencesRelacion.cardinalidadFin domain property.
-		/// </summary>
-		internal sealed partial class cardinalidadFinPropertyHandler : DslModeling::DomainPropertyValueHandler<EntidadReferencesRelacion, Cardinalidad>
-		{
-			private cardinalidadFinPropertyHandler() { }
-		
-			/// <summary>
-			/// Gets the singleton instance of the EntidadReferencesRelacion.cardinalidadFin domain property value handler.
-			/// </summary>
-			public static readonly cardinalidadFinPropertyHandler Instance = new cardinalidadFinPropertyHandler();
-		
-			/// <summary>
-			/// Gets the Id of the EntidadReferencesRelacion.cardinalidadFin domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return cardinalidadFinDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed Cardinalidad GetValue(EntidadReferencesRelacion element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.cardinalidadFinPropertyStorage;
-			}
-		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(EntidadReferencesRelacion element, Cardinalidad newValue)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-		
-				Cardinalidad oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					ValueChanging(element, oldValue, newValue);
-					element.cardinalidadFinPropertyStorage = newValue;
+					element.cardinalidadPropertyStorage = newValue;
 					ValueChanged(element, oldValue, newValue);
 				}
 			}
@@ -1486,13 +505,503 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		#endregion
 		#region Entidad link accessor
 		/// <summary>
-		/// Get the EntidadReferencesRelacion link to a Entidad.
+		/// Get the list of EntidadReferencesRelacion1 links to a Entidad.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion GetLinkToRelacion (global::UPM_IPS.FMRMRCMMGProyectoIPS.Entidad entidadInstance)
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1> GetLinksToRelacion ( global::UPM_IPS.FMRMRCMMGProyectoIPS.Entidad entidadInstance )
 		{
-			global::System.Collections.Generic.IList<global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion>(entidadInstance, global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion.EntidadDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1>(entidadInstance, global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1.EntidadDomainRoleId);
+		}
+		#endregion
+		#region Relacion link accessor
+		/// <summary>
+		/// Get the EntidadReferencesRelacion1 link to a Relacion.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1 GetLinkToEntidad (global::UPM_IPS.FMRMRCMMGProyectoIPS.Relacion relacionInstance)
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1>(relacionInstance, global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1.RelacionDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Relacion not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region EntidadReferencesRelacion1 instance accessors
+		
+		/// <summary>
+		/// Get any EntidadReferencesRelacion1 links between a given Entidad and a Relacion.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1> GetLinks( global::UPM_IPS.FMRMRCMMGProyectoIPS.Entidad source, global::UPM_IPS.FMRMRCMMGProyectoIPS.Relacion target )
+		{
+			global::System.Collections.Generic.List<global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1>();
+			global::System.Collections.Generic.IList<global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1>(source, global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1.EntidadDomainRoleId);
+			foreach ( global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1 link in links )
+			{
+				if ( target.Equals(link.Relacion) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one EntidadReferencesRelacion1 link between a given Entidadand a Relacion.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1 GetLink( global::UPM_IPS.FMRMRCMMGProyectoIPS.Entidad source, global::UPM_IPS.FMRMRCMMGProyectoIPS.Relacion target )
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1>(source, global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1.EntidadDomainRoleId);
+			foreach ( global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1 link in links )
+			{
+				if ( target.Equals(link.Relacion) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace UPM_IPS.FMRMRCMMGProyectoIPS
+{
+	/// <summary>
+	/// DomainRelationship TapizHasElementoes
+	/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship(IsEmbedding=true)]
+	[DslModeling::DomainObjectId("6ce24c72-d856-4db8-969f-a60c4ff2024c")]
+	public partial class TapizHasElementoes : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// TapizHasElementoes domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x6ce24c72, 0xd856, 0x4db8, 0x96, 0x9f, 0xa6, 0x0c, 0x4f, 0xf2, 0x02, 0x4c);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a TapizHasElementoes link in the same Partition as the given Tapiz
+		/// </summary>
+		/// <param name="source">Tapiz to use as the source of the relationship.</param>
+		/// <param name="target">Elemento to use as the target of the relationship.</param>
+		public TapizHasElementoes(Tapiz source, Elemento target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(TapizHasElementoes.TapizDomainRoleId, source), new DslModeling::RoleAssignment(TapizHasElementoes.ElementoDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public TapizHasElementoes(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public TapizHasElementoes(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public TapizHasElementoes(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public TapizHasElementoes(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Tapiz domain role code
+		
+		/// <summary>
+		/// Tapiz domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid TapizDomainRoleId = new global::System.Guid(0xccc70b0f, 0xa2ab, 0x437d, 0x80, 0xc7, 0x14, 0x82, 0x5e, 0xe2, 0xb0, 0x12);
+		
+		/// <summary>
+		/// DomainRole Tapiz
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes.Tapiz
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes/Tapiz.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes/Tapiz.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Elementoes", PropertyDisplayNameKey="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes/Tapiz.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("ccc70b0f-a2ab-437d-80c7-14825ee2b012")]
+		public virtual Tapiz Tapiz
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Tapiz)DslModeling::DomainRoleInfo.GetRolePlayer(this, TapizDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, TapizDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Tapiz of a Elemento
+		/// <summary>
+		/// Gets Tapiz.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static Tapiz GetTapiz(Elemento element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, ElementoDomainRoleId) as Tapiz;
+		}
+		
+		/// <summary>
+		/// Sets Tapiz.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetTapiz(Elemento element, Tapiz newTapiz)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, ElementoDomainRoleId, newTapiz);
+		}
+		#endregion
+		#region Elemento domain role code
+		
+		/// <summary>
+		/// Elemento domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid ElementoDomainRoleId = new global::System.Guid(0x22942794, 0x4c92, 0x48d5, 0xa0, 0xfc, 0xc4, 0x5e, 0xb9, 0x36, 0xb2, 0xeb);
+		
+		/// <summary>
+		/// DomainRole Elemento
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes.Elemento
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes/Elemento.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes/Elemento.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Tapiz", PropertyDisplayNameKey="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes/Elemento.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("22942794-4c92-48d5-a0fc-c45eb936b2eb")]
+		public virtual Elemento Elemento
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Elemento)DslModeling::DomainRoleInfo.GetRolePlayer(this, ElementoDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, ElementoDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Elementoes of a Tapiz
+		/// <summary>
+		/// Gets a list of Elementoes.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<Elemento> GetElementoes(Tapiz element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Elemento>, Elemento>(element, TapizDomainRoleId);
+		}
+		#endregion
+		#region Tapiz link accessor
+		/// <summary>
+		/// Get the list of TapizHasElementoes links to a Tapiz.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes> GetLinksToElementoes ( global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz tapizInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes>(tapizInstance, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes.TapizDomainRoleId);
+		}
+		#endregion
+		#region Elemento link accessor
+		/// <summary>
+		/// Get the TapizHasElementoes link to a Elemento.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes GetLinkToTapiz (global::UPM_IPS.FMRMRCMMGProyectoIPS.Elemento elementoInstance)
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes>(elementoInstance, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes.ElementoDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Elemento not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region TapizHasElementoes instance accessors
+		
+		/// <summary>
+		/// Get any TapizHasElementoes links between a given Tapiz and a Elemento.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes> GetLinks( global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz source, global::UPM_IPS.FMRMRCMMGProyectoIPS.Elemento target )
+		{
+			global::System.Collections.Generic.List<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes>();
+			global::System.Collections.Generic.IList<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes>(source, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes.TapizDomainRoleId);
+			foreach ( global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes link in links )
+			{
+				if ( target.Equals(link.Elemento) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one TapizHasElementoes link between a given Tapizand a Elemento.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes GetLink( global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz source, global::UPM_IPS.FMRMRCMMGProyectoIPS.Elemento target )
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes>(source, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes.TapizDomainRoleId);
+			foreach ( global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes link in links )
+			{
+				if ( target.Equals(link.Elemento) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace UPM_IPS.FMRMRCMMGProyectoIPS
+{
+	/// <summary>
+	/// DomainRelationship EntidadReferencesAtributoKey
+	/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship()]
+	[DslModeling::DomainObjectId("63bc9f85-070a-48ec-a88c-07ba5a44055d")]
+	public partial class EntidadReferencesAtributoKey : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// EntidadReferencesAtributoKey domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x63bc9f85, 0x070a, 0x48ec, 0xa8, 0x8c, 0x07, 0xba, 0x5a, 0x44, 0x05, 0x5d);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a EntidadReferencesAtributoKey link in the same Partition as the given Entidad
+		/// </summary>
+		/// <param name="source">Entidad to use as the source of the relationship.</param>
+		/// <param name="target">AtributoKey to use as the target of the relationship.</param>
+		public EntidadReferencesAtributoKey(Entidad source, AtributoKey target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(EntidadReferencesAtributoKey.EntidadDomainRoleId, source), new DslModeling::RoleAssignment(EntidadReferencesAtributoKey.AtributoKeyDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public EntidadReferencesAtributoKey(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public EntidadReferencesAtributoKey(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public EntidadReferencesAtributoKey(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public EntidadReferencesAtributoKey(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Entidad domain role code
+		
+		/// <summary>
+		/// Entidad domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid EntidadDomainRoleId = new global::System.Guid(0xb9415adb, 0xe0f2, 0x4b69, 0xa4, 0xd2, 0x6c, 0x65, 0xbc, 0xf4, 0x53, 0xe2);
+		
+		/// <summary>
+		/// DomainRole Entidad
+		/// Description for
+		/// UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey.Entidad
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey/Entidad.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey/Entidad.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "AtributoKey", PropertyDisplayNameKey="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey/Entidad.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("b9415adb-e0f2-4b69-a4d2-6c65bcf453e2")]
+		public virtual Entidad Entidad
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Entidad)DslModeling::DomainRoleInfo.GetRolePlayer(this, EntidadDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, EntidadDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Entidad of a AtributoKey
+		/// <summary>
+		/// Gets Entidad.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static Entidad GetEntidad(AtributoKey element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, AtributoKeyDomainRoleId) as Entidad;
+		}
+		
+		/// <summary>
+		/// Sets Entidad.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetEntidad(AtributoKey element, Entidad newEntidad)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, AtributoKeyDomainRoleId, newEntidad);
+		}
+		#endregion
+		#region AtributoKey domain role code
+		
+		/// <summary>
+		/// AtributoKey domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid AtributoKeyDomainRoleId = new global::System.Guid(0x4c1af005, 0xdbd4, 0x4981, 0xa4, 0xbe, 0x0b, 0xeb, 0x0f, 0x02, 0x74, 0xb1);
+		
+		/// <summary>
+		/// DomainRole AtributoKey
+		/// Description for
+		/// UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey.AtributoKey
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey/AtributoKey.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey/AtributoKey.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Entidad", PropertyDisplayNameKey="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey/AtributoKey.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("4c1af005-dbd4-4981-a4be-0beb0f0274b1")]
+		public virtual AtributoKey AtributoKey
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (AtributoKey)DslModeling::DomainRoleInfo.GetRolePlayer(this, AtributoKeyDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, AtributoKeyDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access AtributoKey of a Entidad
+		/// <summary>
+		/// Gets AtributoKey.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static AtributoKey GetAtributoKey(Entidad element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, EntidadDomainRoleId) as AtributoKey;
+		}
+		
+		/// <summary>
+		/// Sets AtributoKey.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetAtributoKey(Entidad element, AtributoKey newAtributoKey)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, EntidadDomainRoleId, newAtributoKey);
+		}
+		#endregion
+		#region Entidad link accessor
+		/// <summary>
+		/// Get the EntidadReferencesAtributoKey link to a Entidad.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey GetLinkToAtributoKey (global::UPM_IPS.FMRMRCMMGProyectoIPS.Entidad entidadInstance)
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey>(entidadInstance, global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey.EntidadDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Entidad not obeyed.");
 			if ( links.Count == 0 )
 			{
@@ -1504,31 +1013,40 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			}
 		}
 		#endregion
-		#region Relacion link accessor
+		#region AtributoKey link accessor
 		/// <summary>
-		/// Get the list of EntidadReferencesRelacion links to a Relacion.
+		/// Get the EntidadReferencesAtributoKey link to a AtributoKey.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion> GetLinksToEntidad ( global::UPM_IPS.FMRMRCMMGProyectoIPS.Relacion relacionInstance )
+		public static global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey GetLinkToEntidad (global::UPM_IPS.FMRMRCMMGProyectoIPS.AtributoKey atributoKeyInstance)
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion>(relacionInstance, global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion.RelacionDomainRoleId);
+			global::System.Collections.Generic.IList<global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey>(atributoKeyInstance, global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey.AtributoKeyDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of AtributoKey not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
 		}
 		#endregion
-		#region EntidadReferencesRelacion instance accessors
+		#region EntidadReferencesAtributoKey instance accessors
 		
 		/// <summary>
-		/// Get any EntidadReferencesRelacion links between a given Entidad and a Relacion.
+		/// Get any EntidadReferencesAtributoKey links between a given Entidad and a AtributoKey.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion> GetLinks( global::UPM_IPS.FMRMRCMMGProyectoIPS.Entidad source, global::UPM_IPS.FMRMRCMMGProyectoIPS.Relacion target )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey> GetLinks( global::UPM_IPS.FMRMRCMMGProyectoIPS.Entidad source, global::UPM_IPS.FMRMRCMMGProyectoIPS.AtributoKey target )
 		{
-			global::System.Collections.Generic.List<global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion>();
-			global::System.Collections.Generic.IList<global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion>(source, global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion.EntidadDomainRoleId);
-			foreach ( global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion link in links )
+			global::System.Collections.Generic.List<global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey>();
+			global::System.Collections.Generic.IList<global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey>(source, global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey.EntidadDomainRoleId);
+			foreach ( global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey link in links )
 			{
-				if ( target.Equals(link.Relacion) )
+				if ( target.Equals(link.AtributoKey) )
 				{
 					outLinks.Add(link);
 				}
@@ -1536,16 +1054,257 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			return outLinks.AsReadOnly();
 		}
 		/// <summary>
-		/// Get the one EntidadReferencesRelacion link between a given Entidadand a Relacion.
+		/// Get the one EntidadReferencesAtributoKey link between a given Entidadand a AtributoKey.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion GetLink( global::UPM_IPS.FMRMRCMMGProyectoIPS.Entidad source, global::UPM_IPS.FMRMRCMMGProyectoIPS.Relacion target )
+		public static global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey GetLink( global::UPM_IPS.FMRMRCMMGProyectoIPS.Entidad source, global::UPM_IPS.FMRMRCMMGProyectoIPS.AtributoKey target )
 		{
-			global::System.Collections.Generic.IList<global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion>(source, global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion.EntidadDomainRoleId);
-			foreach ( global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion link in links )
+			global::System.Collections.Generic.IList<global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey>(source, global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey.EntidadDomainRoleId);
+			foreach ( global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey link in links )
 			{
-				if ( target.Equals(link.Relacion) )
+				if ( target.Equals(link.AtributoKey) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace UPM_IPS.FMRMRCMMGProyectoIPS
+{
+	/// <summary>
+	/// DomainRelationship RelacionReferencesAtributoRelacion
+	/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship()]
+	[DslModeling::DomainObjectId("0be9f4a9-6f40-44cf-8940-a33c96f8efe7")]
+	public partial class RelacionReferencesAtributoRelacion : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// RelacionReferencesAtributoRelacion domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x0be9f4a9, 0x6f40, 0x44cf, 0x89, 0x40, 0xa3, 0x3c, 0x96, 0xf8, 0xef, 0xe7);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a RelacionReferencesAtributoRelacion link in the same Partition as the given Relacion
+		/// </summary>
+		/// <param name="source">Relacion to use as the source of the relationship.</param>
+		/// <param name="target">AtributoRelacion to use as the target of the relationship.</param>
+		public RelacionReferencesAtributoRelacion(Relacion source, AtributoRelacion target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(RelacionReferencesAtributoRelacion.RelacionDomainRoleId, source), new DslModeling::RoleAssignment(RelacionReferencesAtributoRelacion.AtributoRelacionDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public RelacionReferencesAtributoRelacion(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public RelacionReferencesAtributoRelacion(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public RelacionReferencesAtributoRelacion(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public RelacionReferencesAtributoRelacion(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Relacion domain role code
+		
+		/// <summary>
+		/// Relacion domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid RelacionDomainRoleId = new global::System.Guid(0x9952615a, 0xa646, 0x4cd9, 0x9a, 0x8b, 0xfa, 0x8b, 0xc0, 0x2a, 0xbd, 0x20);
+		
+		/// <summary>
+		/// DomainRole Relacion
+		/// Description for
+		/// UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion.Relacion
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion/Relacion.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion/Relacion.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "AtributoRelacion", PropertyDisplayNameKey="UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion/Relacion.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("9952615a-a646-4cd9-9a8b-fa8bc02abd20")]
+		public virtual Relacion Relacion
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Relacion)DslModeling::DomainRoleInfo.GetRolePlayer(this, RelacionDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, RelacionDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Relacion of a AtributoRelacion
+		/// <summary>
+		/// Gets Relacion.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static Relacion GetRelacion(AtributoRelacion element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, AtributoRelacionDomainRoleId) as Relacion;
+		}
+		
+		/// <summary>
+		/// Sets Relacion.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetRelacion(AtributoRelacion element, Relacion newRelacion)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, AtributoRelacionDomainRoleId, newRelacion);
+		}
+		#endregion
+		#region AtributoRelacion domain role code
+		
+		/// <summary>
+		/// AtributoRelacion domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid AtributoRelacionDomainRoleId = new global::System.Guid(0x6b1ef23a, 0xf126, 0x4297, 0xae, 0x37, 0x4e, 0x57, 0x23, 0x9f, 0xc1, 0xc2);
+		
+		/// <summary>
+		/// DomainRole AtributoRelacion
+		/// Description for
+		/// UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion.AtributoRelacion
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion/AtributoRelacion.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion/AtributoRelacion.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Relacion", PropertyDisplayNameKey="UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion/AtributoRelacion.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("6b1ef23a-f126-4297-ae37-4e57239fc1c2")]
+		public virtual AtributoRelacion AtributoRelacion
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (AtributoRelacion)DslModeling::DomainRoleInfo.GetRolePlayer(this, AtributoRelacionDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, AtributoRelacionDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access AtributoRelacion of a Relacion
+		/// <summary>
+		/// Gets a list of AtributoRelacion.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<AtributoRelacion> GetAtributoRelacion(Relacion element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<AtributoRelacion>, AtributoRelacion>(element, RelacionDomainRoleId);
+		}
+		#endregion
+		#region Relacion link accessor
+		/// <summary>
+		/// Get the list of RelacionReferencesAtributoRelacion links to a Relacion.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion> GetLinksToAtributoRelacion ( global::UPM_IPS.FMRMRCMMGProyectoIPS.Relacion relacionInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion>(relacionInstance, global::UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion.RelacionDomainRoleId);
+		}
+		#endregion
+		#region AtributoRelacion link accessor
+		/// <summary>
+		/// Get the RelacionReferencesAtributoRelacion link to a AtributoRelacion.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion GetLinkToRelacion (global::UPM_IPS.FMRMRCMMGProyectoIPS.AtributoRelacion atributoRelacionInstance)
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion>(atributoRelacionInstance, global::UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion.AtributoRelacionDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of AtributoRelacion not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region RelacionReferencesAtributoRelacion instance accessors
+		
+		/// <summary>
+		/// Get any RelacionReferencesAtributoRelacion links between a given Relacion and a AtributoRelacion.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion> GetLinks( global::UPM_IPS.FMRMRCMMGProyectoIPS.Relacion source, global::UPM_IPS.FMRMRCMMGProyectoIPS.AtributoRelacion target )
+		{
+			global::System.Collections.Generic.List<global::UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion>();
+			global::System.Collections.Generic.IList<global::UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion>(source, global::UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion.RelacionDomainRoleId);
+			foreach ( global::UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion link in links )
+			{
+				if ( target.Equals(link.AtributoRelacion) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one RelacionReferencesAtributoRelacion link between a given Relacionand a AtributoRelacion.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion GetLink( global::UPM_IPS.FMRMRCMMGProyectoIPS.Relacion source, global::UPM_IPS.FMRMRCMMGProyectoIPS.AtributoRelacion target )
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion>(source, global::UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion.RelacionDomainRoleId);
+			foreach ( global::UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion link in links )
+			{
+				if ( target.Equals(link.AtributoRelacion) )
 				{
 					return link;
 				}

@@ -54,11 +54,11 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 					0xff00ff,
 					Index = 2)]
 	[VSShell::ProvideStaticToolboxItem("UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSToolboxTab",
-					"@EntidadRelacionConectorToolboxItem;UPM_IPS.FMRMRCMMGProyectoIPS.Dsl.dll", 
-					"UPM_IPS.FMRMRCMMGProyectoIPS.EntidadRelacionConectorToolboxItem", 
+					"@EntidadRelacionConector1ToolboxItem;UPM_IPS.FMRMRCMMGProyectoIPS.Dsl.dll", 
+					"UPM_IPS.FMRMRCMMGProyectoIPS.EntidadRelacionConector1ToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"EntidadRelacionConector", 
-					"@EntidadRelacionConectorToolboxBitmap;UPM_IPS.FMRMRCMMGProyectoIPS.Dsl.dll", 
+					"EntidadRelacionConector1", 
+					"@EntidadRelacionConector1ToolboxBitmap;UPM_IPS.FMRMRCMMGProyectoIPS.Dsl.dll", 
 					0xff00ff,
 					Index = 3)]
 	[VSShell::ProvideStaticToolboxItem("UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSToolboxTab",
@@ -69,6 +69,38 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 					"@RelacionToolboxBitmap;UPM_IPS.FMRMRCMMGProyectoIPS.Dsl.dll", 
 					0xff00ff,
 					Index = 4)]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSToolboxTab",
+					"@EntidadAtributoKeyConectorToolboxItem;UPM_IPS.FMRMRCMMGProyectoIPS.Dsl.dll", 
+					"UPM_IPS.FMRMRCMMGProyectoIPS.EntidadAtributoKeyConectorToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"EntidadAtributoKeyConector", 
+					"@EntidadAtributoKeyConectorToolboxBitmap;UPM_IPS.FMRMRCMMGProyectoIPS.Dsl.dll", 
+					0xff00ff,
+					Index = 5)]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSToolboxTab",
+					"@AtributoKeyToolboxItem;UPM_IPS.FMRMRCMMGProyectoIPS.Dsl.dll", 
+					"UPM_IPS.FMRMRCMMGProyectoIPS.AtributoKeyToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"AtributoKey", 
+					"@AtributoKeyToolboxBitmap;UPM_IPS.FMRMRCMMGProyectoIPS.Dsl.dll", 
+					0xff00ff,
+					Index = 6)]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSToolboxTab",
+					"@RelacionAtributoRelacionConectorToolboxItem;UPM_IPS.FMRMRCMMGProyectoIPS.Dsl.dll", 
+					"UPM_IPS.FMRMRCMMGProyectoIPS.RelacionAtributoRelacionConectorToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"RelacionAtributoRelacionConector", 
+					"@RelacionAtributoRelacionConectorToolboxBitmap;UPM_IPS.FMRMRCMMGProyectoIPS.Dsl.dll", 
+					0xff00ff,
+					Index = 7)]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSToolboxTab",
+					"@AtributoRelacionToolboxItem;UPM_IPS.FMRMRCMMGProyectoIPS.Dsl.dll", 
+					"UPM_IPS.FMRMRCMMGProyectoIPS.AtributoRelacionToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"AtributoRelacion", 
+					"@AtributoRelacionToolboxBitmap;UPM_IPS.FMRMRCMMGProyectoIPS.Dsl.dll", 
+					0xff00ff,
+					Index = 8)]
 	[VSShell::ProvideEditorFactory(typeof(FMRMRCMMGProyectoIPSEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
 	[VSShell::ProvideEditorExtension(typeof(FMRMRCMMGProyectoIPSEditorFactory), "." + Constants.DesignerFileExtension, 50)]
 	[VSShell::ProvideEditorLogicalView(typeof(FMRMRCMMGProyectoIPSEditorFactory), "{7651A702-06E5-11D1-8EBD-00A0C90F26EA}")] // Designer logical view GUID i.e. VSConstants.LOGVIEWID_Designer
