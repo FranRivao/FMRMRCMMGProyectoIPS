@@ -15,7 +15,7 @@
         </DomainProperty>
         <DomainProperty Id="901981f0-8e09-4f52-9a43-efd36d530181" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz.Tamaño Titulo" Name="tamañoTitulo" DisplayName="Tamaño Titulo">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <ExternalTypeMoniker Name="/System/Int16" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="f68c2a09-9e58-487b-a7da-fb9052016a5a" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz.Color Fondo Portal" Name="colorFondoPortal" DisplayName="Color Fondo Portal">
@@ -49,11 +49,60 @@
       <BaseClass>
         <DomainClassMoniker Name="Elemento" />
       </BaseClass>
+      <Properties>
+        <DomainProperty Id="6acdec1a-8cdc-4693-bc8e-0bfe30898a90" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Entidad.Color Titulo" Name="colorTitulo" DisplayName="Color Titulo">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="3d755ed2-09ee-448e-a3dc-fda9e1a5be2d" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Entidad.Tamaño Titulo" Name="tamañoTitulo" DisplayName="Tamaño Titulo">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="b8b522b4-62aa-4492-9436-50e8237dbc40" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Entidad.Alineacion Titulo" Name="alineacionTitulo" DisplayName="Alineacion Titulo">
+          <Type>
+            <DomainEnumerationMoniker Name="PosicionTituloEnum" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="3c868f2e-3acf-4507-8806-f7a31bdbf27d" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Entidad.Fuente Titulo" Name="fuenteTitulo" DisplayName="Fuente Titulo">
+          <Type>
+            <DomainEnumerationMoniker Name="FuentesEnum" />
+          </Type>
+        </DomainProperty>
+      </Properties>
     </DomainClass>
     <DomainClass Id="995157d2-720f-4224-9529-acb6d4eac32e" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Atributo" Name="Atributo" DisplayName="Atributo" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS">
       <BaseClass>
         <DomainClassMoniker Name="Elemento" />
       </BaseClass>
+      <Properties>
+        <DomainProperty Id="835588bf-a041-4feb-a0ef-7b2ef0513583" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Atributo.Color Titulo" Name="colorTitulo" DisplayName="Color Titulo">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="d0c8f608-7bad-476f-9caf-4be1d01da5ab" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Atributo.Tamaño Titulo" Name="tamañoTitulo" DisplayName="Tamaño Titulo">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Int16" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="e08a94ff-7bd2-4273-bfe2-03a7b81f0ce3" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Atributo.Alineacion Titulo" Name="alineacionTitulo" DisplayName="Alineacion Titulo">
+          <Type>
+            <DomainEnumerationMoniker Name="PosicionTituloEnum" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="5c0c48dd-3c3e-4d60-ae50-261b81c78545" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Atributo.Fuente Titulo" Name="fuenteTitulo" DisplayName="Fuente Titulo">
+          <Type>
+            <DomainEnumerationMoniker Name="FuentesEnum" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="d9ba8e9e-4d02-4f7b-9d0a-c84b2e2f2062" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Atributo.Formato Visualizacion" Name="formatoVisualizacion" DisplayName="Formato Visualizacion">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
     </DomainClass>
     <DomainClass Id="f199dab1-e960-43df-a3b8-ad53816ee47a" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Relacion" Name="Relacion" DisplayName="Relacion" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS">
       <BaseClass>
@@ -208,6 +257,14 @@
         <EnumerationLiteral Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.PosicionTituloEnum.Centro" Name="Centro" Value="1" />
       </Literals>
     </DomainEnumeration>
+    <DomainEnumeration Name="VisualizacionEnum" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.VisualizacionEnum">
+      <Literals>
+        <EnumerationLiteral Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.VisualizacionEnum.areaDeTexto" Name="areaDeTexto" Value="0" />
+        <EnumerationLiteral Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.VisualizacionEnum.checkbox" Name="checkbox" Value="1" />
+        <EnumerationLiteral Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.VisualizacionEnum.radioButton" Name="radioButton" Value="2" />
+        <EnumerationLiteral Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.VisualizacionEnum.listaDesplegable" Name="listaDesplegable" Value="3" />
+      </Literals>
+    </DomainEnumeration>
   </Types>
   <Shapes>
     <GeometryShape Id="c00637d8-a0bc-4683-a295-2c6950f9c042" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaEntidad" Name="MetaforaEntidad" DisplayName="Metafora Entidad" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Metafora Entidad" FillColor="IndianRed" InitialHeight="1" OutlineThickness="0.07" FillGradientMode="None" Geometry="Circle">
@@ -294,6 +351,18 @@
           <XmlRelationshipData UseFullForm="true" RoleElementName="atributoKey">
             <DomainRelationshipMoniker Name="EntidadReferencesAtributoKey" />
           </XmlRelationshipData>
+          <XmlPropertyData XmlName="colorTitulo">
+            <DomainPropertyMoniker Name="Entidad/colorTitulo" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="tamañoTitulo">
+            <DomainPropertyMoniker Name="Entidad/tamañoTitulo" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="alineacionTitulo">
+            <DomainPropertyMoniker Name="Entidad/alineacionTitulo" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="fuenteTitulo">
+            <DomainPropertyMoniker Name="Entidad/fuenteTitulo" />
+          </XmlPropertyData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="MetaforaEntidad" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaEntidadMoniker" ElementName="metaforaEntidad" MonikerTypeName="MetaforaEntidadMoniker">
@@ -301,6 +370,23 @@
       </XmlClassData>
       <XmlClassData TypeName="Atributo" MonikerAttributeName="" SerializeId="true" MonikerElementName="atributoMoniker" ElementName="atributo" MonikerTypeName="AtributoMoniker">
         <DomainClassMoniker Name="Atributo" />
+        <ElementData>
+          <XmlPropertyData XmlName="colorTitulo">
+            <DomainPropertyMoniker Name="Atributo/colorTitulo" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="tamañoTitulo">
+            <DomainPropertyMoniker Name="Atributo/tamañoTitulo" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="alineacionTitulo">
+            <DomainPropertyMoniker Name="Atributo/alineacionTitulo" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="fuenteTitulo">
+            <DomainPropertyMoniker Name="Atributo/fuenteTitulo" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="formatoVisualizacion">
+            <DomainPropertyMoniker Name="Atributo/formatoVisualizacion" />
+          </XmlPropertyData>
+        </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="MetaforaAtributo" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaAtributoMoniker" ElementName="metaforaAtributo" MonikerTypeName="MetaforaAtributoMoniker">
         <GeometryShapeMoniker Name="MetaforaAtributo" />

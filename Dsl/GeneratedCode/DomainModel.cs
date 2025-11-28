@@ -110,6 +110,15 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 				new DomainMemberInfo(typeof(Tapiz), "colorFondoPortal", Tapiz.colorFondoPortalDomainPropertyId, typeof(Tapiz.colorFondoPortalPropertyHandler)),
 				new DomainMemberInfo(typeof(Tapiz), "fuenteTitulo", Tapiz.fuenteTituloDomainPropertyId, typeof(Tapiz.fuenteTituloPropertyHandler)),
 				new DomainMemberInfo(typeof(Tapiz), "alineacionTitulo", Tapiz.alineacionTituloDomainPropertyId, typeof(Tapiz.alineacionTituloPropertyHandler)),
+				new DomainMemberInfo(typeof(Entidad), "colorTitulo", Entidad.colorTituloDomainPropertyId, typeof(Entidad.colorTituloPropertyHandler)),
+				new DomainMemberInfo(typeof(Entidad), "tamañoTitulo", Entidad.tamañoTituloDomainPropertyId, typeof(Entidad.tamañoTituloPropertyHandler)),
+				new DomainMemberInfo(typeof(Entidad), "alineacionTitulo", Entidad.alineacionTituloDomainPropertyId, typeof(Entidad.alineacionTituloPropertyHandler)),
+				new DomainMemberInfo(typeof(Entidad), "fuenteTitulo", Entidad.fuenteTituloDomainPropertyId, typeof(Entidad.fuenteTituloPropertyHandler)),
+				new DomainMemberInfo(typeof(Atributo), "colorTitulo", Atributo.colorTituloDomainPropertyId, typeof(Atributo.colorTituloPropertyHandler)),
+				new DomainMemberInfo(typeof(Atributo), "tamañoTitulo", Atributo.tamañoTituloDomainPropertyId, typeof(Atributo.tamañoTituloPropertyHandler)),
+				new DomainMemberInfo(typeof(Atributo), "alineacionTitulo", Atributo.alineacionTituloDomainPropertyId, typeof(Atributo.alineacionTituloPropertyHandler)),
+				new DomainMemberInfo(typeof(Atributo), "fuenteTitulo", Atributo.fuenteTituloDomainPropertyId, typeof(Atributo.fuenteTituloPropertyHandler)),
+				new DomainMemberInfo(typeof(Atributo), "formatoVisualizacion", Atributo.formatoVisualizacionDomainPropertyId, typeof(Atributo.formatoVisualizacionPropertyHandler)),
 				new DomainMemberInfo(typeof(Elemento), "nombre", Elemento.nombreDomainPropertyId, typeof(Elemento.nombrePropertyHandler)),
 				new DomainMemberInfo(typeof(EntidadReferencesRelacion1), "cardinalidad", EntidadReferencesRelacion1.cardinalidadDomainPropertyId, typeof(EntidadReferencesRelacion1.cardinalidadPropertyHandler)),
 			};
@@ -588,6 +597,41 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		/// </summary>
 		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.PosicionTituloEnum/Centro.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
 		Centro = 1,
+	}
+}
+namespace UPM_IPS.FMRMRCMMGProyectoIPS
+{
+	/// <summary>
+	/// DomainEnumeration: VisualizacionEnum
+	/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.VisualizacionEnum
+	/// </summary>
+	[global::System.CLSCompliant(true)]
+	public enum VisualizacionEnum
+	{
+		/// <summary>
+		/// areaDeTexto
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.VisualizacionEnum.areaDeTexto
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.VisualizacionEnum/areaDeTexto.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		areaDeTexto = 0,
+		/// <summary>
+		/// checkbox
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.VisualizacionEnum.checkbox
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.VisualizacionEnum/checkbox.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		checkbox = 1,
+		/// <summary>
+		/// radioButton
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.VisualizacionEnum.radioButton
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.VisualizacionEnum/radioButton.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		radioButton = 2,
+		/// <summary>
+		/// listaDesplegable
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.VisualizacionEnum.listaDesplegable
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.VisualizacionEnum/listaDesplegable.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		listaDesplegable = 3,
 	}
 }
 

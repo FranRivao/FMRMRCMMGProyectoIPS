@@ -194,14 +194,14 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 				string attribtamañoTitulo = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "tamañoTitulo");
 				if (attribtamañoTitulo != null)
 				{
-					global::System.String valueOftamañoTitulo;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribtamañoTitulo, out valueOftamañoTitulo))
+					global::System.Int16 valueOftamañoTitulo;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.Int16>(serializationContext, attribtamañoTitulo, out valueOftamañoTitulo))
 					{
 						instanceOfTapiz.tamañoTitulo = valueOftamañoTitulo;
 					}
 					else
 					{	// Invalid property value, ignored.
-						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "tamañoTitulo", typeof(global::System.String), attribtamañoTitulo);
+						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "tamañoTitulo", typeof(global::System.Int16), attribtamañoTitulo);
 					}
 				}
 			}
@@ -793,12 +793,11 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			// tamañoTitulo
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfTapiz.tamañoTitulo;
+				global::System.Int16 propValue = instanceOfTapiz.tamañoTitulo;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<global::System.Int16>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					if (!string.IsNullOrEmpty(propValue))
-						FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "tamañoTitulo", propValue);
-	
+					FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "tamañoTitulo", serializedPropValue);
 				}
 			}
 			// colorFondoPortal
@@ -1028,7 +1027,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			#endregion
 			
 			// Read properties serialized as XML attributes.
-			base.ReadPropertiesFromAttributes(serializationContext, element, reader);
+			ReadPropertiesFromAttributes(serializationContext, element, reader);
 	
 			// Read nested XML elements.
 			if (!serializationContext.Result.Failed)
@@ -1060,6 +1059,95 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			DslModeling::SerializationUtilities.Skip(reader);
 		}
 		
+	
+		/// <summary>
+		/// This method deserializes all properties that are serialized as XML attributes.
+		/// </summary>
+		/// <remarks>
+		/// Because this method only handles properties serialized as XML attributes, the passed-in reader shouldn't be moved inside this method.
+		/// The caller will guarantee that the reader is positioned on the open XML tag of the current element being deserialized.
+		/// </remarks>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="element">In-memory Entidad instance that will get the deserialized data.</param>
+		/// <param name="reader">XmlReader to read serialized data from.</param>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		protected override void ReadPropertiesFromAttributes(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlReader reader)
+		{
+			// Always call the base class so any extensions are deserialized
+			base.ReadPropertiesFromAttributes(serializationContext, element, reader);
+	
+			Entidad instanceOfEntidad = element as Entidad;
+			global::System.Diagnostics.Debug.Assert(instanceOfEntidad != null, "Expecting an instance of Entidad");
+	
+			// colorTitulo
+			if (!serializationContext.Result.Failed)
+			{
+				string attribcolorTitulo = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "colorTitulo");
+				if (attribcolorTitulo != null)
+				{
+					global::System.String valueOfcolorTitulo;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribcolorTitulo, out valueOfcolorTitulo))
+					{
+						instanceOfEntidad.colorTitulo = valueOfcolorTitulo;
+					}
+					else
+					{	// Invalid property value, ignored.
+						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "colorTitulo", typeof(global::System.String), attribcolorTitulo);
+					}
+				}
+			}
+			// tamañoTitulo
+			if (!serializationContext.Result.Failed)
+			{
+				string attribtamañoTitulo = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "tamañoTitulo");
+				if (attribtamañoTitulo != null)
+				{
+					global::System.String valueOftamañoTitulo;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribtamañoTitulo, out valueOftamañoTitulo))
+					{
+						instanceOfEntidad.tamañoTitulo = valueOftamañoTitulo;
+					}
+					else
+					{	// Invalid property value, ignored.
+						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "tamañoTitulo", typeof(global::System.String), attribtamañoTitulo);
+					}
+				}
+			}
+			// alineacionTitulo
+			if (!serializationContext.Result.Failed)
+			{
+				string attribalineacionTitulo = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "alineacionTitulo");
+				if (attribalineacionTitulo != null)
+				{
+					PosicionTituloEnum valueOfalineacionTitulo;
+					if (DslModeling::SerializationUtilities.TryGetValue<PosicionTituloEnum>(serializationContext, attribalineacionTitulo, out valueOfalineacionTitulo))
+					{
+						instanceOfEntidad.alineacionTitulo = valueOfalineacionTitulo;
+					}
+					else
+					{	// Invalid property value, ignored.
+						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "alineacionTitulo", typeof(PosicionTituloEnum), attribalineacionTitulo);
+					}
+				}
+			}
+			// fuenteTitulo
+			if (!serializationContext.Result.Failed)
+			{
+				string attribfuenteTitulo = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "fuenteTitulo");
+				if (attribfuenteTitulo != null)
+				{
+					FuentesEnum valueOffuenteTitulo;
+					if (DslModeling::SerializationUtilities.TryGetValue<FuentesEnum>(serializationContext, attribfuenteTitulo, out valueOffuenteTitulo))
+					{
+						instanceOfEntidad.fuenteTitulo = valueOffuenteTitulo;
+					}
+					else
+					{	// Invalid property value, ignored.
+						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "fuenteTitulo", typeof(FuentesEnum), attribfuenteTitulo);
+					}
+				}
+			}
+		}
 	
 		/// <summary>
 		/// This methods deserializes nested XML elements inside the passed-in element.
@@ -1665,7 +1753,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			// Write out element Id.
 			writer.WriteAttributeString("Id", element.Id.ToString("D", global::System.Globalization.CultureInfo.CurrentCulture));
 	
-			base.WritePropertiesAsAttributes(serializationContext, element, writer);
+			WritePropertiesAsAttributes(serializationContext, element, writer);
 	
 			// Write out any extension data if this is the root element
 			if (rootElementSettings != null && !serializationContext.Result.Failed)
@@ -1680,6 +1768,65 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			}
 	
 			writer.WriteEndElement();
+		}
+	
+		/// <summary>
+		/// Write all properties that need to be serialized as XML attributes.
+		/// </summary>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="element">Entidad instance to be serialized.</param>
+		/// <param name="writer">XmlWriter to write serialized data to.</param> 
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		protected override void WritePropertiesAsAttributes(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlWriter writer)
+		{
+			// Always call the base class so any extensions are serialized
+			base.WritePropertiesAsAttributes(serializationContext, element, writer);
+	
+			Entidad instanceOfEntidad = element as Entidad;
+			global::System.Diagnostics.Debug.Assert(instanceOfEntidad != null, "Expecting an instance of Entidad");
+	
+			// colorTitulo
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.String propValue = instanceOfEntidad.colorTitulo;
+				if (!serializationContext.Result.Failed)
+				{
+					if (!string.IsNullOrEmpty(propValue))
+						FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "colorTitulo", propValue);
+	
+				}
+			}
+			// tamañoTitulo
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.String propValue = instanceOfEntidad.tamañoTitulo;
+				if (!serializationContext.Result.Failed)
+				{
+					if (!string.IsNullOrEmpty(propValue))
+						FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "tamañoTitulo", propValue);
+	
+				}
+			}
+			// alineacionTitulo
+			if (!serializationContext.Result.Failed)
+			{
+				PosicionTituloEnum propValue = instanceOfEntidad.alineacionTitulo;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<PosicionTituloEnum>(serializationContext, propValue);
+				if (!serializationContext.Result.Failed)
+				{
+					FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "alineacionTitulo", serializedPropValue);
+				}
+			}
+			// fuenteTitulo
+			if (!serializationContext.Result.Failed)
+			{
+				FuentesEnum propValue = instanceOfEntidad.fuenteTitulo;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<FuentesEnum>(serializationContext, propValue);
+				if (!serializationContext.Result.Failed)
+				{
+					FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "fuenteTitulo", serializedPropValue);
+				}
+			}
 		}
 	
 		/// <summary>
@@ -1904,7 +2051,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			#endregion
 			
 			// Read properties serialized as XML attributes.
-			base.ReadPropertiesFromAttributes(serializationContext, element, reader);
+			ReadPropertiesFromAttributes(serializationContext, element, reader);
 	
 			// Read nested XML elements.
 			if (!serializationContext.Result.Failed)
@@ -1936,6 +2083,112 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			DslModeling::SerializationUtilities.Skip(reader);
 		}
 		
+	
+		/// <summary>
+		/// This method deserializes all properties that are serialized as XML attributes.
+		/// </summary>
+		/// <remarks>
+		/// Because this method only handles properties serialized as XML attributes, the passed-in reader shouldn't be moved inside this method.
+		/// The caller will guarantee that the reader is positioned on the open XML tag of the current element being deserialized.
+		/// </remarks>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="element">In-memory Atributo instance that will get the deserialized data.</param>
+		/// <param name="reader">XmlReader to read serialized data from.</param>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		protected override void ReadPropertiesFromAttributes(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlReader reader)
+		{
+			// Always call the base class so any extensions are deserialized
+			base.ReadPropertiesFromAttributes(serializationContext, element, reader);
+	
+			Atributo instanceOfAtributo = element as Atributo;
+			global::System.Diagnostics.Debug.Assert(instanceOfAtributo != null, "Expecting an instance of Atributo");
+	
+			// colorTitulo
+			if (!serializationContext.Result.Failed)
+			{
+				string attribcolorTitulo = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "colorTitulo");
+				if (attribcolorTitulo != null)
+				{
+					global::System.String valueOfcolorTitulo;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribcolorTitulo, out valueOfcolorTitulo))
+					{
+						instanceOfAtributo.colorTitulo = valueOfcolorTitulo;
+					}
+					else
+					{	// Invalid property value, ignored.
+						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "colorTitulo", typeof(global::System.String), attribcolorTitulo);
+					}
+				}
+			}
+			// tamañoTitulo
+			if (!serializationContext.Result.Failed)
+			{
+				string attribtamañoTitulo = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "tamañoTitulo");
+				if (attribtamañoTitulo != null)
+				{
+					global::System.Int16 valueOftamañoTitulo;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.Int16>(serializationContext, attribtamañoTitulo, out valueOftamañoTitulo))
+					{
+						instanceOfAtributo.tamañoTitulo = valueOftamañoTitulo;
+					}
+					else
+					{	// Invalid property value, ignored.
+						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "tamañoTitulo", typeof(global::System.Int16), attribtamañoTitulo);
+					}
+				}
+			}
+			// alineacionTitulo
+			if (!serializationContext.Result.Failed)
+			{
+				string attribalineacionTitulo = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "alineacionTitulo");
+				if (attribalineacionTitulo != null)
+				{
+					PosicionTituloEnum valueOfalineacionTitulo;
+					if (DslModeling::SerializationUtilities.TryGetValue<PosicionTituloEnum>(serializationContext, attribalineacionTitulo, out valueOfalineacionTitulo))
+					{
+						instanceOfAtributo.alineacionTitulo = valueOfalineacionTitulo;
+					}
+					else
+					{	// Invalid property value, ignored.
+						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "alineacionTitulo", typeof(PosicionTituloEnum), attribalineacionTitulo);
+					}
+				}
+			}
+			// fuenteTitulo
+			if (!serializationContext.Result.Failed)
+			{
+				string attribfuenteTitulo = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "fuenteTitulo");
+				if (attribfuenteTitulo != null)
+				{
+					FuentesEnum valueOffuenteTitulo;
+					if (DslModeling::SerializationUtilities.TryGetValue<FuentesEnum>(serializationContext, attribfuenteTitulo, out valueOffuenteTitulo))
+					{
+						instanceOfAtributo.fuenteTitulo = valueOffuenteTitulo;
+					}
+					else
+					{	// Invalid property value, ignored.
+						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "fuenteTitulo", typeof(FuentesEnum), attribfuenteTitulo);
+					}
+				}
+			}
+			// formatoVisualizacion
+			if (!serializationContext.Result.Failed)
+			{
+				string attribformatoVisualizacion = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "formatoVisualizacion");
+				if (attribformatoVisualizacion != null)
+				{
+					global::System.String valueOfformatoVisualizacion;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribformatoVisualizacion, out valueOfformatoVisualizacion))
+					{
+						instanceOfAtributo.formatoVisualizacion = valueOfformatoVisualizacion;
+					}
+					else
+					{	// Invalid property value, ignored.
+						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "formatoVisualizacion", typeof(global::System.String), attribformatoVisualizacion);
+					}
+				}
+			}
+		}
 	
 		#region TryCreateInstance
 		/// <summary>
@@ -2305,7 +2558,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			// Write out element Id.
 			writer.WriteAttributeString("Id", element.Id.ToString("D", global::System.Globalization.CultureInfo.CurrentCulture));
 	
-			base.WritePropertiesAsAttributes(serializationContext, element, writer);
+			WritePropertiesAsAttributes(serializationContext, element, writer);
 	
 			// Write out any extension data if this is the root element
 			if (rootElementSettings != null && !serializationContext.Result.Failed)
@@ -2320,6 +2573,75 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			}
 	
 			writer.WriteEndElement();
+		}
+	
+		/// <summary>
+		/// Write all properties that need to be serialized as XML attributes.
+		/// </summary>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="element">Atributo instance to be serialized.</param>
+		/// <param name="writer">XmlWriter to write serialized data to.</param> 
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		protected override void WritePropertiesAsAttributes(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlWriter writer)
+		{
+			// Always call the base class so any extensions are serialized
+			base.WritePropertiesAsAttributes(serializationContext, element, writer);
+	
+			Atributo instanceOfAtributo = element as Atributo;
+			global::System.Diagnostics.Debug.Assert(instanceOfAtributo != null, "Expecting an instance of Atributo");
+	
+			// colorTitulo
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.String propValue = instanceOfAtributo.colorTitulo;
+				if (!serializationContext.Result.Failed)
+				{
+					if (!string.IsNullOrEmpty(propValue))
+						FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "colorTitulo", propValue);
+	
+				}
+			}
+			// tamañoTitulo
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.Int16 propValue = instanceOfAtributo.tamañoTitulo;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<global::System.Int16>(serializationContext, propValue);
+				if (!serializationContext.Result.Failed)
+				{
+					FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "tamañoTitulo", serializedPropValue);
+				}
+			}
+			// alineacionTitulo
+			if (!serializationContext.Result.Failed)
+			{
+				PosicionTituloEnum propValue = instanceOfAtributo.alineacionTitulo;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<PosicionTituloEnum>(serializationContext, propValue);
+				if (!serializationContext.Result.Failed)
+				{
+					FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "alineacionTitulo", serializedPropValue);
+				}
+			}
+			// fuenteTitulo
+			if (!serializationContext.Result.Failed)
+			{
+				FuentesEnum propValue = instanceOfAtributo.fuenteTitulo;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<FuentesEnum>(serializationContext, propValue);
+				if (!serializationContext.Result.Failed)
+				{
+					FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "fuenteTitulo", serializedPropValue);
+				}
+			}
+			// formatoVisualizacion
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.String propValue = instanceOfAtributo.formatoVisualizacion;
+				if (!serializationContext.Result.Failed)
+				{
+					if (!string.IsNullOrEmpty(propValue))
+						FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "formatoVisualizacion", propValue);
+	
+				}
+			}
 		}
 		#endregion
 	

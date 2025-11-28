@@ -129,6 +129,14 @@
             <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
+        <!-- Property: colorTitulo -->
+        <xsd:attribute name="colorTitulo" type="xsd:string" />
+        <!-- Property: tamañoTitulo -->
+        <xsd:attribute name="tamañoTitulo" type="xsd:string" />
+        <!-- Property: alineacionTitulo -->
+        <xsd:attribute name="alineacionTitulo" type="PosicionTituloEnum" />
+        <!-- Property: fuenteTitulo -->
+        <xsd:attribute name="fuenteTitulo" type="FuentesEnum" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -156,6 +164,16 @@
             <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
+        <!-- Property: colorTitulo -->
+        <xsd:attribute name="colorTitulo" type="xsd:string" />
+        <!-- Property: tamañoTitulo -->
+        <xsd:attribute name="tamañoTitulo" type="xsd:string" />
+        <!-- Property: alineacionTitulo -->
+        <xsd:attribute name="alineacionTitulo" type="PosicionTituloEnum" />
+        <!-- Property: fuenteTitulo -->
+        <xsd:attribute name="fuenteTitulo" type="FuentesEnum" />
+        <!-- Property: formatoVisualizacion -->
+        <xsd:attribute name="formatoVisualizacion" type="xsd:string" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -532,6 +550,16 @@
       <xsd:enumeration value="Izquierda"/>
       <xsd:enumeration value="Derecha"/>
       <xsd:enumeration value="Centro"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- Enum VisualizacionEnum -->
+  <xsd:simpleType name="VisualizacionEnum">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="areaDeTexto"/>
+      <xsd:enumeration value="checkbox"/>
+      <xsd:enumeration value="radioButton"/>
+      <xsd:enumeration value="listaDesplegable"/>
     </xsd:restriction>
   </xsd:simpleType>
   
