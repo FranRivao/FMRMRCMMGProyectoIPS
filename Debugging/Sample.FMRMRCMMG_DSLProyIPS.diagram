@@ -21,14 +21,14 @@
     <metaforaAtributo Id="6d43f15c-ed09-41aa-ad28-26be874dd819" absoluteBounds="0.625, 2.5, 1.25, 0.75">
       <atributoMoniker Id="105fb1c2-3d81-410c-9132-9a39f05f76f5" />
     </metaforaAtributo>
-    <conectorEntidadAtributo Id="3895df32-5fb4-4d4d-84ea-572305f51083" edgePoints="[(4 : 2.13549002711255); (4 : 1.25)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <conectorEntidadAtributo Id="3895df32-5fb4-4d4d-84ea-572305f51083" edgePoints="[(4 : 2.13549002711255); (4 : 1.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <entidadReferencesAtributoMoniker Id="dc1b6363-5f67-4c1e-a78b-1c0d92354360" />
       <nodes>
         <metaforaEntidadMoniker Id="13071ba4-f2c8-4cdf-ac9d-8cce3e7272b1" />
         <metaforaAtributoMoniker Id="db4fb18c-f67d-44dd-b16c-3081cd656be4" />
       </nodes>
     </conectorEntidadAtributo>
-    <conectorEntidadAtributo Id="98bc40c0-7ff4-40c5-af6d-8fd79c25a170" edgePoints="[(3.125 : 2.875); (1.875 : 2.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <conectorEntidadAtributo Id="98bc40c0-7ff4-40c5-af6d-8fd79c25a170" edgePoints="[(3.125 : 2.875); (1.875 : 2.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <entidadReferencesAtributoMoniker Id="e6a997a6-fc92-41d0-8315-b3d8a85c9962" />
       <nodes>
         <metaforaEntidadMoniker Id="13071ba4-f2c8-4cdf-ac9d-8cce3e7272b1" />

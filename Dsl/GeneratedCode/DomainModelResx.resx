@@ -133,6 +133,54 @@
     <value>Tapiz</value>
     <comment>DisplayName for DomainClass &apos;Tapiz&apos;</comment>
   </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz/tituloPortal.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz.Titulo Portal</value>
+    <comment>Description for DomainProperty &apos;tituloPortal&apos; on DomainClass &apos;Tapiz&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz/tituloPortal.DisplayName" xml:space="preserve">
+    <value>Titulo Portal</value>
+    <comment>DisplayName for DomainProperty &apos;tituloPortal&apos; on DomainClass &apos;Tapiz&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz/colorTitulo.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz.Color Titulo</value>
+    <comment>Description for DomainProperty &apos;colorTitulo&apos; on DomainClass &apos;Tapiz&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz/colorTitulo.DisplayName" xml:space="preserve">
+    <value>Color Titulo</value>
+    <comment>DisplayName for DomainProperty &apos;colorTitulo&apos; on DomainClass &apos;Tapiz&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz/tamañoTitulo.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz.Tamaño Titulo</value>
+    <comment>Description for DomainProperty &apos;tamañoTitulo&apos; on DomainClass &apos;Tapiz&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz/tamañoTitulo.DisplayName" xml:space="preserve">
+    <value>Tamaño Titulo</value>
+    <comment>DisplayName for DomainProperty &apos;tamañoTitulo&apos; on DomainClass &apos;Tapiz&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz/colorFondoPortal.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz.Color Fondo Portal</value>
+    <comment>Description for DomainProperty &apos;colorFondoPortal&apos; on DomainClass &apos;Tapiz&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz/colorFondoPortal.DisplayName" xml:space="preserve">
+    <value>Color Fondo Portal</value>
+    <comment>DisplayName for DomainProperty &apos;colorFondoPortal&apos; on DomainClass &apos;Tapiz&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz/fuenteTitulo.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz.Fuente Titulo</value>
+    <comment>Description for DomainProperty &apos;fuenteTitulo&apos; on DomainClass &apos;Tapiz&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz/fuenteTitulo.DisplayName" xml:space="preserve">
+    <value>Fuente Titulo</value>
+    <comment>DisplayName for DomainProperty &apos;fuenteTitulo&apos; on DomainClass &apos;Tapiz&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz/alineacionTitulo.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz.Alineacion Titulo</value>
+    <comment>Description for DomainProperty &apos;alineacionTitulo&apos; on DomainClass &apos;Tapiz&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz/alineacionTitulo.DisplayName" xml:space="preserve">
+    <value>Alineacion Titulo</value>
+    <comment>DisplayName for DomainProperty &apos;alineacionTitulo&apos; on DomainClass &apos;Tapiz&apos;</comment>
+  </data>
   <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Entidad.Description" xml:space="preserve">
     <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Entidad</value>
     <comment>Description for DomainClass &apos;Entidad&apos;</comment>
@@ -388,6 +436,62 @@
   <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Cardinalidad/unoAuno.Description" xml:space="preserve">
     <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Cardinalidad.unoAuno</value>
     <comment>Description for EnumerationLiteral &apos;unoAuno&apos; on DomainEnumeration &apos;Cardinalidad&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.FuentesEnum/Arial.DisplayName" xml:space="preserve">
+    <value>Arial</value>
+    <comment>Display name for EnumerationLiteral &apos;Arial&apos; on DomainEnumeration &apos;FuentesEnum&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.FuentesEnum/Arial.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.FuentesEnum.Arial</value>
+    <comment>Description for EnumerationLiteral &apos;Arial&apos; on DomainEnumeration &apos;FuentesEnum&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.FuentesEnum/Verdana.DisplayName" xml:space="preserve">
+    <value>Verdana</value>
+    <comment>Display name for EnumerationLiteral &apos;Verdana&apos; on DomainEnumeration &apos;FuentesEnum&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.FuentesEnum/Verdana.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.FuentesEnum.Verdana</value>
+    <comment>Description for EnumerationLiteral &apos;Verdana&apos; on DomainEnumeration &apos;FuentesEnum&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.FuentesEnum/TimesNewRoman.DisplayName" xml:space="preserve">
+    <value>TimesNewRoman</value>
+    <comment>Display name for EnumerationLiteral &apos;TimesNewRoman&apos; on DomainEnumeration &apos;FuentesEnum&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.FuentesEnum/TimesNewRoman.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.FuentesEnum.TimesNewRoman</value>
+    <comment>Description for EnumerationLiteral &apos;TimesNewRoman&apos; on DomainEnumeration &apos;FuentesEnum&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.FuentesEnum/Tahoma.DisplayName" xml:space="preserve">
+    <value>Tahoma</value>
+    <comment>Display name for EnumerationLiteral &apos;Tahoma&apos; on DomainEnumeration &apos;FuentesEnum&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.FuentesEnum/Tahoma.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.FuentesEnum.Tahoma</value>
+    <comment>Description for EnumerationLiteral &apos;Tahoma&apos; on DomainEnumeration &apos;FuentesEnum&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.PosicionTituloEnum/Izquierda.DisplayName" xml:space="preserve">
+    <value>Izquierda</value>
+    <comment>Display name for EnumerationLiteral &apos;Izquierda&apos; on DomainEnumeration &apos;PosicionTituloEnum&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.PosicionTituloEnum/Izquierda.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.PosicionTituloEnum.Izquierda</value>
+    <comment>Description for EnumerationLiteral &apos;Izquierda&apos; on DomainEnumeration &apos;PosicionTituloEnum&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.PosicionTituloEnum/Derecha.DisplayName" xml:space="preserve">
+    <value>Derecha</value>
+    <comment>Display name for EnumerationLiteral &apos;Derecha&apos; on DomainEnumeration &apos;PosicionTituloEnum&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.PosicionTituloEnum/Derecha.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.PosicionTituloEnum.Derecha</value>
+    <comment>Description for EnumerationLiteral &apos;Derecha&apos; on DomainEnumeration &apos;PosicionTituloEnum&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.PosicionTituloEnum/Centro.DisplayName" xml:space="preserve">
+    <value>Centro</value>
+    <comment>Display name for EnumerationLiteral &apos;Centro&apos; on DomainEnumeration &apos;PosicionTituloEnum&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.PosicionTituloEnum/Centro.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.PosicionTituloEnum.Centro</value>
+    <comment>Description for EnumerationLiteral &apos;Centro&apos; on DomainEnumeration &apos;PosicionTituloEnum&apos;</comment>
   </data>
   <data name="UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaEntidad.Description" xml:space="preserve">
     <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaEntidad</value>

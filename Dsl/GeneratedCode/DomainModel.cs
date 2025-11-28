@@ -104,6 +104,12 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		{
 			return new DomainMemberInfo[]
 			{
+				new DomainMemberInfo(typeof(Tapiz), "tituloPortal", Tapiz.tituloPortalDomainPropertyId, typeof(Tapiz.tituloPortalPropertyHandler)),
+				new DomainMemberInfo(typeof(Tapiz), "colorTitulo", Tapiz.colorTituloDomainPropertyId, typeof(Tapiz.colorTituloPropertyHandler)),
+				new DomainMemberInfo(typeof(Tapiz), "tamañoTitulo", Tapiz.tamañoTituloDomainPropertyId, typeof(Tapiz.tamañoTituloPropertyHandler)),
+				new DomainMemberInfo(typeof(Tapiz), "colorFondoPortal", Tapiz.colorFondoPortalDomainPropertyId, typeof(Tapiz.colorFondoPortalPropertyHandler)),
+				new DomainMemberInfo(typeof(Tapiz), "fuenteTitulo", Tapiz.fuenteTituloDomainPropertyId, typeof(Tapiz.fuenteTituloPropertyHandler)),
+				new DomainMemberInfo(typeof(Tapiz), "alineacionTitulo", Tapiz.alineacionTituloDomainPropertyId, typeof(Tapiz.alineacionTituloPropertyHandler)),
 				new DomainMemberInfo(typeof(Elemento), "nombre", Elemento.nombreDomainPropertyId, typeof(Elemento.nombrePropertyHandler)),
 				new DomainMemberInfo(typeof(EntidadReferencesRelacion1), "cardinalidad", EntidadReferencesRelacion1.cardinalidadDomainPropertyId, typeof(EntidadReferencesRelacion1.cardinalidadPropertyHandler)),
 			};
@@ -518,6 +524,70 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		/// </summary>
 		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.Cardinalidad/unoAuno.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
 		unoAuno = 3,
+	}
+}
+namespace UPM_IPS.FMRMRCMMGProyectoIPS
+{
+	/// <summary>
+	/// DomainEnumeration: FuentesEnum
+	/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.FuentesEnum
+	/// </summary>
+	[global::System.CLSCompliant(true)]
+	public enum FuentesEnum
+	{
+		/// <summary>
+		/// Arial
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.FuentesEnum.Arial
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.FuentesEnum/Arial.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		Arial = 0,
+		/// <summary>
+		/// Verdana
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.FuentesEnum.Verdana
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.FuentesEnum/Verdana.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		Verdana = 1,
+		/// <summary>
+		/// TimesNewRoman
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.FuentesEnum.TimesNewRoman
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.FuentesEnum/TimesNewRoman.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		TimesNewRoman = 2,
+		/// <summary>
+		/// Tahoma
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.FuentesEnum.Tahoma
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.FuentesEnum/Tahoma.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		Tahoma = 3,
+	}
+}
+namespace UPM_IPS.FMRMRCMMGProyectoIPS
+{
+	/// <summary>
+	/// DomainEnumeration: PosicionTituloEnum
+	/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.PosicionTituloEnum
+	/// </summary>
+	[global::System.CLSCompliant(true)]
+	public enum PosicionTituloEnum
+	{
+		/// <summary>
+		/// Izquierda
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.PosicionTituloEnum.Izquierda
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.PosicionTituloEnum/Izquierda.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		Izquierda = 0,
+		/// <summary>
+		/// Derecha
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.PosicionTituloEnum.Derecha
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.PosicionTituloEnum/Derecha.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		Derecha = 2,
+		/// <summary>
+		/// Centro
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.PosicionTituloEnum.Centro
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.PosicionTituloEnum/Centro.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		Centro = 1,
 	}
 }
 

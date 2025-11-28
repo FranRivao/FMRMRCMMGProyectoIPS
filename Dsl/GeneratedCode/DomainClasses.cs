@@ -48,6 +48,528 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		{
 		}
 		#endregion
+		#region tituloPortal domain property code
+		
+		/// <summary>
+		/// tituloPortal domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid tituloPortalDomainPropertyId = new global::System.Guid(0xc98e3bd7, 0x9b15, 0x414d, 0xb8, 0x39, 0x5a, 0x05, 0xf8, 0x40, 0x8f, 0x59);
+		
+		/// <summary>
+		/// Storage for tituloPortal
+		/// </summary>
+		private global::System.String tituloPortalPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of tituloPortal domain property.
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz.Titulo Portal
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz/tituloPortal.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz/tituloPortal.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("c98e3bd7-9b15-414d-b839-5a05f8408f59")]
+		public global::System.String tituloPortal
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return tituloPortalPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				tituloPortalPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Tapiz.tituloPortal domain property.
+		/// </summary>
+		internal sealed partial class tituloPortalPropertyHandler : DslModeling::DomainPropertyValueHandler<Tapiz, global::System.String>
+		{
+			private tituloPortalPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Tapiz.tituloPortal domain property value handler.
+			/// </summary>
+			public static readonly tituloPortalPropertyHandler Instance = new tituloPortalPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Tapiz.tituloPortal domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return tituloPortalDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(Tapiz element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.tituloPortalPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Tapiz element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.tituloPortalPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region colorTitulo domain property code
+		
+		/// <summary>
+		/// colorTitulo domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid colorTituloDomainPropertyId = new global::System.Guid(0xdf1090ae, 0x5600, 0x4c95, 0x99, 0x97, 0x98, 0xa0, 0x86, 0x69, 0x13, 0xad);
+		
+		/// <summary>
+		/// Storage for colorTitulo
+		/// </summary>
+		private global::System.String colorTituloPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of colorTitulo domain property.
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz.Color Titulo
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz/colorTitulo.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz/colorTitulo.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("df1090ae-5600-4c95-9997-98a0866913ad")]
+		public global::System.String colorTitulo
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return colorTituloPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				colorTituloPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Tapiz.colorTitulo domain property.
+		/// </summary>
+		internal sealed partial class colorTituloPropertyHandler : DslModeling::DomainPropertyValueHandler<Tapiz, global::System.String>
+		{
+			private colorTituloPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Tapiz.colorTitulo domain property value handler.
+			/// </summary>
+			public static readonly colorTituloPropertyHandler Instance = new colorTituloPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Tapiz.colorTitulo domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return colorTituloDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(Tapiz element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.colorTituloPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Tapiz element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.colorTituloPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region tamañoTitulo domain property code
+		
+		/// <summary>
+		/// tamañoTitulo domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid tamañoTituloDomainPropertyId = new global::System.Guid(0x901981f0, 0x8e09, 0x4f52, 0x9a, 0x43, 0xef, 0xd3, 0x6d, 0x53, 0x01, 0x81);
+		
+		/// <summary>
+		/// Storage for tamañoTitulo
+		/// </summary>
+		private global::System.String tamañoTituloPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of tamañoTitulo domain property.
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz.Tamaño Titulo
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz/tamañoTitulo.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz/tamañoTitulo.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("901981f0-8e09-4f52-9a43-efd36d530181")]
+		public global::System.String tamañoTitulo
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return tamañoTituloPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				tamañoTituloPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Tapiz.tamañoTitulo domain property.
+		/// </summary>
+		internal sealed partial class tamañoTituloPropertyHandler : DslModeling::DomainPropertyValueHandler<Tapiz, global::System.String>
+		{
+			private tamañoTituloPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Tapiz.tamañoTitulo domain property value handler.
+			/// </summary>
+			public static readonly tamañoTituloPropertyHandler Instance = new tamañoTituloPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Tapiz.tamañoTitulo domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return tamañoTituloDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(Tapiz element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.tamañoTituloPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Tapiz element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.tamañoTituloPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region colorFondoPortal domain property code
+		
+		/// <summary>
+		/// colorFondoPortal domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid colorFondoPortalDomainPropertyId = new global::System.Guid(0xf68c2a09, 0x9e58, 0x487b, 0xa7, 0xda, 0xfb, 0x90, 0x52, 0x01, 0x6a, 0x5a);
+		
+		/// <summary>
+		/// Storage for colorFondoPortal
+		/// </summary>
+		private global::System.String colorFondoPortalPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of colorFondoPortal domain property.
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz.Color Fondo Portal
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz/colorFondoPortal.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz/colorFondoPortal.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("f68c2a09-9e58-487b-a7da-fb9052016a5a")]
+		public global::System.String colorFondoPortal
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return colorFondoPortalPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				colorFondoPortalPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Tapiz.colorFondoPortal domain property.
+		/// </summary>
+		internal sealed partial class colorFondoPortalPropertyHandler : DslModeling::DomainPropertyValueHandler<Tapiz, global::System.String>
+		{
+			private colorFondoPortalPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Tapiz.colorFondoPortal domain property value handler.
+			/// </summary>
+			public static readonly colorFondoPortalPropertyHandler Instance = new colorFondoPortalPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Tapiz.colorFondoPortal domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return colorFondoPortalDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(Tapiz element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.colorFondoPortalPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Tapiz element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.colorFondoPortalPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region fuenteTitulo domain property code
+		
+		/// <summary>
+		/// fuenteTitulo domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid fuenteTituloDomainPropertyId = new global::System.Guid(0xd3d0d60a, 0x0ab5, 0x4c3e, 0xa6, 0x19, 0xc4, 0x26, 0xd5, 0xaf, 0x94, 0xbe);
+		
+		/// <summary>
+		/// Storage for fuenteTitulo
+		/// </summary>
+		private FuentesEnum fuenteTituloPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of fuenteTitulo domain property.
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz.Fuente Titulo
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz/fuenteTitulo.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz/fuenteTitulo.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("d3d0d60a-0ab5-4c3e-a619-c426d5af94be")]
+		public FuentesEnum fuenteTitulo
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return fuenteTituloPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				fuenteTituloPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Tapiz.fuenteTitulo domain property.
+		/// </summary>
+		internal sealed partial class fuenteTituloPropertyHandler : DslModeling::DomainPropertyValueHandler<Tapiz, FuentesEnum>
+		{
+			private fuenteTituloPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Tapiz.fuenteTitulo domain property value handler.
+			/// </summary>
+			public static readonly fuenteTituloPropertyHandler Instance = new fuenteTituloPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Tapiz.fuenteTitulo domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return fuenteTituloDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed FuentesEnum GetValue(Tapiz element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.fuenteTituloPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Tapiz element, FuentesEnum newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				FuentesEnum oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.fuenteTituloPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region alineacionTitulo domain property code
+		
+		/// <summary>
+		/// alineacionTitulo domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid alineacionTituloDomainPropertyId = new global::System.Guid(0x5b5b1f1c, 0x8c3c, 0x448b, 0xb3, 0xdf, 0xff, 0xc3, 0x74, 0x64, 0x6f, 0x21);
+		
+		/// <summary>
+		/// Storage for alineacionTitulo
+		/// </summary>
+		private PosicionTituloEnum alineacionTituloPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of alineacionTitulo domain property.
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz.Alineacion Titulo
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz/alineacionTitulo.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz/alineacionTitulo.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("5b5b1f1c-8c3c-448b-b3df-ffc374646f21")]
+		public PosicionTituloEnum alineacionTitulo
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return alineacionTituloPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				alineacionTituloPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Tapiz.alineacionTitulo domain property.
+		/// </summary>
+		internal sealed partial class alineacionTituloPropertyHandler : DslModeling::DomainPropertyValueHandler<Tapiz, PosicionTituloEnum>
+		{
+			private alineacionTituloPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Tapiz.alineacionTitulo domain property value handler.
+			/// </summary>
+			public static readonly alineacionTituloPropertyHandler Instance = new alineacionTituloPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Tapiz.alineacionTitulo domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return alineacionTituloDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed PosicionTituloEnum GetValue(Tapiz element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.alineacionTituloPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Tapiz element, PosicionTituloEnum newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				PosicionTituloEnum oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.alineacionTituloPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
 		#region Elementoes opposite domain role accessor
 		
 		/// <summary>

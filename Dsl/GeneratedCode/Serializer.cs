@@ -103,7 +103,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			
 			// Read properties serialized as XML attributes.
 			ReadPropertiesFromAttributes(serializationContext, element, reader);
-				
+	
 			// Read nested XML elements.
 			if (!serializationContext.Result.Failed)
 			{
@@ -151,7 +151,111 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			// Always call the base class so any extensions are deserialized
 			base.ReadPropertiesFromAttributes(serializationContext, element, reader);
 	
-			// There is no property to read; do nothing
+			Tapiz instanceOfTapiz = element as Tapiz;
+			global::System.Diagnostics.Debug.Assert(instanceOfTapiz != null, "Expecting an instance of Tapiz");
+	
+			// tituloPortal
+			if (!serializationContext.Result.Failed)
+			{
+				string attribtituloPortal = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "tituloPortal");
+				if (attribtituloPortal != null)
+				{
+					global::System.String valueOftituloPortal;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribtituloPortal, out valueOftituloPortal))
+					{
+						instanceOfTapiz.tituloPortal = valueOftituloPortal;
+					}
+					else
+					{	// Invalid property value, ignored.
+						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "tituloPortal", typeof(global::System.String), attribtituloPortal);
+					}
+				}
+			}
+			// colorTitulo
+			if (!serializationContext.Result.Failed)
+			{
+				string attribcolorTitulo = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "colorTitulo");
+				if (attribcolorTitulo != null)
+				{
+					global::System.String valueOfcolorTitulo;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribcolorTitulo, out valueOfcolorTitulo))
+					{
+						instanceOfTapiz.colorTitulo = valueOfcolorTitulo;
+					}
+					else
+					{	// Invalid property value, ignored.
+						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "colorTitulo", typeof(global::System.String), attribcolorTitulo);
+					}
+				}
+			}
+			// tamañoTitulo
+			if (!serializationContext.Result.Failed)
+			{
+				string attribtamañoTitulo = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "tamañoTitulo");
+				if (attribtamañoTitulo != null)
+				{
+					global::System.String valueOftamañoTitulo;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribtamañoTitulo, out valueOftamañoTitulo))
+					{
+						instanceOfTapiz.tamañoTitulo = valueOftamañoTitulo;
+					}
+					else
+					{	// Invalid property value, ignored.
+						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "tamañoTitulo", typeof(global::System.String), attribtamañoTitulo);
+					}
+				}
+			}
+			// colorFondoPortal
+			if (!serializationContext.Result.Failed)
+			{
+				string attribcolorFondoPortal = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "colorFondoPortal");
+				if (attribcolorFondoPortal != null)
+				{
+					global::System.String valueOfcolorFondoPortal;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribcolorFondoPortal, out valueOfcolorFondoPortal))
+					{
+						instanceOfTapiz.colorFondoPortal = valueOfcolorFondoPortal;
+					}
+					else
+					{	// Invalid property value, ignored.
+						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "colorFondoPortal", typeof(global::System.String), attribcolorFondoPortal);
+					}
+				}
+			}
+			// fuenteTitulo
+			if (!serializationContext.Result.Failed)
+			{
+				string attribfuenteTitulo = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "fuenteTitulo");
+				if (attribfuenteTitulo != null)
+				{
+					FuentesEnum valueOffuenteTitulo;
+					if (DslModeling::SerializationUtilities.TryGetValue<FuentesEnum>(serializationContext, attribfuenteTitulo, out valueOffuenteTitulo))
+					{
+						instanceOfTapiz.fuenteTitulo = valueOffuenteTitulo;
+					}
+					else
+					{	// Invalid property value, ignored.
+						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "fuenteTitulo", typeof(FuentesEnum), attribfuenteTitulo);
+					}
+				}
+			}
+			// alineacionTitulo
+			if (!serializationContext.Result.Failed)
+			{
+				string attribalineacionTitulo = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "alineacionTitulo");
+				if (attribalineacionTitulo != null)
+				{
+					PosicionTituloEnum valueOfalineacionTitulo;
+					if (DslModeling::SerializationUtilities.TryGetValue<PosicionTituloEnum>(serializationContext, attribalineacionTitulo, out valueOfalineacionTitulo))
+					{
+						instanceOfTapiz.alineacionTitulo = valueOfalineacionTitulo;
+					}
+					else
+					{	// Invalid property value, ignored.
+						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "alineacionTitulo", typeof(PosicionTituloEnum), attribalineacionTitulo);
+					}
+				}
+			}
 		}
 	
 		/// <summary>
@@ -661,7 +765,73 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			// Always call the base class so any extensions are serialized
 			base.WritePropertiesAsAttributes(serializationContext, element, writer);
 	
-			// There are no properties; do nothing
+			Tapiz instanceOfTapiz = element as Tapiz;
+			global::System.Diagnostics.Debug.Assert(instanceOfTapiz != null, "Expecting an instance of Tapiz");
+	
+			// tituloPortal
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.String propValue = instanceOfTapiz.tituloPortal;
+				if (!serializationContext.Result.Failed)
+				{
+					if (!string.IsNullOrEmpty(propValue))
+						FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "tituloPortal", propValue);
+	
+				}
+			}
+			// colorTitulo
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.String propValue = instanceOfTapiz.colorTitulo;
+				if (!serializationContext.Result.Failed)
+				{
+					if (!string.IsNullOrEmpty(propValue))
+						FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "colorTitulo", propValue);
+	
+				}
+			}
+			// tamañoTitulo
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.String propValue = instanceOfTapiz.tamañoTitulo;
+				if (!serializationContext.Result.Failed)
+				{
+					if (!string.IsNullOrEmpty(propValue))
+						FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "tamañoTitulo", propValue);
+	
+				}
+			}
+			// colorFondoPortal
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.String propValue = instanceOfTapiz.colorFondoPortal;
+				if (!serializationContext.Result.Failed)
+				{
+					if (!string.IsNullOrEmpty(propValue))
+						FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "colorFondoPortal", propValue);
+	
+				}
+			}
+			// fuenteTitulo
+			if (!serializationContext.Result.Failed)
+			{
+				FuentesEnum propValue = instanceOfTapiz.fuenteTitulo;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<FuentesEnum>(serializationContext, propValue);
+				if (!serializationContext.Result.Failed)
+				{
+					FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "fuenteTitulo", serializedPropValue);
+				}
+			}
+			// alineacionTitulo
+			if (!serializationContext.Result.Failed)
+			{
+				PosicionTituloEnum propValue = instanceOfTapiz.alineacionTitulo;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<PosicionTituloEnum>(serializationContext, propValue);
+				if (!serializationContext.Result.Failed)
+				{
+					FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "alineacionTitulo", serializedPropValue);
+				}
+			}
 		}
 	
 		/// <summary>
