@@ -1,17 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <tapiz xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="2ea417be-3bd0-42fe-a5f2-125af54914ce" xmlns="http://schemas.microsoft.com/dsltools/FMRMRCMMGProyectoIPS">
   <elementoes>
-    <tapizHasElementoes Id="a137966e-2e01-4e8d-b28f-c38fa0edf8f0">
-      <entidad Id="c3a13687-e915-4ae5-845c-ad2865d1a921">
+    <tapizHasElementoes Id="8e580da3-e182-454b-9de6-3522ff2f4fd9">
+      <entidad Id="2ab999c3-492e-4655-9fab-e8eb8242223b" nombre="asdasd">
+        <atributo>
+          <entidadReferencesAtributo Id="dc1b6363-5f67-4c1e-a78b-1c0d92354360">
+            <atributoMoniker Id="9e0542ab-af08-424d-a932-03e53920135f" />
+          </entidadReferencesAtributo>
+          <entidadReferencesAtributo Id="e6a997a6-fc92-41d0-8315-b3d8a85c9962">
+            <atributoMoniker Id="105fb1c2-3d81-410c-9132-9a39f05f76f5" />
+          </entidadReferencesAtributo>
+        </atributo>
         <atributoKey>
-          <entidadReferencesAtributoKey Id="ab923bb3-a8db-4148-aed9-748488568982">
-            <atributoKeyMoniker Id="adeb95cc-591d-4de7-bd96-b13b84eca566" />
+          <entidadReferencesAtributoKey Id="9215272e-865e-41c0-b01c-bccac672f9e9">
+            <atributoKeyMoniker Id="d379b8e0-fbc2-43e5-97c8-e9df68989a0c" />
           </entidadReferencesAtributoKey>
         </atributoKey>
       </entidad>
     </tapizHasElementoes>
-    <tapizHasElementoes Id="168e5881-e78e-4bf3-9980-bcc8b9726b93">
-      <atributoKey Id="adeb95cc-591d-4de7-bd96-b13b84eca566" />
+    <tapizHasElementoes Id="c0508754-6e0d-4ad5-ac91-8cda3dbd4018">
+      <atributoKey Id="d379b8e0-fbc2-43e5-97c8-e9df68989a0c" nombre="adasd" />
+    </tapizHasElementoes>
+    <tapizHasElementoes Id="b0b818d5-4eea-492b-b774-f3db7c504037">
+      <atributo Id="9e0542ab-af08-424d-a932-03e53920135f" nombre="sqwsqw" />
+    </tapizHasElementoes>
+    <tapizHasElementoes Id="c8a547ae-8bb5-4dec-8029-68bb4c52e2c1">
+      <atributo Id="105fb1c2-3d81-410c-9132-9a39f05f76f5" nombre="sqwsqwq" />
     </tapizHasElementoes>
   </elementoes>
 </tapiz>

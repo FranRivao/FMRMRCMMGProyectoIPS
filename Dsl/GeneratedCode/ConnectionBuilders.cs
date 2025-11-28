@@ -631,24 +631,20 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 					targetShapeElement = RemovePassThroughShapes(targetShapeElement);
 					targetElement = targetShapeElement.ModelElement;
 					if(targetElement == null) targetElement = targetShapeElement;
-					
-					// The AtributoEntidadConector connection tool specifies that source and target should be reversed.
-					// base.CanCreateConnection must be called to check whether existing Locks prevent this link from getting created.
-					canConnect = base.CanCreateConnection(targetShapeElement, sourceShapeElement, ref connectionWarning);
 			
 				}
 
+				// base.CanCreateConnection must be called to check whether existing Locks prevent this link from getting created.	
+				canConnect = base.CanCreateConnection(sourceShapeElement, targetShapeElement, ref connectionWarning);
 				if (canConnect)
 				{				
 					if(targetShapeElement == null)
 					{
-						// The AtributoEntidadConector connection tool specifies that source and target should be reversed. 
-						return EntidadReferencesAtributoBuilder.CanAcceptTarget(sourceElement);
+						return EntidadReferencesAtributoBuilder.CanAcceptSource(sourceElement);
 					}
 					else
 					{				
-						// The AtributoEntidadConector connection tool specifies that source and target should be reversed. 
-						return EntidadReferencesAtributoBuilder.CanAcceptSourceAndTarget(targetElement, sourceElement);
+						return EntidadReferencesAtributoBuilder.CanAcceptSourceAndTarget(sourceElement, targetElement);
 					}
 				}
 				else
@@ -687,8 +683,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 				if(sourceElement == null) sourceElement = sourceShapeElement;
 				DslModeling::ModelElement targetElement = targetShapeElement.ModelElement;
 				if(targetElement == null) targetElement = targetShapeElement;
-				// The AtributoEntidadConector connection tool specifies that source and target should be reversed. 
-				EntidadReferencesAtributoBuilder.Connect(targetElement, sourceElement);
+				EntidadReferencesAtributoBuilder.Connect(sourceElement, targetElement);
 			}
 		}
 		
@@ -954,24 +949,20 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 					targetShapeElement = RemovePassThroughShapes(targetShapeElement);
 					targetElement = targetShapeElement.ModelElement;
 					if(targetElement == null) targetElement = targetShapeElement;
-					
-					// The EntidadAtributoKeyConector connection tool specifies that source and target should be reversed.
-					// base.CanCreateConnection must be called to check whether existing Locks prevent this link from getting created.
-					canConnect = base.CanCreateConnection(targetShapeElement, sourceShapeElement, ref connectionWarning);
 			
 				}
 
+				// base.CanCreateConnection must be called to check whether existing Locks prevent this link from getting created.	
+				canConnect = base.CanCreateConnection(sourceShapeElement, targetShapeElement, ref connectionWarning);
 				if (canConnect)
 				{				
 					if(targetShapeElement == null)
 					{
-						// The EntidadAtributoKeyConector connection tool specifies that source and target should be reversed. 
-						return EntidadReferencesAtributoKeyBuilder.CanAcceptTarget(sourceElement);
+						return EntidadReferencesAtributoKeyBuilder.CanAcceptSource(sourceElement);
 					}
 					else
 					{				
-						// The EntidadAtributoKeyConector connection tool specifies that source and target should be reversed. 
-						return EntidadReferencesAtributoKeyBuilder.CanAcceptSourceAndTarget(targetElement, sourceElement);
+						return EntidadReferencesAtributoKeyBuilder.CanAcceptSourceAndTarget(sourceElement, targetElement);
 					}
 				}
 				else
@@ -1010,8 +1001,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 				if(sourceElement == null) sourceElement = sourceShapeElement;
 				DslModeling::ModelElement targetElement = targetShapeElement.ModelElement;
 				if(targetElement == null) targetElement = targetShapeElement;
-				// The EntidadAtributoKeyConector connection tool specifies that source and target should be reversed. 
-				EntidadReferencesAtributoKeyBuilder.Connect(targetElement, sourceElement);
+				EntidadReferencesAtributoKeyBuilder.Connect(sourceElement, targetElement);
 			}
 		}
 		
@@ -1118,24 +1108,20 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 					targetShapeElement = RemovePassThroughShapes(targetShapeElement);
 					targetElement = targetShapeElement.ModelElement;
 					if(targetElement == null) targetElement = targetShapeElement;
-					
-					// The RelacionAtributoRelacionConector connection tool specifies that source and target should be reversed.
-					// base.CanCreateConnection must be called to check whether existing Locks prevent this link from getting created.
-					canConnect = base.CanCreateConnection(targetShapeElement, sourceShapeElement, ref connectionWarning);
 			
 				}
 
+				// base.CanCreateConnection must be called to check whether existing Locks prevent this link from getting created.	
+				canConnect = base.CanCreateConnection(sourceShapeElement, targetShapeElement, ref connectionWarning);
 				if (canConnect)
 				{				
 					if(targetShapeElement == null)
 					{
-						// The RelacionAtributoRelacionConector connection tool specifies that source and target should be reversed. 
-						return RelacionReferencesAtributoRelacionBuilder.CanAcceptTarget(sourceElement);
+						return RelacionReferencesAtributoRelacionBuilder.CanAcceptSource(sourceElement);
 					}
 					else
 					{				
-						// The RelacionAtributoRelacionConector connection tool specifies that source and target should be reversed. 
-						return RelacionReferencesAtributoRelacionBuilder.CanAcceptSourceAndTarget(targetElement, sourceElement);
+						return RelacionReferencesAtributoRelacionBuilder.CanAcceptSourceAndTarget(sourceElement, targetElement);
 					}
 				}
 				else
@@ -1174,8 +1160,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 				if(sourceElement == null) sourceElement = sourceShapeElement;
 				DslModeling::ModelElement targetElement = targetShapeElement.ModelElement;
 				if(targetElement == null) targetElement = targetShapeElement;
-				// The RelacionAtributoRelacionConector connection tool specifies that source and target should be reversed. 
-				RelacionReferencesAtributoRelacionBuilder.Connect(targetElement, sourceElement);
+				RelacionReferencesAtributoRelacionBuilder.Connect(sourceElement, targetElement);
 			}
 		}
 		

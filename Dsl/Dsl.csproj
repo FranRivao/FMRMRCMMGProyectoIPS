@@ -76,7 +76,7 @@
     <PackageReference Include="Microsoft.VisualStudio.TextTemplating.Modeling" Version="17.0.*-*" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Validation\Validation.cs" />
+    <Compile Include="CustomCode\Validation\Validation.cs" />
     <None Include="..\Key.snk">
       <Link>Key.snk</Link>
     </None>
@@ -257,7 +257,5 @@
     <EmbeddedResource Include="Resources\ConnectorSourceSearch.cur" />
     <EmbeddedResource Include="Resources\ConnectorTargetSearch.cur" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DesignerCustomization\" />
-  </ItemGroup>
+  <ItemGroup />
 </Project>
