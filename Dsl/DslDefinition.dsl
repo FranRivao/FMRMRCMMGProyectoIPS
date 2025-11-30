@@ -11,6 +11,14 @@
             <DomainPath>TapizHasElementoes.Elementoes</DomainPath>
           </LinkCreationPaths>
         </ElementMergeDirective>
+        <ElementMergeDirective>
+          <Index>
+            <DomainClassMoniker Name="ElementosWeb" />
+          </Index>
+          <LinkCreationPaths>
+            <DomainPath>TapizHasElementosWebbed.ElementosWebbed</DomainPath>
+          </LinkCreationPaths>
+        </ElementMergeDirective>
       </ElementMergeDirectives>
     </DomainClass>
     <DomainClass Id="f14a95f1-18d8-4ddc-a899-463623caca02" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Entidad" Name="Entidad" DisplayName="Entidad" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS">
@@ -47,6 +55,113 @@
         <DomainClassMoniker Name="Elemento" />
       </BaseClass>
     </DomainClass>
+    <DomainClass Id="a9823568-0c3a-455e-b811-c0ac13f6e3b6" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Portal" Name="Portal" DisplayName="Portal" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS">
+      <BaseClass>
+        <DomainClassMoniker Name="ElementosWeb" />
+      </BaseClass>
+      <Properties>
+        <DomainProperty Id="d8614fe2-6098-49a2-b685-455ca4390ec5" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Portal.Background Color" Name="backgroundColor" DisplayName="Background Color">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="628216c2-ecb6-4cda-aaa7-c57f70e2d9ac" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Portal.Title Text" Name="titleText" DisplayName="Title Text">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="1fd37aab-c0ff-4912-aae8-ff653018eb22" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Portal.Title Color" Name="titleColor" DisplayName="Title Color">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="18e507eb-b4a0-48a1-a9e6-1f18174f83e7" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Portal.Title Font Family" Name="titleFontFamily" DisplayName="Title Font Family">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="220806c3-ac91-44c3-b76b-399570876324" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Portal.Title Font Size" Name="titleFontSize" DisplayName="Title Font Size">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Int16" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="5af328f1-1dae-4005-9f32-95fee29fe0ad" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Portal.Title Alignment" Name="titleAlignment" DisplayName="Title Alignment">
+          <Type>
+            <DomainEnumerationMoniker Name="TextAlignment" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+    </DomainClass>
+    <DomainClass Id="e686a92b-077c-47da-a7c1-cb6ac01747ff" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Page" Name="Page" DisplayName="Page" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS">
+      <BaseClass>
+        <DomainClassMoniker Name="ElementosWeb" />
+      </BaseClass>
+      <Properties>
+        <DomainProperty Id="40740ba6-adce-4992-9e45-a003ad3801cc" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Page.Title Color" Name="titleColor" DisplayName="Title Color">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="76a1d6fd-b66d-456e-b354-e9a328ac44df" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Page.Title Font Family" Name="titleFontFamily" DisplayName="Title Font Family">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="acd75d8d-a486-4b70-8de8-0b9436d7ca77" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Page.Title Font Size" Name="titleFontSize" DisplayName="Title Font Size">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Int16" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="b2a053f0-2444-4ebb-a41d-303d7f8c23ad" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Page.Title Alignment" Name="titleAlignment" DisplayName="Title Alignment">
+          <Type>
+            <DomainEnumerationMoniker Name="TextAlignment" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="f97ede96-bdcd-4a79-8cc2-82bcd789b1bd" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Page.Additional CSS" Name="additionalCSS" DisplayName="Additional CSS">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+    </DomainClass>
+    <DomainClass Id="dd43b97c-e312-4f42-9b5f-66423e074641" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Field" Name="Field" DisplayName="Field" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS">
+      <BaseClass>
+        <DomainClassMoniker Name="ElementosWeb" />
+      </BaseClass>
+      <Properties>
+        <DomainProperty Id="6f95a88d-dc30-4796-8beb-2f7085923c8f" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Field.Label Color" Name="labelColor" DisplayName="Label Color">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="a020fb36-92c4-4814-89be-f7e89d37a57f" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Field.Label Font Family" Name="labelFontFamily" DisplayName="Label Font Family">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="15097892-eeb1-4cbf-a891-ef5c100a0635" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Field.Label Font Size" Name="labelFontSize" DisplayName="Label Font Size">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Int16" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="0f3fef65-8567-4434-848d-b65f1f9f5791" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Field.Label Alignment" Name="labelAlignment" DisplayName="Label Alignment">
+          <Type>
+            <DomainEnumerationMoniker Name="TextAlignment" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="9bdc66b1-3d73-4fd7-8b00-240ae2f60db2" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Field.Placeholder" Name="placeholder" DisplayName="Placeholder">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="c4b4023c-3e80-453a-a4fb-76150b94ccb8" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Field.Required" Name="required" DisplayName="Required">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Boolean" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+    </DomainClass>
+    <DomainClass Id="3baae1ea-3856-4a6d-8d6b-a84d9312d788" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.ElementosWeb" Name="ElementosWeb" DisplayName="Elementos Web" InheritanceModifier="Abstract" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" />
   </Classes>
   <Relationships>
     <DomainRelationship Id="e8f7629d-9907-4554-aa2d-f41c46c74c3b" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributo" Name="EntidadReferencesAtributo" DisplayName="Entidad References Atributo" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS">
@@ -136,6 +251,54 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
+    <DomainRelationship Id="a220121e-0023-4acc-b780-3adf1351a213" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged" Name="PortalReferencesPaged" DisplayName="Portal References Paged" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS">
+      <Source>
+        <DomainRole Id="8219b8ea-204c-4dbc-b470-5459cb4d8b38" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged.Portal" Name="Portal" DisplayName="Portal" PropertyName="Paged" PropertyDisplayName="Paged">
+          <RolePlayer>
+            <DomainClassMoniker Name="Portal" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="eee0fa3d-2ce7-4b5d-9487-9639c508706e" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged.Page" Name="Page" DisplayName="Page" PropertyName="Portals" PropertyDisplayName="Portals">
+          <RolePlayer>
+            <DomainClassMoniker Name="Page" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="aa479095-ec3a-47dc-976b-ca012860c8c2" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded" Name="PageReferencesFielded" DisplayName="Page References Fielded" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS">
+      <Source>
+        <DomainRole Id="ddb2e6c6-3517-430a-a318-ed620ce3b544" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded.Page" Name="Page" DisplayName="Page" PropertyName="Fielded" PropertyDisplayName="Fielded">
+          <RolePlayer>
+            <DomainClassMoniker Name="Page" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="f1c8fe6d-a100-4d69-beed-8f15277ea753" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded.Field" Name="Field" DisplayName="Field" PropertyName="Paged" PropertyDisplayName="Paged">
+          <RolePlayer>
+            <DomainClassMoniker Name="Field" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="d84a285f-6b12-4ad9-a28a-b546012dbd08" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementosWebbed" Name="TapizHasElementosWebbed" DisplayName="Tapiz Has Elementos Webbed" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" IsEmbedding="true">
+      <Source>
+        <DomainRole Id="5871ed2f-e8b4-4412-8321-dbf789c9164f" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementosWebbed.Tapiz" Name="Tapiz" DisplayName="Tapiz" PropertyName="ElementosWebbed" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Elementos Webbed">
+          <RolePlayer>
+            <DomainClassMoniker Name="Tapiz" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="b6a2693f-5fbe-4fe8-87ba-2ffad215525d" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementosWebbed.ElementosWeb" Name="ElementosWeb" DisplayName="Elementos Web" PropertyName="Tapiz" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Tapiz">
+          <RolePlayer>
+            <DomainClassMoniker Name="ElementosWeb" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
   </Relationships>
   <Types>
     <ExternalType Name="DateTime" Namespace="System" />
@@ -159,6 +322,13 @@
         <EnumerationLiteral Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Cardinalidad.ceroAn" Name="ceroAn" Value="0" />
         <EnumerationLiteral Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Cardinalidad.unoAn" Name="unoAn" Value="2" />
         <EnumerationLiteral Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Cardinalidad.unoAuno" Name="unoAuno" Value="3" />
+      </Literals>
+    </DomainEnumeration>
+    <DomainEnumeration Name="TextAlignment" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.TextAlignment">
+      <Literals>
+        <EnumerationLiteral Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.TextAlignment.Left" Name="Left" Value="0" />
+        <EnumerationLiteral Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.TextAlignment.Right" Name="Right" Value="2" />
+        <EnumerationLiteral Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.TextAlignment.Center" Name="Center" Value="1" />
       </Literals>
     </DomainEnumeration>
   </Types>
@@ -188,6 +358,13 @@
         <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
       </ShapeHasDecorators>
     </GeometryShape>
+    <GeometryShape Id="6e0ab175-799c-4be7-a0fe-1c70626a1830" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaPortal" Name="MetaforaPortal" DisplayName="Metafora Portal" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Metafora Portal" InitialHeight="1" Geometry="Rectangle">
+      <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="titleTextDec" DisplayName="Title Text Dec" DefaultText="titleTextDec" FontStyle="Bold" FontSize="9" />
+      </ShapeHasDecorators>
+    </GeometryShape>
+    <GeometryShape Id="6e9a3b05-2041-4072-8de2-86384baf6e98" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.MetaforePage" Name="MetaforePage" DisplayName="Metafore Page" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Metafore Page" InitialHeight="1" Geometry="Rectangle" />
+    <GeometryShape Id="3969b08c-5727-495c-bf1e-489f0d07cede" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaField" Name="MetaforaField" DisplayName="Metafora Field" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Metafora Field" InitialHeight="1" Geometry="Rectangle" />
   </Shapes>
   <Connectors>
     <Connector Id="7b518e40-fc7c-4385-8e1b-ca221cb38292" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadAtributo" Name="ConectorEntidadAtributo" DisplayName="Conector Entidad Atributo" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Conector Entidad Atributo" DashStyle="Dot" RoutingStyle="Straight" />
@@ -203,6 +380,8 @@
       </BaseConnector>
     </Connector>
     <Connector Id="f8510ae7-75e1-425a-b024-577f1319defd" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.ConectorRelacionAtributoRelacion" Name="ConectorRelacionAtributoRelacion" DisplayName="Conector Relacion Atributo Relacion" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Conector Relacion Atributo Relacion" Color="Navy" RoutingStyle="Straight" />
+    <Connector Id="99ce57cb-ca6a-4d13-9c25-0e5e72ae584d" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.ConectorPortalPage" Name="ConectorPortalPage" DisplayName="Conector Portal Page" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Conector Portal Page" />
+    <Connector Id="ae631b7a-b206-4e05-9603-0e849b3e0cab" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.ConectorPageField" Name="ConectorPageField" DisplayName="Conector Page Field" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Conector Page Field" />
   </Connectors>
   <XmlSerializationBehavior Name="FMRMRCMMGProyectoIPSSerializationBehavior" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS">
     <ClassData>
@@ -211,6 +390,9 @@
         <ElementData>
           <XmlRelationshipData UseFullForm="true" RoleElementName="elementoes">
             <DomainRelationshipMoniker Name="TapizHasElementoes" />
+          </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="elementosWebbed">
+            <DomainRelationshipMoniker Name="TapizHasElementosWebbed" />
           </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
@@ -306,6 +488,105 @@
       <XmlClassData TypeName="ConectorRelacionAtributoRelacion" MonikerAttributeName="" SerializeId="true" MonikerElementName="conectorRelacionAtributoRelacionMoniker" ElementName="conectorRelacionAtributoRelacion" MonikerTypeName="ConectorRelacionAtributoRelacionMoniker">
         <ConnectorMoniker Name="ConectorRelacionAtributoRelacion" />
       </XmlClassData>
+      <XmlClassData TypeName="Portal" MonikerAttributeName="" SerializeId="true" MonikerElementName="portalMoniker" ElementName="portal" MonikerTypeName="PortalMoniker">
+        <DomainClassMoniker Name="Portal" />
+        <ElementData>
+          <XmlPropertyData XmlName="backgroundColor">
+            <DomainPropertyMoniker Name="Portal/backgroundColor" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="titleText">
+            <DomainPropertyMoniker Name="Portal/titleText" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="titleColor">
+            <DomainPropertyMoniker Name="Portal/titleColor" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="titleFontFamily">
+            <DomainPropertyMoniker Name="Portal/titleFontFamily" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="titleFontSize">
+            <DomainPropertyMoniker Name="Portal/titleFontSize" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="titleAlignment">
+            <DomainPropertyMoniker Name="Portal/titleAlignment" />
+          </XmlPropertyData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="paged">
+            <DomainRelationshipMoniker Name="PortalReferencesPaged" />
+          </XmlRelationshipData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="Page" MonikerAttributeName="" SerializeId="true" MonikerElementName="pageMoniker" ElementName="page" MonikerTypeName="PageMoniker">
+        <DomainClassMoniker Name="Page" />
+        <ElementData>
+          <XmlPropertyData XmlName="titleColor">
+            <DomainPropertyMoniker Name="Page/titleColor" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="titleFontFamily">
+            <DomainPropertyMoniker Name="Page/titleFontFamily" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="titleFontSize">
+            <DomainPropertyMoniker Name="Page/titleFontSize" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="titleAlignment">
+            <DomainPropertyMoniker Name="Page/titleAlignment" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="additionalCSS">
+            <DomainPropertyMoniker Name="Page/additionalCSS" />
+          </XmlPropertyData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="fielded">
+            <DomainRelationshipMoniker Name="PageReferencesFielded" />
+          </XmlRelationshipData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="Field" MonikerAttributeName="" SerializeId="true" MonikerElementName="fieldMoniker" ElementName="field" MonikerTypeName="FieldMoniker">
+        <DomainClassMoniker Name="Field" />
+        <ElementData>
+          <XmlPropertyData XmlName="labelColor">
+            <DomainPropertyMoniker Name="Field/labelColor" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="labelFontFamily">
+            <DomainPropertyMoniker Name="Field/labelFontFamily" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="labelFontSize">
+            <DomainPropertyMoniker Name="Field/labelFontSize" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="labelAlignment">
+            <DomainPropertyMoniker Name="Field/labelAlignment" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="placeholder">
+            <DomainPropertyMoniker Name="Field/placeholder" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="required">
+            <DomainPropertyMoniker Name="Field/required" />
+          </XmlPropertyData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="MetaforaPortal" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaPortalMoniker" ElementName="metaforaPortal" MonikerTypeName="MetaforaPortalMoniker">
+        <GeometryShapeMoniker Name="MetaforaPortal" />
+      </XmlClassData>
+      <XmlClassData TypeName="ConectorPortalPage" MonikerAttributeName="" SerializeId="true" MonikerElementName="conectorPortalPageMoniker" ElementName="conectorPortalPage" MonikerTypeName="ConectorPortalPageMoniker">
+        <ConnectorMoniker Name="ConectorPortalPage" />
+      </XmlClassData>
+      <XmlClassData TypeName="PortalReferencesPaged" MonikerAttributeName="" SerializeId="true" MonikerElementName="portalReferencesPagedMoniker" ElementName="portalReferencesPaged" MonikerTypeName="PortalReferencesPagedMoniker">
+        <DomainRelationshipMoniker Name="PortalReferencesPaged" />
+      </XmlClassData>
+      <XmlClassData TypeName="PageReferencesFielded" MonikerAttributeName="" SerializeId="true" MonikerElementName="pageReferencesFieldedMoniker" ElementName="pageReferencesFielded" MonikerTypeName="PageReferencesFieldedMoniker">
+        <DomainRelationshipMoniker Name="PageReferencesFielded" />
+      </XmlClassData>
+      <XmlClassData TypeName="MetaforePage" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforePageMoniker" ElementName="metaforePage" MonikerTypeName="MetaforePageMoniker">
+        <GeometryShapeMoniker Name="MetaforePage" />
+      </XmlClassData>
+      <XmlClassData TypeName="ConectorPageField" MonikerAttributeName="" SerializeId="true" MonikerElementName="conectorPageFieldMoniker" ElementName="conectorPageField" MonikerTypeName="ConectorPageFieldMoniker">
+        <ConnectorMoniker Name="ConectorPageField" />
+      </XmlClassData>
+      <XmlClassData TypeName="MetaforaField" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaFieldMoniker" ElementName="metaforaField" MonikerTypeName="MetaforaFieldMoniker">
+        <GeometryShapeMoniker Name="MetaforaField" />
+      </XmlClassData>
+      <XmlClassData TypeName="ElementosWeb" MonikerAttributeName="" SerializeId="true" MonikerElementName="elementosWebMoniker" ElementName="elementosWeb" MonikerTypeName="ElementosWebMoniker">
+        <DomainClassMoniker Name="ElementosWeb" />
+      </XmlClassData>
+      <XmlClassData TypeName="TapizHasElementosWebbed" MonikerAttributeName="" SerializeId="true" MonikerElementName="tapizHasElementosWebbedMoniker" ElementName="tapizHasElementosWebbed" MonikerTypeName="TapizHasElementosWebbedMoniker">
+        <DomainRelationshipMoniker Name="TapizHasElementosWebbed" />
+      </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
   <ExplorerBehavior Name="FMRMRCMMGProyectoIPSExplorer" />
@@ -381,6 +662,44 @@
           <RolePlayerConnectDirective>
             <AcceptingClass>
               <DomainClassMoniker Name="AtributoRelacion" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </TargetDirectives>
+      </LinkConnectDirective>
+    </ConnectionBuilder>
+    <ConnectionBuilder Name="PortalReferencesPagedBuilder">
+      <LinkConnectDirective>
+        <DomainRelationshipMoniker Name="PortalReferencesPaged" />
+        <SourceDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="Portal" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </SourceDirectives>
+        <TargetDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="Page" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </TargetDirectives>
+      </LinkConnectDirective>
+    </ConnectionBuilder>
+    <ConnectionBuilder Name="PageReferencesFieldedBuilder">
+      <LinkConnectDirective>
+        <DomainRelationshipMoniker Name="PageReferencesFielded" />
+        <SourceDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="Page" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </SourceDirectives>
+        <TargetDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="Field" />
             </AcceptingClass>
           </RolePlayerConnectDirective>
         </TargetDirectives>
@@ -467,6 +786,35 @@
         </DecoratorMap>
         <GeometryShapeMoniker Name="MetaforaAtributoRelacion" />
       </ShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="Portal" />
+        <ParentElementPath>
+          <DomainPath>TapizHasElementosWebbed.Tapiz/!Tapiz</DomainPath>
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="MetaforaPortal/titleTextDec" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Portal/titleText" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <GeometryShapeMoniker Name="MetaforaPortal" />
+      </ShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="Page" />
+        <ParentElementPath>
+          <DomainPath>TapizHasElementosWebbed.Tapiz/!Tapiz</DomainPath>
+        </ParentElementPath>
+        <GeometryShapeMoniker Name="MetaforePage" />
+      </ShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="Field" />
+        <ParentElementPath>
+          <DomainPath>TapizHasElementosWebbed.Tapiz/!Tapiz</DomainPath>
+        </ParentElementPath>
+        <GeometryShapeMoniker Name="MetaforaField" />
+      </ShapeMap>
     </ShapeMaps>
     <ConnectorMaps>
       <ConnectorMap>
@@ -493,6 +841,14 @@
         <ConnectorMoniker Name="ConectorRelacionAtributoRelacion" />
         <DomainRelationshipMoniker Name="RelacionReferencesAtributoRelacion" />
       </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="ConectorPortalPage" />
+        <DomainRelationshipMoniker Name="PortalReferencesPaged" />
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="ConectorPageField" />
+        <DomainRelationshipMoniker Name="PageReferencesFielded" />
+      </ConnectorMap>
     </ConnectorMaps>
   </Diagram>
   <Designer CopyPasteGeneration="CopyPasteOnly" FileExtension="FMRMRCMMG_DSLProyIPS" EditorGuid="0ec12e17-df7d-42e8-a88d-0216e8f14f09">
@@ -502,34 +858,55 @@
     <XmlSerializationDefinition CustomPostLoad="false">
       <XmlSerializationBehaviorMoniker Name="FMRMRCMMGProyectoIPSSerializationBehavior" />
     </XmlSerializationDefinition>
-    <ToolboxTab TabText="FMRMRCMMGProyectoIPS">
+    <ToolboxTab TabText="Elementos">
       <ElementTool Name="Entidad" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Entidad" Tooltip="Entidad" HelpKeyword="Entidad">
         <DomainClassMoniker Name="Entidad" />
       </ElementTool>
       <ElementTool Name="Atributo" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Atributo" Tooltip="Atributo" HelpKeyword="Atributo">
         <DomainClassMoniker Name="Atributo" />
       </ElementTool>
-      <ConnectionTool Name="AtributoEntidadConector" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="AtributoEntidadConector" Tooltip="Atributo Entidad Conector" HelpKeyword="AtributoEntidadConector">
-        <ConnectionBuilderMoniker Name="FMRMRCMMGProyectoIPS/EntidadReferencesAtributoBuilder" />
-      </ConnectionTool>
-      <ConnectionTool Name="EntidadRelacionConector1" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="EntidadRelacionConector1" Tooltip="Entidad Relacion Conector1" HelpKeyword="EntidadRelacionConector1">
-        <ConnectionBuilderMoniker Name="FMRMRCMMGProyectoIPS/EntidadReferencesRelacion1Builder" />
-      </ConnectionTool>
-      <ElementTool Name="Relacion" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Relacion" Tooltip="Relacion" HelpKeyword="Relacion">
-        <DomainClassMoniker Name="Relacion" />
-      </ElementTool>
-      <ConnectionTool Name="EntidadAtributoKeyConector" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="EntidadAtributoKeyConector" Tooltip="Entidad Atributo Key Conector" HelpKeyword="EntidadAtributoKeyConector">
-        <ConnectionBuilderMoniker Name="FMRMRCMMGProyectoIPS/EntidadReferencesAtributoKeyBuilder" />
-      </ConnectionTool>
       <ElementTool Name="AtributoKey" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="AtributoKey" Tooltip="Atributo Key" HelpKeyword="AtributoKey">
         <DomainClassMoniker Name="AtributoKey" />
       </ElementTool>
-      <ConnectionTool Name="RelacionAtributoRelacionConector" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="RelacionAtributoRelacionConector" Tooltip="Relacion Atributo Relacion Conector" HelpKeyword="RelacionAtributoRelacionConector">
-        <ConnectionBuilderMoniker Name="FMRMRCMMGProyectoIPS/RelacionReferencesAtributoRelacionBuilder" />
-      </ConnectionTool>
       <ElementTool Name="AtributoRelacion" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="AtributoRelacion" Tooltip="Atributo Relacion" HelpKeyword="AtributoRelacion">
         <DomainClassMoniker Name="AtributoRelacion" />
       </ElementTool>
+      <ElementTool Name="Relacion" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Relacion" Tooltip="Relacion" HelpKeyword="Relacion">
+        <DomainClassMoniker Name="Relacion" />
+      </ElementTool>
+    </ToolboxTab>
+    <ToolboxTab TabText="Conectores">
+      <ConnectionTool Name="ConectorEntidadRelacion" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="ConectorEntidadRelacion" Tooltip="Conector Entidad Relacion" HelpKeyword="ConectorEntidadRelacion">
+        <ConnectionBuilderMoniker Name="FMRMRCMMGProyectoIPS/EntidadReferencesRelacion1Builder" />
+      </ConnectionTool>
+      <ConnectionTool Name="ConectorEntidadAtributo" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="ConectorEntidadAtributo" Tooltip="Conector Entidad Atributo" HelpKeyword="ConectorEntidadAtributo">
+        <ConnectionBuilderMoniker Name="FMRMRCMMGProyectoIPS/EntidadReferencesAtributoBuilder" />
+      </ConnectionTool>
+      <ConnectionTool Name="ConectorEntidadAtributoKey" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="ConectorEntidadAtributoKey" Tooltip="Conector Entidad Atributo Key" HelpKeyword="ConectorEntidadAtributoKey">
+        <ConnectionBuilderMoniker Name="FMRMRCMMGProyectoIPS/EntidadReferencesAtributoKeyBuilder" />
+      </ConnectionTool>
+      <ConnectionTool Name="ConectorRelacionAtributoRelacion" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="ConectorRelacionAtributoRelacion" Tooltip="Conector Relacion Atributo Relacion" HelpKeyword="ConectorRelacionAtributoRelacion">
+        <ConnectionBuilderMoniker Name="FMRMRCMMGProyectoIPS/RelacionReferencesAtributoRelacionBuilder" />
+      </ConnectionTool>
+    </ToolboxTab>
+    <ToolboxTab TabText="WebElementos">
+      <ElementTool Name="Portal" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Portal" Tooltip="Portal" HelpKeyword="Portal">
+        <DomainClassMoniker Name="Portal" />
+      </ElementTool>
+      <ElementTool Name="Page" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Page" Tooltip="Page" HelpKeyword="Page">
+        <DomainClassMoniker Name="Page" />
+      </ElementTool>
+      <ElementTool Name="Field" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Field" Tooltip="Field" HelpKeyword="Field">
+        <DomainClassMoniker Name="Field" />
+      </ElementTool>
+    </ToolboxTab>
+    <ToolboxTab TabText="WebConectores">
+      <ConnectionTool Name="ConectorPortalPage" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="ConectorPortalPage" Tooltip="Conector Portal Page" HelpKeyword="ConectorPortalPage">
+        <ConnectionBuilderMoniker Name="FMRMRCMMGProyectoIPS/PortalReferencesPagedBuilder" />
+      </ConnectionTool>
+      <ConnectionTool Name="ConectorPageField" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="ConectorPageField" Tooltip="Conector Page Field" HelpKeyword="ConectorPageField">
+        <ConnectionBuilderMoniker Name="FMRMRCMMGProyectoIPS/PageReferencesFieldedBuilder" />
+      </ConnectionTool>
     </ToolboxTab>
     <Validation UsesMenu="false" UsesOpen="true" UsesSave="true" UsesLoad="false" />
     <DiagramMoniker Name="FMRMRCMMGProyectoIPSDiagram" />

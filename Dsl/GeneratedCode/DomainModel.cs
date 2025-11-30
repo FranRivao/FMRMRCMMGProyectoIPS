@@ -74,22 +74,35 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 				typeof(Elemento),
 				typeof(AtributoKey),
 				typeof(AtributoRelacion),
+				typeof(Portal),
+				typeof(Page),
+				typeof(Field),
 				typeof(EntidadReferencesAtributo),
 				typeof(EntidadReferencesRelacion1),
 				typeof(TapizHasElementoes),
 				typeof(EntidadReferencesAtributoKey),
 				typeof(RelacionReferencesAtributoRelacion),
+				typeof(TapizHasPortal),
+				typeof(PortalReferencesPaged),
+				typeof(PageReferencesFielded),
+				typeof(TapizHasPaged),
+				typeof(TapizHasFielded),
 				typeof(FMRMRCMMGProyectoIPSDiagram),
 				typeof(ConectorEntidadAtributo),
 				typeof(ConectorEntidadRelacion),
 				typeof(ConectorEntidadAtributoKey),
 				typeof(ConectorEntidadRelacion1),
 				typeof(ConectorRelacionAtributoRelacion),
+				typeof(ConectorPortalPage),
+				typeof(ConectorPageField),
 				typeof(MetaforaEntidad),
 				typeof(MetaforaAtributo),
 				typeof(MetaforaRelacion),
 				typeof(MetaforaAtributoKey),
 				typeof(MetaforaAtributoRelacion),
+				typeof(MetaforaPortal),
+				typeof(MetaforePage),
+				typeof(MetaforaField),
 				typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FixUpDiagram),
 				typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.DecoratorPropertyChanged),
 				typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.ConnectorRolePlayerChanged),
@@ -105,6 +118,23 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			return new DomainMemberInfo[]
 			{
 				new DomainMemberInfo(typeof(Elemento), "nombre", Elemento.nombreDomainPropertyId, typeof(Elemento.nombrePropertyHandler)),
+				new DomainMemberInfo(typeof(Portal), "backgroundColor", Portal.backgroundColorDomainPropertyId, typeof(Portal.backgroundColorPropertyHandler)),
+				new DomainMemberInfo(typeof(Portal), "titleText", Portal.titleTextDomainPropertyId, typeof(Portal.titleTextPropertyHandler)),
+				new DomainMemberInfo(typeof(Portal), "titleColor", Portal.titleColorDomainPropertyId, typeof(Portal.titleColorPropertyHandler)),
+				new DomainMemberInfo(typeof(Portal), "titleFontFamily", Portal.titleFontFamilyDomainPropertyId, typeof(Portal.titleFontFamilyPropertyHandler)),
+				new DomainMemberInfo(typeof(Portal), "titleFontSize", Portal.titleFontSizeDomainPropertyId, typeof(Portal.titleFontSizePropertyHandler)),
+				new DomainMemberInfo(typeof(Portal), "titleAlignment", Portal.titleAlignmentDomainPropertyId, typeof(Portal.titleAlignmentPropertyHandler)),
+				new DomainMemberInfo(typeof(Page), "titleColor", Page.titleColorDomainPropertyId, typeof(Page.titleColorPropertyHandler)),
+				new DomainMemberInfo(typeof(Page), "titleFontFamily", Page.titleFontFamilyDomainPropertyId, typeof(Page.titleFontFamilyPropertyHandler)),
+				new DomainMemberInfo(typeof(Page), "titleFontSize", Page.titleFontSizeDomainPropertyId, typeof(Page.titleFontSizePropertyHandler)),
+				new DomainMemberInfo(typeof(Page), "titleAlignment", Page.titleAlignmentDomainPropertyId, typeof(Page.titleAlignmentPropertyHandler)),
+				new DomainMemberInfo(typeof(Page), "additionalCSS", Page.additionalCSSDomainPropertyId, typeof(Page.additionalCSSPropertyHandler)),
+				new DomainMemberInfo(typeof(Field), "labelColor", Field.labelColorDomainPropertyId, typeof(Field.labelColorPropertyHandler)),
+				new DomainMemberInfo(typeof(Field), "labelFontFamily", Field.labelFontFamilyDomainPropertyId, typeof(Field.labelFontFamilyPropertyHandler)),
+				new DomainMemberInfo(typeof(Field), "labelFontSize", Field.labelFontSizeDomainPropertyId, typeof(Field.labelFontSizePropertyHandler)),
+				new DomainMemberInfo(typeof(Field), "labelAlignment", Field.labelAlignmentDomainPropertyId, typeof(Field.labelAlignmentPropertyHandler)),
+				new DomainMemberInfo(typeof(Field), "placeholder", Field.placeholderDomainPropertyId, typeof(Field.placeholderPropertyHandler)),
+				new DomainMemberInfo(typeof(Field), "required", Field.requiredDomainPropertyId, typeof(Field.requiredPropertyHandler)),
 				new DomainMemberInfo(typeof(EntidadReferencesRelacion1), "cardinalidad", EntidadReferencesRelacion1.cardinalidadDomainPropertyId, typeof(EntidadReferencesRelacion1.cardinalidadPropertyHandler)),
 			};
 		}
@@ -126,6 +156,16 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 				new DomainRolePlayerInfo(typeof(EntidadReferencesAtributoKey), "AtributoKey", EntidadReferencesAtributoKey.AtributoKeyDomainRoleId),
 				new DomainRolePlayerInfo(typeof(RelacionReferencesAtributoRelacion), "Relacion", RelacionReferencesAtributoRelacion.RelacionDomainRoleId),
 				new DomainRolePlayerInfo(typeof(RelacionReferencesAtributoRelacion), "AtributoRelacion", RelacionReferencesAtributoRelacion.AtributoRelacionDomainRoleId),
+				new DomainRolePlayerInfo(typeof(TapizHasPortal), "Tapiz", TapizHasPortal.TapizDomainRoleId),
+				new DomainRolePlayerInfo(typeof(TapizHasPortal), "Portal", TapizHasPortal.PortalDomainRoleId),
+				new DomainRolePlayerInfo(typeof(PortalReferencesPaged), "Portal", PortalReferencesPaged.PortalDomainRoleId),
+				new DomainRolePlayerInfo(typeof(PortalReferencesPaged), "Page", PortalReferencesPaged.PageDomainRoleId),
+				new DomainRolePlayerInfo(typeof(PageReferencesFielded), "Page", PageReferencesFielded.PageDomainRoleId),
+				new DomainRolePlayerInfo(typeof(PageReferencesFielded), "Field", PageReferencesFielded.FieldDomainRoleId),
+				new DomainRolePlayerInfo(typeof(TapizHasPaged), "Tapiz", TapizHasPaged.TapizDomainRoleId),
+				new DomainRolePlayerInfo(typeof(TapizHasPaged), "Page", TapizHasPaged.PageDomainRoleId),
+				new DomainRolePlayerInfo(typeof(TapizHasFielded), "Tapiz", TapizHasFielded.TapizDomainRoleId),
+				new DomainRolePlayerInfo(typeof(TapizHasFielded), "Field", TapizHasFielded.FieldDomainRoleId),
 			};
 		}
 		#endregion
@@ -147,23 +187,31 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(18);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(26);
 				createElementMap.Add(typeof(Tapiz), 0);
 				createElementMap.Add(typeof(Entidad), 1);
 				createElementMap.Add(typeof(Atributo), 2);
 				createElementMap.Add(typeof(Relacion), 3);
 				createElementMap.Add(typeof(AtributoKey), 4);
 				createElementMap.Add(typeof(AtributoRelacion), 5);
-				createElementMap.Add(typeof(FMRMRCMMGProyectoIPSDiagram), 6);
-				createElementMap.Add(typeof(ConectorEntidadAtributo), 7);
-				createElementMap.Add(typeof(ConectorEntidadAtributoKey), 8);
-				createElementMap.Add(typeof(ConectorEntidadRelacion1), 9);
-				createElementMap.Add(typeof(ConectorRelacionAtributoRelacion), 10);
-				createElementMap.Add(typeof(MetaforaEntidad), 11);
-				createElementMap.Add(typeof(MetaforaAtributo), 12);
-				createElementMap.Add(typeof(MetaforaRelacion), 13);
-				createElementMap.Add(typeof(MetaforaAtributoKey), 14);
-				createElementMap.Add(typeof(MetaforaAtributoRelacion), 15);
+				createElementMap.Add(typeof(Portal), 6);
+				createElementMap.Add(typeof(Page), 7);
+				createElementMap.Add(typeof(Field), 8);
+				createElementMap.Add(typeof(FMRMRCMMGProyectoIPSDiagram), 9);
+				createElementMap.Add(typeof(ConectorEntidadAtributo), 10);
+				createElementMap.Add(typeof(ConectorEntidadAtributoKey), 11);
+				createElementMap.Add(typeof(ConectorEntidadRelacion1), 12);
+				createElementMap.Add(typeof(ConectorRelacionAtributoRelacion), 13);
+				createElementMap.Add(typeof(ConectorPortalPage), 14);
+				createElementMap.Add(typeof(ConectorPageField), 15);
+				createElementMap.Add(typeof(MetaforaEntidad), 16);
+				createElementMap.Add(typeof(MetaforaAtributo), 17);
+				createElementMap.Add(typeof(MetaforaRelacion), 18);
+				createElementMap.Add(typeof(MetaforaAtributoKey), 19);
+				createElementMap.Add(typeof(MetaforaAtributoRelacion), 20);
+				createElementMap.Add(typeof(MetaforaPortal), 21);
+				createElementMap.Add(typeof(MetaforePage), 22);
+				createElementMap.Add(typeof(MetaforaField), 23);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -183,16 +231,24 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 				case 3: return new Relacion(partition, propertyAssignments);
 				case 4: return new AtributoKey(partition, propertyAssignments);
 				case 5: return new AtributoRelacion(partition, propertyAssignments);
-				case 6: return new FMRMRCMMGProyectoIPSDiagram(partition, propertyAssignments);
-				case 7: return new ConectorEntidadAtributo(partition, propertyAssignments);
-				case 8: return new ConectorEntidadAtributoKey(partition, propertyAssignments);
-				case 9: return new ConectorEntidadRelacion1(partition, propertyAssignments);
-				case 10: return new ConectorRelacionAtributoRelacion(partition, propertyAssignments);
-				case 11: return new MetaforaEntidad(partition, propertyAssignments);
-				case 12: return new MetaforaAtributo(partition, propertyAssignments);
-				case 13: return new MetaforaRelacion(partition, propertyAssignments);
-				case 14: return new MetaforaAtributoKey(partition, propertyAssignments);
-				case 15: return new MetaforaAtributoRelacion(partition, propertyAssignments);
+				case 6: return new Portal(partition, propertyAssignments);
+				case 7: return new Page(partition, propertyAssignments);
+				case 8: return new Field(partition, propertyAssignments);
+				case 9: return new FMRMRCMMGProyectoIPSDiagram(partition, propertyAssignments);
+				case 10: return new ConectorEntidadAtributo(partition, propertyAssignments);
+				case 11: return new ConectorEntidadAtributoKey(partition, propertyAssignments);
+				case 12: return new ConectorEntidadRelacion1(partition, propertyAssignments);
+				case 13: return new ConectorRelacionAtributoRelacion(partition, propertyAssignments);
+				case 14: return new ConectorPortalPage(partition, propertyAssignments);
+				case 15: return new ConectorPageField(partition, propertyAssignments);
+				case 16: return new MetaforaEntidad(partition, propertyAssignments);
+				case 17: return new MetaforaAtributo(partition, propertyAssignments);
+				case 18: return new MetaforaRelacion(partition, propertyAssignments);
+				case 19: return new MetaforaAtributoKey(partition, propertyAssignments);
+				case 20: return new MetaforaAtributoRelacion(partition, propertyAssignments);
+				case 21: return new MetaforaPortal(partition, propertyAssignments);
+				case 22: return new MetaforePage(partition, propertyAssignments);
+				case 23: return new MetaforaField(partition, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -215,12 +271,17 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 	
 			if (createElementLinkMap == null)
 			{
-				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(5);
+				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(10);
 				createElementLinkMap.Add(typeof(EntidadReferencesAtributo), 0);
 				createElementLinkMap.Add(typeof(EntidadReferencesRelacion1), 1);
 				createElementLinkMap.Add(typeof(TapizHasElementoes), 2);
 				createElementLinkMap.Add(typeof(EntidadReferencesAtributoKey), 3);
 				createElementLinkMap.Add(typeof(RelacionReferencesAtributoRelacion), 4);
+				createElementLinkMap.Add(typeof(TapizHasPortal), 5);
+				createElementLinkMap.Add(typeof(PortalReferencesPaged), 6);
+				createElementLinkMap.Add(typeof(PageReferencesFielded), 7);
+				createElementLinkMap.Add(typeof(TapizHasPaged), 8);
+				createElementLinkMap.Add(typeof(TapizHasFielded), 9);
 			}
 			int index;
 			if (!createElementLinkMap.TryGetValue(elementLinkType, out index))
@@ -240,6 +301,11 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 				case 2: return new TapizHasElementoes(partition, roleAssignments, propertyAssignments);
 				case 3: return new EntidadReferencesAtributoKey(partition, roleAssignments, propertyAssignments);
 				case 4: return new RelacionReferencesAtributoRelacion(partition, roleAssignments, propertyAssignments);
+				case 5: return new TapizHasPortal(partition, roleAssignments, propertyAssignments);
+				case 6: return new PortalReferencesPaged(partition, roleAssignments, propertyAssignments);
+				case 7: return new PageReferencesFielded(partition, roleAssignments, propertyAssignments);
+				case 8: return new TapizHasPaged(partition, roleAssignments, propertyAssignments);
+				case 9: return new TapizHasFielded(partition, roleAssignments, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -411,6 +477,9 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		{
 			#region Initialize DomainData Table
 			DomainRoles.Add(global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes.ElementoDomainRoleId, true);
+			DomainRoles.Add(global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal.PortalDomainRoleId, true);
+			DomainRoles.Add(global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged.PageDomainRoleId, true);
+			DomainRoles.Add(global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded.FieldDomainRoleId, true);
 			#endregion
 		}
 		/// <summary>
@@ -518,6 +587,35 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		/// </summary>
 		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.Cardinalidad/unoAuno.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
 		unoAuno = 3,
+	}
+}
+namespace UPM_IPS.FMRMRCMMGProyectoIPS
+{
+	/// <summary>
+	/// DomainEnumeration: TextAlignment
+	/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TextAlignment
+	/// </summary>
+	[global::System.CLSCompliant(true)]
+	public enum TextAlignment
+	{
+		/// <summary>
+		/// Left
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TextAlignment.Left
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.TextAlignment/Left.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		Left = 0,
+		/// <summary>
+		/// Right
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TextAlignment.Right
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.TextAlignment/Right.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		Right = 2,
+		/// <summary>
+		/// Center
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TextAlignment.Center
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.TextAlignment/Center.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		Center = 1,
 	}
 }
 
