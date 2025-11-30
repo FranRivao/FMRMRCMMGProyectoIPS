@@ -83,6 +83,18 @@
             <xsd:documentation>Version of the model serialized in this file.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
+        <!-- Property: tituloPortal -->
+        <xsd:attribute name="tituloPortal" type="xsd:string" />
+        <!-- Property: colorTitulo -->
+        <xsd:attribute name="colorTitulo" type="xsd:string" />
+        <!-- Property: tamañoTitulo -->
+        <xsd:attribute name="tamañoTitulo" type="xsd:string" />
+        <!-- Property: colorFondoPortal -->
+        <xsd:attribute name="colorFondoPortal" type="xsd:string" />
+        <!-- Property: fuenteTitulo -->
+        <xsd:attribute name="fuenteTitulo" type="FuentesEnum" />
+        <!-- Property: alineacionTitulo -->
+        <xsd:attribute name="alineacionTitulo" type="PosicionTituloEnum" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -162,6 +174,14 @@
             <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
+        <!-- Property: colorTitulo -->
+        <xsd:attribute name="colorTitulo" type="xsd:string" />
+        <!-- Property: tamañoTitulo -->
+        <xsd:attribute name="tamañoTitulo" type="xsd:string" />
+        <!-- Property: alineacionTitulo -->
+        <xsd:attribute name="alineacionTitulo" type="PosicionTituloEnum" />
+        <!-- Property: fuenteTitulo -->
+        <xsd:attribute name="fuenteTitulo" type="FuentesEnum" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -189,6 +209,16 @@
             <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
+        <!-- Property: colorTitulo -->
+        <xsd:attribute name="colorTitulo" type="xsd:string" />
+        <!-- Property: tamañoTitulo -->
+        <xsd:attribute name="tamañoTitulo" type="xsd:string" />
+        <!-- Property: alineacionTitulo -->
+        <xsd:attribute name="alineacionTitulo" type="PosicionTituloEnum" />
+        <!-- Property: fuenteTitulo -->
+        <xsd:attribute name="fuenteTitulo" type="FuentesEnum" />
+        <!-- Property: formatoVisualizacion -->
+        <xsd:attribute name="formatoVisualizacion" type="xsd:string" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -913,12 +943,32 @@
     </xsd:restriction>
   </xsd:simpleType>
   
-  <!-- Enum TextAlignment -->
-  <xsd:simpleType name="TextAlignment">
+  <!-- Enum FuentesEnum -->
+  <xsd:simpleType name="FuentesEnum">
     <xsd:restriction base="xsd:string">
-      <xsd:enumeration value="Left"/>
-      <xsd:enumeration value="Right"/>
-      <xsd:enumeration value="Center"/>
+      <xsd:enumeration value="Arial"/>
+      <xsd:enumeration value="Verdana"/>
+      <xsd:enumeration value="TimesNewRoman"/>
+      <xsd:enumeration value="Tahoma"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- Enum PosicionTituloEnum -->
+  <xsd:simpleType name="PosicionTituloEnum">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Izquierda"/>
+      <xsd:enumeration value="Derecha"/>
+      <xsd:enumeration value="Centro"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- Enum VisualizacionEnum -->
+  <xsd:simpleType name="VisualizacionEnum">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="areaDeTexto"/>
+      <xsd:enumeration value="checkbox"/>
+      <xsd:enumeration value="radioButton"/>
+      <xsd:enumeration value="listaDesplegable"/>
     </xsd:restriction>
   </xsd:simpleType>
   

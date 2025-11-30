@@ -117,6 +117,21 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		{
 			return new DomainMemberInfo[]
 			{
+				new DomainMemberInfo(typeof(Tapiz), "tituloPortal", Tapiz.tituloPortalDomainPropertyId, typeof(Tapiz.tituloPortalPropertyHandler)),
+				new DomainMemberInfo(typeof(Tapiz), "colorTitulo", Tapiz.colorTituloDomainPropertyId, typeof(Tapiz.colorTituloPropertyHandler)),
+				new DomainMemberInfo(typeof(Tapiz), "tamañoTitulo", Tapiz.tamañoTituloDomainPropertyId, typeof(Tapiz.tamañoTituloPropertyHandler)),
+				new DomainMemberInfo(typeof(Tapiz), "colorFondoPortal", Tapiz.colorFondoPortalDomainPropertyId, typeof(Tapiz.colorFondoPortalPropertyHandler)),
+				new DomainMemberInfo(typeof(Tapiz), "fuenteTitulo", Tapiz.fuenteTituloDomainPropertyId, typeof(Tapiz.fuenteTituloPropertyHandler)),
+				new DomainMemberInfo(typeof(Tapiz), "alineacionTitulo", Tapiz.alineacionTituloDomainPropertyId, typeof(Tapiz.alineacionTituloPropertyHandler)),
+				new DomainMemberInfo(typeof(Entidad), "colorTitulo", Entidad.colorTituloDomainPropertyId, typeof(Entidad.colorTituloPropertyHandler)),
+				new DomainMemberInfo(typeof(Entidad), "tamañoTitulo", Entidad.tamañoTituloDomainPropertyId, typeof(Entidad.tamañoTituloPropertyHandler)),
+				new DomainMemberInfo(typeof(Entidad), "alineacionTitulo", Entidad.alineacionTituloDomainPropertyId, typeof(Entidad.alineacionTituloPropertyHandler)),
+				new DomainMemberInfo(typeof(Entidad), "fuenteTitulo", Entidad.fuenteTituloDomainPropertyId, typeof(Entidad.fuenteTituloPropertyHandler)),
+				new DomainMemberInfo(typeof(Atributo), "colorTitulo", Atributo.colorTituloDomainPropertyId, typeof(Atributo.colorTituloPropertyHandler)),
+				new DomainMemberInfo(typeof(Atributo), "tamañoTitulo", Atributo.tamañoTituloDomainPropertyId, typeof(Atributo.tamañoTituloPropertyHandler)),
+				new DomainMemberInfo(typeof(Atributo), "alineacionTitulo", Atributo.alineacionTituloDomainPropertyId, typeof(Atributo.alineacionTituloPropertyHandler)),
+				new DomainMemberInfo(typeof(Atributo), "fuenteTitulo", Atributo.fuenteTituloDomainPropertyId, typeof(Atributo.fuenteTituloPropertyHandler)),
+				new DomainMemberInfo(typeof(Atributo), "formatoVisualizacion", Atributo.formatoVisualizacionDomainPropertyId, typeof(Atributo.formatoVisualizacionPropertyHandler)),
 				new DomainMemberInfo(typeof(Elemento), "nombre", Elemento.nombreDomainPropertyId, typeof(Elemento.nombrePropertyHandler)),
 				new DomainMemberInfo(typeof(Portal), "backgroundColor", Portal.backgroundColorDomainPropertyId, typeof(Portal.backgroundColorPropertyHandler)),
 				new DomainMemberInfo(typeof(Portal), "titleText", Portal.titleTextDomainPropertyId, typeof(Portal.titleTextPropertyHandler)),
@@ -592,30 +607,100 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 namespace UPM_IPS.FMRMRCMMGProyectoIPS
 {
 	/// <summary>
-	/// DomainEnumeration: TextAlignment
-	/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TextAlignment
+	/// DomainEnumeration: FuentesEnum
+	/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.FuentesEnum
 	/// </summary>
 	[global::System.CLSCompliant(true)]
-	public enum TextAlignment
+	public enum FuentesEnum
 	{
 		/// <summary>
-		/// Left
-		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TextAlignment.Left
+		/// Arial
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.FuentesEnum.Arial
 		/// </summary>
-		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.TextAlignment/Left.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		Left = 0,
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.FuentesEnum/Arial.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		Arial = 0,
 		/// <summary>
-		/// Right
-		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TextAlignment.Right
+		/// Verdana
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.FuentesEnum.Verdana
 		/// </summary>
-		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.TextAlignment/Right.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		Right = 2,
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.FuentesEnum/Verdana.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		Verdana = 1,
 		/// <summary>
-		/// Center
-		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TextAlignment.Center
+		/// TimesNewRoman
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.FuentesEnum.TimesNewRoman
 		/// </summary>
-		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.TextAlignment/Center.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		Center = 1,
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.FuentesEnum/TimesNewRoman.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		TimesNewRoman = 2,
+		/// <summary>
+		/// Tahoma
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.FuentesEnum.Tahoma
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.FuentesEnum/Tahoma.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		Tahoma = 3,
+	}
+}
+namespace UPM_IPS.FMRMRCMMGProyectoIPS
+{
+	/// <summary>
+	/// DomainEnumeration: PosicionTituloEnum
+	/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.PosicionTituloEnum
+	/// </summary>
+	[global::System.CLSCompliant(true)]
+	public enum PosicionTituloEnum
+	{
+		/// <summary>
+		/// Izquierda
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.PosicionTituloEnum.Izquierda
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.PosicionTituloEnum/Izquierda.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		Izquierda = 0,
+		/// <summary>
+		/// Derecha
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.PosicionTituloEnum.Derecha
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.PosicionTituloEnum/Derecha.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		Derecha = 2,
+		/// <summary>
+		/// Centro
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.PosicionTituloEnum.Centro
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.PosicionTituloEnum/Centro.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		Centro = 1,
+	}
+}
+namespace UPM_IPS.FMRMRCMMGProyectoIPS
+{
+	/// <summary>
+	/// DomainEnumeration: VisualizacionEnum
+	/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.VisualizacionEnum
+	/// </summary>
+	[global::System.CLSCompliant(true)]
+	public enum VisualizacionEnum
+	{
+		/// <summary>
+		/// areaDeTexto
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.VisualizacionEnum.areaDeTexto
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.VisualizacionEnum/areaDeTexto.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		areaDeTexto = 0,
+		/// <summary>
+		/// checkbox
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.VisualizacionEnum.checkbox
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.VisualizacionEnum/checkbox.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		checkbox = 1,
+		/// <summary>
+		/// radioButton
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.VisualizacionEnum.radioButton
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.VisualizacionEnum/radioButton.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		radioButton = 2,
+		/// <summary>
+		/// listaDesplegable
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.VisualizacionEnum.listaDesplegable
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.VisualizacionEnum/listaDesplegable.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		listaDesplegable = 3,
 	}
 }
 
