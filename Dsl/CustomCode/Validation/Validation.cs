@@ -35,24 +35,6 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
                     "ERR_NUMEROS_EN_NOMBRE"
                 );
             }
-
-
-            if (!string.IsNullOrWhiteSpace(nombre))
-            {
-                var duplicates = Store.ElementDirectory
-                    .FindElements<Elemento>()
-                    .Where(e => e.GetType() == GetType() // mismo tipo (Entidad, Atributo, etc.)
-                                && e.nombre == nombre
-                                && e.Id != Id);
-
-                if (duplicates.Any())
-                {
-                    context.LogError(
-                        $"El nombre '{nombre}' ya está en uso en otro elemento del mismo tipo.",
-                        "ERR_NOMBRE_DUPLICADO"
-                    );
-                }
-            }
         }
     }
 

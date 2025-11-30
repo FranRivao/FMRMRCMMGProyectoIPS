@@ -333,52 +333,47 @@
     </DomainEnumeration>
   </Types>
   <Shapes>
-    <GeometryShape Id="c00637d8-a0bc-4683-a295-2c6950f9c042" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaEntidad" Name="MetaforaEntidad" DisplayName="Metafora Entidad" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Metafora Entidad" FillColor="IndianRed" InitialHeight="1" OutlineThickness="0.07" FillGradientMode="None" Geometry="Circle">
+    <GeometryShape Id="c00637d8-a0bc-4683-a295-2c6950f9c042" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaEntidad" Name="MetaforaEntidad" DisplayName="Metafora Entidad" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Metafora Entidad" FillColor="IndianRed" InitialHeight="1" OutlineThickness="0.06" FillGradientMode="None" Geometry="Circle">
       <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" FontStyle="Bold, Italic" FontSize="12" />
+        <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" FontStyle="Bold" FontSize="15" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="a61f56c9-abc3-4b5e-894e-8cae621a5ffc" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaAtributo" Name="MetaforaAtributo" DisplayName="Metafora Atributo" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Metafora Atributo" FillColor="LightGreen" OutlineColor="LightGray" InitialWidth="1.3" InitialHeight="0.8" OutlineThickness="0.04" FillGradientMode="None" Geometry="Ellipse">
+    <GeometryShape Id="a61f56c9-abc3-4b5e-894e-8cae621a5ffc" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaAtributo" Name="MetaforaAtributo" DisplayName="Metafora Atributo" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Metafora Atributo" FillColor="LightGreen" OutlineColor="LightGray" InitialWidth="1.1" InitialHeight="0.8" OutlineThickness="0.04" FillGradientMode="None" Geometry="Ellipse">
       <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" FontStyle="Bold" FontSize="10" />
+        <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" FontSize="10" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="608465d1-8bed-4e21-9966-0f8d67d623f1" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaRelacion" Name="MetaforaRelacion" DisplayName="Metafora Relacion" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Metafora Relacion" FillColor="MediumSlateBlue" OutlineColor="MistyRose" InitialHeight="1" Geometry="Rectangle">
+    <GeometryShape Id="608465d1-8bed-4e21-9966-0f8d67d623f1" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaRelacion" Name="MetaforaRelacion" DisplayName="Metafora Relacion" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Metafora Relacion" FillColor="HotPink" OutlineColor="MistyRose" InitialWidth="1" InitialHeight="1" OutlineThickness="0.04" FillGradientMode="None" Geometry="Rectangle">
       <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" FontStyle="Italic" FontSize="10" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="f531bbfd-7821-40b7-92d5-63d849ec4257" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaAtributoKey" Name="MetaforaAtributoKey" DisplayName="Metafora Atributo Key" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Metafora Atributo Key" OutlineColor="Chocolate" InitialHeight="1" OutlineThickness="0.08125" FillGradientMode="None" Geometry="Rectangle">
+    <GeometryShape Id="f531bbfd-7821-40b7-92d5-63d849ec4257" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaAtributoKey" Name="MetaforaAtributoKey" DisplayName="Metafora Atributo Key" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Metafora Atributo Key" FillColor="Silver" OutlineColor="Chocolate" InitialHeight="1" OutlineThickness="0.05" FillGradientMode="Vertical" Geometry="Rectangle">
       <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" FontStyle="Bold, Underline" FontSize="9" />
+        <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" FontStyle="Bold, Underline" FontSize="10" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="d9d59eda-45dd-4c1d-968f-4ebb5728364b" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaAtributoRelacion" Name="MetaforaAtributoRelacion" DisplayName="Metafora Atributo Relacion" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Metafora Atributo Relacion" TextColor="White" FillColor="DarkTurquoise" InitialHeight="1" FillGradientMode="None" Geometry="Circle">
+    <GeometryShape Id="d9d59eda-45dd-4c1d-968f-4ebb5728364b" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaAtributoRelacion" Name="MetaforaAtributoRelacion" DisplayName="Metafora Atributo Relacion" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Metafora Atributo Relacion" TextColor="White" FillColor="DarkTurquoise" InitialWidth="1" InitialHeight="1" OutlineThickness="0.04" FillGradientMode="None" Geometry="Circle">
       <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="6e0ab175-799c-4be7-a0fe-1c70626a1830" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaPortal" Name="MetaforaPortal" DisplayName="Metafora Portal" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Metafora Portal" InitialHeight="1" Geometry="Rectangle">
+    <GeometryShape Id="6e0ab175-799c-4be7-a0fe-1c70626a1830" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaPortal" Name="MetaforaPortal" DisplayName="Metafora Portal" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Metafora Portal" FillColor="Orchid" OutlineColor="MediumVioletRed" InitialHeight="1" FillGradientMode="ForwardDiagonal" Geometry="Rectangle">
       <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="titleTextDec" DisplayName="Title Text Dec" DefaultText="titleTextDec" FontStyle="Bold" FontSize="9" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="6e9a3b05-2041-4072-8de2-86384baf6e98" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.MetaforePage" Name="MetaforePage" DisplayName="Metafore Page" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Metafore Page" InitialHeight="1" Geometry="Rectangle" />
-    <GeometryShape Id="3969b08c-5727-495c-bf1e-489f0d07cede" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaField" Name="MetaforaField" DisplayName="Metafora Field" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Metafora Field" InitialHeight="1" Geometry="Rectangle" />
+    <GeometryShape Id="6e9a3b05-2041-4072-8de2-86384baf6e98" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.MetaforePage" Name="MetaforePage" DisplayName="Metafore Page" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Metafore Page" FillColor="RoyalBlue" OutlineColor="LightGray" InitialHeight="1" FillGradientMode="Vertical" Geometry="RoundedRectangle" />
+    <GeometryShape Id="3969b08c-5727-495c-bf1e-489f0d07cede" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaField" Name="MetaforaField" DisplayName="Metafora Field" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Metafora Field" OutlineColor="Tomato" InitialHeight="1" FillGradientMode="BackwardDiagonal" Geometry="Ellipse" />
   </Shapes>
   <Connectors>
     <Connector Id="7b518e40-fc7c-4385-8e1b-ca221cb38292" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadAtributo" Name="ConectorEntidadAtributo" DisplayName="Conector Entidad Atributo" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Conector Entidad Atributo" DashStyle="Dot" RoutingStyle="Straight" />
-    <Connector Id="76d3363b-b780-4156-bb69-0cccd2aa5687" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadRelacion" Name="ConectorEntidadRelacion" DisplayName="Conector Entidad Relacion" InheritanceModifier="Abstract" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Conector Entidad Relacion" Color="Gold" DashStyle="DashDotDot" Thickness="0.04125">
-      <ConnectorHasDecorators Position="SourceTop" OffsetFromShape="0" OffsetFromLine="0">
-        <TextDecorator Name="cardinalidadDec" DisplayName="Cardinalidad Dec" DefaultText="cardinalidadDec" FontStyle="Italic, Underline" />
+    <Connector Id="76d3363b-b780-4156-bb69-0cccd2aa5687" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadRelacion" Name="ConectorEntidadRelacion" DisplayName="Conector Entidad Relacion" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Conector Entidad Relacion" Color="Gold" DashStyle="DashDotDot" Thickness="0.04125">
+      <ConnectorHasDecorators Position="SourceTop" OffsetFromShape="0.1" OffsetFromLine="0" isMoveable="true">
+        <TextDecorator Name="cardinalidadDec" DisplayName="Cardinalidad Dec" DefaultText="cardinalidadDec" FontSize="9" />
       </ConnectorHasDecorators>
     </Connector>
-    <Connector Id="af824879-0c61-467e-bc1f-400e060654e3" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadAtributoKey" Name="ConectorEntidadAtributoKey" DisplayName="Conector Entidad Atributo Key" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Conector Entidad Atributo Key" Color="Yellow" Thickness="0.05" RoutingStyle="Straight" />
-    <Connector Id="c9103a99-7c6c-46d0-bea6-1e5d2c471a30" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadRelacion1" Name="ConectorEntidadRelacion1" DisplayName="Conector Entidad Relacion1" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Conector Entidad Relacion1" Color="Gold" DashStyle="DashDotDot" Thickness="0.04125">
-      <BaseConnector>
-        <ConnectorMoniker Name="ConectorEntidadRelacion" />
-      </BaseConnector>
-    </Connector>
+    <Connector Id="af824879-0c61-467e-bc1f-400e060654e3" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadAtributoKey" Name="ConectorEntidadAtributoKey" DisplayName="Conector Entidad Atributo Key" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Conector Entidad Atributo Key" Color="Red" Thickness="0.05" RoutingStyle="Straight" />
     <Connector Id="f8510ae7-75e1-425a-b024-577f1319defd" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.ConectorRelacionAtributoRelacion" Name="ConectorRelacionAtributoRelacion" DisplayName="Conector Relacion Atributo Relacion" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Conector Relacion Atributo Relacion" Color="Navy" RoutingStyle="Straight" />
     <Connector Id="99ce57cb-ca6a-4d13-9c25-0e5e72ae584d" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.ConectorPortalPage" Name="ConectorPortalPage" DisplayName="Conector Portal Page" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Conector Portal Page" />
     <Connector Id="ae631b7a-b206-4e05-9603-0e849b3e0cab" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.ConectorPageField" Name="ConectorPageField" DisplayName="Conector Page Field" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Conector Page Field" />
@@ -472,9 +467,6 @@
       </XmlClassData>
       <XmlClassData TypeName="ConectorEntidadAtributoKey" MonikerAttributeName="" SerializeId="true" MonikerElementName="conectorEntidadAtributoKeyMoniker" ElementName="conectorEntidadAtributoKey" MonikerTypeName="ConectorEntidadAtributoKeyMoniker">
         <ConnectorMoniker Name="ConectorEntidadAtributoKey" />
-      </XmlClassData>
-      <XmlClassData TypeName="ConectorEntidadRelacion1" MonikerAttributeName="" SerializeId="true" MonikerElementName="conectorEntidadRelacion1Moniker" ElementName="conectorEntidadRelacion1" MonikerTypeName="ConectorEntidadRelacion1Moniker">
-        <ConnectorMoniker Name="ConectorEntidadRelacion1" />
       </XmlClassData>
       <XmlClassData TypeName="AtributoRelacion" MonikerAttributeName="" SerializeId="true" MonikerElementName="atributoRelacionMoniker" ElementName="atributoRelacion" MonikerTypeName="AtributoRelacionMoniker">
         <DomainClassMoniker Name="AtributoRelacion" />
@@ -826,18 +818,6 @@
         <DomainRelationshipMoniker Name="EntidadReferencesAtributoKey" />
       </ConnectorMap>
       <ConnectorMap>
-        <ConnectorMoniker Name="ConectorEntidadRelacion1" />
-        <DomainRelationshipMoniker Name="EntidadReferencesRelacion1" />
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="ConectorEntidadRelacion/cardinalidadDec" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="EntidadReferencesRelacion1/cardinalidad" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-      </ConnectorMap>
-      <ConnectorMap>
         <ConnectorMoniker Name="ConectorRelacionAtributoRelacion" />
         <DomainRelationshipMoniker Name="RelacionReferencesAtributoRelacion" />
       </ConnectorMap>
@@ -848,6 +828,18 @@
       <ConnectorMap>
         <ConnectorMoniker Name="ConectorPageField" />
         <DomainRelationshipMoniker Name="PageReferencesFielded" />
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="ConectorEntidadRelacion" />
+        <DomainRelationshipMoniker Name="EntidadReferencesRelacion1" />
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="ConectorEntidadRelacion/cardinalidadDec" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="EntidadReferencesRelacion1/cardinalidad" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
       </ConnectorMap>
     </ConnectorMaps>
   </Diagram>

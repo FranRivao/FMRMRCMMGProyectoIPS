@@ -349,6 +349,14 @@
     <value>Required</value>
     <comment>DisplayName for DomainProperty &apos;required&apos; on DomainClass &apos;Field&apos;</comment>
   </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.ElementosWeb.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.ElementosWeb</value>
+    <comment>Description for DomainClass &apos;ElementosWeb&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.ElementosWeb.DisplayName" xml:space="preserve">
+    <value>Elementos Web</value>
+    <comment>DisplayName for DomainClass &apos;ElementosWeb&apos;</comment>
+  </data>
   <data name="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributo.Description" xml:space="preserve">
     <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributo</value>
     <comment>Description for DomainClass &apos;EntidadReferencesAtributo&apos;</comment>
@@ -517,38 +525,6 @@
     <value>Relacion</value>
     <comment>PropertyDisplayName for DomainRole &apos;AtributoRelacion&apos; on DomainRelationship &apos;RelacionReferencesAtributoRelacion&apos;</comment>
   </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal</value>
-    <comment>Description for DomainClass &apos;TapizHasPortal&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal.DisplayName" xml:space="preserve">
-    <value>Tapiz Has Portal</value>
-    <comment>DisplayName for DomainClass &apos;TapizHasPortal&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal/Tapiz.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal.Tapiz</value>
-    <comment>Description for DomainRole &apos;Tapiz&apos; on DomainRelationship &apos;TapizHasPortal&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal/Tapiz.DisplayName" xml:space="preserve">
-    <value>Tapiz</value>
-    <comment>DisplayName for DomainRole &apos;Tapiz&apos; on DomainRelationship &apos;TapizHasPortal&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal/Tapiz.PropertyDisplayName" xml:space="preserve">
-    <value>Portal</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Tapiz&apos; on DomainRelationship &apos;TapizHasPortal&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal/Portal.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal.Portal</value>
-    <comment>Description for DomainRole &apos;Portal&apos; on DomainRelationship &apos;TapizHasPortal&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal/Portal.DisplayName" xml:space="preserve">
-    <value>Portal</value>
-    <comment>DisplayName for DomainRole &apos;Portal&apos; on DomainRelationship &apos;TapizHasPortal&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal/Portal.PropertyDisplayName" xml:space="preserve">
-    <value>Tapiz</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Portal&apos; on DomainRelationship &apos;TapizHasPortal&apos;</comment>
-  </data>
   <data name="UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged.Description" xml:space="preserve">
     <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged</value>
     <comment>Description for DomainClass &apos;PortalReferencesPaged&apos;</comment>
@@ -613,69 +589,37 @@
     <value>Paged</value>
     <comment>PropertyDisplayName for DomainRole &apos;Field&apos; on DomainRelationship &apos;PageReferencesFielded&apos;</comment>
   </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged</value>
-    <comment>Description for DomainClass &apos;TapizHasPaged&apos;</comment>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementosWebbed.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementosWebbed</value>
+    <comment>Description for DomainClass &apos;TapizHasElementosWebbed&apos;</comment>
   </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged.DisplayName" xml:space="preserve">
-    <value>Tapiz Has Paged</value>
-    <comment>DisplayName for DomainClass &apos;TapizHasPaged&apos;</comment>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementosWebbed.DisplayName" xml:space="preserve">
+    <value>Tapiz Has Elementos Webbed</value>
+    <comment>DisplayName for DomainClass &apos;TapizHasElementosWebbed&apos;</comment>
   </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged/Tapiz.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged.Tapiz</value>
-    <comment>Description for DomainRole &apos;Tapiz&apos; on DomainRelationship &apos;TapizHasPaged&apos;</comment>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementosWebbed/Tapiz.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementosWebbed.Tapiz</value>
+    <comment>Description for DomainRole &apos;Tapiz&apos; on DomainRelationship &apos;TapizHasElementosWebbed&apos;</comment>
   </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged/Tapiz.DisplayName" xml:space="preserve">
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementosWebbed/Tapiz.DisplayName" xml:space="preserve">
     <value>Tapiz</value>
-    <comment>DisplayName for DomainRole &apos;Tapiz&apos; on DomainRelationship &apos;TapizHasPaged&apos;</comment>
+    <comment>DisplayName for DomainRole &apos;Tapiz&apos; on DomainRelationship &apos;TapizHasElementosWebbed&apos;</comment>
   </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged/Tapiz.PropertyDisplayName" xml:space="preserve">
-    <value>Paged</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Tapiz&apos; on DomainRelationship &apos;TapizHasPaged&apos;</comment>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementosWebbed/Tapiz.PropertyDisplayName" xml:space="preserve">
+    <value>Elementos Webbed</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Tapiz&apos; on DomainRelationship &apos;TapizHasElementosWebbed&apos;</comment>
   </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged/Page.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged.Page</value>
-    <comment>Description for DomainRole &apos;Page&apos; on DomainRelationship &apos;TapizHasPaged&apos;</comment>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementosWebbed/ElementosWeb.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementosWebbed.ElementosWeb</value>
+    <comment>Description for DomainRole &apos;ElementosWeb&apos; on DomainRelationship &apos;TapizHasElementosWebbed&apos;</comment>
   </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged/Page.DisplayName" xml:space="preserve">
-    <value>Page</value>
-    <comment>DisplayName for DomainRole &apos;Page&apos; on DomainRelationship &apos;TapizHasPaged&apos;</comment>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementosWebbed/ElementosWeb.DisplayName" xml:space="preserve">
+    <value>Elementos Web</value>
+    <comment>DisplayName for DomainRole &apos;ElementosWeb&apos; on DomainRelationship &apos;TapizHasElementosWebbed&apos;</comment>
   </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged/Page.PropertyDisplayName" xml:space="preserve">
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementosWebbed/ElementosWeb.PropertyDisplayName" xml:space="preserve">
     <value>Tapiz</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Page&apos; on DomainRelationship &apos;TapizHasPaged&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded</value>
-    <comment>Description for DomainClass &apos;TapizHasFielded&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded.DisplayName" xml:space="preserve">
-    <value>Tapiz Has Fielded</value>
-    <comment>DisplayName for DomainClass &apos;TapizHasFielded&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded/Tapiz.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded.Tapiz</value>
-    <comment>Description for DomainRole &apos;Tapiz&apos; on DomainRelationship &apos;TapizHasFielded&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded/Tapiz.DisplayName" xml:space="preserve">
-    <value>Tapiz</value>
-    <comment>DisplayName for DomainRole &apos;Tapiz&apos; on DomainRelationship &apos;TapizHasFielded&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded/Tapiz.PropertyDisplayName" xml:space="preserve">
-    <value>Fielded</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Tapiz&apos; on DomainRelationship &apos;TapizHasFielded&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded/Field.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded.Field</value>
-    <comment>Description for DomainRole &apos;Field&apos; on DomainRelationship &apos;TapizHasFielded&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded/Field.DisplayName" xml:space="preserve">
-    <value>Field</value>
-    <comment>DisplayName for DomainRole &apos;Field&apos; on DomainRelationship &apos;TapizHasFielded&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded/Field.PropertyDisplayName" xml:space="preserve">
-    <value>Tapiz</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Field&apos; on DomainRelationship &apos;TapizHasFielded&apos;</comment>
+    <comment>PropertyDisplayName for DomainRole &apos;ElementosWeb&apos; on DomainRelationship &apos;TapizHasElementosWebbed&apos;</comment>
   </data>
   <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Cardinalidad/ceroAuno.DisplayName" xml:space="preserve">
     <value>ceroAuno</value>
@@ -848,14 +792,6 @@
   <data name="UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadAtributoKey.DisplayName" xml:space="preserve">
     <value>Conector Entidad Atributo Key</value>
     <comment>DisplayName for DomainClass &apos;ConectorEntidadAtributoKey&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadRelacion1.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadRelacion1</value>
-    <comment>Description for DomainClass &apos;ConectorEntidadRelacion1&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadRelacion1.DisplayName" xml:space="preserve">
-    <value>Conector Entidad Relacion1</value>
-    <comment>DisplayName for DomainClass &apos;ConectorEntidadRelacion1&apos;</comment>
   </data>
   <data name="UPM_IPS.FMRMRCMMGProyectoIPS.ConectorRelacionAtributoRelacion.Description" xml:space="preserve">
     <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.ConectorRelacionAtributoRelacion</value>

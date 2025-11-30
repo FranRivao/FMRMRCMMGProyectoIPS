@@ -138,7 +138,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			
 			// Outline pen settings for this shape.
 			DslDiagrams::PenSettings outlinePen = new DslDiagrams::PenSettings();
-			outlinePen.Width = 0.07F;
+			outlinePen.Width = 0.06F;
 			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ShapeOutline, outlinePen);
 			// Fill brush settings for this shape.
 			DslDiagrams::BrushSettings backgroundBrush = new DslDiagrams::BrushSettings();
@@ -148,9 +148,9 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			// Custom font styles
 			DslDiagrams::FontSettings fontSettings;
 			fontSettings = new DslDiagrams::FontSettings();
-			fontSettings.Style =  global::System.Drawing.FontStyle.Bold |  global::System.Drawing.FontStyle.Italic ;
-			fontSettings.Size = 12/72.0F;
-			classStyleSet.AddFont(new DslDiagrams::StyleSetResourceId(string.Empty, "ShapeTextBold, Italic12"), DslDiagrams::DiagramFonts.ShapeText, fontSettings);
+			fontSettings.Style =  global::System.Drawing.FontStyle.Bold ;
+			fontSettings.Size = 15/72.0F;
+			classStyleSet.AddFont(new DslDiagrams::StyleSetResourceId(string.Empty, "ShapeTextBold15"), DslDiagrams::DiagramFonts.ShapeText, fontSettings);
 		}
 		
 		/// <summary>
@@ -178,7 +178,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			field1.AnchoringBehavior.MinimumHeightInLines = 1;
 			field1.AnchoringBehavior.MinimumWidthInCharacters = 1;
 			field1.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
-			field1.DefaultFontId = new DslDiagrams::StyleSetResourceId(string.Empty, "ShapeTextBold, Italic12");			
+			field1.DefaultFontId = new DslDiagrams::StyleSetResourceId(string.Empty, "ShapeTextBold15");			
 			shapeFields.Add(field1);
 			
 		}
@@ -358,7 +358,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		{
 			get
 			{
-				return new DslDiagrams::SizeD(1.3, 0.8);
+				return new DslDiagrams::SizeD(1.1, 0.8);
 			}
 		}
 		#endregion
@@ -384,9 +384,9 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			// Custom font styles
 			DslDiagrams::FontSettings fontSettings;
 			fontSettings = new DslDiagrams::FontSettings();
-			fontSettings.Style =  global::System.Drawing.FontStyle.Bold ;
+			fontSettings.Style =  global::System.Drawing.FontStyle.Regular ;
 			fontSettings.Size = 10/72.0F;
-			classStyleSet.AddFont(new DslDiagrams::StyleSetResourceId(string.Empty, "ShapeTextBold10"), DslDiagrams::DiagramFonts.ShapeText, fontSettings);
+			classStyleSet.AddFont(new DslDiagrams::StyleSetResourceId(string.Empty, "ShapeTextRegular10"), DslDiagrams::DiagramFonts.ShapeText, fontSettings);
 		}
 		
 		/// <summary>
@@ -414,7 +414,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			field1.AnchoringBehavior.MinimumHeightInLines = 1;
 			field1.AnchoringBehavior.MinimumWidthInCharacters = 1;
 			field1.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
-			field1.DefaultFontId = new DslDiagrams::StyleSetResourceId(string.Empty, "ShapeTextBold10");			
+			field1.DefaultFontId = new DslDiagrams::StyleSetResourceId(string.Empty, "ShapeTextRegular10");			
 			shapeFields.Add(field1);
 			
 		}
@@ -594,7 +594,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		{
 			get
 			{
-				return new DslDiagrams::SizeD(1.5, 1);
+				return new DslDiagrams::SizeD(1, 1);
 			}
 		}
 		#endregion
@@ -610,10 +610,11 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			// Outline pen settings for this shape.
 			DslDiagrams::PenSettings outlinePen = new DslDiagrams::PenSettings();
 			outlinePen.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.MistyRose);
+			outlinePen.Width = 0.04F;
 			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ShapeOutline, outlinePen);
 			// Fill brush settings for this shape.
 			DslDiagrams::BrushSettings backgroundBrush = new DslDiagrams::BrushSettings();
-			backgroundBrush.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.MediumSlateBlue);
+			backgroundBrush.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.HotPink);
 			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeBackground, backgroundBrush);
 		
 			// Custom font styles
@@ -631,18 +632,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		{
 			get
 			{
-				return true;
-			}
-		}
-		
-		/// <summary>
-		/// Indicates the direction of the gradient.
-		/// </summary>
-		public override global::System.Drawing.Drawing2D.LinearGradientMode BackgroundGradientMode
-		{
-			get
-			{
-				return global::System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+				return false;
 			}
 		}
 		#endregion
@@ -856,14 +846,19 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			// Outline pen settings for this shape.
 			DslDiagrams::PenSettings outlinePen = new DslDiagrams::PenSettings();
 			outlinePen.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.Chocolate);
-			outlinePen.Width = 0.08125F;
+			outlinePen.Width = 0.05F;
 			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ShapeOutline, outlinePen);
+			// Fill brush settings for this shape.
+			DslDiagrams::BrushSettings backgroundBrush = new DslDiagrams::BrushSettings();
+			backgroundBrush.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.Silver);
+			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeBackground, backgroundBrush);
+		
 			// Custom font styles
 			DslDiagrams::FontSettings fontSettings;
 			fontSettings = new DslDiagrams::FontSettings();
 			fontSettings.Style =  global::System.Drawing.FontStyle.Bold |  global::System.Drawing.FontStyle.Underline ;
-			fontSettings.Size = 9/72.0F;
-			classStyleSet.AddFont(new DslDiagrams::StyleSetResourceId(string.Empty, "ShapeTextBold, Underline9"), DslDiagrams::DiagramFonts.ShapeText, fontSettings);
+			fontSettings.Size = 10/72.0F;
+			classStyleSet.AddFont(new DslDiagrams::StyleSetResourceId(string.Empty, "ShapeTextBold, Underline10"), DslDiagrams::DiagramFonts.ShapeText, fontSettings);
 		}
 		
 		/// <summary>
@@ -873,9 +868,10 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		{
 			get
 			{
-				return false;
+				return true;
 			}
 		}
+		
 		#endregion
 		#region Decorators
 		/// <summary>
@@ -891,7 +887,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			field1.AnchoringBehavior.MinimumHeightInLines = 1;
 			field1.AnchoringBehavior.MinimumWidthInCharacters = 1;
 			field1.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
-			field1.DefaultFontId = new DslDiagrams::StyleSetResourceId(string.Empty, "ShapeTextBold, Underline9");			
+			field1.DefaultFontId = new DslDiagrams::StyleSetResourceId(string.Empty, "ShapeTextBold, Underline10");			
 			shapeFields.Add(field1);
 			
 		}
@@ -1071,7 +1067,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		{
 			get
 			{
-				return new DslDiagrams::SizeD(1.5, 1.5);
+				return new DslDiagrams::SizeD(1, 1);
 			}
 		}
 		#endregion
@@ -1084,6 +1080,10 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		{
 			base.InitializeResources(classStyleSet);
 			
+			// Outline pen settings for this shape.
+			DslDiagrams::PenSettings outlinePen = new DslDiagrams::PenSettings();
+			outlinePen.Width = 0.04F;
+			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ShapeOutline, outlinePen);
 			// Fill brush settings for this shape.
 			DslDiagrams::BrushSettings backgroundBrush = new DslDiagrams::BrushSettings();
 			backgroundBrush.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.DarkTurquoise);
@@ -1313,6 +1313,15 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		{
 			base.InitializeResources(classStyleSet);
 			
+			// Outline pen settings for this shape.
+			DslDiagrams::PenSettings outlinePen = new DslDiagrams::PenSettings();
+			outlinePen.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.MediumVioletRed);
+			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ShapeOutline, outlinePen);
+			// Fill brush settings for this shape.
+			DslDiagrams::BrushSettings backgroundBrush = new DslDiagrams::BrushSettings();
+			backgroundBrush.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.Orchid);
+			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeBackground, backgroundBrush);
+		
 			// Custom font styles
 			DslDiagrams::FontSettings fontSettings;
 			fontSettings = new DslDiagrams::FontSettings();
@@ -1339,7 +1348,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		{
 			get
 			{
-				return global::System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+				return global::System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
 			}
 		}
 		#endregion
@@ -1525,6 +1534,25 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		#endregion
 		#region Shape styles
 		/// <summary>
+		/// Initializes style set resources for this shape type
+		/// </summary>
+		/// <param name="classStyleSet">The style set for this shape class</param>
+		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
+		{
+			base.InitializeResources(classStyleSet);
+			
+			// Outline pen settings for this shape.
+			DslDiagrams::PenSettings outlinePen = new DslDiagrams::PenSettings();
+			outlinePen.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.LightGray);
+			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ShapeOutline, outlinePen);
+			// Fill brush settings for this shape.
+			DslDiagrams::BrushSettings backgroundBrush = new DslDiagrams::BrushSettings();
+			backgroundBrush.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.RoyalBlue);
+			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeBackground, backgroundBrush);
+		
+		}
+		
+		/// <summary>
 		/// Indicates whether this shape displays a background gradient.
 		/// </summary>
 		public override bool HasBackgroundGradient
@@ -1536,13 +1564,13 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		}
 		
 		/// <summary>
-		/// Indicates the direction of the gradient.
+		/// Specifies the geometry used by this shape
 		/// </summary>
-		public override global::System.Drawing.Drawing2D.LinearGradientMode BackgroundGradientMode
+		public override DslDiagrams::ShapeGeometry ShapeGeometry
 		{
 			get
 			{
-				return global::System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+				return DslDiagrams::ShapeGeometries.RoundedRectangle;
 			}
 		}
 		#endregion
@@ -1674,24 +1702,27 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		#endregion
 		#region Shape styles
 		/// <summary>
-		/// Indicates whether this shape displays a background gradient.
+		/// Initializes style set resources for this shape type
 		/// </summary>
-		public override bool HasBackgroundGradient
+		/// <param name="classStyleSet">The style set for this shape class</param>
+		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
 		{
-			get
-			{
-				return true;
-			}
+			base.InitializeResources(classStyleSet);
+			
+			// Outline pen settings for this shape.
+			DslDiagrams::PenSettings outlinePen = new DslDiagrams::PenSettings();
+			outlinePen.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.Tomato);
+			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ShapeOutline, outlinePen);
 		}
 		
 		/// <summary>
-		/// Indicates the direction of the gradient.
+		/// Specifies the geometry used by this shape
 		/// </summary>
-		public override global::System.Drawing.Drawing2D.LinearGradientMode BackgroundGradientMode
+		public override DslDiagrams::ShapeGeometry ShapeGeometry
 		{
 			get
 			{
-				return global::System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+				return DslDiagrams::ShapeGeometries.Ellipse;
 			}
 		}
 		#endregion
