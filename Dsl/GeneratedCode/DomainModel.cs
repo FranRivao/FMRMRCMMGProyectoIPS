@@ -77,21 +77,19 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 				typeof(Portal),
 				typeof(Page),
 				typeof(Field),
+				typeof(ElementosWeb),
 				typeof(EntidadReferencesAtributo),
 				typeof(EntidadReferencesRelacion1),
 				typeof(TapizHasElementoes),
 				typeof(EntidadReferencesAtributoKey),
 				typeof(RelacionReferencesAtributoRelacion),
-				typeof(TapizHasPortal),
 				typeof(PortalReferencesPaged),
 				typeof(PageReferencesFielded),
-				typeof(TapizHasPaged),
-				typeof(TapizHasFielded),
+				typeof(TapizHasElementosWebbed),
 				typeof(FMRMRCMMGProyectoIPSDiagram),
 				typeof(ConectorEntidadAtributo),
 				typeof(ConectorEntidadRelacion),
 				typeof(ConectorEntidadAtributoKey),
-				typeof(ConectorEntidadRelacion1),
 				typeof(ConectorRelacionAtributoRelacion),
 				typeof(ConectorPortalPage),
 				typeof(ConectorPageField),
@@ -171,16 +169,12 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 				new DomainRolePlayerInfo(typeof(EntidadReferencesAtributoKey), "AtributoKey", EntidadReferencesAtributoKey.AtributoKeyDomainRoleId),
 				new DomainRolePlayerInfo(typeof(RelacionReferencesAtributoRelacion), "Relacion", RelacionReferencesAtributoRelacion.RelacionDomainRoleId),
 				new DomainRolePlayerInfo(typeof(RelacionReferencesAtributoRelacion), "AtributoRelacion", RelacionReferencesAtributoRelacion.AtributoRelacionDomainRoleId),
-				new DomainRolePlayerInfo(typeof(TapizHasPortal), "Tapiz", TapizHasPortal.TapizDomainRoleId),
-				new DomainRolePlayerInfo(typeof(TapizHasPortal), "Portal", TapizHasPortal.PortalDomainRoleId),
 				new DomainRolePlayerInfo(typeof(PortalReferencesPaged), "Portal", PortalReferencesPaged.PortalDomainRoleId),
 				new DomainRolePlayerInfo(typeof(PortalReferencesPaged), "Page", PortalReferencesPaged.PageDomainRoleId),
 				new DomainRolePlayerInfo(typeof(PageReferencesFielded), "Page", PageReferencesFielded.PageDomainRoleId),
 				new DomainRolePlayerInfo(typeof(PageReferencesFielded), "Field", PageReferencesFielded.FieldDomainRoleId),
-				new DomainRolePlayerInfo(typeof(TapizHasPaged), "Tapiz", TapizHasPaged.TapizDomainRoleId),
-				new DomainRolePlayerInfo(typeof(TapizHasPaged), "Page", TapizHasPaged.PageDomainRoleId),
-				new DomainRolePlayerInfo(typeof(TapizHasFielded), "Tapiz", TapizHasFielded.TapizDomainRoleId),
-				new DomainRolePlayerInfo(typeof(TapizHasFielded), "Field", TapizHasFielded.FieldDomainRoleId),
+				new DomainRolePlayerInfo(typeof(TapizHasElementosWebbed), "Tapiz", TapizHasElementosWebbed.TapizDomainRoleId),
+				new DomainRolePlayerInfo(typeof(TapizHasElementosWebbed), "ElementosWeb", TapizHasElementosWebbed.ElementosWebDomainRoleId),
 			};
 		}
 		#endregion
@@ -214,8 +208,8 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 				createElementMap.Add(typeof(Field), 8);
 				createElementMap.Add(typeof(FMRMRCMMGProyectoIPSDiagram), 9);
 				createElementMap.Add(typeof(ConectorEntidadAtributo), 10);
-				createElementMap.Add(typeof(ConectorEntidadAtributoKey), 11);
-				createElementMap.Add(typeof(ConectorEntidadRelacion1), 12);
+				createElementMap.Add(typeof(ConectorEntidadRelacion), 11);
+				createElementMap.Add(typeof(ConectorEntidadAtributoKey), 12);
 				createElementMap.Add(typeof(ConectorRelacionAtributoRelacion), 13);
 				createElementMap.Add(typeof(ConectorPortalPage), 14);
 				createElementMap.Add(typeof(ConectorPageField), 15);
@@ -251,8 +245,8 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 				case 8: return new Field(partition, propertyAssignments);
 				case 9: return new FMRMRCMMGProyectoIPSDiagram(partition, propertyAssignments);
 				case 10: return new ConectorEntidadAtributo(partition, propertyAssignments);
-				case 11: return new ConectorEntidadAtributoKey(partition, propertyAssignments);
-				case 12: return new ConectorEntidadRelacion1(partition, propertyAssignments);
+				case 11: return new ConectorEntidadRelacion(partition, propertyAssignments);
+				case 12: return new ConectorEntidadAtributoKey(partition, propertyAssignments);
 				case 13: return new ConectorRelacionAtributoRelacion(partition, propertyAssignments);
 				case 14: return new ConectorPortalPage(partition, propertyAssignments);
 				case 15: return new ConectorPageField(partition, propertyAssignments);
@@ -286,17 +280,15 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 	
 			if (createElementLinkMap == null)
 			{
-				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(10);
+				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(8);
 				createElementLinkMap.Add(typeof(EntidadReferencesAtributo), 0);
 				createElementLinkMap.Add(typeof(EntidadReferencesRelacion1), 1);
 				createElementLinkMap.Add(typeof(TapizHasElementoes), 2);
 				createElementLinkMap.Add(typeof(EntidadReferencesAtributoKey), 3);
 				createElementLinkMap.Add(typeof(RelacionReferencesAtributoRelacion), 4);
-				createElementLinkMap.Add(typeof(TapizHasPortal), 5);
-				createElementLinkMap.Add(typeof(PortalReferencesPaged), 6);
-				createElementLinkMap.Add(typeof(PageReferencesFielded), 7);
-				createElementLinkMap.Add(typeof(TapizHasPaged), 8);
-				createElementLinkMap.Add(typeof(TapizHasFielded), 9);
+				createElementLinkMap.Add(typeof(PortalReferencesPaged), 5);
+				createElementLinkMap.Add(typeof(PageReferencesFielded), 6);
+				createElementLinkMap.Add(typeof(TapizHasElementosWebbed), 7);
 			}
 			int index;
 			if (!createElementLinkMap.TryGetValue(elementLinkType, out index))
@@ -316,11 +308,9 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 				case 2: return new TapizHasElementoes(partition, roleAssignments, propertyAssignments);
 				case 3: return new EntidadReferencesAtributoKey(partition, roleAssignments, propertyAssignments);
 				case 4: return new RelacionReferencesAtributoRelacion(partition, roleAssignments, propertyAssignments);
-				case 5: return new TapizHasPortal(partition, roleAssignments, propertyAssignments);
-				case 6: return new PortalReferencesPaged(partition, roleAssignments, propertyAssignments);
-				case 7: return new PageReferencesFielded(partition, roleAssignments, propertyAssignments);
-				case 8: return new TapizHasPaged(partition, roleAssignments, propertyAssignments);
-				case 9: return new TapizHasFielded(partition, roleAssignments, propertyAssignments);
+				case 5: return new PortalReferencesPaged(partition, roleAssignments, propertyAssignments);
+				case 6: return new PageReferencesFielded(partition, roleAssignments, propertyAssignments);
+				case 7: return new TapizHasElementosWebbed(partition, roleAssignments, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -492,9 +482,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		{
 			#region Initialize DomainData Table
 			DomainRoles.Add(global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementoes.ElementoDomainRoleId, true);
-			DomainRoles.Add(global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal.PortalDomainRoleId, true);
-			DomainRoles.Add(global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged.PageDomainRoleId, true);
-			DomainRoles.Add(global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded.FieldDomainRoleId, true);
+			DomainRoles.Add(global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementosWebbed.ElementosWebDomainRoleId, true);
 			#endregion
 		}
 		/// <summary>

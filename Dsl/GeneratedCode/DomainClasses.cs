@@ -585,52 +585,18 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			}
 		}
 		#endregion
-		#region Portal opposite domain role accessor
-		/// <summary>
-		/// Gets or sets Portal.
-		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal.Tapiz
-		/// </summary>
-		public virtual Portal Portal
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal.TapizDomainRoleId) as Portal;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal.TapizDomainRoleId, value);
-			}
-		}
-		#endregion
-		#region Paged opposite domain role accessor
+		#region ElementosWebbed opposite domain role accessor
 		
 		/// <summary>
-		/// Gets a list of Paged.
-		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged.Tapiz
+		/// Gets a list of ElementosWebbed.
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementosWebbed.Tapiz
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Page> Paged
+		public virtual DslModeling::LinkedElementCollection<ElementosWeb> ElementosWebbed
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Page>, Page>(global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged.TapizDomainRoleId);
-			}
-		}
-		#endregion
-		#region Fielded opposite domain role accessor
-		
-		/// <summary>
-		/// Gets a list of Fielded.
-		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded.Tapiz
-		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Field> Fielded
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Field>, Field>(global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded.TapizDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<ElementosWeb>, ElementosWeb>(global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementosWebbed.TapizDomainRoleId);
 			}
 		}
 		#endregion
@@ -659,22 +625,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 					return true;
 				}
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.FMRMRCMMGProyectoIPS.Portal.DomainClassId)) 
-				{
-					// Check that creating a link with this path doesn't cause multiplicity overflow: TapizHasPortal.Portal
-					if (this.Portal != null)
-					{
-						return false;
-					}
-					return true;
-				}
-				
-				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.FMRMRCMMGProyectoIPS.Page.DomainClassId)) 
-				{
-					return true;
-				}
-				
-				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.FMRMRCMMGProyectoIPS.Field.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.FMRMRCMMGProyectoIPS.ElementosWeb.DomainClassId)) 
 				{
 					return true;
 				}
@@ -712,29 +663,11 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 				return;
 			}
 				
-			global::UPM_IPS.FMRMRCMMGProyectoIPS.Portal sourcePortal2 = sourceElement as global::UPM_IPS.FMRMRCMMGProyectoIPS.Portal;
-			if (sourcePortal2 != null)
+			global::UPM_IPS.FMRMRCMMGProyectoIPS.ElementosWeb sourceElementosWeb2 = sourceElement as global::UPM_IPS.FMRMRCMMGProyectoIPS.ElementosWeb;
+			if (sourceElementosWeb2 != null)
 			{
-				// Create link for path TapizHasPortal.Portal
-				this.Portal = sourcePortal2;
-
-				return;
-			}
-				
-			global::UPM_IPS.FMRMRCMMGProyectoIPS.Page sourcePage3 = sourceElement as global::UPM_IPS.FMRMRCMMGProyectoIPS.Page;
-			if (sourcePage3 != null)
-			{
-				// Create link for path TapizHasPaged.Paged
-				this.Paged.Add(sourcePage3);
-
-				return;
-			}
-				
-			global::UPM_IPS.FMRMRCMMGProyectoIPS.Field sourceField4 = sourceElement as global::UPM_IPS.FMRMRCMMGProyectoIPS.Field;
-			if (sourceField4 != null)
-			{
-				// Create link for path TapizHasFielded.Fielded
-				this.Fielded.Add(sourceField4);
+				// Create link for path TapizHasElementosWebbed.ElementosWebbed
+				this.ElementosWebbed.Add(sourceElementosWeb2);
 
 				return;
 			}
@@ -775,43 +708,15 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 				return;
 			}
 				
-			global::UPM_IPS.FMRMRCMMGProyectoIPS.Portal sourcePortal2 = sourceElement as global::UPM_IPS.FMRMRCMMGProyectoIPS.Portal;
-			if (sourcePortal2 != null)
+			global::UPM_IPS.FMRMRCMMGProyectoIPS.ElementosWeb sourceElementosWeb2 = sourceElement as global::UPM_IPS.FMRMRCMMGProyectoIPS.ElementosWeb;
+			if (sourceElementosWeb2 != null)
 			{
-				// Delete link for path TapizHasPortal.Portal
+				// Delete link for path TapizHasElementosWebbed.ElementosWebbed
 				
-				foreach (DslModeling::ElementLink link in global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal.GetLinks((global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz)this, sourcePortal2))
+				foreach (DslModeling::ElementLink link in global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementosWebbed.GetLinks((global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz)this, sourceElementosWeb2))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal.TapizDomainRoleId, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal.PortalDomainRoleId);
-				}
-
-				return;
-			}
-				
-			global::UPM_IPS.FMRMRCMMGProyectoIPS.Page sourcePage3 = sourceElement as global::UPM_IPS.FMRMRCMMGProyectoIPS.Page;
-			if (sourcePage3 != null)
-			{
-				// Delete link for path TapizHasPaged.Paged
-				
-				foreach (DslModeling::ElementLink link in global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged.GetLinks((global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz)this, sourcePage3))
-				{
-					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged.TapizDomainRoleId, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged.PageDomainRoleId);
-				}
-
-				return;
-			}
-				
-			global::UPM_IPS.FMRMRCMMGProyectoIPS.Field sourceField4 = sourceElement as global::UPM_IPS.FMRMRCMMGProyectoIPS.Field;
-			if (sourceField4 != null)
-			{
-				// Delete link for path TapizHasFielded.Fielded
-				
-				foreach (DslModeling::ElementLink link in global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded.GetLinks((global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz)this, sourceField4))
-				{
-					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded.TapizDomainRoleId, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded.FieldDomainRoleId);
+					link.Delete(global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementosWebbed.TapizDomainRoleId, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementosWebbed.ElementosWebDomainRoleId);
 				}
 
 				return;
@@ -2098,7 +2003,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("a9823568-0c3a-455e-b811-c0ac13f6e3b6")]
-	public partial class Portal : DslModeling::ModelElement
+	public partial class Portal : ElementosWeb
 	{
 		#region Constructors, domain class Id
 	
@@ -2648,25 +2553,6 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		}
 		
 		#endregion
-		#region Tapiz opposite domain role accessor
-		/// <summary>
-		/// Gets or sets Tapiz.
-		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal.Portal
-		/// </summary>
-		public virtual Tapiz Tapiz
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal.PortalDomainRoleId) as Tapiz;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal.PortalDomainRoleId, value);
-			}
-		}
-		#endregion
 		#region Paged opposite domain role accessor
 		
 		/// <summary>
@@ -2695,7 +2581,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("e686a92b-077c-47da-a7c1-cb6ac01747ff")]
-	public partial class Page : DslModeling::ModelElement
+	public partial class Page : ElementosWeb
 	{
 		#region Constructors, domain class Id
 	
@@ -3188,25 +3074,6 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			}
 		}
 		#endregion
-		#region Tapiz opposite domain role accessor
-		/// <summary>
-		/// Gets or sets Tapiz.
-		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged.Page
-		/// </summary>
-		public virtual Tapiz Tapiz
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged.PageDomainRoleId) as Tapiz;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged.PageDomainRoleId, value);
-			}
-		}
-		#endregion
 	}
 }
 namespace UPM_IPS.FMRMRCMMGProyectoIPS
@@ -3220,7 +3087,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("dd43b97c-e312-4f42-9b5f-66423e074641")]
-	public partial class Field : DslModeling::ModelElement
+	public partial class Field : ElementosWeb
 	{
 		#region Constructors, domain class Id
 	
@@ -3785,22 +3652,54 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			}
 		}
 		#endregion
+	}
+}
+namespace UPM_IPS.FMRMRCMMGProyectoIPS
+{
+	/// <summary>
+	/// DomainClass ElementosWeb
+	/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.ElementosWeb
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.ElementosWeb.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.ElementosWeb.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("3baae1ea-3856-4a6d-8d6b-a84d9312d788")]
+	public abstract partial class ElementosWeb : DslModeling::ModelElement
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// ElementosWeb domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x3baae1ea, 0x3856, 0x4a6d, 0x8d, 0x6b, 0xa8, 0x4d, 0x93, 0x12, 0xd7, 0x88);
+		/// <summary>
+		/// Constructor.
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		protected ElementosWeb(DslModeling::Partition partition, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
 		#region Tapiz opposite domain role accessor
 		/// <summary>
 		/// Gets or sets Tapiz.
-		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded.Field
+		/// Description for
+		/// UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementosWebbed.ElementosWeb
 		/// </summary>
 		public virtual Tapiz Tapiz
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded.FieldDomainRoleId) as Tapiz;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementosWebbed.ElementosWebDomainRoleId) as Tapiz;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded.FieldDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementosWebbed.ElementosWebDomainRoleId, value);
 			}
 		}
 		#endregion

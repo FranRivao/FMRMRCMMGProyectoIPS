@@ -25,46 +25,16 @@
               </xsd:sequence>
             </xsd:complexType>
           </xsd:element>
-          <!-- Relationship: TapizHasPortal -->
-          <xsd:element name="portal" minOccurs="1" maxOccurs="1">
+          <!-- Relationship: TapizHasElementosWebbed -->
+          <xsd:element name="elementosWebbed" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
-              <xsd:documentation>Instance of TapizHasPortal</xsd:documentation>
+              <xsd:documentation>Instances of TapizHasElementosWebbed</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element ref="tapizHasPortal" minOccurs="1" maxOccurs="1">
+                <xsd:element ref="tapizHasElementosWebbed" minOccurs="0" maxOccurs="unbounded">
                   <xsd:annotation>
-                    <xsd:documentation>[Instance of TapizHasPortal needs to be serialized in full-form]</xsd:documentation>
-                  </xsd:annotation>
-                </xsd:element>
-              </xsd:sequence>
-            </xsd:complexType>
-          </xsd:element>
-          <!-- Relationship: TapizHasPaged -->
-          <xsd:element name="paged" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-              <xsd:documentation>Instances of TapizHasPaged</xsd:documentation>
-            </xsd:annotation>
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element ref="tapizHasPaged" minOccurs="0" maxOccurs="unbounded">
-                  <xsd:annotation>
-                    <xsd:documentation>[Instance of TapizHasPaged needs to be serialized in full-form]</xsd:documentation>
-                  </xsd:annotation>
-                </xsd:element>
-              </xsd:sequence>
-            </xsd:complexType>
-          </xsd:element>
-          <!-- Relationship: TapizHasFielded -->
-          <xsd:element name="fielded" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-              <xsd:documentation>Instances of TapizHasFielded</xsd:documentation>
-            </xsd:annotation>
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element ref="tapizHasFielded" minOccurs="0" maxOccurs="unbounded">
-                  <xsd:annotation>
-                    <xsd:documentation>[Instance of TapizHasFielded needs to be serialized in full-form]</xsd:documentation>
+                    <xsd:documentation>[Instance of TapizHasElementosWebbed needs to be serialized in full-form]</xsd:documentation>
                   </xsd:annotation>
                 </xsd:element>
               </xsd:sequence>
@@ -368,10 +338,10 @@
   </xsd:complexType>
   
   <!-- Portal -->
-  <xsd:element name="portal" type="Portal" substitutionGroup="core:modelElement" />
+  <xsd:element name="portal" type="Portal" substitutionGroup="elementosWeb" />
   <xsd:complexType name="Portal">
     <xsd:complexContent>
-      <xsd:extension base="core:ModelElement">
+      <xsd:extension base="ElementosWeb">
         <xsd:sequence minOccurs="0" maxOccurs="1">
           <!-- Relationship: PortalReferencesPaged -->
           <xsd:element name="paged" minOccurs="0" maxOccurs="1">
@@ -412,27 +382,22 @@
   </xsd:complexType>
   
   <!-- Portal Moniker -->
-  <xsd:element name="portalMoniker" type="PortalMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:element name="portalMoniker" type="PortalMoniker" substitutionGroup="elementosWebMoniker" />
   <xsd:complexType name="PortalMoniker">
     <xsd:annotation>
       <xsd:documentation>Moniker for Portal instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="core:ModelElementMoniker">
-        <xsd:attribute name="Id" type="xsd:string" >
-          <xsd:annotation>
-            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
+      <xsd:extension base="ElementosWebMoniker">
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
   
   <!-- Page -->
-  <xsd:element name="page" type="Page" substitutionGroup="core:modelElement" />
+  <xsd:element name="page" type="Page" substitutionGroup="elementosWeb" />
   <xsd:complexType name="Page">
     <xsd:complexContent>
-      <xsd:extension base="core:ModelElement">
+      <xsd:extension base="ElementosWeb">
         <xsd:sequence minOccurs="0" maxOccurs="1">
           <!-- Relationship: PageReferencesFielded -->
           <xsd:element name="fielded" minOccurs="0" maxOccurs="1">
@@ -471,27 +436,22 @@
   </xsd:complexType>
   
   <!-- Page Moniker -->
-  <xsd:element name="pageMoniker" type="PageMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:element name="pageMoniker" type="PageMoniker" substitutionGroup="elementosWebMoniker" />
   <xsd:complexType name="PageMoniker">
     <xsd:annotation>
       <xsd:documentation>Moniker for Page instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="core:ModelElementMoniker">
-        <xsd:attribute name="Id" type="xsd:string" >
-          <xsd:annotation>
-            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
+      <xsd:extension base="ElementosWebMoniker">
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
   
   <!-- Field -->
-  <xsd:element name="field" type="Field" substitutionGroup="core:modelElement" />
+  <xsd:element name="field" type="Field" substitutionGroup="elementosWeb" />
   <xsd:complexType name="Field">
     <xsd:complexContent>
-      <xsd:extension base="core:ModelElement">
+      <xsd:extension base="ElementosWeb">
         <!-- Id -->
         <xsd:attribute name="Id" type="xsd:string">
           <xsd:annotation>
@@ -515,10 +475,37 @@
   </xsd:complexType>
   
   <!-- Field Moniker -->
-  <xsd:element name="fieldMoniker" type="FieldMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:element name="fieldMoniker" type="FieldMoniker" substitutionGroup="elementosWebMoniker" />
   <xsd:complexType name="FieldMoniker">
     <xsd:annotation>
       <xsd:documentation>Moniker for Field instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ElementosWebMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ElementosWeb -->
+  <xsd:element name="elementosWeb" abstract="true" type="ElementosWeb" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ElementosWeb" abstract="true" >
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ElementosWeb Moniker -->
+  <xsd:element name="elementosWebMoniker" abstract="true" type="ElementosWebMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ElementosWebMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ElementosWeb instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElementMoniker">
@@ -733,46 +720,6 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- TapizHasPortal -->
-  <xsd:element name="tapizHasPortal" type="TapizHasPortal" substitutionGroup="core:modelElement" />
-  <xsd:complexType name="TapizHasPortal">
-    <xsd:complexContent>
-      <xsd:extension base="core:ModelElement">
-        <xsd:sequence minOccurs="0" maxOccurs="1">
-          <!-- Target end Portal -->
-          <xsd:element ref="portal" minOccurs="1" maxOccurs="1">
-            <xsd:annotation>
-              <xsd:documentation>[Target role-player]</xsd:documentation>
-            </xsd:annotation>
-          </xsd:element>
-        </xsd:sequence>
-        <!-- Id -->
-        <xsd:attribute name="Id" type="xsd:string">
-          <xsd:annotation>
-            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
-      </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
-  
-  <!-- TapizHasPortal Moniker -->
-  <xsd:element name="tapizHasPortalMoniker" type="TapizHasPortalMoniker" substitutionGroup="core:modelElementMoniker" />
-  <xsd:complexType name="TapizHasPortalMoniker">
-    <xsd:annotation>
-      <xsd:documentation>Moniker for TapizHasPortal instance.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexContent>
-      <xsd:extension base="core:ModelElementMoniker">
-        <xsd:attribute name="Id" type="xsd:string" >
-          <xsd:annotation>
-            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
-      </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
-  
   <!-- PortalReferencesPaged -->
   <xsd:element name="portalReferencesPaged" type="PortalReferencesPaged" substitutionGroup="core:modelElement" />
   <xsd:complexType name="PortalReferencesPaged">
@@ -853,14 +800,14 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- TapizHasPaged -->
-  <xsd:element name="tapizHasPaged" type="TapizHasPaged" substitutionGroup="core:modelElement" />
-  <xsd:complexType name="TapizHasPaged">
+  <!-- TapizHasElementosWebbed -->
+  <xsd:element name="tapizHasElementosWebbed" type="TapizHasElementosWebbed" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="TapizHasElementosWebbed">
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
-          <!-- Target end Page -->
-          <xsd:element ref="page" minOccurs="1" maxOccurs="1">
+          <!-- Target end ElementosWeb -->
+          <xsd:element ref="elementosWeb" minOccurs="1" maxOccurs="1">
             <xsd:annotation>
               <xsd:documentation>[Target role-player]</xsd:documentation>
             </xsd:annotation>
@@ -876,51 +823,11 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- TapizHasPaged Moniker -->
-  <xsd:element name="tapizHasPagedMoniker" type="TapizHasPagedMoniker" substitutionGroup="core:modelElementMoniker" />
-  <xsd:complexType name="TapizHasPagedMoniker">
+  <!-- TapizHasElementosWebbed Moniker -->
+  <xsd:element name="tapizHasElementosWebbedMoniker" type="TapizHasElementosWebbedMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="TapizHasElementosWebbedMoniker">
     <xsd:annotation>
-      <xsd:documentation>Moniker for TapizHasPaged instance.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexContent>
-      <xsd:extension base="core:ModelElementMoniker">
-        <xsd:attribute name="Id" type="xsd:string" >
-          <xsd:annotation>
-            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
-      </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
-  
-  <!-- TapizHasFielded -->
-  <xsd:element name="tapizHasFielded" type="TapizHasFielded" substitutionGroup="core:modelElement" />
-  <xsd:complexType name="TapizHasFielded">
-    <xsd:complexContent>
-      <xsd:extension base="core:ModelElement">
-        <xsd:sequence minOccurs="0" maxOccurs="1">
-          <!-- Target end Field -->
-          <xsd:element ref="field" minOccurs="1" maxOccurs="1">
-            <xsd:annotation>
-              <xsd:documentation>[Target role-player]</xsd:documentation>
-            </xsd:annotation>
-          </xsd:element>
-        </xsd:sequence>
-        <!-- Id -->
-        <xsd:attribute name="Id" type="xsd:string">
-          <xsd:annotation>
-            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
-      </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
-  
-  <!-- TapizHasFielded Moniker -->
-  <xsd:element name="tapizHasFieldedMoniker" type="TapizHasFieldedMoniker" substitutionGroup="core:modelElementMoniker" />
-  <xsd:complexType name="TapizHasFieldedMoniker">
-    <xsd:annotation>
-      <xsd:documentation>Moniker for TapizHasFielded instance.</xsd:documentation>
+      <xsd:documentation>Moniker for TapizHasElementosWebbed instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElementMoniker">
