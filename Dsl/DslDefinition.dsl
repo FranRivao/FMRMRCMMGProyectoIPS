@@ -166,11 +166,6 @@
             <ExternalTypeMoniker Name="/System/Int16" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="5af328f1-1dae-4005-9f32-95fee29fe0ad" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Portal.Title Alignment" Name="titleAlignment" DisplayName="Title Alignment">
-          <Type>
-            <DomainEnumerationMoniker Name="TextAlignment" />
-          </Type>
-        </DomainProperty>
       </Properties>
     </DomainClass>
     <DomainClass Id="e686a92b-077c-47da-a7c1-cb6ac01747ff" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Page" Name="Page" DisplayName="Page" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS">
@@ -191,11 +186,6 @@
         <DomainProperty Id="acd75d8d-a486-4b70-8de8-0b9436d7ca77" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Page.Title Font Size" Name="titleFontSize" DisplayName="Title Font Size">
           <Type>
             <ExternalTypeMoniker Name="/System/Int16" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="b2a053f0-2444-4ebb-a41d-303d7f8c23ad" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Page.Title Alignment" Name="titleAlignment" DisplayName="Title Alignment">
-          <Type>
-            <DomainEnumerationMoniker Name="TextAlignment" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="f97ede96-bdcd-4a79-8cc2-82bcd789b1bd" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Page.Additional CSS" Name="additionalCSS" DisplayName="Additional CSS">
@@ -223,11 +213,6 @@
         <DomainProperty Id="15097892-eeb1-4cbf-a891-ef5c100a0635" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Field.Label Font Size" Name="labelFontSize" DisplayName="Label Font Size">
           <Type>
             <ExternalTypeMoniker Name="/System/Int16" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="0f3fef65-8567-4434-848d-b65f1f9f5791" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Field.Label Alignment" Name="labelAlignment" DisplayName="Label Alignment">
-          <Type>
-            <DomainEnumerationMoniker Name="TextAlignment" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="9bdc66b1-3d73-4fd7-8b00-240ae2f60db2" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Field.Placeholder" Name="placeholder" DisplayName="Placeholder">
@@ -501,6 +486,9 @@
           <XmlPropertyData XmlName="alineacionTitulo">
             <DomainPropertyMoniker Name="Tapiz/alineacionTitulo" />
           </XmlPropertyData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="elementosWebbed">
+            <DomainRelationshipMoniker Name="TapizHasElementosWebbed" />
+          </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="FMRMRCMMGProyectoIPSDiagram" MonikerAttributeName="" SerializeId="true" MonikerElementName="fMRMRCMMGProyectoIPSDiagramMoniker" ElementName="fMRMRCMMGProyectoIPSDiagram" MonikerTypeName="FMRMRCMMGProyectoIPSDiagramMoniker">
@@ -639,9 +627,6 @@
           <XmlPropertyData XmlName="titleFontSize">
             <DomainPropertyMoniker Name="Portal/titleFontSize" />
           </XmlPropertyData>
-          <XmlPropertyData XmlName="titleAlignment">
-            <DomainPropertyMoniker Name="Portal/titleAlignment" />
-          </XmlPropertyData>
           <XmlRelationshipData UseFullForm="true" RoleElementName="paged">
             <DomainRelationshipMoniker Name="PortalReferencesPaged" />
           </XmlRelationshipData>
@@ -658,9 +643,6 @@
           </XmlPropertyData>
           <XmlPropertyData XmlName="titleFontSize">
             <DomainPropertyMoniker Name="Page/titleFontSize" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="titleAlignment">
-            <DomainPropertyMoniker Name="Page/titleAlignment" />
           </XmlPropertyData>
           <XmlPropertyData XmlName="additionalCSS">
             <DomainPropertyMoniker Name="Page/additionalCSS" />
@@ -681,9 +663,6 @@
           </XmlPropertyData>
           <XmlPropertyData XmlName="labelFontSize">
             <DomainPropertyMoniker Name="Field/labelFontSize" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="labelAlignment">
-            <DomainPropertyMoniker Name="Field/labelAlignment" />
           </XmlPropertyData>
           <XmlPropertyData XmlName="placeholder">
             <DomainPropertyMoniker Name="Field/placeholder" />
