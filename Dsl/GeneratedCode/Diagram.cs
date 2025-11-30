@@ -237,6 +237,24 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
+			if(element is global::UPM_IPS.FMRMRCMMGProyectoIPS.Portal)
+			{
+				global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaPortal newShape = new global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaPortal(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::UPM_IPS.FMRMRCMMGProyectoIPS.Page)
+			{
+				global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforePage newShape = new global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforePage(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::UPM_IPS.FMRMRCMMGProyectoIPS.Field)
+			{
+				global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaField newShape = new global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaField(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
 			if(element is global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributo)
 			{
 				global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadAtributo newShape = new global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadAtributo(this.Partition);
@@ -257,6 +275,16 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 				global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorRelacionAtributoRelacion newShape = new global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorRelacionAtributoRelacion(this.Partition);
 				return newShape;
 			}
+			if(element is global::UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged)
+			{
+				global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorPortalPage newShape = new global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorPortalPage(this.Partition);
+				return newShape;
+			}
+			if(element is global::UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded)
+			{
+				global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorPageField newShape = new global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorPageField(this.Partition);
+				return newShape;
+			}
 			return base.CreateChildShape(element);
 		}
 		#endregion
@@ -273,6 +301,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaRelacion.DecoratorsInitialized += MetaforaRelacionDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaAtributoKey.DecoratorsInitialized += MetaforaAtributoKeyDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaAtributoRelacion.DecoratorsInitialized += MetaforaAtributoRelacionDecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaPortal.DecoratorsInitialized += MetaforaPortalDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadRelacion1.DecoratorsInitialized += ConectorEntidadRelacion1DecoratorMap.OnDecoratorsInitialized;
 		}
 		
@@ -367,6 +396,24 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		}
 		
 		/// <summary>
+		/// Class containing decorator path traversal methods for MetaforaPortal.
+		/// </summary>
+		internal static partial class MetaforaPortalDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for MetaforaPortal.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.FMRMRCMMGProyectoIPS.Portal.titleTextDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "titleTextDec").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
 		/// Class containing decorator path traversal methods for ConectorEntidadRelacion.
 		/// </summary>
 		internal static partial class ConectorEntidadRelacionDecoratorMap
@@ -403,10 +450,12 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		
 		#region Connect actions
 		private bool changingMouseAction;
-		private global::UPM_IPS.FMRMRCMMGProyectoIPS.AtributoEntidadConectorConnectAction atributoEntidadConectorConnectAction;
-		private global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadRelacionConector1ConnectAction entidadRelacionConector1ConnectAction;
-		private global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadAtributoKeyConectorConnectAction entidadAtributoKeyConectorConnectAction;
-		private global::UPM_IPS.FMRMRCMMGProyectoIPS.RelacionAtributoRelacionConectorConnectAction relacionAtributoRelacionConectorConnectAction;
+		private global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadRelacionConnectAction conectorEntidadRelacionConnectAction;
+		private global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadAtributoConnectAction conectorEntidadAtributoConnectAction;
+		private global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadAtributoKeyConnectAction conectorEntidadAtributoKeyConnectAction;
+		private global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorRelacionAtributoRelacionConnectAction conectorRelacionAtributoRelacionConnectAction;
+		private global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorPortalPageConnectAction conectorPortalPageConnectAction;
+		private global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorPageFieldConnectAction conectorPageFieldConnectAction;
 		/// <summary>
 		/// Virtual method to provide a filter when to select the mouse action
 		/// </summary>
@@ -429,41 +478,59 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			if(activeView != null)
 			{
 				DslDiagrams::MouseAction action = null;
-				if (SelectedToolboxItemSupportsFilterString(activeView, global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSToolboxHelper.AtributoEntidadConectorFilterString))
+				if (SelectedToolboxItemSupportsFilterString(activeView, global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSToolboxHelper.ConectorEntidadRelacionFilterString))
 				{
-					if (this.atributoEntidadConectorConnectAction == null)
+					if (this.conectorEntidadRelacionConnectAction == null)
 					{
-						this.atributoEntidadConectorConnectAction = new global::UPM_IPS.FMRMRCMMGProyectoIPS.AtributoEntidadConectorConnectAction(this);
-						this.atributoEntidadConectorConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+						this.conectorEntidadRelacionConnectAction = new global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadRelacionConnectAction(this);
+						this.conectorEntidadRelacionConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
 					}
-					action = this.atributoEntidadConectorConnectAction;
+					action = this.conectorEntidadRelacionConnectAction;
 				} 
-				else if (SelectedToolboxItemSupportsFilterString(activeView, global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSToolboxHelper.EntidadRelacionConector1FilterString))
+				else if (SelectedToolboxItemSupportsFilterString(activeView, global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSToolboxHelper.ConectorEntidadAtributoFilterString))
 				{
-					if (this.entidadRelacionConector1ConnectAction == null)
+					if (this.conectorEntidadAtributoConnectAction == null)
 					{
-						this.entidadRelacionConector1ConnectAction = new global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadRelacionConector1ConnectAction(this);
-						this.entidadRelacionConector1ConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+						this.conectorEntidadAtributoConnectAction = new global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadAtributoConnectAction(this);
+						this.conectorEntidadAtributoConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
 					}
-					action = this.entidadRelacionConector1ConnectAction;
+					action = this.conectorEntidadAtributoConnectAction;
 				} 
-				else if (SelectedToolboxItemSupportsFilterString(activeView, global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSToolboxHelper.EntidadAtributoKeyConectorFilterString))
+				else if (SelectedToolboxItemSupportsFilterString(activeView, global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSToolboxHelper.ConectorEntidadAtributoKeyFilterString))
 				{
-					if (this.entidadAtributoKeyConectorConnectAction == null)
+					if (this.conectorEntidadAtributoKeyConnectAction == null)
 					{
-						this.entidadAtributoKeyConectorConnectAction = new global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadAtributoKeyConectorConnectAction(this);
-						this.entidadAtributoKeyConectorConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+						this.conectorEntidadAtributoKeyConnectAction = new global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadAtributoKeyConnectAction(this);
+						this.conectorEntidadAtributoKeyConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
 					}
-					action = this.entidadAtributoKeyConectorConnectAction;
+					action = this.conectorEntidadAtributoKeyConnectAction;
 				} 
-				else if (SelectedToolboxItemSupportsFilterString(activeView, global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSToolboxHelper.RelacionAtributoRelacionConectorFilterString))
+				else if (SelectedToolboxItemSupportsFilterString(activeView, global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSToolboxHelper.ConectorRelacionAtributoRelacionFilterString))
 				{
-					if (this.relacionAtributoRelacionConectorConnectAction == null)
+					if (this.conectorRelacionAtributoRelacionConnectAction == null)
 					{
-						this.relacionAtributoRelacionConectorConnectAction = new global::UPM_IPS.FMRMRCMMGProyectoIPS.RelacionAtributoRelacionConectorConnectAction(this);
-						this.relacionAtributoRelacionConectorConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+						this.conectorRelacionAtributoRelacionConnectAction = new global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorRelacionAtributoRelacionConnectAction(this);
+						this.conectorRelacionAtributoRelacionConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
 					}
-					action = this.relacionAtributoRelacionConectorConnectAction;
+					action = this.conectorRelacionAtributoRelacionConnectAction;
+				} 
+				else if (SelectedToolboxItemSupportsFilterString(activeView, global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSToolboxHelper.ConectorPortalPageFilterString))
+				{
+					if (this.conectorPortalPageConnectAction == null)
+					{
+						this.conectorPortalPageConnectAction = new global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorPortalPageConnectAction(this);
+						this.conectorPortalPageConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+					}
+					action = this.conectorPortalPageConnectAction;
+				} 
+				else if (SelectedToolboxItemSupportsFilterString(activeView, global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSToolboxHelper.ConectorPageFieldFilterString))
+				{
+					if (this.conectorPageFieldConnectAction == null)
+					{
+						this.conectorPageFieldConnectAction = new global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorPageFieldConnectAction(this);
+						this.conectorPageFieldConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+					}
+					action = this.conectorPageFieldConnectAction;
 				} 
 				else
 				{
@@ -522,25 +589,35 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			{
 				if(disposing)
 				{
-					if(this.atributoEntidadConectorConnectAction != null)
+					if(this.conectorEntidadRelacionConnectAction != null)
 					{
-						this.atributoEntidadConectorConnectAction.Dispose();
-						this.atributoEntidadConectorConnectAction = null;
+						this.conectorEntidadRelacionConnectAction.Dispose();
+						this.conectorEntidadRelacionConnectAction = null;
 					}
-					if(this.entidadRelacionConector1ConnectAction != null)
+					if(this.conectorEntidadAtributoConnectAction != null)
 					{
-						this.entidadRelacionConector1ConnectAction.Dispose();
-						this.entidadRelacionConector1ConnectAction = null;
+						this.conectorEntidadAtributoConnectAction.Dispose();
+						this.conectorEntidadAtributoConnectAction = null;
 					}
-					if(this.entidadAtributoKeyConectorConnectAction != null)
+					if(this.conectorEntidadAtributoKeyConnectAction != null)
 					{
-						this.entidadAtributoKeyConectorConnectAction.Dispose();
-						this.entidadAtributoKeyConectorConnectAction = null;
+						this.conectorEntidadAtributoKeyConnectAction.Dispose();
+						this.conectorEntidadAtributoKeyConnectAction = null;
 					}
-					if(this.relacionAtributoRelacionConectorConnectAction != null)
+					if(this.conectorRelacionAtributoRelacionConnectAction != null)
 					{
-						this.relacionAtributoRelacionConectorConnectAction.Dispose();
-						this.relacionAtributoRelacionConectorConnectAction = null;
+						this.conectorRelacionAtributoRelacionConnectAction.Dispose();
+						this.conectorRelacionAtributoRelacionConnectAction = null;
+					}
+					if(this.conectorPortalPageConnectAction != null)
+					{
+						this.conectorPortalPageConnectAction.Dispose();
+						this.conectorPortalPageConnectAction = null;
+					}
+					if(this.conectorPageFieldConnectAction != null)
+					{
+						this.conectorPageFieldConnectAction.Dispose();
+						this.conectorPageFieldConnectAction = null;
 					}
 				}
 			}
@@ -600,10 +677,15 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.Relacion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.AtributoKey), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.AtributoRelacion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.Portal), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.Page), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.Field), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributo), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed partial class FixUpDiagram : FixUpDiagramBase
 		{
 			[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
@@ -638,6 +720,18 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 				if(childElement is global::UPM_IPS.FMRMRCMMGProyectoIPS.AtributoRelacion)
 				{
 					parentElement = GetParentForAtributoRelacion((global::UPM_IPS.FMRMRCMMGProyectoIPS.AtributoRelacion)childElement);
+				} else
+				if(childElement is global::UPM_IPS.FMRMRCMMGProyectoIPS.Portal)
+				{
+					parentElement = GetParentForPortal((global::UPM_IPS.FMRMRCMMGProyectoIPS.Portal)childElement);
+				} else
+				if(childElement is global::UPM_IPS.FMRMRCMMGProyectoIPS.Page)
+				{
+					parentElement = GetParentForPage((global::UPM_IPS.FMRMRCMMGProyectoIPS.Page)childElement);
+				} else
+				if(childElement is global::UPM_IPS.FMRMRCMMGProyectoIPS.Field)
+				{
+					parentElement = GetParentForField((global::UPM_IPS.FMRMRCMMGProyectoIPS.Field)childElement);
 				} else
 				{
 					parentElement = null;
@@ -677,6 +771,27 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 				return result;
 			}
 			public static global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz GetParentForAtributoRelacion( global::UPM_IPS.FMRMRCMMGProyectoIPS.Elemento root )
+			{
+				// Segments 0 and 1
+				global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz result = root.Tapiz;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz GetParentForPortal( global::UPM_IPS.FMRMRCMMGProyectoIPS.Portal root )
+			{
+				// Segments 0 and 1
+				global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz result = root.Tapiz;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz GetParentForPage( global::UPM_IPS.FMRMRCMMGProyectoIPS.Page root )
+			{
+				// Segments 0 and 1
+				global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz result = root.Tapiz;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz GetParentForField( global::UPM_IPS.FMRMRCMMGProyectoIPS.Field root )
 			{
 				// Segments 0 and 1
 				global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz result = root.Tapiz;
@@ -799,6 +914,8 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed class ConnectorRolePlayerChanged : DslModeling::RolePlayerChangeRule
 		{
 			/// <summary>

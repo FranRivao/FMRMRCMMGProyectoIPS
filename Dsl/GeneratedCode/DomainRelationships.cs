@@ -1296,3 +1296,1179 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		#endregion
 	}
 }
+namespace UPM_IPS.FMRMRCMMGProyectoIPS
+{
+	/// <summary>
+	/// DomainRelationship TapizHasPortal
+	/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship(IsEmbedding=true)]
+	[DslModeling::DomainObjectId("8d3cb53b-b3f8-48bd-abc3-5c6da45db5b5")]
+	public partial class TapizHasPortal : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// TapizHasPortal domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x8d3cb53b, 0xb3f8, 0x48bd, 0xab, 0xc3, 0x5c, 0x6d, 0xa4, 0x5d, 0xb5, 0xb5);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a TapizHasPortal link in the same Partition as the given Tapiz
+		/// </summary>
+		/// <param name="source">Tapiz to use as the source of the relationship.</param>
+		/// <param name="target">Portal to use as the target of the relationship.</param>
+		public TapizHasPortal(Tapiz source, Portal target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(TapizHasPortal.TapizDomainRoleId, source), new DslModeling::RoleAssignment(TapizHasPortal.PortalDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public TapizHasPortal(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public TapizHasPortal(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public TapizHasPortal(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public TapizHasPortal(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Tapiz domain role code
+		
+		/// <summary>
+		/// Tapiz domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid TapizDomainRoleId = new global::System.Guid(0x875639c9, 0x76a7, 0x4b02, 0x96, 0x8d, 0x45, 0x59, 0x34, 0x2b, 0x2a, 0xdc);
+		
+		/// <summary>
+		/// DomainRole Tapiz
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal.Tapiz
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal/Tapiz.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal/Tapiz.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Portal", PropertyDisplayNameKey="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal/Tapiz.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("875639c9-76a7-4b02-968d-4559342b2adc")]
+		public virtual Tapiz Tapiz
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Tapiz)DslModeling::DomainRoleInfo.GetRolePlayer(this, TapizDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, TapizDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Tapiz of a Portal
+		/// <summary>
+		/// Gets Tapiz.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static Tapiz GetTapiz(Portal element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, PortalDomainRoleId) as Tapiz;
+		}
+		
+		/// <summary>
+		/// Sets Tapiz.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetTapiz(Portal element, Tapiz newTapiz)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, PortalDomainRoleId, newTapiz);
+		}
+		#endregion
+		#region Portal domain role code
+		
+		/// <summary>
+		/// Portal domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid PortalDomainRoleId = new global::System.Guid(0x9d87bc0d, 0xdc8b, 0x4753, 0x81, 0x63, 0xf8, 0xb1, 0x3d, 0xaf, 0xda, 0x24);
+		
+		/// <summary>
+		/// DomainRole Portal
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal.Portal
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal/Portal.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal/Portal.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Tapiz", PropertyDisplayNameKey="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal/Portal.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("9d87bc0d-dc8b-4753-8163-f8b13dafda24")]
+		public virtual Portal Portal
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Portal)DslModeling::DomainRoleInfo.GetRolePlayer(this, PortalDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, PortalDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Portal of a Tapiz
+		/// <summary>
+		/// Gets Portal.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static Portal GetPortal(Tapiz element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, TapizDomainRoleId) as Portal;
+		}
+		
+		/// <summary>
+		/// Sets Portal.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetPortal(Tapiz element, Portal newPortal)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, TapizDomainRoleId, newPortal);
+		}
+		#endregion
+		#region Tapiz link accessor
+		/// <summary>
+		/// Get the TapizHasPortal link to a Tapiz.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal GetLinkToPortal (global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz tapizInstance)
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal>(tapizInstance, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal.TapizDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Tapiz not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region Portal link accessor
+		/// <summary>
+		/// Get the TapizHasPortal link to a Portal.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal GetLinkToTapiz (global::UPM_IPS.FMRMRCMMGProyectoIPS.Portal portalInstance)
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal>(portalInstance, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal.PortalDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Portal not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region TapizHasPortal instance accessors
+		
+		/// <summary>
+		/// Get any TapizHasPortal links between a given Tapiz and a Portal.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal> GetLinks( global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz source, global::UPM_IPS.FMRMRCMMGProyectoIPS.Portal target )
+		{
+			global::System.Collections.Generic.List<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal>();
+			global::System.Collections.Generic.IList<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal>(source, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal.TapizDomainRoleId);
+			foreach ( global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal link in links )
+			{
+				if ( target.Equals(link.Portal) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one TapizHasPortal link between a given Tapizand a Portal.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal GetLink( global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz source, global::UPM_IPS.FMRMRCMMGProyectoIPS.Portal target )
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal>(source, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal.TapizDomainRoleId);
+			foreach ( global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPortal link in links )
+			{
+				if ( target.Equals(link.Portal) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace UPM_IPS.FMRMRCMMGProyectoIPS
+{
+	/// <summary>
+	/// DomainRelationship PortalReferencesPaged
+	/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship()]
+	[DslModeling::DomainObjectId("a220121e-0023-4acc-b780-3adf1351a213")]
+	public partial class PortalReferencesPaged : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// PortalReferencesPaged domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xa220121e, 0x0023, 0x4acc, 0xb7, 0x80, 0x3a, 0xdf, 0x13, 0x51, 0xa2, 0x13);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a PortalReferencesPaged link in the same Partition as the given Portal
+		/// </summary>
+		/// <param name="source">Portal to use as the source of the relationship.</param>
+		/// <param name="target">Page to use as the target of the relationship.</param>
+		public PortalReferencesPaged(Portal source, Page target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(PortalReferencesPaged.PortalDomainRoleId, source), new DslModeling::RoleAssignment(PortalReferencesPaged.PageDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public PortalReferencesPaged(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public PortalReferencesPaged(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public PortalReferencesPaged(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public PortalReferencesPaged(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Portal domain role code
+		
+		/// <summary>
+		/// Portal domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid PortalDomainRoleId = new global::System.Guid(0x8219b8ea, 0x204c, 0x4dbc, 0xb4, 0x70, 0x54, 0x59, 0xcb, 0x4d, 0x8b, 0x38);
+		
+		/// <summary>
+		/// DomainRole Portal
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged.Portal
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged/Portal.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged/Portal.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Paged", PropertyDisplayNameKey="UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged/Portal.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("8219b8ea-204c-4dbc-b470-5459cb4d8b38")]
+		public virtual Portal Portal
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Portal)DslModeling::DomainRoleInfo.GetRolePlayer(this, PortalDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, PortalDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Portals of a Page
+		/// <summary>
+		/// Gets a list of Portals.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<Portal> GetPortals(Page element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Portal>, Portal>(element, PageDomainRoleId);
+		}
+		#endregion
+		#region Page domain role code
+		
+		/// <summary>
+		/// Page domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid PageDomainRoleId = new global::System.Guid(0xeee0fa3d, 0x2ce7, 0x4b5d, 0x94, 0x87, 0x96, 0x39, 0xc5, 0x08, 0x70, 0x6e);
+		
+		/// <summary>
+		/// DomainRole Page
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged.Page
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged/Page.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged/Page.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Portals", PropertyDisplayNameKey="UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged/Page.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("eee0fa3d-2ce7-4b5d-9487-9639c508706e")]
+		public virtual Page Page
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Page)DslModeling::DomainRoleInfo.GetRolePlayer(this, PageDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, PageDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Paged of a Portal
+		/// <summary>
+		/// Gets a list of Paged.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<Page> GetPaged(Portal element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Page>, Page>(element, PortalDomainRoleId);
+		}
+		#endregion
+		#region Portal link accessor
+		/// <summary>
+		/// Get the list of PortalReferencesPaged links to a Portal.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged> GetLinksToPaged ( global::UPM_IPS.FMRMRCMMGProyectoIPS.Portal portalInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged>(portalInstance, global::UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged.PortalDomainRoleId);
+		}
+		#endregion
+		#region Page link accessor
+		/// <summary>
+		/// Get the list of PortalReferencesPaged links to a Page.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged> GetLinksToPortals ( global::UPM_IPS.FMRMRCMMGProyectoIPS.Page pageInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged>(pageInstance, global::UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged.PageDomainRoleId);
+		}
+		#endregion
+		#region PortalReferencesPaged instance accessors
+		
+		/// <summary>
+		/// Get any PortalReferencesPaged links between a given Portal and a Page.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged> GetLinks( global::UPM_IPS.FMRMRCMMGProyectoIPS.Portal source, global::UPM_IPS.FMRMRCMMGProyectoIPS.Page target )
+		{
+			global::System.Collections.Generic.List<global::UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged>();
+			global::System.Collections.Generic.IList<global::UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged>(source, global::UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged.PortalDomainRoleId);
+			foreach ( global::UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged link in links )
+			{
+				if ( target.Equals(link.Page) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one PortalReferencesPaged link between a given Portaland a Page.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged GetLink( global::UPM_IPS.FMRMRCMMGProyectoIPS.Portal source, global::UPM_IPS.FMRMRCMMGProyectoIPS.Page target )
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged>(source, global::UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged.PortalDomainRoleId);
+			foreach ( global::UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged link in links )
+			{
+				if ( target.Equals(link.Page) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace UPM_IPS.FMRMRCMMGProyectoIPS
+{
+	/// <summary>
+	/// DomainRelationship PageReferencesFielded
+	/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship()]
+	[DslModeling::DomainObjectId("aa479095-ec3a-47dc-976b-ca012860c8c2")]
+	public partial class PageReferencesFielded : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// PageReferencesFielded domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xaa479095, 0xec3a, 0x47dc, 0x97, 0x6b, 0xca, 0x01, 0x28, 0x60, 0xc8, 0xc2);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a PageReferencesFielded link in the same Partition as the given Page
+		/// </summary>
+		/// <param name="source">Page to use as the source of the relationship.</param>
+		/// <param name="target">Field to use as the target of the relationship.</param>
+		public PageReferencesFielded(Page source, Field target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(PageReferencesFielded.PageDomainRoleId, source), new DslModeling::RoleAssignment(PageReferencesFielded.FieldDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public PageReferencesFielded(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public PageReferencesFielded(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public PageReferencesFielded(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public PageReferencesFielded(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Page domain role code
+		
+		/// <summary>
+		/// Page domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid PageDomainRoleId = new global::System.Guid(0xddb2e6c6, 0x3517, 0x430a, 0xa3, 0x18, 0xed, 0x62, 0x0c, 0xe3, 0xb5, 0x44);
+		
+		/// <summary>
+		/// DomainRole Page
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded.Page
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded/Page.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded/Page.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Fielded", PropertyDisplayNameKey="UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded/Page.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("ddb2e6c6-3517-430a-a318-ed620ce3b544")]
+		public virtual Page Page
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Page)DslModeling::DomainRoleInfo.GetRolePlayer(this, PageDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, PageDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Paged of a Field
+		/// <summary>
+		/// Gets a list of Paged.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<Page> GetPaged(Field element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Page>, Page>(element, FieldDomainRoleId);
+		}
+		#endregion
+		#region Field domain role code
+		
+		/// <summary>
+		/// Field domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid FieldDomainRoleId = new global::System.Guid(0xf1c8fe6d, 0xa100, 0x4d69, 0xbe, 0xed, 0x8f, 0x15, 0x27, 0x7e, 0xa7, 0x53);
+		
+		/// <summary>
+		/// DomainRole Field
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded.Field
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded/Field.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded/Field.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Paged", PropertyDisplayNameKey="UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded/Field.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("f1c8fe6d-a100-4d69-beed-8f15277ea753")]
+		public virtual Field Field
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Field)DslModeling::DomainRoleInfo.GetRolePlayer(this, FieldDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, FieldDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Fielded of a Page
+		/// <summary>
+		/// Gets a list of Fielded.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<Field> GetFielded(Page element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Field>, Field>(element, PageDomainRoleId);
+		}
+		#endregion
+		#region Page link accessor
+		/// <summary>
+		/// Get the list of PageReferencesFielded links to a Page.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded> GetLinksToFielded ( global::UPM_IPS.FMRMRCMMGProyectoIPS.Page pageInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded>(pageInstance, global::UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded.PageDomainRoleId);
+		}
+		#endregion
+		#region Field link accessor
+		/// <summary>
+		/// Get the list of PageReferencesFielded links to a Field.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded> GetLinksToPaged ( global::UPM_IPS.FMRMRCMMGProyectoIPS.Field fieldInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded>(fieldInstance, global::UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded.FieldDomainRoleId);
+		}
+		#endregion
+		#region PageReferencesFielded instance accessors
+		
+		/// <summary>
+		/// Get any PageReferencesFielded links between a given Page and a Field.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded> GetLinks( global::UPM_IPS.FMRMRCMMGProyectoIPS.Page source, global::UPM_IPS.FMRMRCMMGProyectoIPS.Field target )
+		{
+			global::System.Collections.Generic.List<global::UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded>();
+			global::System.Collections.Generic.IList<global::UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded>(source, global::UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded.PageDomainRoleId);
+			foreach ( global::UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded link in links )
+			{
+				if ( target.Equals(link.Field) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one PageReferencesFielded link between a given Pageand a Field.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded GetLink( global::UPM_IPS.FMRMRCMMGProyectoIPS.Page source, global::UPM_IPS.FMRMRCMMGProyectoIPS.Field target )
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded>(source, global::UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded.PageDomainRoleId);
+			foreach ( global::UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded link in links )
+			{
+				if ( target.Equals(link.Field) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace UPM_IPS.FMRMRCMMGProyectoIPS
+{
+	/// <summary>
+	/// DomainRelationship TapizHasPaged
+	/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship(IsEmbedding=true)]
+	[DslModeling::DomainObjectId("12601f25-7996-41fb-9069-5f542093edf7")]
+	public partial class TapizHasPaged : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// TapizHasPaged domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x12601f25, 0x7996, 0x41fb, 0x90, 0x69, 0x5f, 0x54, 0x20, 0x93, 0xed, 0xf7);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a TapizHasPaged link in the same Partition as the given Tapiz
+		/// </summary>
+		/// <param name="source">Tapiz to use as the source of the relationship.</param>
+		/// <param name="target">Page to use as the target of the relationship.</param>
+		public TapizHasPaged(Tapiz source, Page target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(TapizHasPaged.TapizDomainRoleId, source), new DslModeling::RoleAssignment(TapizHasPaged.PageDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public TapizHasPaged(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public TapizHasPaged(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public TapizHasPaged(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public TapizHasPaged(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Tapiz domain role code
+		
+		/// <summary>
+		/// Tapiz domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid TapizDomainRoleId = new global::System.Guid(0x014c4cd0, 0x4874, 0x4250, 0xab, 0x1b, 0xb5, 0x1a, 0xc7, 0xc8, 0xca, 0xd7);
+		
+		/// <summary>
+		/// DomainRole Tapiz
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged.Tapiz
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged/Tapiz.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged/Tapiz.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Paged", PropertyDisplayNameKey="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged/Tapiz.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("014c4cd0-4874-4250-ab1b-b51ac7c8cad7")]
+		public virtual Tapiz Tapiz
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Tapiz)DslModeling::DomainRoleInfo.GetRolePlayer(this, TapizDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, TapizDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Tapiz of a Page
+		/// <summary>
+		/// Gets Tapiz.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static Tapiz GetTapiz(Page element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, PageDomainRoleId) as Tapiz;
+		}
+		
+		/// <summary>
+		/// Sets Tapiz.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetTapiz(Page element, Tapiz newTapiz)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, PageDomainRoleId, newTapiz);
+		}
+		#endregion
+		#region Page domain role code
+		
+		/// <summary>
+		/// Page domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid PageDomainRoleId = new global::System.Guid(0x459fc77d, 0x6923, 0x4890, 0xbb, 0x9c, 0x58, 0xf7, 0x91, 0x02, 0xb4, 0xb5);
+		
+		/// <summary>
+		/// DomainRole Page
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged.Page
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged/Page.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged/Page.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Tapiz", PropertyDisplayNameKey="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged/Page.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("459fc77d-6923-4890-bb9c-58f79102b4b5")]
+		public virtual Page Page
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Page)DslModeling::DomainRoleInfo.GetRolePlayer(this, PageDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, PageDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Paged of a Tapiz
+		/// <summary>
+		/// Gets a list of Paged.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<Page> GetPaged(Tapiz element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Page>, Page>(element, TapizDomainRoleId);
+		}
+		#endregion
+		#region Tapiz link accessor
+		/// <summary>
+		/// Get the list of TapizHasPaged links to a Tapiz.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged> GetLinksToPaged ( global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz tapizInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged>(tapizInstance, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged.TapizDomainRoleId);
+		}
+		#endregion
+		#region Page link accessor
+		/// <summary>
+		/// Get the TapizHasPaged link to a Page.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged GetLinkToTapiz (global::UPM_IPS.FMRMRCMMGProyectoIPS.Page pageInstance)
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged>(pageInstance, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged.PageDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Page not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region TapizHasPaged instance accessors
+		
+		/// <summary>
+		/// Get any TapizHasPaged links between a given Tapiz and a Page.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged> GetLinks( global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz source, global::UPM_IPS.FMRMRCMMGProyectoIPS.Page target )
+		{
+			global::System.Collections.Generic.List<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged>();
+			global::System.Collections.Generic.IList<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged>(source, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged.TapizDomainRoleId);
+			foreach ( global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged link in links )
+			{
+				if ( target.Equals(link.Page) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one TapizHasPaged link between a given Tapizand a Page.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged GetLink( global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz source, global::UPM_IPS.FMRMRCMMGProyectoIPS.Page target )
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged>(source, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged.TapizDomainRoleId);
+			foreach ( global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasPaged link in links )
+			{
+				if ( target.Equals(link.Page) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace UPM_IPS.FMRMRCMMGProyectoIPS
+{
+	/// <summary>
+	/// DomainRelationship TapizHasFielded
+	/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship(IsEmbedding=true)]
+	[DslModeling::DomainObjectId("a407a1d6-d9c7-46d6-ae9e-43e9d5240486")]
+	public partial class TapizHasFielded : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// TapizHasFielded domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xa407a1d6, 0xd9c7, 0x46d6, 0xae, 0x9e, 0x43, 0xe9, 0xd5, 0x24, 0x04, 0x86);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a TapizHasFielded link in the same Partition as the given Tapiz
+		/// </summary>
+		/// <param name="source">Tapiz to use as the source of the relationship.</param>
+		/// <param name="target">Field to use as the target of the relationship.</param>
+		public TapizHasFielded(Tapiz source, Field target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(TapizHasFielded.TapizDomainRoleId, source), new DslModeling::RoleAssignment(TapizHasFielded.FieldDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public TapizHasFielded(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public TapizHasFielded(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public TapizHasFielded(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public TapizHasFielded(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Tapiz domain role code
+		
+		/// <summary>
+		/// Tapiz domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid TapizDomainRoleId = new global::System.Guid(0xffe487b1, 0xf262, 0x4275, 0xa0, 0x4b, 0x01, 0x79, 0x36, 0x70, 0x24, 0x14);
+		
+		/// <summary>
+		/// DomainRole Tapiz
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded.Tapiz
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded/Tapiz.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded/Tapiz.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Fielded", PropertyDisplayNameKey="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded/Tapiz.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("ffe487b1-f262-4275-a04b-017936702414")]
+		public virtual Tapiz Tapiz
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Tapiz)DslModeling::DomainRoleInfo.GetRolePlayer(this, TapizDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, TapizDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Tapiz of a Field
+		/// <summary>
+		/// Gets Tapiz.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static Tapiz GetTapiz(Field element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, FieldDomainRoleId) as Tapiz;
+		}
+		
+		/// <summary>
+		/// Sets Tapiz.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetTapiz(Field element, Tapiz newTapiz)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, FieldDomainRoleId, newTapiz);
+		}
+		#endregion
+		#region Field domain role code
+		
+		/// <summary>
+		/// Field domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid FieldDomainRoleId = new global::System.Guid(0xdadfd941, 0xfec8, 0x4e1f, 0xbd, 0x86, 0x58, 0x07, 0x08, 0x34, 0x78, 0x40);
+		
+		/// <summary>
+		/// DomainRole Field
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded.Field
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded/Field.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded/Field.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Tapiz", PropertyDisplayNameKey="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded/Field.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("dadfd941-fec8-4e1f-bd86-580708347840")]
+		public virtual Field Field
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Field)DslModeling::DomainRoleInfo.GetRolePlayer(this, FieldDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, FieldDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Fielded of a Tapiz
+		/// <summary>
+		/// Gets a list of Fielded.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<Field> GetFielded(Tapiz element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Field>, Field>(element, TapizDomainRoleId);
+		}
+		#endregion
+		#region Tapiz link accessor
+		/// <summary>
+		/// Get the list of TapizHasFielded links to a Tapiz.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded> GetLinksToFielded ( global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz tapizInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded>(tapizInstance, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded.TapizDomainRoleId);
+		}
+		#endregion
+		#region Field link accessor
+		/// <summary>
+		/// Get the TapizHasFielded link to a Field.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded GetLinkToTapiz (global::UPM_IPS.FMRMRCMMGProyectoIPS.Field fieldInstance)
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded>(fieldInstance, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded.FieldDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Field not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region TapizHasFielded instance accessors
+		
+		/// <summary>
+		/// Get any TapizHasFielded links between a given Tapiz and a Field.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded> GetLinks( global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz source, global::UPM_IPS.FMRMRCMMGProyectoIPS.Field target )
+		{
+			global::System.Collections.Generic.List<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded>();
+			global::System.Collections.Generic.IList<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded>(source, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded.TapizDomainRoleId);
+			foreach ( global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded link in links )
+			{
+				if ( target.Equals(link.Field) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one TapizHasFielded link between a given Tapizand a Field.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded GetLink( global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz source, global::UPM_IPS.FMRMRCMMGProyectoIPS.Field target )
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded>(source, global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded.TapizDomainRoleId);
+			foreach ( global::UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasFielded link in links )
+			{
+				if ( target.Equals(link.Field) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
