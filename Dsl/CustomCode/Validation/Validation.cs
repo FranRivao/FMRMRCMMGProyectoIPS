@@ -18,7 +18,6 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
                 );
             }
 
-            // Validar longitud máxima
             if (!string.IsNullOrWhiteSpace(nombre) && nombre.Length > 30)
             {
                 context.LogError(
@@ -27,7 +26,6 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
                 );
             }
 
-            // Validar que no contenga números
             if (!string.IsNullOrWhiteSpace(nombre) && Regex.IsMatch(nombre, @"\d"))
             {
                 context.LogError(
@@ -38,6 +36,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
         }
     }
 
+    [ValidationState(ValidationState.Enabled)]
     public partial class Entidad 
     {
         [ValidationMethod(ValidationCategories.Save | ValidationCategories.Open)]
@@ -79,6 +78,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
         }
     }
 
+    [ValidationState(ValidationState.Enabled)]
     public partial class Relacion
     {
         [ValidationMethod(ValidationCategories.Save | ValidationCategories.Open)]
@@ -149,6 +149,35 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
                         "ERR_LONGITUD_ALFANUMERICO"
                     );
                 }
+            }
+        }
+    }
+    [ValidationState(ValidationState.Enabled)]
+    public partial class AtributoKey
+    {
+        [ValidationMethod(ValidationCategories.Save | ValidationCategories.Open)]
+        public void EnsureFlagsFalse(ValidationContext context)
+        {
+            bool changed = false;
+
+            if (this.esNulo)
+            {
+                AtributoGeneral.esNuloPropertyHandler.Instance.SetValue(this, false);
+                changed = true;
+            }
+
+            if (this.admiteRepetidos)
+            {
+                AtributoGeneral.admiteRepetidosPropertyHandler.Instance.SetValue(this, false);
+                changed = true;
+            }
+
+            if (changed)
+            {
+                context.LogWarning(
+                    $"Las propiedades 'esNulo' y/o 'admiteRepetidos' del AtributoKey '{this.nombre}' se han forzado a False.",
+                    "INF_ATRIBUTOKEY_FLAGS_FORZADAS"
+                );
             }
         }
     }
