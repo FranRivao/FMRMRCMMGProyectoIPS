@@ -378,14 +378,10 @@
     </DomainEnumeration>
     <DomainEnumeration Name="TipoDatoEnum" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.TipoDatoEnum">
       <Literals>
-        <EnumerationLiteral Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.TipoDatoEnum.String" Name="String" Value="0" />
-        <EnumerationLiteral Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.TipoDatoEnum.Byte" Name="Byte" Value="2" />
-        <EnumerationLiteral Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.TipoDatoEnum.Char" Name="Char" Value="3" />
-        <EnumerationLiteral Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.TipoDatoEnum.Boolean" Name="Boolean" Value="1" />
-        <EnumerationLiteral Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.TipoDatoEnum.DateTime" Name="DateTime" Value="4" />
-        <EnumerationLiteral Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.TipoDatoEnum.Double" Name="Double" Value="5" />
-        <EnumerationLiteral Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.TipoDatoEnum.Float" Name="Float" Value="7" />
-        <EnumerationLiteral Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.TipoDatoEnum.Int" Name="Int" Value="6" />
+        <EnumerationLiteral Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.TipoDatoEnum.Fecha" Name="Fecha" Value="0" />
+        <EnumerationLiteral Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.TipoDatoEnum.Real" Name="Real" Value="2" />
+        <EnumerationLiteral Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.TipoDatoEnum.Alfanumerico" Name="Alfanumerico" Value="3" />
+        <EnumerationLiteral Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.TipoDatoEnum.Entero" Name="Entero" Value="1" />
       </Literals>
     </DomainEnumeration>
   </Types>
