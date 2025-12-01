@@ -78,6 +78,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 				typeof(Page),
 				typeof(Field),
 				typeof(ElementosWeb),
+				typeof(AtributoGeneral),
 				typeof(EntidadReferencesAtributo),
 				typeof(EntidadReferencesRelacion1),
 				typeof(TapizHasElementoes),
@@ -115,12 +116,6 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		{
 			return new DomainMemberInfo[]
 			{
-				new DomainMemberInfo(typeof(Tapiz), "tituloPortal", Tapiz.tituloPortalDomainPropertyId, typeof(Tapiz.tituloPortalPropertyHandler)),
-				new DomainMemberInfo(typeof(Tapiz), "colorTitulo", Tapiz.colorTituloDomainPropertyId, typeof(Tapiz.colorTituloPropertyHandler)),
-				new DomainMemberInfo(typeof(Tapiz), "tamañoTitulo", Tapiz.tamañoTituloDomainPropertyId, typeof(Tapiz.tamañoTituloPropertyHandler)),
-				new DomainMemberInfo(typeof(Tapiz), "colorFondoPortal", Tapiz.colorFondoPortalDomainPropertyId, typeof(Tapiz.colorFondoPortalPropertyHandler)),
-				new DomainMemberInfo(typeof(Tapiz), "fuenteTitulo", Tapiz.fuenteTituloDomainPropertyId, typeof(Tapiz.fuenteTituloPropertyHandler)),
-				new DomainMemberInfo(typeof(Tapiz), "alineacionTitulo", Tapiz.alineacionTituloDomainPropertyId, typeof(Tapiz.alineacionTituloPropertyHandler)),
 				new DomainMemberInfo(typeof(Entidad), "colorTitulo", Entidad.colorTituloDomainPropertyId, typeof(Entidad.colorTituloPropertyHandler)),
 				new DomainMemberInfo(typeof(Entidad), "tamañoTitulo", Entidad.tamañoTituloDomainPropertyId, typeof(Entidad.tamañoTituloPropertyHandler)),
 				new DomainMemberInfo(typeof(Entidad), "alineacionTitulo", Entidad.alineacionTituloDomainPropertyId, typeof(Entidad.alineacionTituloPropertyHandler)),
@@ -143,6 +138,10 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 				new DomainMemberInfo(typeof(Field), "labelPosition", Field.labelPositionDomainPropertyId, typeof(Field.labelPositionPropertyHandler)),
 				new DomainMemberInfo(typeof(Field), "labelText", Field.labelTextDomainPropertyId, typeof(Field.labelTextPropertyHandler)),
 				new DomainMemberInfo(typeof(Field), "labelFormat", Field.labelFormatDomainPropertyId, typeof(Field.labelFormatPropertyHandler)),
+				new DomainMemberInfo(typeof(AtributoGeneral), "tipoDato", AtributoGeneral.tipoDatoDomainPropertyId, typeof(AtributoGeneral.tipoDatoPropertyHandler)),
+				new DomainMemberInfo(typeof(AtributoGeneral), "esNulo", AtributoGeneral.esNuloDomainPropertyId, typeof(AtributoGeneral.esNuloPropertyHandler)),
+				new DomainMemberInfo(typeof(AtributoGeneral), "admiteRepetidos", AtributoGeneral.admiteRepetidosDomainPropertyId, typeof(AtributoGeneral.admiteRepetidosPropertyHandler)),
+				new DomainMemberInfo(typeof(AtributoGeneral), "longitud", AtributoGeneral.longitudDomainPropertyId, typeof(AtributoGeneral.longitudPropertyHandler)),
 				new DomainMemberInfo(typeof(EntidadReferencesRelacion1), "cardinalidad", EntidadReferencesRelacion1.cardinalidadDomainPropertyId, typeof(EntidadReferencesRelacion1.cardinalidadPropertyHandler)),
 			};
 		}
@@ -191,7 +190,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(26);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(27);
 				createElementMap.Add(typeof(Tapiz), 0);
 				createElementMap.Add(typeof(Entidad), 1);
 				createElementMap.Add(typeof(Atributo), 2);
@@ -684,6 +683,41 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		/// </summary>
 		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.VisualizacionEnum/listaDesplegable.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
 		listaDesplegable = 3,
+	}
+}
+namespace UPM_IPS.FMRMRCMMGProyectoIPS
+{
+	/// <summary>
+	/// DomainEnumeration: TipoDatoEnum
+	/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TipoDatoEnum
+	/// </summary>
+	[global::System.CLSCompliant(true)]
+	public enum TipoDatoEnum
+	{
+		/// <summary>
+		/// Fecha
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TipoDatoEnum.Fecha
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.TipoDatoEnum/Fecha.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		Fecha = 0,
+		/// <summary>
+		/// Real
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TipoDatoEnum.Real
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.TipoDatoEnum/Real.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		Real = 2,
+		/// <summary>
+		/// Alfanumerico
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TipoDatoEnum.Alfanumerico
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.TipoDatoEnum/Alfanumerico.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		Alfanumerico = 3,
+		/// <summary>
+		/// Entero
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.TipoDatoEnum.Entero
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.TipoDatoEnum/Entero.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		Entero = 1,
 	}
 }
 

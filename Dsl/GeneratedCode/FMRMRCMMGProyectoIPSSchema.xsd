@@ -53,18 +53,6 @@
             <xsd:documentation>Version of the model serialized in this file.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <!-- Property: tituloPortal -->
-        <xsd:attribute name="tituloPortal" type="xsd:string" />
-        <!-- Property: colorTitulo -->
-        <xsd:attribute name="colorTitulo" type="xsd:string" />
-        <!-- Property: tamañoTitulo -->
-        <xsd:attribute name="tamañoTitulo" type="xsd:string" />
-        <!-- Property: colorFondoPortal -->
-        <xsd:attribute name="colorFondoPortal" type="xsd:string" />
-        <!-- Property: fuenteTitulo -->
-        <xsd:attribute name="fuenteTitulo" type="FuentesEnum" />
-        <!-- Property: alineacionTitulo -->
-        <xsd:attribute name="alineacionTitulo" type="PosicionTituloEnum" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -169,10 +157,10 @@
   </xsd:complexType>
   
   <!-- Atributo -->
-  <xsd:element name="atributo" type="Atributo" substitutionGroup="elemento" />
+  <xsd:element name="atributo" type="Atributo" substitutionGroup="atributoGeneral" />
   <xsd:complexType name="Atributo">
     <xsd:complexContent>
-      <xsd:extension base="Elemento">
+      <xsd:extension base="AtributoGeneral">
         <!-- Id -->
         <xsd:attribute name="Id" type="xsd:string">
           <xsd:annotation>
@@ -184,13 +172,13 @@
   </xsd:complexType>
   
   <!-- Atributo Moniker -->
-  <xsd:element name="atributoMoniker" type="AtributoMoniker" substitutionGroup="elementoMoniker" />
+  <xsd:element name="atributoMoniker" type="AtributoMoniker" substitutionGroup="atributoGeneralMoniker" />
   <xsd:complexType name="AtributoMoniker">
     <xsd:annotation>
       <xsd:documentation>Moniker for Atributo instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="ElementoMoniker">
+      <xsd:extension base="AtributoGeneralMoniker">
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -274,10 +262,10 @@
   </xsd:complexType>
   
   <!-- AtributoKey -->
-  <xsd:element name="atributoKey" type="AtributoKey" substitutionGroup="elemento" />
+  <xsd:element name="atributoKey" type="AtributoKey" substitutionGroup="atributoGeneral" />
   <xsd:complexType name="AtributoKey">
     <xsd:complexContent>
-      <xsd:extension base="Elemento">
+      <xsd:extension base="AtributoGeneral">
         <!-- Id -->
         <xsd:attribute name="Id" type="xsd:string">
           <xsd:annotation>
@@ -289,22 +277,22 @@
   </xsd:complexType>
   
   <!-- AtributoKey Moniker -->
-  <xsd:element name="atributoKeyMoniker" type="AtributoKeyMoniker" substitutionGroup="elementoMoniker" />
+  <xsd:element name="atributoKeyMoniker" type="AtributoKeyMoniker" substitutionGroup="atributoGeneralMoniker" />
   <xsd:complexType name="AtributoKeyMoniker">
     <xsd:annotation>
       <xsd:documentation>Moniker for AtributoKey instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="ElementoMoniker">
+      <xsd:extension base="AtributoGeneralMoniker">
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
   
   <!-- AtributoRelacion -->
-  <xsd:element name="atributoRelacion" type="AtributoRelacion" substitutionGroup="elemento" />
+  <xsd:element name="atributoRelacion" type="AtributoRelacion" substitutionGroup="atributoGeneral" />
   <xsd:complexType name="AtributoRelacion">
     <xsd:complexContent>
-      <xsd:extension base="Elemento">
+      <xsd:extension base="AtributoGeneral">
         <!-- Id -->
         <xsd:attribute name="Id" type="xsd:string">
           <xsd:annotation>
@@ -316,13 +304,13 @@
   </xsd:complexType>
   
   <!-- AtributoRelacion Moniker -->
-  <xsd:element name="atributoRelacionMoniker" type="AtributoRelacionMoniker" substitutionGroup="elementoMoniker" />
+  <xsd:element name="atributoRelacionMoniker" type="AtributoRelacionMoniker" substitutionGroup="atributoGeneralMoniker" />
   <xsd:complexType name="AtributoRelacionMoniker">
     <xsd:annotation>
       <xsd:documentation>Moniker for AtributoRelacion instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="ElementoMoniker">
+      <xsd:extension base="AtributoGeneralMoniker">
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -504,6 +492,41 @@
             <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- AtributoGeneral -->
+  <xsd:element name="atributoGeneral" abstract="true" type="AtributoGeneral" substitutionGroup="elemento" />
+  <xsd:complexType name="AtributoGeneral" abstract="true" >
+    <xsd:complexContent>
+      <xsd:extension base="Elemento">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: tipoDato -->
+        <xsd:attribute name="tipoDato" type="TipoDatoEnum" />
+        <!-- Property: esNulo -->
+        <xsd:attribute name="esNulo" type="xsd:boolean" />
+        <!-- Property: admiteRepetidos -->
+        <xsd:attribute name="admiteRepetidos" type="xsd:boolean" />
+        <!-- Property: longitud -->
+        <xsd:attribute name="longitud" type="xsd:string" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- AtributoGeneral Moniker -->
+  <xsd:element name="atributoGeneralMoniker" abstract="true" type="AtributoGeneralMoniker" substitutionGroup="elementoMoniker" />
+  <xsd:complexType name="AtributoGeneralMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for AtributoGeneral instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ElementoMoniker">
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -866,6 +889,16 @@
       <xsd:enumeration value="checkbox"/>
       <xsd:enumeration value="radioButton"/>
       <xsd:enumeration value="listaDesplegable"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- Enum TipoDatoEnum -->
+  <xsd:simpleType name="TipoDatoEnum">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Fecha"/>
+      <xsd:enumeration value="Real"/>
+      <xsd:enumeration value="Alfanumerico"/>
+      <xsd:enumeration value="Entero"/>
     </xsd:restriction>
   </xsd:simpleType>
   

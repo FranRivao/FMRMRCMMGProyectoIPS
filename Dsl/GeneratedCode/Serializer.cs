@@ -103,7 +103,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			
 			// Read properties serialized as XML attributes.
 			ReadPropertiesFromAttributes(serializationContext, element, reader);
-	
+				
 			// Read nested XML elements.
 			if (!serializationContext.Result.Failed)
 			{
@@ -151,111 +151,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			// Always call the base class so any extensions are deserialized
 			base.ReadPropertiesFromAttributes(serializationContext, element, reader);
 	
-			Tapiz instanceOfTapiz = element as Tapiz;
-			global::System.Diagnostics.Debug.Assert(instanceOfTapiz != null, "Expecting an instance of Tapiz");
-	
-			// tituloPortal
-			if (!serializationContext.Result.Failed)
-			{
-				string attribtituloPortal = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "tituloPortal");
-				if (attribtituloPortal != null)
-				{
-					global::System.String valueOftituloPortal;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribtituloPortal, out valueOftituloPortal))
-					{
-						instanceOfTapiz.tituloPortal = valueOftituloPortal;
-					}
-					else
-					{	// Invalid property value, ignored.
-						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "tituloPortal", typeof(global::System.String), attribtituloPortal);
-					}
-				}
-			}
-			// colorTitulo
-			if (!serializationContext.Result.Failed)
-			{
-				string attribcolorTitulo = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "colorTitulo");
-				if (attribcolorTitulo != null)
-				{
-					global::System.String valueOfcolorTitulo;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribcolorTitulo, out valueOfcolorTitulo))
-					{
-						instanceOfTapiz.colorTitulo = valueOfcolorTitulo;
-					}
-					else
-					{	// Invalid property value, ignored.
-						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "colorTitulo", typeof(global::System.String), attribcolorTitulo);
-					}
-				}
-			}
-			// tamañoTitulo
-			if (!serializationContext.Result.Failed)
-			{
-				string attribtamañoTitulo = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "tamañoTitulo");
-				if (attribtamañoTitulo != null)
-				{
-					global::System.Int16 valueOftamañoTitulo;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.Int16>(serializationContext, attribtamañoTitulo, out valueOftamañoTitulo))
-					{
-						instanceOfTapiz.tamañoTitulo = valueOftamañoTitulo;
-					}
-					else
-					{	// Invalid property value, ignored.
-						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "tamañoTitulo", typeof(global::System.Int16), attribtamañoTitulo);
-					}
-				}
-			}
-			// colorFondoPortal
-			if (!serializationContext.Result.Failed)
-			{
-				string attribcolorFondoPortal = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "colorFondoPortal");
-				if (attribcolorFondoPortal != null)
-				{
-					global::System.String valueOfcolorFondoPortal;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribcolorFondoPortal, out valueOfcolorFondoPortal))
-					{
-						instanceOfTapiz.colorFondoPortal = valueOfcolorFondoPortal;
-					}
-					else
-					{	// Invalid property value, ignored.
-						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "colorFondoPortal", typeof(global::System.String), attribcolorFondoPortal);
-					}
-				}
-			}
-			// fuenteTitulo
-			if (!serializationContext.Result.Failed)
-			{
-				string attribfuenteTitulo = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "fuenteTitulo");
-				if (attribfuenteTitulo != null)
-				{
-					FuentesEnum valueOffuenteTitulo;
-					if (DslModeling::SerializationUtilities.TryGetValue<FuentesEnum>(serializationContext, attribfuenteTitulo, out valueOffuenteTitulo))
-					{
-						instanceOfTapiz.fuenteTitulo = valueOffuenteTitulo;
-					}
-					else
-					{	// Invalid property value, ignored.
-						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "fuenteTitulo", typeof(FuentesEnum), attribfuenteTitulo);
-					}
-				}
-			}
-			// alineacionTitulo
-			if (!serializationContext.Result.Failed)
-			{
-				string attribalineacionTitulo = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "alineacionTitulo");
-				if (attribalineacionTitulo != null)
-				{
-					PosicionTituloEnum valueOfalineacionTitulo;
-					if (DslModeling::SerializationUtilities.TryGetValue<PosicionTituloEnum>(serializationContext, attribalineacionTitulo, out valueOfalineacionTitulo))
-					{
-						instanceOfTapiz.alineacionTitulo = valueOfalineacionTitulo;
-					}
-					else
-					{	// Invalid property value, ignored.
-						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "alineacionTitulo", typeof(PosicionTituloEnum), attribalineacionTitulo);
-					}
-				}
-			}
+			// There is no property to read; do nothing
 		}
 	
 		/// <summary>
@@ -827,72 +723,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			// Always call the base class so any extensions are serialized
 			base.WritePropertiesAsAttributes(serializationContext, element, writer);
 	
-			Tapiz instanceOfTapiz = element as Tapiz;
-			global::System.Diagnostics.Debug.Assert(instanceOfTapiz != null, "Expecting an instance of Tapiz");
-	
-			// tituloPortal
-			if (!serializationContext.Result.Failed)
-			{
-				global::System.String propValue = instanceOfTapiz.tituloPortal;
-				if (!serializationContext.Result.Failed)
-				{
-					if (!string.IsNullOrEmpty(propValue))
-						FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "tituloPortal", propValue);
-	
-				}
-			}
-			// colorTitulo
-			if (!serializationContext.Result.Failed)
-			{
-				global::System.String propValue = instanceOfTapiz.colorTitulo;
-				if (!serializationContext.Result.Failed)
-				{
-					if (!string.IsNullOrEmpty(propValue))
-						FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "colorTitulo", propValue);
-	
-				}
-			}
-			// tamañoTitulo
-			if (!serializationContext.Result.Failed)
-			{
-				global::System.Int16 propValue = instanceOfTapiz.tamañoTitulo;
-				string serializedPropValue = DslModeling::SerializationUtilities.GetString<global::System.Int16>(serializationContext, propValue);
-				if (!serializationContext.Result.Failed)
-				{
-					FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "tamañoTitulo", serializedPropValue);
-				}
-			}
-			// colorFondoPortal
-			if (!serializationContext.Result.Failed)
-			{
-				global::System.String propValue = instanceOfTapiz.colorFondoPortal;
-				if (!serializationContext.Result.Failed)
-				{
-					if (!string.IsNullOrEmpty(propValue))
-						FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "colorFondoPortal", propValue);
-	
-				}
-			}
-			// fuenteTitulo
-			if (!serializationContext.Result.Failed)
-			{
-				FuentesEnum propValue = instanceOfTapiz.fuenteTitulo;
-				string serializedPropValue = DslModeling::SerializationUtilities.GetString<FuentesEnum>(serializationContext, propValue);
-				if (!serializationContext.Result.Failed)
-				{
-					FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "fuenteTitulo", serializedPropValue);
-				}
-			}
-			// alineacionTitulo
-			if (!serializationContext.Result.Failed)
-			{
-				PosicionTituloEnum propValue = instanceOfTapiz.alineacionTitulo;
-				string serializedPropValue = DslModeling::SerializationUtilities.GetString<PosicionTituloEnum>(serializationContext, propValue);
-				if (!serializationContext.Result.Failed)
-				{
-					FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "alineacionTitulo", serializedPropValue);
-				}
-			}
+			// There are no properties; do nothing
 		}
 	
 		/// <summary>
@@ -2043,7 +1874,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 	/// <summary>
 	/// Serializer AtributoSerializer for DomainClass Atributo.
 	/// </summary>
-	public partial class AtributoSerializer : ElementoSerializer
+	public partial class AtributoSerializer : AtributoGeneralSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -3810,7 +3641,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 	/// <summary>
 	/// Serializer AtributoKeySerializer for DomainClass AtributoKey.
 	/// </summary>
-	public partial class AtributoKeySerializer : ElementoSerializer
+	public partial class AtributoKeySerializer : AtributoGeneralSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -4373,7 +4204,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 	/// <summary>
 	/// Serializer AtributoRelacionSerializer for DomainClass AtributoRelacion.
 	/// </summary>
-	public partial class AtributoRelacionSerializer : ElementoSerializer
+	public partial class AtributoRelacionSerializer : AtributoGeneralSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -7946,6 +7777,572 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		/// </summary>
 		/// <param name="directory">Directory to look up serializer based on model element type.</param>
 		/// <param name="element">ElementosWeb instance to get moniker qualifier from.</param>
+		/// <returns>
+		/// Value of this element's moniker qualifier property, if it has one, or the value of the container's moniker qualifier property. Or empty string if this
+		/// element is not monikerized using standard /qualifier/key mechanism.
+		/// </returns>
+		public override string GetMonikerQualifier(DslModeling::DomainXmlSerializerDirectory directory, DslModeling::ModelElement element)
+		{
+			#region Check Parameters
+			global::System.Diagnostics.Debug.Assert (directory != null);
+			if (directory == null)
+				throw new global::System.ArgumentNullException ("directory");
+			global::System.Diagnostics.Debug.Assert(element != null);
+			if (element == null)
+				throw new global::System.ArgumentNullException("element");
+			#endregion	
+			
+			return string.Empty;
+		}
+		#endregion
+	}
+}
+
+namespace UPM_IPS.FMRMRCMMGProyectoIPS
+{
+	/// <summary>
+	/// Serializer AtributoGeneralSerializer for DomainClass AtributoGeneral.
+	/// </summary>
+	public partial class AtributoGeneralSerializer : ElementoSerializer
+	{
+		#region Constructor
+		/// <summary>
+		/// AtributoGeneralSerializer Constructor
+		/// </summary>
+		public AtributoGeneralSerializer ()
+			: base ()
+		{
+		}
+		#endregion
+	
+		
+		#region Miscellaneous methods
+	
+		/// <summary>
+		/// Reset the serializer
+		/// </summary>
+		/// <remarks>
+		/// Clear the cached information about any derived classes so that it is recalculated.
+		/// </remarks>
+		public override void Reset()
+		{
+			base.Reset();
+			this.derivedClasses = null;
+			this.derivedClassMonikers = null;
+		}
+	
+		#endregion
+	
+		#region Public Properties
+		/// <summary>
+		/// Cannot be serialized.
+		/// </summary>
+		public override string XmlTagName
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get { return string.Empty; }
+		}
+	
+		/// <summary>
+		/// Cannot be monikerized.
+		/// </summary>
+		public override string MonikerTagName
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get { return string.Empty; }
+		}
+		
+		/// <summary>
+		/// Cannot be monikerized.
+		/// </summary>
+		public override string MonikerAttributeName
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get { return string.Empty; }
+		}
+		#endregion
+	
+		#region Read Methods
+		/// <summary>
+		/// AtributoGeneral is abstract and cannot be instantiated, so this method throws NotSupportedException.
+		/// </summary>
+		/// <remarks>
+		/// When this method is called, caller guarantees that the passed-in XML reader is positioned at the open XML tag
+		/// of the AtributoGeneral element that is about to be deserialized. 
+		/// The method needs to ensure that when it returns, the reader is positioned at the open XML tag of the next sibling element,
+		/// or the close tag of the parent element (or EOF).
+		/// </remarks>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="element">In-memory AtributoGeneral instance that will get the deserialized data.</param>
+		/// <param name="reader">XmlReader to read serialized data from.</param>
+		public override void Read(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlReader reader)
+		{
+			throw new global::System.NotSupportedException();
+		}
+	
+		/// <summary>
+		/// This method deserializes all properties that are serialized as XML attributes.
+		/// </summary>
+		/// <remarks>
+		/// Because this method only handles properties serialized as XML attributes, the passed-in reader shouldn't be moved inside this method.
+		/// The caller will guarantee that the reader is positioned on the open XML tag of the current element being deserialized.
+		/// </remarks>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="element">In-memory AtributoGeneral instance that will get the deserialized data.</param>
+		/// <param name="reader">XmlReader to read serialized data from.</param>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		protected override void ReadPropertiesFromAttributes(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlReader reader)
+		{
+			// Always call the base class so any extensions are deserialized
+			base.ReadPropertiesFromAttributes(serializationContext, element, reader);
+	
+			AtributoGeneral instanceOfAtributoGeneral = element as AtributoGeneral;
+			global::System.Diagnostics.Debug.Assert(instanceOfAtributoGeneral != null, "Expecting an instance of AtributoGeneral");
+	
+			// tipoDato
+			if (!serializationContext.Result.Failed)
+			{
+				string attribtipoDato = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "tipoDato");
+				if (attribtipoDato != null)
+				{
+					TipoDatoEnum valueOftipoDato;
+					if (DslModeling::SerializationUtilities.TryGetValue<TipoDatoEnum>(serializationContext, attribtipoDato, out valueOftipoDato))
+					{
+						instanceOfAtributoGeneral.tipoDato = valueOftipoDato;
+					}
+					else
+					{	// Invalid property value, ignored.
+						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "tipoDato", typeof(TipoDatoEnum), attribtipoDato);
+					}
+				}
+			}
+			// esNulo
+			if (!serializationContext.Result.Failed)
+			{
+				string attribesNulo = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "esNulo");
+				if (attribesNulo != null)
+				{
+					global::System.Boolean valueOfesNulo;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.Boolean>(serializationContext, attribesNulo, out valueOfesNulo))
+					{
+						instanceOfAtributoGeneral.esNulo = valueOfesNulo;
+					}
+					else
+					{	// Invalid property value, ignored.
+						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "esNulo", typeof(global::System.Boolean), attribesNulo);
+					}
+				}
+			}
+			// admiteRepetidos
+			if (!serializationContext.Result.Failed)
+			{
+				string attribadmiteRepetidos = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "admiteRepetidos");
+				if (attribadmiteRepetidos != null)
+				{
+					global::System.Boolean valueOfadmiteRepetidos;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.Boolean>(serializationContext, attribadmiteRepetidos, out valueOfadmiteRepetidos))
+					{
+						instanceOfAtributoGeneral.admiteRepetidos = valueOfadmiteRepetidos;
+					}
+					else
+					{	// Invalid property value, ignored.
+						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "admiteRepetidos", typeof(global::System.Boolean), attribadmiteRepetidos);
+					}
+				}
+			}
+			// longitud
+			if (!serializationContext.Result.Failed)
+			{
+				string attriblongitud = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "longitud");
+				if (attriblongitud != null)
+				{
+					global::System.Int16 valueOflongitud;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.Int16>(serializationContext, attriblongitud, out valueOflongitud))
+					{
+						instanceOfAtributoGeneral.longitud = valueOflongitud;
+					}
+					else
+					{	// Invalid property value, ignored.
+						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "longitud", typeof(global::System.Int16), attriblongitud);
+					}
+				}
+			}
+		}
+	
+		#region TryCreateInstance
+		/// <summary>
+		/// This method creates a correct instance of AtributoGeneral based on the tag currently pointed by the reader. If the reader
+		/// is positioned at a serialized AtributoGeneral, a new AtributoGeneral instance will be created in the given partition, otherwise 
+		/// null is returned.
+		/// </summary>
+		/// <remarks>
+		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
+		/// not move the reader; the reader should remain at the same position when this method returns.
+		/// </remarks>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="reader">XmlReader to read serialized data from.</param>
+		/// <param name="partition">Partition in which new elements should be created.</param>	
+		/// <returns>Created AtributoGeneral instance, or null if the reader is not pointing to a serialized AtributoGeneral instance.</returns>
+		public override DslModeling::ModelElement TryCreateInstance(DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::Partition partition)
+		{
+			#region Check Parameters
+			global::System.Diagnostics.Debug.Assert (serializationContext != null);
+			if (serializationContext == null)
+				throw new global::System.ArgumentNullException ("serializationContext");
+			global::System.Diagnostics.Debug.Assert (reader != null);
+			if (reader == null)
+				throw new global::System.ArgumentNullException ("reader");
+			global::System.Diagnostics.Debug.Assert (partition != null);
+			if (partition == null)
+				throw new global::System.ArgumentNullException ("partition");
+			#endregion
+	
+			DslModeling::ModelElement result = null;
+			if (!serializationContext.Result.Failed && !reader.EOF && reader.NodeType == global::System.Xml.XmlNodeType.Element)
+			{
+				string localName = reader.LocalName;
+				// Check for derived classes of "AtributoGeneral".
+				if (this.derivedClasses == null)
+					this.ConstructDerivedClassesLookupTable(serializationContext, partition.DomainDataDirectory);
+				global::System.Diagnostics.Debug.Assert (this.derivedClasses != null);
+				DslModeling::DomainClassInfo derivedClass = null;
+				if (this.derivedClasses.TryGetValue (localName, out derivedClass) && derivedClass != null)
+				{	// New derived class instance.
+					AtributoGeneralSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as AtributoGeneralSerializer;
+					global::System.Diagnostics.Debug.Assert(derivedSerializer != null, "Cannot find serializer for " + derivedClass.Name + "!");
+					result = derivedSerializer.CreateInstance(serializationContext, reader, partition);
+				}
+			}
+	
+			return result;
+		}
+	
+		/// <summary>
+		/// This method creates an instance of AtributoGeneral based on the tag currently pointed by the reader. The reader is guaranteed (by the caller)
+		/// to be pointed at a serialized instance of AtributoGeneral.
+		/// </summary>
+		/// <remarks>
+		/// The caller will guarantee that the reader is positioned at open XML tag of the ModelRoot instance being read. This method should
+		/// not move the reader; the reader should remain at the same position when this method returns.
+		/// </remarks>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="reader">XmlReader to read serialized data from.</param>
+		/// <param name="partition">Partition in which new AtributoGeneral instance should be created.</param>	
+		/// <returns>Created AtributoGeneral instance.</returns>
+		protected override DslModeling::ModelElement CreateInstance(DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::Partition partition)
+		{
+			// Abstract class, cannot be serialized.
+			throw new global::System.NotSupportedException();
+		}
+	
+		/// <summary>
+		/// Stores a mapping from XmlTagName to DomainClassInfo that derives from AtributoGeneral, created on demand.
+		/// </summary>
+		private global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> derivedClasses;
+	
+		/// <summary>
+		/// Construct the apping from XmlTagName to DomainClassInfo that derives from AtributoGeneral.
+		/// </summary>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="domainDataDirectory">DomainDataDirectory to be used to discover all derived classes.</param>
+		private void ConstructDerivedClassesLookupTable(DslModeling::SerializationContext serializationContext, DslModeling::DomainDataDirectory domainDataDirectory)
+		{
+			global::System.Diagnostics.Debug.Assert(this.derivedClasses == null); // Shouldn't construct the table more than once.
+			this.derivedClasses = new global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> (global::System.StringComparer.CurrentCulture);
+	
+			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(AtributoGeneral.DomainClassId);
+			global::System.Diagnostics.Debug.Assert(thisClass != null, "Cannot find DomainClassInfo for ModelRoot!");
+	
+			global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainClassInfo> descendents = thisClass.AllDescendants;
+			if (descendents != null)
+			{
+				foreach (DslModeling::DomainClassInfo descendent in descendents)
+				{
+					global::System.Type descendentType = descendent.ImplementationClass;
+					if (!descendentType.IsAbstract)
+					{
+						DslModeling::DomainClassXmlSerializer descendentSerializer = serializationContext.Directory.GetSerializer(descendent.Id);
+						if (descendentSerializer != null)
+						{
+							string descendentXmlTagName = descendentSerializer.XmlTagName;
+							if (!string.IsNullOrEmpty (descendentXmlTagName))
+							{
+								global::System.Diagnostics.Debug.Assert(!this.derivedClasses.ContainsKey (descendentXmlTagName));
+								this.derivedClasses.Add (descendentXmlTagName, descendent);
+							}
+						}
+					}
+					else
+					{   // Ignore abstract derived classes because they cannot be instantiated directly.
+					}
+				}
+			}
+		}
+		#endregion
+	
+		#region TryCreateMonikerInstance
+		/// <summary>
+		/// This method creates a Moniker of the correct derived (including AtributoGeneral itself) instance of AtributoGeneral based on the tag currently pointed by the reader.
+		/// </summary>
+		/// <remarks>
+		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
+		/// not move the reader; the reader should remain at the same position when this method returns.
+		/// </remarks>		
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="reader">XmlReader to read serialized data from.</param>
+		/// <param name="sourceRolePlayer">The source role-player instance from which the moniker being created is referenced.</param>
+		/// <param name="relDomainClassId">The DomainClass Id of the relationship that connects the sourceRolePlayer to the moniker being created.</param>
+		/// <param name="partition">The new Moniker should be created in the Store associated with this partition.</param>			
+		/// <returns>Created ModelRoot instance, or null if the reader is not pointing to a correct monikerized instance.</returns>
+		public override DslModeling::Moniker TryCreateMonikerInstance (DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::ModelElement sourceRolePlayer, global::System.Guid relDomainClassId, DslModeling::Partition partition)
+		{
+			#region Check Parameters
+			global::System.Diagnostics.Debug.Assert (serializationContext != null);
+			if (serializationContext == null)
+				throw new global::System.ArgumentNullException ("serializationContext");
+			global::System.Diagnostics.Debug.Assert (reader != null);
+			if (reader == null)
+				throw new global::System.ArgumentNullException ("reader");
+			global::System.Diagnostics.Debug.Assert (sourceRolePlayer != null);
+			if (sourceRolePlayer == null)
+				throw new global::System.ArgumentNullException ("sourceRolePlayer");
+			global::System.Diagnostics.Debug.Assert (partition != null);
+			if (partition == null)
+				throw new global::System.ArgumentNullException ("partition");
+			#endregion
+	
+			DslModeling::Moniker result = null;
+			if (!serializationContext.Result.Failed && !reader.EOF && reader.NodeType == global::System.Xml.XmlNodeType.Element)
+			{
+				string localName = reader.LocalName;
+				// Check for derived classes of "AtributoGeneral".
+				if (this.derivedClassMonikers == null)
+					this.ConstructDerivedClassMonikersLookupTable(serializationContext, partition.DomainDataDirectory);
+				global::System.Diagnostics.Debug.Assert(this.derivedClassMonikers != null);
+				DslModeling::DomainClassInfo derivedClass = null;
+				if (this.derivedClassMonikers.TryGetValue (localName, out derivedClass) && derivedClass != null)
+				{	// New derived class moniker instance.
+					AtributoGeneralSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as AtributoGeneralSerializer;
+					global::System.Diagnostics.Debug.Assert(derivedSerializer != null, "Cannot find serializer for " + derivedClass.Name + "!");
+					result = derivedSerializer.CreateMonikerInstance(serializationContext, reader, sourceRolePlayer, relDomainClassId, partition);
+				}
+			}
+	
+			return result;
+		}
+		
+		/// <summary>
+		/// This method creates a Moniker of AtributoGeneral based on the tag currently pointed by the reader.
+		/// </summary>
+		/// <remarks>
+		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
+		/// not move the reader; the reader should remain at the same position when this method returns.
+		/// </remarks>		
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="reader">XmlReader to read serialized data from.</param>
+		/// <param name="sourceRolePlayer">The source role-player instance from which the moniker being created is referenced.</param>
+		/// <param name="relDomainClassId">The DomainClass Id of the relationship that connects the sourceRolePlayer to the moniker being created.</param>
+		/// <param name="partition">The new Moniker should be created in the Store associated with this partition.</param>			
+		/// <returns>Created ModelRoot instance, or null if the reader is not pointing to a correct monikerized instance.</returns>
+		protected override DslModeling::Moniker CreateMonikerInstance (DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::ModelElement sourceRolePlayer, global::System.Guid relDomainClassId, DslModeling::Partition partition)
+		{
+			string monikerString = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, sourceRolePlayer, reader, this.MonikerAttributeName);
+	
+			if (string.IsNullOrEmpty(monikerString))
+			{	
+				FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.MissingMoniker(serializationContext, reader, this.MonikerAttributeName);
+				return null;
+			}
+			try
+			{	// Normalize the Id.
+				global::System.Guid id = new global::System.Guid(monikerString);
+				monikerString = id.ToString("D", global::System.Globalization.CultureInfo.CurrentCulture);
+				DslModeling::Moniker result = new DslModeling::Moniker(new DslModeling::MonikerKey(monikerString, relDomainClassId, AtributoGeneral.DomainClassId, partition.Store), partition.Store);
+				// Set location info if possible.
+				result.Location = serializationContext.Location;
+				global::System.Xml.IXmlLineInfo xmlLineInfo = reader as global::System.Xml.IXmlLineInfo;
+				if (xmlLineInfo != null)
+				{
+					result.Line = xmlLineInfo.LineNumber;
+					result.Column = xmlLineInfo.LinePosition;
+				}
+				return result;
+			}
+			catch (global::System.FormatException /* fEx */)
+			{
+				FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.InvalidPropertyValue(serializationContext, reader, this.MonikerAttributeName, typeof(global::System.Guid), monikerString);
+				return null;
+			}
+			catch (global::System.OverflowException /* oEx */)
+			{	
+				FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.InvalidPropertyValue(serializationContext, reader, this.MonikerAttributeName, typeof(global::System.Guid), monikerString);
+				return null;
+			}
+		}
+	
+		/// <summary>
+		/// Stores a mapping from Moniker Xml tag name to DomainClassInfo that derives from AtributoGeneral, created on demand.
+		/// </summary>
+		private global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> derivedClassMonikers;
+	
+		/// <summary>
+		/// Construct the mapping from Moniker Xml tag name to DomainClassInfo that derives from AtributoGeneral.
+		/// </summary>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="domainDataDirectory">DomainDataDirectory to be used to discover all derived classes.</param>
+		private void ConstructDerivedClassMonikersLookupTable(DslModeling::SerializationContext serializationContext, DslModeling::DomainDataDirectory domainDataDirectory)
+		{
+			global::System.Diagnostics.Debug.Assert(this.derivedClassMonikers == null); // Shouldn't construct the table more than once.
+			this.derivedClassMonikers = new global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> (global::System.StringComparer.CurrentCulture);
+	
+			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(AtributoGeneral.DomainClassId);
+			global::System.Diagnostics.Debug.Assert(thisClass != null, "Cannot find DomainClassInfo for ModelRoot!");
+	
+			global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainClassInfo> descendents = thisClass.AllDescendants;
+			if (descendents != null)
+			{
+				foreach (DslModeling::DomainClassInfo descendent in descendents)
+				{
+					DslModeling::DomainClassXmlSerializer descendentSerializer = serializationContext.Directory.GetSerializer(descendent.Id);
+					if (descendentSerializer != null)
+					{
+						string descendentMonikerTagName = descendentSerializer.MonikerTagName;
+						if (!string.IsNullOrEmpty (descendentMonikerTagName))
+						{
+							global::System.Diagnostics.Debug.Assert(!this.derivedClassMonikers.ContainsKey (descendentMonikerTagName));
+							this.derivedClassMonikers.Add (descendentMonikerTagName, descendent);
+						}
+					}
+				}
+			}
+		}
+		#endregion
+		#endregion
+	
+		#region Write Methods
+		/// <summary>
+		/// Public WriteMoniker() method that writes a monikerized AtributoGeneral instance into XML.
+		/// </summary>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="element">AtributoGeneral instance to be monikerized.</param>
+		/// <param name="writer">XmlWriter to write serialized data to.</param>
+		/// <param name="sourceRolePlayer">Source element that references the AtributoGeneral instance being monikerized.</param>
+		/// <param name="relSerializer">Serializer that handles the relationship connecting the source element to the AtributoGeneral instance being monikerized.</param>
+		public override void WriteMoniker(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlWriter writer, DslModeling::ModelElement sourceRolePlayer, DslModeling::DomainRelationshipXmlSerializer relSerializer)
+		{
+			// Instance of AtributoGeneral cannot be monikerized.
+			FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.CannotMonikerizeElement(serializationContext, "AtributoGeneral");
+		}
+		
+		/// <summary>
+		/// Public Write() method that serializes one AtributoGeneral instance into XML.
+		/// </summary>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="element">AtributoGeneral instance to be serialized.</param>
+		/// <param name="writer">XmlWriter to write serialized data to.</param>
+		/// <param name="rootElementSettings">
+		/// The root element settings if the passed in element is serialized as a root element in the XML. The root element contains additional
+		/// information like schema target namespace, version, etc.
+		/// This should only be passed for root-level elements. Null should be passed for rest elements (and ideally call the Write() method 
+		/// without this parameter).
+		/// </param>
+		public override void Write(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlWriter writer, DslModeling::RootElementSettings rootElementSettings)
+		{
+			throw new global::System.NotSupportedException();
+		}
+	
+		/// <summary>
+		/// Write all properties that need to be serialized as XML attributes.
+		/// </summary>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="element">AtributoGeneral instance to be serialized.</param>
+		/// <param name="writer">XmlWriter to write serialized data to.</param> 
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		protected override void WritePropertiesAsAttributes(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlWriter writer)
+		{
+			// Always call the base class so any extensions are serialized
+			base.WritePropertiesAsAttributes(serializationContext, element, writer);
+	
+			AtributoGeneral instanceOfAtributoGeneral = element as AtributoGeneral;
+			global::System.Diagnostics.Debug.Assert(instanceOfAtributoGeneral != null, "Expecting an instance of AtributoGeneral");
+	
+			// tipoDato
+			if (!serializationContext.Result.Failed)
+			{
+				TipoDatoEnum propValue = instanceOfAtributoGeneral.tipoDato;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<TipoDatoEnum>(serializationContext, propValue);
+				if (!serializationContext.Result.Failed)
+				{
+					FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "tipoDato", serializedPropValue);
+				}
+			}
+			// esNulo
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.Boolean propValue = instanceOfAtributoGeneral.esNulo;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<global::System.Boolean>(serializationContext, propValue);
+				if (!serializationContext.Result.Failed)
+				{
+					FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "esNulo", serializedPropValue);
+				}
+			}
+			// admiteRepetidos
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.Boolean propValue = instanceOfAtributoGeneral.admiteRepetidos;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<global::System.Boolean>(serializationContext, propValue);
+				if (!serializationContext.Result.Failed)
+				{
+					FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "admiteRepetidos", serializedPropValue);
+				}
+			}
+			// longitud
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.Int16 propValue = instanceOfAtributoGeneral.longitud;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<global::System.Int16>(serializationContext, propValue);
+				if (!serializationContext.Result.Failed)
+				{
+					if (serializationContext.WriteOptionalPropertiesWithDefaultValue || string.CompareOrdinal(serializedPropValue, "0") != 0)
+					{	// No need to write the value out if it's the same as default value.
+						FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "longitud", serializedPropValue);
+					}
+				}
+			}
+		}
+		#endregion
+	
+		#region Moniker Support
+		/// <summary>
+		/// This method calculates a moniker to a given AtributoGeneral instance.
+		/// </summary>
+		/// <param name="directory">Directory to look up serializer based on model element type.</param>
+		/// <param name="element">AtributoGeneral instance to calculate qualified name for.</param>
+		/// <returns>A fully qualified string moniker to the AtributoGeneral instance.</returns>
+		public override string CalculateQualifiedName(DslModeling::DomainXmlSerializerDirectory directory, DslModeling::ModelElement element)
+		{
+			#region Check Parameters
+			global::System.Diagnostics.Debug.Assert (directory != null);
+			if (directory == null)
+				throw new global::System.ArgumentNullException ("directory");
+			global::System.Diagnostics.Debug.Assert(element != null);
+			if (element == null)
+				throw new global::System.ArgumentNullException("element");
+			#endregion	
+			
+			AtributoGeneral instance = element as AtributoGeneral;
+			global::System.Diagnostics.Debug.Assert(instance != null, "Expecting an instance of AtributoGeneral!");
+	
+			return instance.Id.ToString("D", global::System.Globalization.CultureInfo.CurrentCulture);
+		}
+	
+		/// <summary>
+		/// A domain class can be monikerized in different ways: standard /qualifier/key mechanism, custom moniker, or element ID. If the domain class is serialized
+		/// using standard /qualifier/key mechanism, this method returns the qualifier of the moniker; if the domain class uses other ways for monikerization, this method
+		/// returns empty string.
+		/// </summary>
+		/// <param name="directory">Directory to look up serializer based on model element type.</param>
+		/// <param name="element">AtributoGeneral instance to get moniker qualifier from.</param>
 		/// <returns>
 		/// Value of this element's moniker qualifier property, if it has one, or the value of the container's moniker qualifier property. Or empty string if this
 		/// element is not monikerized using standard /qualifier/key mechanism.
@@ -23319,7 +23716,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 				{
 					global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainXmlSerializerDirectoryEntry> customSerializerTypes = this.CustomSerializerTypes;
 					int customSerializerCount = (customSerializerTypes == null ? 0 : customSerializerTypes.Count);
-					FMRMRCMMGProyectoIPSSerializationBehavior.serializerTypes = new global::System.Collections.Generic.List<DslModeling::DomainXmlSerializerDirectoryEntry>(34 + customSerializerCount);
+					FMRMRCMMGProyectoIPSSerializationBehavior.serializerTypes = new global::System.Collections.Generic.List<DslModeling::DomainXmlSerializerDirectoryEntry>(35 + customSerializerCount);
 	
 					#region Serializers defined in this model
 					FMRMRCMMGProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(Tapiz.DomainClassId, typeof(TapizSerializer)));
@@ -23333,6 +23730,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 					FMRMRCMMGProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(Page.DomainClassId, typeof(PageSerializer)));
 					FMRMRCMMGProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(Field.DomainClassId, typeof(FieldSerializer)));
 					FMRMRCMMGProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(ElementosWeb.DomainClassId, typeof(ElementosWebSerializer)));
+					FMRMRCMMGProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(AtributoGeneral.DomainClassId, typeof(AtributoGeneralSerializer)));
 					FMRMRCMMGProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(EntidadReferencesAtributo.DomainClassId, typeof(EntidadReferencesAtributoSerializer)));
 					FMRMRCMMGProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(EntidadReferencesRelacion1.DomainClassId, typeof(EntidadReferencesRelacion1Serializer)));
 					FMRMRCMMGProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(TapizHasElementoes.DomainClassId, typeof(TapizHasElementoesSerializer)));

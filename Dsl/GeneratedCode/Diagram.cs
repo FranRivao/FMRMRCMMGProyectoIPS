@@ -191,21 +191,15 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Generated code.")]
 		protected override DslDiagrams::ShapeElement CreateChildShape(DslModeling::ModelElement element)
 		{
-			if(element is global::UPM_IPS.FMRMRCMMGProyectoIPS.Entidad)
-			{
-				global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaEntidad newShape = new global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaEntidad(this.Partition);
-				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
-				return newShape;
-			}
 			if(element is global::UPM_IPS.FMRMRCMMGProyectoIPS.Atributo)
 			{
 				global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaAtributo newShape = new global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaAtributo(this.Partition);
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
-			if(element is global::UPM_IPS.FMRMRCMMGProyectoIPS.Relacion)
+			if(element is global::UPM_IPS.FMRMRCMMGProyectoIPS.AtributoRelacion)
 			{
-				global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaRelacion newShape = new global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaRelacion(this.Partition);
+				global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaAtributoRelacion newShape = new global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaAtributoRelacion(this.Partition);
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
@@ -215,9 +209,15 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
-			if(element is global::UPM_IPS.FMRMRCMMGProyectoIPS.AtributoRelacion)
+			if(element is global::UPM_IPS.FMRMRCMMGProyectoIPS.Entidad)
 			{
-				global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaAtributoRelacion newShape = new global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaAtributoRelacion(this.Partition);
+				global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaEntidad newShape = new global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaEntidad(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::UPM_IPS.FMRMRCMMGProyectoIPS.Relacion)
+			{
+				global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaRelacion newShape = new global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaRelacion(this.Partition);
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
@@ -239,21 +239,6 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
-			if(element is global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributo)
-			{
-				global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadAtributo newShape = new global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadAtributo(this.Partition);
-				return newShape;
-			}
-			if(element is global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey)
-			{
-				global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadAtributoKey newShape = new global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadAtributoKey(this.Partition);
-				return newShape;
-			}
-			if(element is global::UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion)
-			{
-				global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorRelacionAtributoRelacion newShape = new global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorRelacionAtributoRelacion(this.Partition);
-				return newShape;
-			}
 			if(element is global::UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged)
 			{
 				global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorPortalPage newShape = new global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorPortalPage(this.Partition);
@@ -269,6 +254,21 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 				global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadRelacion newShape = new global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadRelacion(this.Partition);
 				return newShape;
 			}
+			if(element is global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributo)
+			{
+				global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadAtributo newShape = new global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadAtributo(this.Partition);
+				return newShape;
+			}
+			if(element is global::UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion)
+			{
+				global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorRelacionAtributoRelacion newShape = new global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorRelacionAtributoRelacion(this.Partition);
+				return newShape;
+			}
+			if(element is global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey)
+			{
+				global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadAtributoKey newShape = new global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadAtributoKey(this.Partition);
+				return newShape;
+			}
 			return base.CreateChildShape(element);
 		}
 		#endregion
@@ -281,11 +281,11 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		{
 			base.InitializeShapeFields(shapeFields);
 			global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaEntidad.DecoratorsInitialized += MetaforaEntidadDecoratorMap.OnDecoratorsInitialized;
-			global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaAtributo.DecoratorsInitialized += MetaforaAtributoDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaRelacion.DecoratorsInitialized += MetaforaRelacionDecoratorMap.OnDecoratorsInitialized;
-			global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaAtributoKey.DecoratorsInitialized += MetaforaAtributoKeyDecoratorMap.OnDecoratorsInitialized;
-			global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaAtributoRelacion.DecoratorsInitialized += MetaforaAtributoRelacionDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaPortal.DecoratorsInitialized += MetaforaPortalDecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaAtributo.DecoratorsInitialized += MetaforaAtributoDecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaAtributoRelacion.DecoratorsInitialized += MetaforaAtributoRelacionDecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaAtributoKey.DecoratorsInitialized += MetaforaAtributoKeyDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadRelacion.DecoratorsInitialized += ConectorEntidadRelacionDecoratorMap.OnDecoratorsInitialized;
 		}
 		
@@ -296,24 +296,6 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		{
 			/// <summary>
 			/// Event handler called when decorator initialization is complete for MetaforaEntidad.  Adds decorator mappings for this shape or connector.
-			/// </summary>
-			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
-			{
-				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
-				DslDiagrams::AssociatedPropertyInfo propertyInfo;
-				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.FMRMRCMMGProyectoIPS.Elemento.nombreDomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "nombreDec").AssociateValueWith(shape.Store, propertyInfo);
-			}
-		}
-		
-		/// <summary>
-		/// Class containing decorator path traversal methods for MetaforaAtributo.
-		/// </summary>
-		internal static partial class MetaforaAtributoDecoratorMap
-		{
-			/// <summary>
-			/// Event handler called when decorator initialization is complete for MetaforaAtributo.  Adds decorator mappings for this shape or connector.
 			/// </summary>
 			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
 			{
@@ -344,12 +326,30 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		}
 		
 		/// <summary>
-		/// Class containing decorator path traversal methods for MetaforaAtributoKey.
+		/// Class containing decorator path traversal methods for MetaforaPortal.
 		/// </summary>
-		internal static partial class MetaforaAtributoKeyDecoratorMap
+		internal static partial class MetaforaPortalDecoratorMap
 		{
 			/// <summary>
-			/// Event handler called when decorator initialization is complete for MetaforaAtributoKey.  Adds decorator mappings for this shape or connector.
+			/// Event handler called when decorator initialization is complete for MetaforaPortal.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.FMRMRCMMGProyectoIPS.Portal.titleTextDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "titleTextDec").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for MetaforaAtributo.
+		/// </summary>
+		internal static partial class MetaforaAtributoDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for MetaforaAtributo.  Adds decorator mappings for this shape or connector.
 			/// </summary>
 			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
 			{
@@ -380,20 +380,20 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		}
 		
 		/// <summary>
-		/// Class containing decorator path traversal methods for MetaforaPortal.
+		/// Class containing decorator path traversal methods for MetaforaAtributoKey.
 		/// </summary>
-		internal static partial class MetaforaPortalDecoratorMap
+		internal static partial class MetaforaAtributoKeyDecoratorMap
 		{
 			/// <summary>
-			/// Event handler called when decorator initialization is complete for MetaforaPortal.  Adds decorator mappings for this shape or connector.
+			/// Event handler called when decorator initialization is complete for MetaforaAtributoKey.  Adds decorator mappings for this shape or connector.
 			/// </summary>
 			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
 			{
 				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
 				DslDiagrams::AssociatedPropertyInfo propertyInfo;
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.FMRMRCMMGProyectoIPS.Portal.titleTextDomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "titleTextDec").AssociateValueWith(shape.Store, propertyInfo);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.FMRMRCMMGProyectoIPS.Elemento.nombreDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "nombreDec").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
 		
@@ -641,20 +641,20 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		/// <summary>
 		/// Rule that initiates view fixup when an element that has an associated shape is added to the model. 
 		/// </summary>
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.Entidad), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.Atributo), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.Relacion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.AtributoKey), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.AtributoRelacion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.AtributoKey), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.Entidad), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.Relacion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.Portal), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.Page), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.Field), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributo), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributo), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed partial class FixUpDiagram : FixUpDiagramBase
 		{
 			[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
@@ -670,25 +670,25 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 				{
 					parentElement = GetParentForRelationship((DslModeling::ElementLink)childElement);
 				} else
-				if(childElement is global::UPM_IPS.FMRMRCMMGProyectoIPS.Entidad)
-				{
-					parentElement = GetParentForEntidad((global::UPM_IPS.FMRMRCMMGProyectoIPS.Entidad)childElement);
-				} else
 				if(childElement is global::UPM_IPS.FMRMRCMMGProyectoIPS.Atributo)
 				{
 					parentElement = GetParentForAtributo((global::UPM_IPS.FMRMRCMMGProyectoIPS.Atributo)childElement);
 				} else
-				if(childElement is global::UPM_IPS.FMRMRCMMGProyectoIPS.Relacion)
+				if(childElement is global::UPM_IPS.FMRMRCMMGProyectoIPS.AtributoRelacion)
 				{
-					parentElement = GetParentForRelacion((global::UPM_IPS.FMRMRCMMGProyectoIPS.Relacion)childElement);
+					parentElement = GetParentForAtributoRelacion((global::UPM_IPS.FMRMRCMMGProyectoIPS.AtributoRelacion)childElement);
 				} else
 				if(childElement is global::UPM_IPS.FMRMRCMMGProyectoIPS.AtributoKey)
 				{
 					parentElement = GetParentForAtributoKey((global::UPM_IPS.FMRMRCMMGProyectoIPS.AtributoKey)childElement);
 				} else
-				if(childElement is global::UPM_IPS.FMRMRCMMGProyectoIPS.AtributoRelacion)
+				if(childElement is global::UPM_IPS.FMRMRCMMGProyectoIPS.Entidad)
 				{
-					parentElement = GetParentForAtributoRelacion((global::UPM_IPS.FMRMRCMMGProyectoIPS.AtributoRelacion)childElement);
+					parentElement = GetParentForEntidad((global::UPM_IPS.FMRMRCMMGProyectoIPS.Entidad)childElement);
+				} else
+				if(childElement is global::UPM_IPS.FMRMRCMMGProyectoIPS.Relacion)
+				{
+					parentElement = GetParentForRelacion((global::UPM_IPS.FMRMRCMMGProyectoIPS.Relacion)childElement);
 				} else
 				if(childElement is global::UPM_IPS.FMRMRCMMGProyectoIPS.Portal)
 				{
@@ -718,28 +718,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 				if ( result == null ) return null;
 				return result;
 			}
-			public static global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz GetParentForAtributo( global::UPM_IPS.FMRMRCMMGProyectoIPS.Elemento root )
-			{
-				// Segments 0 and 1
-				global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz result = root.Tapiz;
-				if ( result == null ) return null;
-				return result;
-			}
 			public static global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz GetParentForRelacion( global::UPM_IPS.FMRMRCMMGProyectoIPS.Elemento root )
-			{
-				// Segments 0 and 1
-				global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz result = root.Tapiz;
-				if ( result == null ) return null;
-				return result;
-			}
-			public static global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz GetParentForAtributoKey( global::UPM_IPS.FMRMRCMMGProyectoIPS.Elemento root )
-			{
-				// Segments 0 and 1
-				global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz result = root.Tapiz;
-				if ( result == null ) return null;
-				return result;
-			}
-			public static global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz GetParentForAtributoRelacion( global::UPM_IPS.FMRMRCMMGProyectoIPS.Elemento root )
 			{
 				// Segments 0 and 1
 				global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz result = root.Tapiz;
@@ -761,6 +740,27 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 				return result;
 			}
 			public static global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz GetParentForField( global::UPM_IPS.FMRMRCMMGProyectoIPS.ElementosWeb root )
+			{
+				// Segments 0 and 1
+				global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz result = root.Tapiz;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz GetParentForAtributo( global::UPM_IPS.FMRMRCMMGProyectoIPS.Elemento root )
+			{
+				// Segments 0 and 1
+				global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz result = root.Tapiz;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz GetParentForAtributoRelacion( global::UPM_IPS.FMRMRCMMGProyectoIPS.Elemento root )
+			{
+				// Segments 0 and 1
+				global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz result = root.Tapiz;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz GetParentForAtributoKey( global::UPM_IPS.FMRMRCMMGProyectoIPS.Elemento root )
 			{
 				// Segments 0 and 1
 				global::UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz result = root.Tapiz;
@@ -879,12 +879,12 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		/// <summary>
 		/// Reroute a connector when the role players of its underlying relationship change
 		/// </summary>
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributo), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributo), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed class ConnectorRolePlayerChanged : DslModeling::RolePlayerChangeRule
 		{
 			/// <summary>

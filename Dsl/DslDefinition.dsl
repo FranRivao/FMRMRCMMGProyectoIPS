@@ -194,6 +194,21 @@
             <DomainEnumerationMoniker Name="TipoDatoEnum" />
           </Type>
         </DomainProperty>
+        <DomainProperty Id="cdb4f741-120e-4e0b-9b0a-3ae164235799" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.AtributoGeneral.Es Nulo" Name="esNulo" DisplayName="Es Nulo">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Boolean" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="d6a6dab4-ea49-47ec-9c14-fc046434d89c" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.AtributoGeneral.Admite Repetidos" Name="admiteRepetidos" DisplayName="Admite Repetidos">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Boolean" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="dcc4aa23-d156-4490-ba27-cb39b0b27b7e" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.AtributoGeneral.Longitud" Name="longitud" DisplayName="Longitud" DefaultValue="0">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Int16" />
+          </Type>
+        </DomainProperty>
       </Properties>
     </DomainClass>
   </Classes>
@@ -655,6 +670,15 @@
           <XmlPropertyData XmlName="tipoDato">
             <DomainPropertyMoniker Name="AtributoGeneral/tipoDato" />
           </XmlPropertyData>
+          <XmlPropertyData XmlName="esNulo">
+            <DomainPropertyMoniker Name="AtributoGeneral/esNulo" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="admiteRepetidos">
+            <DomainPropertyMoniker Name="AtributoGeneral/admiteRepetidos" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="longitud">
+            <DomainPropertyMoniker Name="AtributoGeneral/longitud" />
+          </XmlPropertyData>
         </ElementData>
       </XmlClassData>
     </ClassData>
@@ -840,6 +864,51 @@
         </ParentElementPath>
         <GeometryShapeMoniker Name="MetaforaField" />
       </ShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="Atributo" />
+        <ParentElementPath>
+          <DomainPath>TapizHasElementoes.Tapiz/!Tapiz</DomainPath>
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="MetaforaAtributo/nombreDec" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Elemento/nombre" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <GeometryShapeMoniker Name="MetaforaAtributo" />
+      </ShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="AtributoRelacion" />
+        <ParentElementPath>
+          <DomainPath>TapizHasElementoes.Tapiz/!Tapiz</DomainPath>
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="MetaforaAtributoRelacion/nombreDec" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Elemento/nombre" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <GeometryShapeMoniker Name="MetaforaAtributoRelacion" />
+      </ShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="AtributoKey" />
+        <ParentElementPath>
+          <DomainPath>TapizHasElementoes.Tapiz/!Tapiz</DomainPath>
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="MetaforaAtributoKey/nombreDec" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Elemento/nombre" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <GeometryShapeMoniker Name="MetaforaAtributoKey" />
+      </ShapeMap>
     </ShapeMaps>
     <ConnectorMaps>
       <ConnectorMap>
@@ -861,6 +930,18 @@
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="ConectorEntidadAtributo" />
+        <DomainRelationshipMoniker Name="EntidadReferencesAtributo" />
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="ConectorRelacionAtributoRelacion" />
+        <DomainRelationshipMoniker Name="RelacionReferencesAtributoRelacion" />
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="ConectorEntidadAtributoKey" />
+        <DomainRelationshipMoniker Name="EntidadReferencesAtributoKey" />
       </ConnectorMap>
     </ConnectorMaps>
   </Diagram>

@@ -120,4 +120,36 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
             }
         }
     }
+
+    [ValidationState(ValidationState.Enabled)]
+    public partial class AtributoGeneral
+    {
+        [ValidationMethod(ValidationCategories.Save | ValidationCategories.Open)]
+        public void ValidateLongitudSegunTipoDato(ValidationContext context)
+        {
+
+            if (this.tipoDato != TipoDatoEnum.Alfanumerico)
+            {
+                if (this.longitud != 0)
+                {
+                    context.LogError(
+                        $"Para el atributo '{this.nombre}': cuando 'tipoDato' es '{this.tipoDato}', la propiedad 'longitud' debe ser 0.",
+                        "ERR_LONGITUD_DEBE_SER_CERO"
+                    );
+                }
+                return;
+            }
+
+            if (this.tipoDato == TipoDatoEnum.Alfanumerico)
+            {
+                if (this.longitud <= 1 || this.longitud >= 256)
+                {
+                    context.LogError(
+                        $"Para el atributo '{this.nombre}': cuando 'tipoDato' es Alfanumerico, 'longitud' debe estar entre 1 y 256 (valor actual: {this.longitud}).",
+                        "ERR_LONGITUD_ALFANUMERICO"
+                    );
+                }
+            }
+        }
+    }
 }

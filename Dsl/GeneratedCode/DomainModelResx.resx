@@ -133,54 +133,6 @@
     <value>Tapiz</value>
     <comment>DisplayName for DomainClass &apos;Tapiz&apos;</comment>
   </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz/tituloPortal.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz.Titulo Portal</value>
-    <comment>Description for DomainProperty &apos;tituloPortal&apos; on DomainClass &apos;Tapiz&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz/tituloPortal.DisplayName" xml:space="preserve">
-    <value>Titulo Portal</value>
-    <comment>DisplayName for DomainProperty &apos;tituloPortal&apos; on DomainClass &apos;Tapiz&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz/colorTitulo.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz.Color Titulo</value>
-    <comment>Description for DomainProperty &apos;colorTitulo&apos; on DomainClass &apos;Tapiz&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz/colorTitulo.DisplayName" xml:space="preserve">
-    <value>Color Titulo</value>
-    <comment>DisplayName for DomainProperty &apos;colorTitulo&apos; on DomainClass &apos;Tapiz&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz/tamañoTitulo.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz.Tamaño Titulo</value>
-    <comment>Description for DomainProperty &apos;tamañoTitulo&apos; on DomainClass &apos;Tapiz&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz/tamañoTitulo.DisplayName" xml:space="preserve">
-    <value>Tamaño Titulo</value>
-    <comment>DisplayName for DomainProperty &apos;tamañoTitulo&apos; on DomainClass &apos;Tapiz&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz/colorFondoPortal.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz.Color Fondo Portal</value>
-    <comment>Description for DomainProperty &apos;colorFondoPortal&apos; on DomainClass &apos;Tapiz&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz/colorFondoPortal.DisplayName" xml:space="preserve">
-    <value>Color Fondo Portal</value>
-    <comment>DisplayName for DomainProperty &apos;colorFondoPortal&apos; on DomainClass &apos;Tapiz&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz/fuenteTitulo.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz.Fuente Titulo</value>
-    <comment>Description for DomainProperty &apos;fuenteTitulo&apos; on DomainClass &apos;Tapiz&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz/fuenteTitulo.DisplayName" xml:space="preserve">
-    <value>Fuente Titulo</value>
-    <comment>DisplayName for DomainProperty &apos;fuenteTitulo&apos; on DomainClass &apos;Tapiz&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz/alineacionTitulo.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz.Alineacion Titulo</value>
-    <comment>Description for DomainProperty &apos;alineacionTitulo&apos; on DomainClass &apos;Tapiz&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz/alineacionTitulo.DisplayName" xml:space="preserve">
-    <value>Alineacion Titulo</value>
-    <comment>DisplayName for DomainProperty &apos;alineacionTitulo&apos; on DomainClass &apos;Tapiz&apos;</comment>
-  </data>
   <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Entidad.Description" xml:space="preserve">
     <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Entidad</value>
     <comment>Description for DomainClass &apos;Entidad&apos;</comment>
@@ -436,6 +388,46 @@
   <data name="UPM_IPS.FMRMRCMMGProyectoIPS.ElementosWeb.DisplayName" xml:space="preserve">
     <value>Elementos Web</value>
     <comment>DisplayName for DomainClass &apos;ElementosWeb&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.AtributoGeneral.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.AtributoGeneral</value>
+    <comment>Description for DomainClass &apos;AtributoGeneral&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.AtributoGeneral.DisplayName" xml:space="preserve">
+    <value>Atributo General</value>
+    <comment>DisplayName for DomainClass &apos;AtributoGeneral&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.AtributoGeneral/tipoDato.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.AtributoGeneral.Tipo Dato</value>
+    <comment>Description for DomainProperty &apos;tipoDato&apos; on DomainClass &apos;AtributoGeneral&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.AtributoGeneral/tipoDato.DisplayName" xml:space="preserve">
+    <value>Tipo Dato</value>
+    <comment>DisplayName for DomainProperty &apos;tipoDato&apos; on DomainClass &apos;AtributoGeneral&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.AtributoGeneral/esNulo.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.AtributoGeneral.Es Nulo</value>
+    <comment>Description for DomainProperty &apos;esNulo&apos; on DomainClass &apos;AtributoGeneral&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.AtributoGeneral/esNulo.DisplayName" xml:space="preserve">
+    <value>Es Nulo</value>
+    <comment>DisplayName for DomainProperty &apos;esNulo&apos; on DomainClass &apos;AtributoGeneral&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.AtributoGeneral/admiteRepetidos.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.AtributoGeneral.Admite Repetidos</value>
+    <comment>Description for DomainProperty &apos;admiteRepetidos&apos; on DomainClass &apos;AtributoGeneral&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.AtributoGeneral/admiteRepetidos.DisplayName" xml:space="preserve">
+    <value>Admite Repetidos</value>
+    <comment>DisplayName for DomainProperty &apos;admiteRepetidos&apos; on DomainClass &apos;AtributoGeneral&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.AtributoGeneral/longitud.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.AtributoGeneral.Longitud</value>
+    <comment>Description for DomainProperty &apos;longitud&apos; on DomainClass &apos;AtributoGeneral&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.AtributoGeneral/longitud.DisplayName" xml:space="preserve">
+    <value>Longitud</value>
+    <comment>DisplayName for DomainProperty &apos;longitud&apos; on DomainClass &apos;AtributoGeneral&apos;</comment>
   </data>
   <data name="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributo.Description" xml:space="preserve">
     <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributo</value>
@@ -820,6 +812,38 @@
   <data name="UPM_IPS.FMRMRCMMGProyectoIPS.VisualizacionEnum/listaDesplegable.Description" xml:space="preserve">
     <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.VisualizacionEnum.listaDesplegable</value>
     <comment>Description for EnumerationLiteral &apos;listaDesplegable&apos; on DomainEnumeration &apos;VisualizacionEnum&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TipoDatoEnum/Fecha.DisplayName" xml:space="preserve">
+    <value>Fecha</value>
+    <comment>Display name for EnumerationLiteral &apos;Fecha&apos; on DomainEnumeration &apos;TipoDatoEnum&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TipoDatoEnum/Fecha.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.TipoDatoEnum.Fecha</value>
+    <comment>Description for EnumerationLiteral &apos;Fecha&apos; on DomainEnumeration &apos;TipoDatoEnum&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TipoDatoEnum/Real.DisplayName" xml:space="preserve">
+    <value>Real</value>
+    <comment>Display name for EnumerationLiteral &apos;Real&apos; on DomainEnumeration &apos;TipoDatoEnum&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TipoDatoEnum/Real.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.TipoDatoEnum.Real</value>
+    <comment>Description for EnumerationLiteral &apos;Real&apos; on DomainEnumeration &apos;TipoDatoEnum&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TipoDatoEnum/Alfanumerico.DisplayName" xml:space="preserve">
+    <value>Alfanumerico</value>
+    <comment>Display name for EnumerationLiteral &apos;Alfanumerico&apos; on DomainEnumeration &apos;TipoDatoEnum&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TipoDatoEnum/Alfanumerico.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.TipoDatoEnum.Alfanumerico</value>
+    <comment>Description for EnumerationLiteral &apos;Alfanumerico&apos; on DomainEnumeration &apos;TipoDatoEnum&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TipoDatoEnum/Entero.DisplayName" xml:space="preserve">
+    <value>Entero</value>
+    <comment>Display name for EnumerationLiteral &apos;Entero&apos; on DomainEnumeration &apos;TipoDatoEnum&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TipoDatoEnum/Entero.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.TipoDatoEnum.Entero</value>
+    <comment>Description for EnumerationLiteral &apos;Entero&apos; on DomainEnumeration &apos;TipoDatoEnum&apos;</comment>
   </data>
   <data name="UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaEntidad.Description" xml:space="preserve">
     <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaEntidad</value>

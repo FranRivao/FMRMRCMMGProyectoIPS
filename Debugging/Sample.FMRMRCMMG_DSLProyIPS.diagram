@@ -276,7 +276,7 @@
         <metaforaRelacionMoniker Id="958de9ae-1788-43bc-9550-6db06d4c5739" />
       </nodes>
     </conectorEntidadRelacion>
-    <conectorEntidadRelacion Id="301d9717-6371-44d3-8966-e9e3aaf56a76" edgePoints="[(6.6960477205749 : 12.9043162556718); (8 : 12.9043162556718); (8 : 13.625)]" fixedFrom="Caller" fixedTo="Algorithm">
+    <conectorEntidadRelacion Id="301d9717-6371-44d3-8966-e9e3aaf56a76" edgePoints="[(6.6960477205749 : 12.9043162556718); (8 : 12.9043162556718); (8 : 13.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <entidadReferencesRelacion1Moniker Id="a0e6ce61-dc37-4e7f-b92f-0f96dc91ee93" />
       <relativeChildShapes />
       <nodes>
@@ -284,7 +284,7 @@
         <metaforaRelacionMoniker Id="958de9ae-1788-43bc-9550-6db06d4c5739" />
       </nodes>
     </conectorEntidadRelacion>
-    <conectorEntidadRelacion Id="fe57aab7-a119-458d-8402-975a396dd84f" edgePoints="[(5.36391813617587 : 13.0223661567296); (3.875 : 13.0223661567296); (3.875 : 13.375)]" fixedFrom="Caller" fixedTo="Algorithm">
+    <conectorEntidadRelacion Id="fe57aab7-a119-458d-8402-975a396dd84f" edgePoints="[(5.36391813617587 : 13.0223661567296); (3.875 : 13.0223661567296); (3.875 : 13.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <entidadReferencesRelacion1Moniker Id="2d18845b-38eb-496a-ac35-6a2836e9b419" />
       <relativeChildShapes />
       <nodes>
@@ -292,7 +292,7 @@
         <metaforaRelacionMoniker Id="3d810cc9-b5ca-4be0-b67c-405055535298" />
       </nodes>
     </conectorEntidadRelacion>
-    <conectorEntidadRelacion Id="8c9757dc-c6d1-4c49-b101-95c4f756c4e3" edgePoints="[(6.08055268331952 : 13.3706616291657); (6.08055268331952 : 15.75)]" fixedFrom="Caller" fixedTo="Algorithm">
+    <conectorEntidadRelacion Id="8c9757dc-c6d1-4c49-b101-95c4f756c4e3" edgePoints="[(6.08055268331952 : 13.3706616291657); (6.08055268331952 : 15.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <entidadReferencesRelacion1Moniker Id="c0f46168-4bcc-4844-817a-d47c46c771bf" />
       <relativeChildShapes />
       <nodes>
