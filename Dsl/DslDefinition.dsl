@@ -50,15 +50,8 @@
     </DomainClass>
     <DomainClass Id="995157d2-720f-4224-9529-acb6d4eac32e" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Atributo" Name="Atributo" DisplayName="Atributo" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS">
       <BaseClass>
-        <DomainClassMoniker Name="Elemento" />
+        <DomainClassMoniker Name="AtributoGeneral" />
       </BaseClass>
-      <Properties>
-        <DomainProperty Id="6a163632-793c-4d01-a2d6-043cd8291926" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Atributo.Tipo Dato" Name="tipoDato" DisplayName="Tipo Dato">
-          <Type>
-            <DomainEnumerationMoniker Name="TipoDatoEnum" />
-          </Type>
-        </DomainProperty>
-      </Properties>
     </DomainClass>
     <DomainClass Id="f199dab1-e960-43df-a3b8-ad53816ee47a" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Relacion" Name="Relacion" DisplayName="Relacion" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS">
       <BaseClass>
@@ -76,12 +69,12 @@
     </DomainClass>
     <DomainClass Id="8c1c5383-bfce-43be-bb1a-90df94270206" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.AtributoKey" Name="AtributoKey" DisplayName="Atributo Key" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS">
       <BaseClass>
-        <DomainClassMoniker Name="Elemento" />
+        <DomainClassMoniker Name="AtributoGeneral" />
       </BaseClass>
     </DomainClass>
     <DomainClass Id="6cc99eea-e373-4329-badc-f1be1a369ee4" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.AtributoRelacion" Name="AtributoRelacion" DisplayName="Atributo Relacion" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS">
       <BaseClass>
-        <DomainClassMoniker Name="Elemento" />
+        <DomainClassMoniker Name="AtributoGeneral" />
       </BaseClass>
     </DomainClass>
     <DomainClass Id="a9823568-0c3a-455e-b811-c0ac13f6e3b6" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Portal" Name="Portal" DisplayName="Portal" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS">
@@ -191,6 +184,18 @@
       </Properties>
     </DomainClass>
     <DomainClass Id="3baae1ea-3856-4a6d-8d6b-a84d9312d788" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.ElementosWeb" Name="ElementosWeb" DisplayName="Elementos Web" InheritanceModifier="Abstract" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" />
+    <DomainClass Id="90f770ac-941c-4bef-b174-d037ff90092c" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.AtributoGeneral" Name="AtributoGeneral" DisplayName="Atributo General" InheritanceModifier="Abstract" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS">
+      <BaseClass>
+        <DomainClassMoniker Name="Elemento" />
+      </BaseClass>
+      <Properties>
+        <DomainProperty Id="35e15f3e-eba2-450f-8cef-66539fde26ba" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.AtributoGeneral.Tipo Dato" Name="tipoDato" DisplayName="Tipo Dato">
+          <Type>
+            <DomainEnumerationMoniker Name="TipoDatoEnum" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+    </DomainClass>
   </Classes>
   <Relationships>
     <DomainRelationship Id="e8f7629d-9907-4554-aa2d-f41c46c74c3b" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributo" Name="EntidadReferencesAtributo" DisplayName="Entidad References Atributo" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS">
@@ -478,11 +483,6 @@
       </XmlClassData>
       <XmlClassData TypeName="Atributo" MonikerAttributeName="" SerializeId="true" MonikerElementName="atributoMoniker" ElementName="atributo" MonikerTypeName="AtributoMoniker">
         <DomainClassMoniker Name="Atributo" />
-        <ElementData>
-          <XmlPropertyData XmlName="tipoDato">
-            <DomainPropertyMoniker Name="Atributo/tipoDato" />
-          </XmlPropertyData>
-        </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="MetaforaAtributo" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaAtributoMoniker" ElementName="metaforaAtributo" MonikerTypeName="MetaforaAtributoMoniker">
         <GeometryShapeMoniker Name="MetaforaAtributo" />
@@ -649,6 +649,14 @@
       <XmlClassData TypeName="TapizHasElementosWebbed" MonikerAttributeName="" SerializeId="true" MonikerElementName="tapizHasElementosWebbedMoniker" ElementName="tapizHasElementosWebbed" MonikerTypeName="TapizHasElementosWebbedMoniker">
         <DomainRelationshipMoniker Name="TapizHasElementosWebbed" />
       </XmlClassData>
+      <XmlClassData TypeName="AtributoGeneral" MonikerAttributeName="" SerializeId="true" MonikerElementName="atributoGeneralMoniker" ElementName="atributoGeneral" MonikerTypeName="AtributoGeneralMoniker">
+        <DomainClassMoniker Name="AtributoGeneral" />
+        <ElementData>
+          <XmlPropertyData XmlName="tipoDato">
+            <DomainPropertyMoniker Name="AtributoGeneral/tipoDato" />
+          </XmlPropertyData>
+        </ElementData>
+      </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
   <ExplorerBehavior Name="FMRMRCMMGProyectoIPSExplorer" />
@@ -789,21 +797,6 @@
         <GeometryShapeMoniker Name="MetaforaEntidad" />
       </ShapeMap>
       <ShapeMap>
-        <DomainClassMoniker Name="Atributo" />
-        <ParentElementPath>
-          <DomainPath>TapizHasElementoes.Tapiz/!Tapiz</DomainPath>
-        </ParentElementPath>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="MetaforaAtributo/nombreDec" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="Elemento/nombre" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <GeometryShapeMoniker Name="MetaforaAtributo" />
-      </ShapeMap>
-      <ShapeMap>
         <DomainClassMoniker Name="Relacion" />
         <ParentElementPath>
           <DomainPath>TapizHasElementoes.Tapiz/!Tapiz</DomainPath>
@@ -817,36 +810,6 @@
           </PropertyDisplayed>
         </DecoratorMap>
         <GeometryShapeMoniker Name="MetaforaRelacion" />
-      </ShapeMap>
-      <ShapeMap>
-        <DomainClassMoniker Name="AtributoKey" />
-        <ParentElementPath>
-          <DomainPath>TapizHasElementoes.Tapiz/!Tapiz</DomainPath>
-        </ParentElementPath>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="MetaforaAtributoKey/nombreDec" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="Elemento/nombre" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <GeometryShapeMoniker Name="MetaforaAtributoKey" />
-      </ShapeMap>
-      <ShapeMap>
-        <DomainClassMoniker Name="AtributoRelacion" />
-        <ParentElementPath>
-          <DomainPath>TapizHasElementoes.Tapiz/!Tapiz</DomainPath>
-        </ParentElementPath>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="MetaforaAtributoRelacion/nombreDec" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="Elemento/nombre" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <GeometryShapeMoniker Name="MetaforaAtributoRelacion" />
       </ShapeMap>
       <ShapeMap>
         <DomainClassMoniker Name="Portal" />
@@ -879,18 +842,6 @@
       </ShapeMap>
     </ShapeMaps>
     <ConnectorMaps>
-      <ConnectorMap>
-        <ConnectorMoniker Name="ConectorEntidadAtributo" />
-        <DomainRelationshipMoniker Name="EntidadReferencesAtributo" />
-      </ConnectorMap>
-      <ConnectorMap>
-        <ConnectorMoniker Name="ConectorEntidadAtributoKey" />
-        <DomainRelationshipMoniker Name="EntidadReferencesAtributoKey" />
-      </ConnectorMap>
-      <ConnectorMap>
-        <ConnectorMoniker Name="ConectorRelacionAtributoRelacion" />
-        <DomainRelationshipMoniker Name="RelacionReferencesAtributoRelacion" />
-      </ConnectorMap>
       <ConnectorMap>
         <ConnectorMoniker Name="ConectorPortalPage" />
         <DomainRelationshipMoniker Name="PortalReferencesPaged" />
