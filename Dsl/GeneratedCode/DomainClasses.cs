@@ -2031,59 +2031,59 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		}
 		
 		#endregion
-		#region titleFormat domain property code
+		#region backgroundColor domain property code
 		
 		/// <summary>
-		/// titleFormat domain property Id.
+		/// backgroundColor domain property Id.
 		/// </summary>
-		public static readonly global::System.Guid titleFormatDomainPropertyId = new global::System.Guid(0x54626dce, 0x4d8d, 0x49f4, 0xbc, 0xb9, 0x12, 0x45, 0x93, 0x64, 0x81, 0x67);
+		public static readonly global::System.Guid backgroundColorDomainPropertyId = new global::System.Guid(0xa3ae277d, 0x25ec, 0x4646, 0xb1, 0x43, 0x23, 0xf3, 0x7a, 0x16, 0x04, 0xb5);
 		
 		/// <summary>
-		/// Storage for titleFormat
+		/// Storage for backgroundColor
 		/// </summary>
-		private VisualizacionEnum titleFormatPropertyStorage;
+		private global::System.String backgroundColorPropertyStorage = string.Empty;
 		
 		/// <summary>
-		/// Gets or sets the value of titleFormat domain property.
-		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.Portal.Title Format
+		/// Gets or sets the value of backgroundColor domain property.
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.Portal.Background Color
 		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.Portal/titleFormat.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.Portal/titleFormat.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainObjectId("54626dce-4d8d-49f4-bcb9-124593648167")]
-		public VisualizacionEnum titleFormat
+		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.Portal/backgroundColor.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.Portal/backgroundColor.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("a3ae277d-25ec-4646-b143-23f37a1604b5")]
+		public global::System.String backgroundColor
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return titleFormatPropertyStorage;
+				return backgroundColorPropertyStorage;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				titleFormatPropertyHandler.Instance.SetValue(this, value);
+				backgroundColorPropertyHandler.Instance.SetValue(this, value);
 			}
 		}
 		/// <summary>
-		/// Value handler for the Portal.titleFormat domain property.
+		/// Value handler for the Portal.backgroundColor domain property.
 		/// </summary>
-		internal sealed partial class titleFormatPropertyHandler : DslModeling::DomainPropertyValueHandler<Portal, VisualizacionEnum>
+		internal sealed partial class backgroundColorPropertyHandler : DslModeling::DomainPropertyValueHandler<Portal, global::System.String>
 		{
-			private titleFormatPropertyHandler() { }
+			private backgroundColorPropertyHandler() { }
 		
 			/// <summary>
-			/// Gets the singleton instance of the Portal.titleFormat domain property value handler.
+			/// Gets the singleton instance of the Portal.backgroundColor domain property value handler.
 			/// </summary>
-			public static readonly titleFormatPropertyHandler Instance = new titleFormatPropertyHandler();
+			public static readonly backgroundColorPropertyHandler Instance = new backgroundColorPropertyHandler();
 		
 			/// <summary>
-			/// Gets the Id of the Portal.titleFormat domain property.
+			/// Gets the Id of the Portal.backgroundColor domain property.
 			/// </summary>
 			public sealed override global::System.Guid DomainPropertyId
 			{
 				[global::System.Diagnostics.DebuggerStepThrough]
 				get
 				{
-					return titleFormatDomainPropertyId;
+					return backgroundColorDomainPropertyId;
 				}
 			}
 			
@@ -2092,10 +2092,10 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed VisualizacionEnum GetValue(Portal element)
+			public override sealed global::System.String GetValue(Portal element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.titleFormatPropertyStorage;
+				return element.backgroundColorPropertyStorage;
 			}
 		
 			/// <summary>
@@ -2103,15 +2103,15 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Portal element, VisualizacionEnum newValue)
+			public override sealed void SetValue(Portal element, global::System.String newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				VisualizacionEnum oldValue = GetValue(element);
+				global::System.String oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
-					element.titleFormatPropertyStorage = newValue;
+					element.backgroundColorPropertyStorage = newValue;
 					ValueChanged(element, oldValue, newValue);
 				}
 			}
@@ -3109,6 +3109,93 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 				{
 					ValueChanging(element, oldValue, newValue);
 					element.labelTextPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region labelFormat domain property code
+		
+		/// <summary>
+		/// labelFormat domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid labelFormatDomainPropertyId = new global::System.Guid(0xc56d1bf6, 0x6c10, 0x433c, 0x98, 0xb1, 0xe1, 0x77, 0x00, 0x24, 0x43, 0xc4);
+		
+		/// <summary>
+		/// Storage for labelFormat
+		/// </summary>
+		private VisualizacionEnum labelFormatPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of labelFormat domain property.
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.Field.Label Format
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.Field/labelFormat.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.Field/labelFormat.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("c56d1bf6-6c10-433c-98b1-e177002443c4")]
+		public VisualizacionEnum labelFormat
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return labelFormatPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				labelFormatPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Field.labelFormat domain property.
+		/// </summary>
+		internal sealed partial class labelFormatPropertyHandler : DslModeling::DomainPropertyValueHandler<Field, VisualizacionEnum>
+		{
+			private labelFormatPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Field.labelFormat domain property value handler.
+			/// </summary>
+			public static readonly labelFormatPropertyHandler Instance = new labelFormatPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Field.labelFormat domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return labelFormatDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed VisualizacionEnum GetValue(Field element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.labelFormatPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Field element, VisualizacionEnum newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				VisualizacionEnum oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.labelFormatPropertyStorage = newValue;
 					ValueChanged(element, oldValue, newValue);
 				}
 			}

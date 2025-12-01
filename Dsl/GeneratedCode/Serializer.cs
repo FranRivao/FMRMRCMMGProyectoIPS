@@ -5160,20 +5160,20 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 					}
 				}
 			}
-			// titleFormat
+			// backgroundColor
 			if (!serializationContext.Result.Failed)
 			{
-				string attribtitleFormat = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "titleFormat");
-				if (attribtitleFormat != null)
+				string attribbackgroundColor = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "backgroundColor");
+				if (attribbackgroundColor != null)
 				{
-					VisualizacionEnum valueOftitleFormat;
-					if (DslModeling::SerializationUtilities.TryGetValue<VisualizacionEnum>(serializationContext, attribtitleFormat, out valueOftitleFormat))
+					global::System.String valueOfbackgroundColor;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribbackgroundColor, out valueOfbackgroundColor))
 					{
-						instanceOfPortal.titleFormat = valueOftitleFormat;
+						instanceOfPortal.backgroundColor = valueOfbackgroundColor;
 					}
 					else
 					{	// Invalid property value, ignored.
-						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "titleFormat", typeof(VisualizacionEnum), attribtitleFormat);
+						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "backgroundColor", typeof(global::System.String), attribbackgroundColor);
 					}
 				}
 			}
@@ -5740,14 +5740,15 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 					FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "titlePosition", serializedPropValue);
 				}
 			}
-			// titleFormat
+			// backgroundColor
 			if (!serializationContext.Result.Failed)
 			{
-				VisualizacionEnum propValue = instanceOfPortal.titleFormat;
-				string serializedPropValue = DslModeling::SerializationUtilities.GetString<VisualizacionEnum>(serializationContext, propValue);
+				global::System.String propValue = instanceOfPortal.backgroundColor;
 				if (!serializationContext.Result.Failed)
 				{
-					FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "titleFormat", serializedPropValue);
+					if (!string.IsNullOrEmpty(propValue))
+						FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "backgroundColor", propValue);
+	
 				}
 			}
 		}
@@ -6979,6 +6980,23 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 					}
 				}
 			}
+			// labelFormat
+			if (!serializationContext.Result.Failed)
+			{
+				string attriblabelFormat = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "labelFormat");
+				if (attriblabelFormat != null)
+				{
+					VisualizacionEnum valueOflabelFormat;
+					if (DslModeling::SerializationUtilities.TryGetValue<VisualizacionEnum>(serializationContext, attriblabelFormat, out valueOflabelFormat))
+					{
+						instanceOfField.labelFormat = valueOflabelFormat;
+					}
+					else
+					{	// Invalid property value, ignored.
+						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "labelFormat", typeof(VisualizacionEnum), attriblabelFormat);
+					}
+				}
+			}
 		}
 	
 		#region TryCreateInstance
@@ -7431,6 +7449,16 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 					if (!string.IsNullOrEmpty(propValue))
 						FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "labelText", propValue);
 	
+				}
+			}
+			// labelFormat
+			if (!serializationContext.Result.Failed)
+			{
+				VisualizacionEnum propValue = instanceOfField.labelFormat;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<VisualizacionEnum>(serializationContext, propValue);
+				if (!serializationContext.Result.Failed)
+				{
+					FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "labelFormat", serializedPropValue);
 				}
 			}
 		}

@@ -2,38 +2,6 @@
 <Dsl xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="697f02a7-2dd1-43bd-b756-dae8f3e8cbf0" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPS" Name="FMRMRCMMGProyectoIPS" DisplayName="FMRMRCMMGProyectoIPS" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" ProductName="FMRMRCMMGProyectoIPS" CompanyName="UPM_IPS" PackageGuid="f82e4fc8-f4fa-4b17-bb52-00e41545370e" PackageNamespace="UPM_IPS.FMRMRCMMGProyectoIPS" xmlns="http://schemas.microsoft.com/VisualStudio/2005/DslTools/DslDefinitionModel">
   <Classes>
     <DomainClass Id="bf59fb28-24c1-4461-aa40-8b34e2c4744f" Description="The root in which all other elements are embedded. Appears as a diagram." Name="Tapiz" DisplayName="Tapiz" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS">
-      <Properties>
-        <DomainProperty Id="c98e3bd7-9b15-414d-b839-5a05f8408f59" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz.Titulo Portal" Name="tituloPortal" DisplayName="Titulo Portal">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="df1090ae-5600-4c95-9997-98a0866913ad" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz.Color Titulo" Name="colorTitulo" DisplayName="Color Titulo">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="901981f0-8e09-4f52-9a43-efd36d530181" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz.Tamaño Titulo" Name="tamañoTitulo" DisplayName="Tamaño Titulo">
-          <Type>
-            <ExternalTypeMoniker Name="/System/Int16" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="f68c2a09-9e58-487b-a7da-fb9052016a5a" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz.Color Fondo Portal" Name="colorFondoPortal" DisplayName="Color Fondo Portal">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="d3d0d60a-0ab5-4c3e-a619-c426d5af94be" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz.Fuente Titulo" Name="fuenteTitulo" DisplayName="Fuente Titulo">
-          <Type>
-            <DomainEnumerationMoniker Name="FuentesEnum" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="5b5b1f1c-8c3c-448b-b3df-ffc374646f21" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Tapiz.Alineacion Titulo" Name="alineacionTitulo" DisplayName="Alineacion Titulo">
-          <Type>
-            <DomainEnumerationMoniker Name="PosicionTituloEnum" />
-          </Type>
-        </DomainProperty>
-      </Properties>
       <ElementMergeDirectives>
         <ElementMergeDirective>
           <Index>
@@ -84,6 +52,13 @@
       <BaseClass>
         <DomainClassMoniker Name="Elemento" />
       </BaseClass>
+      <Properties>
+        <DomainProperty Id="6a163632-793c-4d01-a2d6-043cd8291926" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Atributo.Tipo Dato" Name="tipoDato" DisplayName="Tipo Dato">
+          <Type>
+            <DomainEnumerationMoniker Name="TipoDatoEnum" />
+          </Type>
+        </DomainProperty>
+      </Properties>
     </DomainClass>
     <DomainClass Id="f199dab1-e960-43df-a3b8-ad53816ee47a" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Relacion" Name="Relacion" DisplayName="Relacion" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS">
       <BaseClass>
@@ -401,6 +376,18 @@
         <EnumerationLiteral Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.VisualizacionEnum.listaDesplegable" Name="listaDesplegable" Value="3" />
       </Literals>
     </DomainEnumeration>
+    <DomainEnumeration Name="TipoDatoEnum" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.TipoDatoEnum">
+      <Literals>
+        <EnumerationLiteral Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.TipoDatoEnum.String" Name="String" Value="0" />
+        <EnumerationLiteral Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.TipoDatoEnum.Byte" Name="Byte" Value="2" />
+        <EnumerationLiteral Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.TipoDatoEnum.Char" Name="Char" Value="3" />
+        <EnumerationLiteral Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.TipoDatoEnum.Boolean" Name="Boolean" Value="1" />
+        <EnumerationLiteral Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.TipoDatoEnum.DateTime" Name="DateTime" Value="4" />
+        <EnumerationLiteral Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.TipoDatoEnum.Double" Name="Double" Value="5" />
+        <EnumerationLiteral Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.TipoDatoEnum.Float" Name="Float" Value="7" />
+        <EnumerationLiteral Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.TipoDatoEnum.Int" Name="Int" Value="6" />
+      </Literals>
+    </DomainEnumeration>
   </Types>
   <Shapes>
     <GeometryShape Id="c00637d8-a0bc-4683-a295-2c6950f9c042" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaEntidad" Name="MetaforaEntidad" DisplayName="Metafora Entidad" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Metafora Entidad" FillColor="IndianRed" InitialHeight="1" OutlineThickness="0.06" FillGradientMode="None" Geometry="Circle">
@@ -456,24 +443,6 @@
           <XmlRelationshipData UseFullForm="true" RoleElementName="elementoes">
             <DomainRelationshipMoniker Name="TapizHasElementoes" />
           </XmlRelationshipData>
-          <XmlPropertyData XmlName="tituloPortal">
-            <DomainPropertyMoniker Name="Tapiz/tituloPortal" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="colorTitulo">
-            <DomainPropertyMoniker Name="Tapiz/colorTitulo" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="tamañoTitulo">
-            <DomainPropertyMoniker Name="Tapiz/tamañoTitulo" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="colorFondoPortal">
-            <DomainPropertyMoniker Name="Tapiz/colorFondoPortal" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="fuenteTitulo">
-            <DomainPropertyMoniker Name="Tapiz/fuenteTitulo" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="alineacionTitulo">
-            <DomainPropertyMoniker Name="Tapiz/alineacionTitulo" />
-          </XmlPropertyData>
           <XmlRelationshipData UseFullForm="true" RoleElementName="elementosWebbed">
             <DomainRelationshipMoniker Name="TapizHasElementosWebbed" />
           </XmlRelationshipData>
@@ -513,6 +482,11 @@
       </XmlClassData>
       <XmlClassData TypeName="Atributo" MonikerAttributeName="" SerializeId="true" MonikerElementName="atributoMoniker" ElementName="atributo" MonikerTypeName="AtributoMoniker">
         <DomainClassMoniker Name="Atributo" />
+        <ElementData>
+          <XmlPropertyData XmlName="tipoDato">
+            <DomainPropertyMoniker Name="Atributo/tipoDato" />
+          </XmlPropertyData>
+        </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="MetaforaAtributo" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaAtributoMoniker" ElementName="metaforaAtributo" MonikerTypeName="MetaforaAtributoMoniker">
         <GeometryShapeMoniker Name="MetaforaAtributo" />

@@ -317,13 +317,13 @@
     <value>Title Position</value>
     <comment>DisplayName for DomainProperty &apos;titlePosition&apos; on DomainClass &apos;Portal&apos;</comment>
   </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Portal/titleFormat.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Portal.Title Format</value>
-    <comment>Description for DomainProperty &apos;titleFormat&apos; on DomainClass &apos;Portal&apos;</comment>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Portal/backgroundColor.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Portal.Background Color</value>
+    <comment>Description for DomainProperty &apos;backgroundColor&apos; on DomainClass &apos;Portal&apos;</comment>
   </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Portal/titleFormat.DisplayName" xml:space="preserve">
-    <value>Title Format</value>
-    <comment>DisplayName for DomainProperty &apos;titleFormat&apos; on DomainClass &apos;Portal&apos;</comment>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Portal/backgroundColor.DisplayName" xml:space="preserve">
+    <value>Background Color</value>
+    <comment>DisplayName for DomainProperty &apos;backgroundColor&apos; on DomainClass &apos;Portal&apos;</comment>
   </data>
   <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Page.Description" xml:space="preserve">
     <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Page</value>
@@ -420,6 +420,14 @@
   <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Field/labelText.DisplayName" xml:space="preserve">
     <value>Label Text</value>
     <comment>DisplayName for DomainProperty &apos;labelText&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Field/labelFormat.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Field.Label Format</value>
+    <comment>Description for DomainProperty &apos;labelFormat&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Field/labelFormat.DisplayName" xml:space="preserve">
+    <value>Label Format</value>
+    <comment>DisplayName for DomainProperty &apos;labelFormat&apos; on DomainClass &apos;Field&apos;</comment>
   </data>
   <data name="UPM_IPS.FMRMRCMMGProyectoIPS.ElementosWeb.Description" xml:space="preserve">
     <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.ElementosWeb</value>

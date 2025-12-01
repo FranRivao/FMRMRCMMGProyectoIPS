@@ -365,8 +365,8 @@
         <xsd:attribute name="titleFontSize" type="xsd:string" />
         <!-- Property: titlePosition -->
         <xsd:attribute name="titlePosition" type="PosicionTituloEnum" />
-        <!-- Property: titleFormat -->
-        <xsd:attribute name="titleFormat" type="VisualizacionEnum" />
+        <!-- Property: backgroundColor -->
+        <xsd:attribute name="backgroundColor" type="xsd:string" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -458,6 +458,8 @@
         <xsd:attribute name="labelPosition" type="PosicionTituloEnum" />
         <!-- Property: labelText -->
         <xsd:attribute name="labelText" type="xsd:string" />
+        <!-- Property: labelFormat -->
+        <xsd:attribute name="labelFormat" type="VisualizacionEnum" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>

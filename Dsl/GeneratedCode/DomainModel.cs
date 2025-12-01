@@ -131,7 +131,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 				new DomainMemberInfo(typeof(Portal), "titleFontFamily", Portal.titleFontFamilyDomainPropertyId, typeof(Portal.titleFontFamilyPropertyHandler)),
 				new DomainMemberInfo(typeof(Portal), "titleFontSize", Portal.titleFontSizeDomainPropertyId, typeof(Portal.titleFontSizePropertyHandler)),
 				new DomainMemberInfo(typeof(Portal), "titlePosition", Portal.titlePositionDomainPropertyId, typeof(Portal.titlePositionPropertyHandler)),
-				new DomainMemberInfo(typeof(Portal), "titleFormat", Portal.titleFormatDomainPropertyId, typeof(Portal.titleFormatPropertyHandler)),
+				new DomainMemberInfo(typeof(Portal), "backgroundColor", Portal.backgroundColorDomainPropertyId, typeof(Portal.backgroundColorPropertyHandler)),
 				new DomainMemberInfo(typeof(Page), "titleColor", Page.titleColorDomainPropertyId, typeof(Page.titleColorPropertyHandler)),
 				new DomainMemberInfo(typeof(Page), "titleFontFamily", Page.titleFontFamilyDomainPropertyId, typeof(Page.titleFontFamilyPropertyHandler)),
 				new DomainMemberInfo(typeof(Page), "titleFontSize", Page.titleFontSizeDomainPropertyId, typeof(Page.titleFontSizePropertyHandler)),
@@ -142,6 +142,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 				new DomainMemberInfo(typeof(Field), "labelFontSize", Field.labelFontSizeDomainPropertyId, typeof(Field.labelFontSizePropertyHandler)),
 				new DomainMemberInfo(typeof(Field), "labelPosition", Field.labelPositionDomainPropertyId, typeof(Field.labelPositionPropertyHandler)),
 				new DomainMemberInfo(typeof(Field), "labelText", Field.labelTextDomainPropertyId, typeof(Field.labelTextPropertyHandler)),
+				new DomainMemberInfo(typeof(Field), "labelFormat", Field.labelFormatDomainPropertyId, typeof(Field.labelFormatPropertyHandler)),
 				new DomainMemberInfo(typeof(EntidadReferencesRelacion1), "cardinalidad", EntidadReferencesRelacion1.cardinalidadDomainPropertyId, typeof(EntidadReferencesRelacion1.cardinalidadPropertyHandler)),
 			};
 		}
