@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<fMRMRCMMGProyectoIPSDiagram dslVersion="1.0.0.0" Id="cfff03ed-d2e0-4992-9fdc-9e6a01a8f5d0" absoluteBounds="0, 0, 13.625, 21" name="Sample">
+<fMRMRCMMGProyectoIPSDiagram dslVersion="1.0.0.0" Id="cfff03ed-d2e0-4992-9fdc-9e6a01a8f5d0" absoluteBounds="0, 0, 38.375, 21" name="Sample">
   <tapizMoniker Id="2ea417be-3bd0-42fe-a5f2-125af54914ce" />
   <nestedChildShapes>
     <metaforaEntidad Id="9cc8f649-ac62-41b5-8d82-734796c8b1d6" absoluteBounds="4.125, 3.25, 1.5, 1.5">
@@ -324,5 +324,198 @@
         <metaforaRelacionMoniker Id="746bf4ee-a997-4ec4-b858-4d5743996175" />
       </nodes>
     </conectorEntidadRelacion>
+    <metaforaPortal Id="94bb76f1-16df-4eb7-b0bb-d6e90807a96c" absoluteBounds="23, 0.875, 2.125, 1">
+      <portalMoniker Id="504629d1-2939-4e68-a29e-182ea2f9014d" />
+    </metaforaPortal>
+    <metaforePage Id="e8ea1b2a-f8e8-499d-9efe-aed88b8ff30a" absoluteBounds="23.875, 6, 1.5, 1">
+      <pageMoniker Id="0e185053-6637-4674-97e4-b6d9d08deb64" />
+    </metaforePage>
+    <metaforePage Id="e10c7e29-ae81-4b5e-89a5-539a55937795" absoluteBounds="15, 5.5, 1.5, 1">
+      <pageMoniker Id="e904041c-8f57-4fcd-a73e-a658e04ada44" />
+    </metaforePage>
+    <metaforePage Id="580ccd33-e9ec-4430-9fd5-e46720794032" absoluteBounds="19.875, 5.625, 1.5, 1">
+      <pageMoniker Id="90b0562a-b40c-46d5-a998-900a5c90d8bf" />
+    </metaforePage>
+    <metaforePage Id="f2562ad4-7dd3-4401-9137-04c7b437b5a0" absoluteBounds="27.5, 5.75, 1.5, 1">
+      <pageMoniker Id="bf033e68-074c-466c-affc-8dd468f84086" />
+    </metaforePage>
+    <metaforePage Id="6d0ee170-e972-4e6d-883d-707a9d0b61bb" absoluteBounds="30.625, 5.75, 1.5, 1">
+      <pageMoniker Id="65096276-fffe-49ea-8e6d-3cf3572d52e0" />
+    </metaforePage>
+    <metaforaField Id="651e6a48-aff6-410e-a1f2-ce4c5ffb2548" absoluteBounds="12.5, 5.75, 1.5, 1">
+      <fieldMoniker Id="a75e43a0-d6d1-4273-93b4-88d3e17b970c" />
+    </metaforaField>
+    <metaforaField Id="68db99e8-42ec-4290-8aa6-24594e0bc6c1" absoluteBounds="19.125, 7.625, 1.5, 1">
+      <fieldMoniker Id="160e00d1-8ada-4506-94ed-d92baaddf1d9" />
+    </metaforaField>
+    <metaforaField Id="1b367cbe-00e7-4964-9fed-75fd67a657f5" absoluteBounds="17.125, 7.375, 1.5, 1">
+      <fieldMoniker Id="71186f63-aa70-4dd1-9333-cd1a7eba53a8" />
+    </metaforaField>
+    <metaforaField Id="ddaf60ba-2f14-41fe-be59-97d6aec2b419" absoluteBounds="21.75, 6.625, 1.5, 1">
+      <fieldMoniker Id="59b48909-7ac3-44a9-991a-2d1cc5d92c65" />
+    </metaforaField>
+    <conectorPortalPage Id="d1d3fced-a050-4e43-aa9d-3fd3a57e408b" edgePoints="[(23 : 1.13066790381034); (15.75 : 1.13066790381034); (15.75 : 5.5)]" manuallyRouted="true" fixedFrom="Caller" fixedTo="Algorithm">
+      <portalReferencesPagedMoniker Id="f4591ffe-07ea-4b5c-8aa8-252a446d90a4" />
+      <nodes>
+        <metaforaPortalMoniker Id="94bb76f1-16df-4eb7-b0bb-d6e90807a96c" />
+        <metaforePageMoniker Id="e10c7e29-ae81-4b5e-89a5-539a55937795" />
+      </nodes>
+    </conectorPortalPage>
+    <conectorPortalPage Id="31332e0d-99dc-439b-ad2a-3f8419b73178" edgePoints="[(23 : 1.375); (20.625 : 1.375); (20.625 : 5.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <portalReferencesPagedMoniker Id="cced6fe8-603f-48c1-886a-a31f89de012f" />
+      <nodes>
+        <metaforaPortalMoniker Id="94bb76f1-16df-4eb7-b0bb-d6e90807a96c" />
+        <metaforePageMoniker Id="580ccd33-e9ec-4430-9fd5-e46720794032" />
+      </nodes>
+    </conectorPortalPage>
+    <conectorPortalPage Id="79aad051-c058-4edc-97d2-442474ff450a" edgePoints="[(24.6808018155362 : 1.875); (24.6808018155362 : 6)]" manuallyRouted="true" fixedFrom="Caller" fixedTo="Algorithm">
+      <portalReferencesPagedMoniker Id="31d8693e-2fcb-46cf-bcf9-c468f03acaf0" />
+      <nodes>
+        <metaforaPortalMoniker Id="94bb76f1-16df-4eb7-b0bb-d6e90807a96c" />
+        <metaforePageMoniker Id="e8ea1b2a-f8e8-499d-9efe-aed88b8ff30a" />
+      </nodes>
+    </conectorPortalPage>
+    <conectorPageField Id="9df28883-c1be-4bc6-839b-1f4095b11f9f" edgePoints="[(15 : 6.125); (13.9761843774139 : 6.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <pageReferencesFieldedMoniker Id="e88d19a4-aa2a-4ac4-8583-3cda1c69da29" />
+      <nodes>
+        <metaforePageMoniker Id="e10c7e29-ae81-4b5e-89a5-539a55937795" />
+        <metaforaFieldMoniker Id="651e6a48-aff6-410e-a1f2-ce4c5ffb2548" />
+      </nodes>
+    </conectorPageField>
+    <conectorPageField Id="aaa9433e-60e7-4e76-a027-f6df12be512e" edgePoints="[(19.875 : 6.125); (17.875 : 6.125); (17.875 : 7.375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <pageReferencesFieldedMoniker Id="584eb031-8f14-4296-bcc1-e6a112c1bb59" />
+      <nodes>
+        <metaforePageMoniker Id="580ccd33-e9ec-4430-9fd5-e46720794032" />
+        <metaforaFieldMoniker Id="1b367cbe-00e7-4964-9fed-75fd67a657f5" />
+      </nodes>
+    </conectorPageField>
+    <conectorPageField Id="ae04e3f7-e284-43d4-aae0-80bbdfb45d94" edgePoints="[(20.25 : 6.625); (20.25 : 7.69198729810778)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <pageReferencesFieldedMoniker Id="b0adacbc-72d8-425d-af82-02fe60686a3b" />
+      <nodes>
+        <metaforePageMoniker Id="580ccd33-e9ec-4430-9fd5-e46720794032" />
+        <metaforaFieldMoniker Id="68db99e8-42ec-4290-8aa6-24594e0bc6c1" />
+      </nodes>
+    </conectorPageField>
+    <metaforePage Id="5fa7944c-d4a0-48ec-b1de-4cf20625193c" absoluteBounds="33.375, 5.875, 1.5, 1">
+      <pageMoniker Id="edfba211-b1df-4602-a710-ccd5964f1290" />
+    </metaforePage>
+    <conectorPortalPage Id="8f0e5e20-bc46-4d74-9535-477af6bcdf66" edgePoints="[(25.125 : 1.13920373568455); (28.25 : 1.13920373568455); (28.25 : 5.75)]" fixedFrom="Caller" fixedTo="Algorithm">
+      <portalReferencesPagedMoniker Id="db059cf0-4a2d-44a0-b713-302f3402c897" />
+      <nodes>
+        <metaforaPortalMoniker Id="94bb76f1-16df-4eb7-b0bb-d6e90807a96c" />
+        <metaforePageMoniker Id="f2562ad4-7dd3-4401-9137-04c7b437b5a0" />
+      </nodes>
+    </conectorPortalPage>
+    <conectorPortalPage Id="01109c75-8b00-4738-8945-5ee6d0fb94d2" edgePoints="[(25.125 : 1.53835436784227); (28.1666666666667 : 1.53835436784227 : JumpStart); (28.3333333333333 : 1.53835436784227 : JumpEnd); (31.375 : 1.53835436784227); (31.375 : 5.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <portalReferencesPagedMoniker Id="090dc1d7-bbfe-483a-b866-1c7fcfda5f11" />
+      <nodes>
+        <metaforaPortalMoniker Id="94bb76f1-16df-4eb7-b0bb-d6e90807a96c" />
+        <metaforePageMoniker Id="6d0ee170-e972-4e6d-883d-707a9d0b61bb" />
+      </nodes>
+    </conectorPortalPage>
+    <conectorPortalPage Id="777bb45c-aa94-4ee4-8f37-7c5f22f05017" edgePoints="[(25.125 : 1.73792968392114); (28.1666666666667 : 1.73792968392114 : JumpStart); (28.3333333333333 : 1.73792968392114 : JumpEnd); (31.2916666666667 : 1.73792968392114 : JumpStart); (31.4583333333333 : 1.73792968392114 : JumpEnd); (34.125 : 1.73792968392114); (34.125 : 5.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <portalReferencesPagedMoniker Id="5754c2c5-a29d-40b4-becb-debe11e497e7" />
+      <nodes>
+        <metaforaPortalMoniker Id="94bb76f1-16df-4eb7-b0bb-d6e90807a96c" />
+        <metaforePageMoniker Id="5fa7944c-d4a0-48ec-b1de-4cf20625193c" />
+      </nodes>
+    </conectorPortalPage>
+    <metaforaField Id="0a0f9a18-49da-496f-b4bf-ac6c55d759a0" absoluteBounds="25.25, 8.625, 1.5, 1">
+      <fieldMoniker Id="47682f1f-24d6-4545-84e5-e4222f4285c8" />
+    </metaforaField>
+    <metaforaField Id="0331adce-3240-472d-a0c2-08f664dd1ea6" absoluteBounds="24.125, 9.625, 1.5, 1">
+      <fieldMoniker Id="4ed6e075-77a5-40b7-b0a1-338c43ecc023" />
+    </metaforaField>
+    <metaforaField Id="ac124a03-056e-4a4e-9645-c6d3d53230cc" absoluteBounds="22.25, 9.625, 1.5, 1">
+      <fieldMoniker Id="77c58f1d-cafa-45a0-b8ea-a3d9c541f048" />
+    </metaforaField>
+    <metaforaField Id="7089e4c1-e557-4041-92c7-92b8a688e7ac" absoluteBounds="21.5, 8.375, 1.5, 1">
+      <fieldMoniker Id="021eaefa-aaf3-4561-a194-723b99cd4a07" />
+    </metaforaField>
+    <metaforaField Id="b4203f23-3f28-4bdb-8c7a-7b74d2ccdeb5" absoluteBounds="26.875, 7.75, 1.5, 1">
+      <fieldMoniker Id="25b86ff2-ede9-4a06-b04f-d2dad40bec0d" />
+    </metaforaField>
+    <conectorPageField Id="4b974a41-675b-4221-84a5-f62d998b1fe5" edgePoints="[(23.875 : 6.8125); (23.6145833333333 : 6.8125 : JumpStart); (23.4479166666667 : 6.8125 : JumpEnd); (23.0854685623498 : 6.8125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <pageReferencesFieldedMoniker Id="e0d5ff6e-df5d-4254-ab0d-527a84d43845" />
+      <nodes>
+        <metaforePageMoniker Id="e8ea1b2a-f8e8-499d-9efe-aed88b8ff30a" />
+        <metaforaFieldMoniker Id="ddaf60ba-2f14-41fe-be59-97d6aec2b419" />
+      </nodes>
+    </conectorPageField>
+    <conectorPageField Id="477fac7f-f9da-4312-b426-9d9a7506ec03" edgePoints="[(24.53125 : 7); (24.53125 : 8.46875); (24.2552058333333 : 8.46875 : JumpStart); (24.0885391666667 : 8.46875 : JumpEnd); (23.6145833333333 : 8.46875 : JumpStart); (23.4479166666667 : 8.46875 : JumpEnd); (22.6872208931135 : 8.46875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <pageReferencesFieldedMoniker Id="48bf480e-c6d0-4917-ad94-0a14341b9a69" />
+      <nodes>
+        <metaforePageMoniker Id="e8ea1b2a-f8e8-499d-9efe-aed88b8ff30a" />
+        <metaforaFieldMoniker Id="7089e4c1-e557-4041-92c7-92b8a688e7ac" />
+      </nodes>
+    </conectorPageField>
+    <conectorPageField Id="18d1bf96-dfa9-4fed-ba55-3db7b5648b7b" edgePoints="[(23.875 : 6.28125); (23.53125 : 6.28125); (23.53125 : 9.77206095112297)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <pageReferencesFieldedMoniker Id="57b65f17-bb71-4d14-bf42-c1d76c400f8c" />
+      <nodes>
+        <metaforePageMoniker Id="e8ea1b2a-f8e8-499d-9efe-aed88b8ff30a" />
+        <metaforaFieldMoniker Id="ac124a03-056e-4a4e-9645-c6d3d53230cc" />
+      </nodes>
+    </conectorPageField>
+    <conectorPageField Id="7def6fe4-84bb-4f36-aa02-2c10704d4364" edgePoints="[(24.921875 : 7); (24.921875 : 9.62597751804152)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <pageReferencesFieldedMoniker Id="03f84fa9-9f92-4d9a-b958-047aeb527cc8" />
+      <nodes>
+        <metaforePageMoniker Id="e8ea1b2a-f8e8-499d-9efe-aed88b8ff30a" />
+        <metaforaFieldMoniker Id="0331adce-3240-472d-a0c2-08f664dd1ea6" />
+      </nodes>
+    </conectorPageField>
+    <conectorPageField Id="9d802108-b74a-4e50-8296-b36fd7c69961" edgePoints="[(24.1718725 : 7); (24.1718725 : 9.09375); (24.8385416666667 : 9.09375 : JumpStart); (25.0052083333333 : 9.09375 : JumpEnd); (25.2514662770623 : 9.09375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <pageReferencesFieldedMoniker Id="8a535132-af8a-45cb-a7a3-e346a8df2d8b" />
+      <nodes>
+        <metaforePageMoniker Id="e8ea1b2a-f8e8-499d-9efe-aed88b8ff30a" />
+        <metaforaFieldMoniker Id="0a0f9a18-49da-496f-b4bf-ac6c55d759a0" />
+      </nodes>
+    </conectorPageField>
+    <conectorPageField Id="a0f93911-65b2-4d20-a54a-6257e62d56e2" edgePoints="[(27.9375 : 6.75); (27.9375 : 7.79547032855685)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <pageReferencesFieldedMoniker Id="b16a3a48-c834-4d68-b7bb-b48b74c5a0d4" />
+      <nodes>
+        <metaforePageMoniker Id="f2562ad4-7dd3-4401-9137-04c7b437b5a0" />
+        <metaforaFieldMoniker Id="b4203f23-3f28-4bdb-8c7a-7b74d2ccdeb5" />
+      </nodes>
+    </conectorPageField>
+    <metaforaField Id="2f5593e1-ac17-4243-a397-72ea2e6d191b" absoluteBounds="30, 7.375, 1.5, 1">
+      <fieldMoniker Id="5032b498-4109-486f-aec0-c2713b2ad3f5" />
+    </metaforaField>
+    <metaforaField Id="c40a0723-e5b7-4535-8ff6-8a171069b9ce" absoluteBounds="36.625, 7.375, 1.5, 1">
+      <fieldMoniker Id="82f41452-b5b3-40d5-a4e5-ea8bafb596aa" />
+    </metaforaField>
+    <metaforaField Id="6d4c3d54-d132-4d9d-bd44-a49093ce416a" absoluteBounds="34.25, 8.375, 1.5, 1">
+      <fieldMoniker Id="7a1cba0b-3573-475b-b952-2bd7e2fda75a" />
+    </metaforaField>
+    <metaforaField Id="40ee4d4e-0257-46ae-88ce-72a259fbd1c7" absoluteBounds="32.5, 8.125, 1.5, 1">
+      <fieldMoniker Id="14657d6a-2cdd-4205-9477-bcc8dd096c27" />
+    </metaforaField>
+    <conectorPageField Id="5d2dcf1f-1ef4-4373-a4c9-89fa6c7e7337" edgePoints="[(31.0625 : 6.75); (31.0625 : 7.42047032855685)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <pageReferencesFieldedMoniker Id="f1e58136-6f87-447a-89e4-94f51a2c2202" />
+      <nodes>
+        <metaforePageMoniker Id="6d0ee170-e972-4e6d-883d-707a9d0b61bb" />
+        <metaforaFieldMoniker Id="2f5593e1-ac17-4243-a397-72ea2e6d191b" />
+      </nodes>
+    </conectorPageField>
+    <conectorPageField Id="6843c465-b79f-44ec-9eca-7bcc7d6bcb89" edgePoints="[(33.6875 : 6.875); (33.6875 : 8.21888356896629)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <pageReferencesFieldedMoniker Id="5ac3d527-070a-4b9a-80c1-e531c7ed7d64" />
+      <nodes>
+        <metaforePageMoniker Id="5fa7944c-d4a0-48ec-b1de-4cf20625193c" />
+        <metaforaFieldMoniker Id="40ee4d4e-0257-46ae-88ce-72a259fbd1c7" />
+      </nodes>
+    </conectorPageField>
+    <conectorPageField Id="479e1d83-5a76-4d0b-9bd5-8d0e2d6eb109" edgePoints="[(34.5625 : 6.875); (34.5625 : 8.46888356896629)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <pageReferencesFieldedMoniker Id="f8e2ac71-f3a0-4778-b85b-f7672875f0e8" />
+      <nodes>
+        <metaforePageMoniker Id="5fa7944c-d4a0-48ec-b1de-4cf20625193c" />
+        <metaforaFieldMoniker Id="6d4c3d54-d132-4d9d-bd44-a49093ce416a" />
+      </nodes>
+    </conectorPageField>
+    <conectorPageField Id="627fb310-17eb-450f-9006-75e2894d5e37" edgePoints="[(34.875 : 6.375); (37.375 : 6.375); (37.375 : 7.375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <pageReferencesFieldedMoniker Id="db8fc338-2326-4e50-b938-10ad26cdfb11" />
+      <nodes>
+        <metaforePageMoniker Id="5fa7944c-d4a0-48ec-b1de-4cf20625193c" />
+        <metaforaFieldMoniker Id="c40a0723-e5b7-4535-8ff6-8a171069b9ce" />
+      </nodes>
+    </conectorPageField>
   </nestedChildShapes>
 </fMRMRCMMGProyectoIPSDiagram>
