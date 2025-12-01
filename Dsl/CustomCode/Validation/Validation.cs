@@ -38,4 +38,86 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
         }
     }
 
+    public partial class Entidad 
+    {
+        [ValidationMethod(ValidationCategories.Save | ValidationCategories.Open)]
+        public void ValidateAtributosUnicos(ValidationContext context)
+        {
+            var atributoNombres = this.Atributo.Select(a => a.nombre).ToList();
+            var nombresDuplicados = atributoNombres
+                .GroupBy(n => n)
+                .Where(g => g.Count() > 1)
+                .Select(g => g.Key)
+                .ToList();
+            foreach (var nombreDuplicado in nombresDuplicados)
+            {
+                context.LogError(
+                    $"El atributo '{nombreDuplicado}' está duplicado en la entidad '{this.nombre}'.",
+                    "ERR_ATRIBUTOS_DUPLICADOS"
+                );
+            }
+        }
+
+        [ValidationMethod(ValidationCategories.Save | ValidationCategories.Open)]
+        public void ValidateNombreEntidadUnico(ValidationContext context)
+        {
+            if (string.IsNullOrWhiteSpace(this.nombre))
+                return;
+
+            var entidadesConMismoNombre = this.Store.ElementDirectory.AllElements
+                .OfType<Entidad>()
+                .Where(e => !object.ReferenceEquals(e, this) && e.nombre == this.nombre)
+                .ToList();
+
+            if (entidadesConMismoNombre.Any())
+            {
+                context.LogError(
+                    $"El nombre de entidad '{this.nombre}' ya existe. Los nombres de entidad deben ser únicos.",
+                    "ERR_ENTIDAD_NOMBRE_DUPLICADO"
+                );
+            }
+        }
+    }
+
+    public partial class Relacion
+    {
+        [ValidationMethod(ValidationCategories.Save | ValidationCategories.Open)]
+        public void ValidateNombreRelacionUnico(ValidationContext context)
+        {
+            // Ignorar nombres vacíos; ya se valida en Elemento.ValidateFormatoNombre
+            if (string.IsNullOrWhiteSpace(this.nombre))
+                return;
+
+            var relacionesConMismoNombre = this.Store.ElementDirectory.AllElements
+                .OfType<Relacion>()
+                .Where(r => !object.ReferenceEquals(r, this) && r.nombre == this.nombre)
+                .ToList();
+
+            if (relacionesConMismoNombre.Any())
+            {
+                context.LogError(
+                    $"El nombre de relación '{this.nombre}' ya existe. Los nombres de relación deben ser únicos.",
+                    "ERR_RELACION_NOMBRE_DUPLICADO"
+                );
+            }
+        }
+
+        [ValidationMethod(ValidationCategories.Save | ValidationCategories.Open)]
+        public void ValidateAtributosUnicos(ValidationContext context)
+        {
+            var atributoNombres = this.AtributoRelacion.Select(a => a.nombre).ToList();
+            var nombresDuplicados = atributoNombres
+                .GroupBy(n => n)
+                .Where(g => g.Count() > 1)
+                .Select(g => g.Key)
+                .ToList();
+            foreach (var nombreDuplicado in nombresDuplicados)
+            {
+                context.LogError(
+                    $"El atributo '{nombreDuplicado}' está duplicado en la relacion '{this.nombre}'.",
+                    "ERR_ATRIBUTOS_DUPLICADOS"
+                );
+            }
+        }
+    }
 }
