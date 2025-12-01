@@ -1205,441 +1205,6 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		{
 		}
 		#endregion
-		#region colorTitulo domain property code
-		
-		/// <summary>
-		/// colorTitulo domain property Id.
-		/// </summary>
-		public static readonly global::System.Guid colorTituloDomainPropertyId = new global::System.Guid(0x835588bf, 0xa041, 0x4feb, 0xa0, 0xef, 0x7b, 0x2e, 0xf0, 0x51, 0x35, 0x83);
-		
-		/// <summary>
-		/// Storage for colorTitulo
-		/// </summary>
-		private global::System.String colorTituloPropertyStorage = string.Empty;
-		
-		/// <summary>
-		/// Gets or sets the value of colorTitulo domain property.
-		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.Atributo.Color Titulo
-		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.Atributo/colorTitulo.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.Atributo/colorTitulo.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainObjectId("835588bf-a041-4feb-a0ef-7b2ef0513583")]
-		public global::System.String colorTitulo
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return colorTituloPropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				colorTituloPropertyHandler.Instance.SetValue(this, value);
-			}
-		}
-		/// <summary>
-		/// Value handler for the Atributo.colorTitulo domain property.
-		/// </summary>
-		internal sealed partial class colorTituloPropertyHandler : DslModeling::DomainPropertyValueHandler<Atributo, global::System.String>
-		{
-			private colorTituloPropertyHandler() { }
-		
-			/// <summary>
-			/// Gets the singleton instance of the Atributo.colorTitulo domain property value handler.
-			/// </summary>
-			public static readonly colorTituloPropertyHandler Instance = new colorTituloPropertyHandler();
-		
-			/// <summary>
-			/// Gets the Id of the Atributo.colorTitulo domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return colorTituloDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(Atributo element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.colorTituloPropertyStorage;
-			}
-		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Atributo element, global::System.String newValue)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-		
-				global::System.String oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					ValueChanging(element, oldValue, newValue);
-					element.colorTituloPropertyStorage = newValue;
-					ValueChanged(element, oldValue, newValue);
-				}
-			}
-		}
-		
-		#endregion
-		#region tamañoTitulo domain property code
-		
-		/// <summary>
-		/// tamañoTitulo domain property Id.
-		/// </summary>
-		public static readonly global::System.Guid tamañoTituloDomainPropertyId = new global::System.Guid(0xd0c8f608, 0x7bad, 0x476f, 0x9c, 0xaf, 0x4b, 0xe1, 0xd0, 0x1d, 0xa5, 0xab);
-		
-		/// <summary>
-		/// Storage for tamañoTitulo
-		/// </summary>
-		private global::System.Int16 tamañoTituloPropertyStorage;
-		
-		/// <summary>
-		/// Gets or sets the value of tamañoTitulo domain property.
-		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.Atributo.Tamaño Titulo
-		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.Atributo/tamañoTitulo.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.Atributo/tamañoTitulo.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainObjectId("d0c8f608-7bad-476f-9caf-4be1d01da5ab")]
-		public global::System.Int16 tamañoTitulo
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return tamañoTituloPropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				tamañoTituloPropertyHandler.Instance.SetValue(this, value);
-			}
-		}
-		/// <summary>
-		/// Value handler for the Atributo.tamañoTitulo domain property.
-		/// </summary>
-		internal sealed partial class tamañoTituloPropertyHandler : DslModeling::DomainPropertyValueHandler<Atributo, global::System.Int16>
-		{
-			private tamañoTituloPropertyHandler() { }
-		
-			/// <summary>
-			/// Gets the singleton instance of the Atributo.tamañoTitulo domain property value handler.
-			/// </summary>
-			public static readonly tamañoTituloPropertyHandler Instance = new tamañoTituloPropertyHandler();
-		
-			/// <summary>
-			/// Gets the Id of the Atributo.tamañoTitulo domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return tamañoTituloDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed global::System.Int16 GetValue(Atributo element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.tamañoTituloPropertyStorage;
-			}
-		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Atributo element, global::System.Int16 newValue)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-		
-				global::System.Int16 oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					ValueChanging(element, oldValue, newValue);
-					element.tamañoTituloPropertyStorage = newValue;
-					ValueChanged(element, oldValue, newValue);
-				}
-			}
-		}
-		
-		#endregion
-		#region alineacionTitulo domain property code
-		
-		/// <summary>
-		/// alineacionTitulo domain property Id.
-		/// </summary>
-		public static readonly global::System.Guid alineacionTituloDomainPropertyId = new global::System.Guid(0xe08a94ff, 0x7bd2, 0x4273, 0xbf, 0xe2, 0x03, 0xa7, 0xb8, 0x1f, 0x0c, 0xe3);
-		
-		/// <summary>
-		/// Storage for alineacionTitulo
-		/// </summary>
-		private PosicionTituloEnum alineacionTituloPropertyStorage;
-		
-		/// <summary>
-		/// Gets or sets the value of alineacionTitulo domain property.
-		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.Atributo.Alineacion Titulo
-		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.Atributo/alineacionTitulo.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.Atributo/alineacionTitulo.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainObjectId("e08a94ff-7bd2-4273-bfe2-03a7b81f0ce3")]
-		public PosicionTituloEnum alineacionTitulo
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return alineacionTituloPropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				alineacionTituloPropertyHandler.Instance.SetValue(this, value);
-			}
-		}
-		/// <summary>
-		/// Value handler for the Atributo.alineacionTitulo domain property.
-		/// </summary>
-		internal sealed partial class alineacionTituloPropertyHandler : DslModeling::DomainPropertyValueHandler<Atributo, PosicionTituloEnum>
-		{
-			private alineacionTituloPropertyHandler() { }
-		
-			/// <summary>
-			/// Gets the singleton instance of the Atributo.alineacionTitulo domain property value handler.
-			/// </summary>
-			public static readonly alineacionTituloPropertyHandler Instance = new alineacionTituloPropertyHandler();
-		
-			/// <summary>
-			/// Gets the Id of the Atributo.alineacionTitulo domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return alineacionTituloDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed PosicionTituloEnum GetValue(Atributo element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.alineacionTituloPropertyStorage;
-			}
-		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Atributo element, PosicionTituloEnum newValue)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-		
-				PosicionTituloEnum oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					ValueChanging(element, oldValue, newValue);
-					element.alineacionTituloPropertyStorage = newValue;
-					ValueChanged(element, oldValue, newValue);
-				}
-			}
-		}
-		
-		#endregion
-		#region fuenteTitulo domain property code
-		
-		/// <summary>
-		/// fuenteTitulo domain property Id.
-		/// </summary>
-		public static readonly global::System.Guid fuenteTituloDomainPropertyId = new global::System.Guid(0x5c0c48dd, 0x3c3e, 0x4d60, 0xae, 0x50, 0x26, 0x1b, 0x81, 0xc7, 0x85, 0x45);
-		
-		/// <summary>
-		/// Storage for fuenteTitulo
-		/// </summary>
-		private FuentesEnum fuenteTituloPropertyStorage;
-		
-		/// <summary>
-		/// Gets or sets the value of fuenteTitulo domain property.
-		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.Atributo.Fuente Titulo
-		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.Atributo/fuenteTitulo.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.Atributo/fuenteTitulo.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainObjectId("5c0c48dd-3c3e-4d60-ae50-261b81c78545")]
-		public FuentesEnum fuenteTitulo
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return fuenteTituloPropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				fuenteTituloPropertyHandler.Instance.SetValue(this, value);
-			}
-		}
-		/// <summary>
-		/// Value handler for the Atributo.fuenteTitulo domain property.
-		/// </summary>
-		internal sealed partial class fuenteTituloPropertyHandler : DslModeling::DomainPropertyValueHandler<Atributo, FuentesEnum>
-		{
-			private fuenteTituloPropertyHandler() { }
-		
-			/// <summary>
-			/// Gets the singleton instance of the Atributo.fuenteTitulo domain property value handler.
-			/// </summary>
-			public static readonly fuenteTituloPropertyHandler Instance = new fuenteTituloPropertyHandler();
-		
-			/// <summary>
-			/// Gets the Id of the Atributo.fuenteTitulo domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return fuenteTituloDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed FuentesEnum GetValue(Atributo element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.fuenteTituloPropertyStorage;
-			}
-		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Atributo element, FuentesEnum newValue)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-		
-				FuentesEnum oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					ValueChanging(element, oldValue, newValue);
-					element.fuenteTituloPropertyStorage = newValue;
-					ValueChanged(element, oldValue, newValue);
-				}
-			}
-		}
-		
-		#endregion
-		#region formatoVisualizacion domain property code
-		
-		/// <summary>
-		/// formatoVisualizacion domain property Id.
-		/// </summary>
-		public static readonly global::System.Guid formatoVisualizacionDomainPropertyId = new global::System.Guid(0xd9ba8e9e, 0x4d02, 0x4f7b, 0x9d, 0x0a, 0xc8, 0x4b, 0x2e, 0x2f, 0x20, 0x62);
-		
-		/// <summary>
-		/// Storage for formatoVisualizacion
-		/// </summary>
-		private global::System.String formatoVisualizacionPropertyStorage = string.Empty;
-		
-		/// <summary>
-		/// Gets or sets the value of formatoVisualizacion domain property.
-		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.Atributo.Formato Visualizacion
-		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.Atributo/formatoVisualizacion.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.Atributo/formatoVisualizacion.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainObjectId("d9ba8e9e-4d02-4f7b-9d0a-c84b2e2f2062")]
-		public global::System.String formatoVisualizacion
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return formatoVisualizacionPropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				formatoVisualizacionPropertyHandler.Instance.SetValue(this, value);
-			}
-		}
-		/// <summary>
-		/// Value handler for the Atributo.formatoVisualizacion domain property.
-		/// </summary>
-		internal sealed partial class formatoVisualizacionPropertyHandler : DslModeling::DomainPropertyValueHandler<Atributo, global::System.String>
-		{
-			private formatoVisualizacionPropertyHandler() { }
-		
-			/// <summary>
-			/// Gets the singleton instance of the Atributo.formatoVisualizacion domain property value handler.
-			/// </summary>
-			public static readonly formatoVisualizacionPropertyHandler Instance = new formatoVisualizacionPropertyHandler();
-		
-			/// <summary>
-			/// Gets the Id of the Atributo.formatoVisualizacion domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return formatoVisualizacionDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(Atributo element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.formatoVisualizacionPropertyStorage;
-			}
-		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Atributo element, global::System.String newValue)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-		
-				global::System.String oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					ValueChanging(element, oldValue, newValue);
-					element.formatoVisualizacionPropertyStorage = newValue;
-					ValueChanged(element, oldValue, newValue);
-				}
-			}
-		}
-		
-		#endregion
 		#region Entidad opposite domain role accessor
 		/// <summary>
 		/// Gets or sets Entidad.
@@ -2031,93 +1596,6 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		{
 		}
 		#endregion
-		#region backgroundColor domain property code
-		
-		/// <summary>
-		/// backgroundColor domain property Id.
-		/// </summary>
-		public static readonly global::System.Guid backgroundColorDomainPropertyId = new global::System.Guid(0xd8614fe2, 0x6098, 0x49a2, 0xb6, 0x85, 0x45, 0x5c, 0xa4, 0x39, 0x0e, 0xc5);
-		
-		/// <summary>
-		/// Storage for backgroundColor
-		/// </summary>
-		private global::System.String backgroundColorPropertyStorage = string.Empty;
-		
-		/// <summary>
-		/// Gets or sets the value of backgroundColor domain property.
-		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.Portal.Background Color
-		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.Portal/backgroundColor.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.Portal/backgroundColor.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainObjectId("d8614fe2-6098-49a2-b685-455ca4390ec5")]
-		public global::System.String backgroundColor
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return backgroundColorPropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				backgroundColorPropertyHandler.Instance.SetValue(this, value);
-			}
-		}
-		/// <summary>
-		/// Value handler for the Portal.backgroundColor domain property.
-		/// </summary>
-		internal sealed partial class backgroundColorPropertyHandler : DslModeling::DomainPropertyValueHandler<Portal, global::System.String>
-		{
-			private backgroundColorPropertyHandler() { }
-		
-			/// <summary>
-			/// Gets the singleton instance of the Portal.backgroundColor domain property value handler.
-			/// </summary>
-			public static readonly backgroundColorPropertyHandler Instance = new backgroundColorPropertyHandler();
-		
-			/// <summary>
-			/// Gets the Id of the Portal.backgroundColor domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return backgroundColorDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(Portal element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.backgroundColorPropertyStorage;
-			}
-		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Portal element, global::System.String newValue)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-		
-				global::System.String oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					ValueChanging(element, oldValue, newValue);
-					element.backgroundColorPropertyStorage = newValue;
-					ValueChanged(element, oldValue, newValue);
-				}
-			}
-		}
-		
-		#endregion
 		#region titleText domain property code
 		
 		/// <summary>
@@ -2302,7 +1780,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		/// <summary>
 		/// Storage for titleFontFamily
 		/// </summary>
-		private global::System.String titleFontFamilyPropertyStorage = string.Empty;
+		private FuentesEnum titleFontFamilyPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of titleFontFamily domain property.
@@ -2311,7 +1789,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.Portal/titleFontFamily.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.Portal/titleFontFamily.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("18e507eb-b4a0-48a1-a9e6-1f18174f83e7")]
-		public global::System.String titleFontFamily
+		public FuentesEnum titleFontFamily
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -2327,7 +1805,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		/// <summary>
 		/// Value handler for the Portal.titleFontFamily domain property.
 		/// </summary>
-		internal sealed partial class titleFontFamilyPropertyHandler : DslModeling::DomainPropertyValueHandler<Portal, global::System.String>
+		internal sealed partial class titleFontFamilyPropertyHandler : DslModeling::DomainPropertyValueHandler<Portal, FuentesEnum>
 		{
 			private titleFontFamilyPropertyHandler() { }
 		
@@ -2353,7 +1831,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(Portal element)
+			public override sealed FuentesEnum GetValue(Portal element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.titleFontFamilyPropertyStorage;
@@ -2364,11 +1842,11 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Portal element, global::System.String newValue)
+			public override sealed void SetValue(Portal element, FuentesEnum newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				FuentesEnum oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
@@ -2466,59 +1944,59 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		}
 		
 		#endregion
-		#region titleAlignment domain property code
+		#region titlePosition domain property code
 		
 		/// <summary>
-		/// titleAlignment domain property Id.
+		/// titlePosition domain property Id.
 		/// </summary>
-		public static readonly global::System.Guid titleAlignmentDomainPropertyId = new global::System.Guid(0x5af328f1, 0x1dae, 0x4005, 0x9f, 0x32, 0x95, 0xfe, 0xe2, 0x9f, 0xe0, 0xad);
+		public static readonly global::System.Guid titlePositionDomainPropertyId = new global::System.Guid(0x115d21de, 0x003f, 0x4d86, 0x86, 0xfb, 0x6c, 0x62, 0xc3, 0xd6, 0x18, 0xdc);
 		
 		/// <summary>
-		/// Storage for titleAlignment
+		/// Storage for titlePosition
 		/// </summary>
-		private TextAlignment titleAlignmentPropertyStorage;
+		private PosicionTituloEnum titlePositionPropertyStorage;
 		
 		/// <summary>
-		/// Gets or sets the value of titleAlignment domain property.
-		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.Portal.Title Alignment
+		/// Gets or sets the value of titlePosition domain property.
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.Portal.Title Position
 		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.Portal/titleAlignment.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.Portal/titleAlignment.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainObjectId("5af328f1-1dae-4005-9f32-95fee29fe0ad")]
-		public TextAlignment titleAlignment
+		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.Portal/titlePosition.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.Portal/titlePosition.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("115d21de-003f-4d86-86fb-6c62c3d618dc")]
+		public PosicionTituloEnum titlePosition
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return titleAlignmentPropertyStorage;
+				return titlePositionPropertyStorage;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				titleAlignmentPropertyHandler.Instance.SetValue(this, value);
+				titlePositionPropertyHandler.Instance.SetValue(this, value);
 			}
 		}
 		/// <summary>
-		/// Value handler for the Portal.titleAlignment domain property.
+		/// Value handler for the Portal.titlePosition domain property.
 		/// </summary>
-		internal sealed partial class titleAlignmentPropertyHandler : DslModeling::DomainPropertyValueHandler<Portal, TextAlignment>
+		internal sealed partial class titlePositionPropertyHandler : DslModeling::DomainPropertyValueHandler<Portal, PosicionTituloEnum>
 		{
-			private titleAlignmentPropertyHandler() { }
+			private titlePositionPropertyHandler() { }
 		
 			/// <summary>
-			/// Gets the singleton instance of the Portal.titleAlignment domain property value handler.
+			/// Gets the singleton instance of the Portal.titlePosition domain property value handler.
 			/// </summary>
-			public static readonly titleAlignmentPropertyHandler Instance = new titleAlignmentPropertyHandler();
+			public static readonly titlePositionPropertyHandler Instance = new titlePositionPropertyHandler();
 		
 			/// <summary>
-			/// Gets the Id of the Portal.titleAlignment domain property.
+			/// Gets the Id of the Portal.titlePosition domain property.
 			/// </summary>
 			public sealed override global::System.Guid DomainPropertyId
 			{
 				[global::System.Diagnostics.DebuggerStepThrough]
 				get
 				{
-					return titleAlignmentDomainPropertyId;
+					return titlePositionDomainPropertyId;
 				}
 			}
 			
@@ -2527,10 +2005,10 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed TextAlignment GetValue(Portal element)
+			public override sealed PosicionTituloEnum GetValue(Portal element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.titleAlignmentPropertyStorage;
+				return element.titlePositionPropertyStorage;
 			}
 		
 			/// <summary>
@@ -2538,15 +2016,102 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Portal element, TextAlignment newValue)
+			public override sealed void SetValue(Portal element, PosicionTituloEnum newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				TextAlignment oldValue = GetValue(element);
+				PosicionTituloEnum oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
-					element.titleAlignmentPropertyStorage = newValue;
+					element.titlePositionPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region titleFormat domain property code
+		
+		/// <summary>
+		/// titleFormat domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid titleFormatDomainPropertyId = new global::System.Guid(0x54626dce, 0x4d8d, 0x49f4, 0xbc, 0xb9, 0x12, 0x45, 0x93, 0x64, 0x81, 0x67);
+		
+		/// <summary>
+		/// Storage for titleFormat
+		/// </summary>
+		private VisualizacionEnum titleFormatPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of titleFormat domain property.
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.Portal.Title Format
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.Portal/titleFormat.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.Portal/titleFormat.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("54626dce-4d8d-49f4-bcb9-124593648167")]
+		public VisualizacionEnum titleFormat
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return titleFormatPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				titleFormatPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Portal.titleFormat domain property.
+		/// </summary>
+		internal sealed partial class titleFormatPropertyHandler : DslModeling::DomainPropertyValueHandler<Portal, VisualizacionEnum>
+		{
+			private titleFormatPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Portal.titleFormat domain property value handler.
+			/// </summary>
+			public static readonly titleFormatPropertyHandler Instance = new titleFormatPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Portal.titleFormat domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return titleFormatDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed VisualizacionEnum GetValue(Portal element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.titleFormatPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Portal element, VisualizacionEnum newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				VisualizacionEnum oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.titleFormatPropertyStorage = newValue;
 					ValueChanged(element, oldValue, newValue);
 				}
 			}
@@ -2706,7 +2271,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		/// <summary>
 		/// Storage for titleFontFamily
 		/// </summary>
-		private global::System.String titleFontFamilyPropertyStorage = string.Empty;
+		private FuentesEnum titleFontFamilyPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of titleFontFamily domain property.
@@ -2715,7 +2280,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.Page/titleFontFamily.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.Page/titleFontFamily.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("76a1d6fd-b66d-456e-b354-e9a328ac44df")]
-		public global::System.String titleFontFamily
+		public FuentesEnum titleFontFamily
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -2731,7 +2296,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		/// <summary>
 		/// Value handler for the Page.titleFontFamily domain property.
 		/// </summary>
-		internal sealed partial class titleFontFamilyPropertyHandler : DslModeling::DomainPropertyValueHandler<Page, global::System.String>
+		internal sealed partial class titleFontFamilyPropertyHandler : DslModeling::DomainPropertyValueHandler<Page, FuentesEnum>
 		{
 			private titleFontFamilyPropertyHandler() { }
 		
@@ -2757,7 +2322,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(Page element)
+			public override sealed FuentesEnum GetValue(Page element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.titleFontFamilyPropertyStorage;
@@ -2768,11 +2333,11 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Page element, global::System.String newValue)
+			public override sealed void SetValue(Page element, FuentesEnum newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				FuentesEnum oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
@@ -2870,59 +2435,59 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		}
 		
 		#endregion
-		#region titleAlignment domain property code
+		#region titlePosition domain property code
 		
 		/// <summary>
-		/// titleAlignment domain property Id.
+		/// titlePosition domain property Id.
 		/// </summary>
-		public static readonly global::System.Guid titleAlignmentDomainPropertyId = new global::System.Guid(0xb2a053f0, 0x2444, 0x4ebb, 0xa4, 0x1d, 0x30, 0x3d, 0x7f, 0x8c, 0x23, 0xad);
+		public static readonly global::System.Guid titlePositionDomainPropertyId = new global::System.Guid(0x0018167a, 0x3fc1, 0x4ede, 0xbc, 0xb1, 0x2c, 0xef, 0xe9, 0xa8, 0x94, 0x4a);
 		
 		/// <summary>
-		/// Storage for titleAlignment
+		/// Storage for titlePosition
 		/// </summary>
-		private TextAlignment titleAlignmentPropertyStorage;
+		private PosicionTituloEnum titlePositionPropertyStorage;
 		
 		/// <summary>
-		/// Gets or sets the value of titleAlignment domain property.
-		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.Page.Title Alignment
+		/// Gets or sets the value of titlePosition domain property.
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.Page.Title Position
 		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.Page/titleAlignment.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.Page/titleAlignment.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainObjectId("b2a053f0-2444-4ebb-a41d-303d7f8c23ad")]
-		public TextAlignment titleAlignment
+		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.Page/titlePosition.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.Page/titlePosition.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("0018167a-3fc1-4ede-bcb1-2cefe9a8944a")]
+		public PosicionTituloEnum titlePosition
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return titleAlignmentPropertyStorage;
+				return titlePositionPropertyStorage;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				titleAlignmentPropertyHandler.Instance.SetValue(this, value);
+				titlePositionPropertyHandler.Instance.SetValue(this, value);
 			}
 		}
 		/// <summary>
-		/// Value handler for the Page.titleAlignment domain property.
+		/// Value handler for the Page.titlePosition domain property.
 		/// </summary>
-		internal sealed partial class titleAlignmentPropertyHandler : DslModeling::DomainPropertyValueHandler<Page, TextAlignment>
+		internal sealed partial class titlePositionPropertyHandler : DslModeling::DomainPropertyValueHandler<Page, PosicionTituloEnum>
 		{
-			private titleAlignmentPropertyHandler() { }
+			private titlePositionPropertyHandler() { }
 		
 			/// <summary>
-			/// Gets the singleton instance of the Page.titleAlignment domain property value handler.
+			/// Gets the singleton instance of the Page.titlePosition domain property value handler.
 			/// </summary>
-			public static readonly titleAlignmentPropertyHandler Instance = new titleAlignmentPropertyHandler();
+			public static readonly titlePositionPropertyHandler Instance = new titlePositionPropertyHandler();
 		
 			/// <summary>
-			/// Gets the Id of the Page.titleAlignment domain property.
+			/// Gets the Id of the Page.titlePosition domain property.
 			/// </summary>
 			public sealed override global::System.Guid DomainPropertyId
 			{
 				[global::System.Diagnostics.DebuggerStepThrough]
 				get
 				{
-					return titleAlignmentDomainPropertyId;
+					return titlePositionDomainPropertyId;
 				}
 			}
 			
@@ -2931,10 +2496,10 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed TextAlignment GetValue(Page element)
+			public override sealed PosicionTituloEnum GetValue(Page element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.titleAlignmentPropertyStorage;
+				return element.titlePositionPropertyStorage;
 			}
 		
 			/// <summary>
@@ -2942,74 +2507,74 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Page element, TextAlignment newValue)
+			public override sealed void SetValue(Page element, PosicionTituloEnum newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				TextAlignment oldValue = GetValue(element);
+				PosicionTituloEnum oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
-					element.titleAlignmentPropertyStorage = newValue;
+					element.titlePositionPropertyStorage = newValue;
 					ValueChanged(element, oldValue, newValue);
 				}
 			}
 		}
 		
 		#endregion
-		#region additionalCSS domain property code
+		#region titleText domain property code
 		
 		/// <summary>
-		/// additionalCSS domain property Id.
+		/// titleText domain property Id.
 		/// </summary>
-		public static readonly global::System.Guid additionalCSSDomainPropertyId = new global::System.Guid(0xf97ede96, 0xbdcd, 0x4a79, 0x8c, 0xc2, 0x82, 0xbc, 0xd7, 0x89, 0xb1, 0xbd);
+		public static readonly global::System.Guid titleTextDomainPropertyId = new global::System.Guid(0x6e5035e0, 0x475b, 0x488c, 0x81, 0xdc, 0x74, 0xda, 0x7d, 0x92, 0x57, 0x9d);
 		
 		/// <summary>
-		/// Storage for additionalCSS
+		/// Storage for titleText
 		/// </summary>
-		private global::System.String additionalCSSPropertyStorage = string.Empty;
+		private global::System.String titleTextPropertyStorage = string.Empty;
 		
 		/// <summary>
-		/// Gets or sets the value of additionalCSS domain property.
-		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.Page.Additional CSS
+		/// Gets or sets the value of titleText domain property.
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.Page.Title Text
 		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.Page/additionalCSS.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.Page/additionalCSS.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainObjectId("f97ede96-bdcd-4a79-8cc2-82bcd789b1bd")]
-		public global::System.String additionalCSS
+		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.Page/titleText.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.Page/titleText.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("6e5035e0-475b-488c-81dc-74da7d92579d")]
+		public global::System.String titleText
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return additionalCSSPropertyStorage;
+				return titleTextPropertyStorage;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				additionalCSSPropertyHandler.Instance.SetValue(this, value);
+				titleTextPropertyHandler.Instance.SetValue(this, value);
 			}
 		}
 		/// <summary>
-		/// Value handler for the Page.additionalCSS domain property.
+		/// Value handler for the Page.titleText domain property.
 		/// </summary>
-		internal sealed partial class additionalCSSPropertyHandler : DslModeling::DomainPropertyValueHandler<Page, global::System.String>
+		internal sealed partial class titleTextPropertyHandler : DslModeling::DomainPropertyValueHandler<Page, global::System.String>
 		{
-			private additionalCSSPropertyHandler() { }
+			private titleTextPropertyHandler() { }
 		
 			/// <summary>
-			/// Gets the singleton instance of the Page.additionalCSS domain property value handler.
+			/// Gets the singleton instance of the Page.titleText domain property value handler.
 			/// </summary>
-			public static readonly additionalCSSPropertyHandler Instance = new additionalCSSPropertyHandler();
+			public static readonly titleTextPropertyHandler Instance = new titleTextPropertyHandler();
 		
 			/// <summary>
-			/// Gets the Id of the Page.additionalCSS domain property.
+			/// Gets the Id of the Page.titleText domain property.
 			/// </summary>
 			public sealed override global::System.Guid DomainPropertyId
 			{
 				[global::System.Diagnostics.DebuggerStepThrough]
 				get
 				{
-					return additionalCSSDomainPropertyId;
+					return titleTextDomainPropertyId;
 				}
 			}
 			
@@ -3021,7 +2586,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			public override sealed global::System.String GetValue(Page element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.additionalCSSPropertyStorage;
+				return element.titleTextPropertyStorage;
 			}
 		
 			/// <summary>
@@ -3037,7 +2602,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
-					element.additionalCSSPropertyStorage = newValue;
+					element.titleTextPropertyStorage = newValue;
 					ValueChanged(element, oldValue, newValue);
 				}
 			}
@@ -3212,7 +2777,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		/// <summary>
 		/// Storage for labelFontFamily
 		/// </summary>
-		private global::System.String labelFontFamilyPropertyStorage = string.Empty;
+		private FuentesEnum labelFontFamilyPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of labelFontFamily domain property.
@@ -3221,7 +2786,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.Field/labelFontFamily.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.Field/labelFontFamily.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("a020fb36-92c4-4814-89be-f7e89d37a57f")]
-		public global::System.String labelFontFamily
+		public FuentesEnum labelFontFamily
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -3237,7 +2802,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		/// <summary>
 		/// Value handler for the Field.labelFontFamily domain property.
 		/// </summary>
-		internal sealed partial class labelFontFamilyPropertyHandler : DslModeling::DomainPropertyValueHandler<Field, global::System.String>
+		internal sealed partial class labelFontFamilyPropertyHandler : DslModeling::DomainPropertyValueHandler<Field, FuentesEnum>
 		{
 			private labelFontFamilyPropertyHandler() { }
 		
@@ -3263,7 +2828,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(Field element)
+			public override sealed FuentesEnum GetValue(Field element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.labelFontFamilyPropertyStorage;
@@ -3274,11 +2839,11 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Field element, global::System.String newValue)
+			public override sealed void SetValue(Field element, FuentesEnum newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				FuentesEnum oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
@@ -3376,59 +2941,59 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		}
 		
 		#endregion
-		#region labelAlignment domain property code
+		#region labelPosition domain property code
 		
 		/// <summary>
-		/// labelAlignment domain property Id.
+		/// labelPosition domain property Id.
 		/// </summary>
-		public static readonly global::System.Guid labelAlignmentDomainPropertyId = new global::System.Guid(0x0f3fef65, 0x8567, 0x4434, 0x84, 0x8d, 0xb6, 0x5f, 0x1f, 0x9f, 0x57, 0x91);
+		public static readonly global::System.Guid labelPositionDomainPropertyId = new global::System.Guid(0x7748d270, 0x81ef, 0x40b4, 0xa7, 0xd6, 0xe9, 0x70, 0xb7, 0x91, 0xab, 0x24);
 		
 		/// <summary>
-		/// Storage for labelAlignment
+		/// Storage for labelPosition
 		/// </summary>
-		private TextAlignment labelAlignmentPropertyStorage;
+		private PosicionTituloEnum labelPositionPropertyStorage;
 		
 		/// <summary>
-		/// Gets or sets the value of labelAlignment domain property.
-		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.Field.Label Alignment
+		/// Gets or sets the value of labelPosition domain property.
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.Field.Label Position
 		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.Field/labelAlignment.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.Field/labelAlignment.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainObjectId("0f3fef65-8567-4434-848d-b65f1f9f5791")]
-		public TextAlignment labelAlignment
+		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.Field/labelPosition.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.Field/labelPosition.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("7748d270-81ef-40b4-a7d6-e970b791ab24")]
+		public PosicionTituloEnum labelPosition
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return labelAlignmentPropertyStorage;
+				return labelPositionPropertyStorage;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				labelAlignmentPropertyHandler.Instance.SetValue(this, value);
+				labelPositionPropertyHandler.Instance.SetValue(this, value);
 			}
 		}
 		/// <summary>
-		/// Value handler for the Field.labelAlignment domain property.
+		/// Value handler for the Field.labelPosition domain property.
 		/// </summary>
-		internal sealed partial class labelAlignmentPropertyHandler : DslModeling::DomainPropertyValueHandler<Field, TextAlignment>
+		internal sealed partial class labelPositionPropertyHandler : DslModeling::DomainPropertyValueHandler<Field, PosicionTituloEnum>
 		{
-			private labelAlignmentPropertyHandler() { }
+			private labelPositionPropertyHandler() { }
 		
 			/// <summary>
-			/// Gets the singleton instance of the Field.labelAlignment domain property value handler.
+			/// Gets the singleton instance of the Field.labelPosition domain property value handler.
 			/// </summary>
-			public static readonly labelAlignmentPropertyHandler Instance = new labelAlignmentPropertyHandler();
+			public static readonly labelPositionPropertyHandler Instance = new labelPositionPropertyHandler();
 		
 			/// <summary>
-			/// Gets the Id of the Field.labelAlignment domain property.
+			/// Gets the Id of the Field.labelPosition domain property.
 			/// </summary>
 			public sealed override global::System.Guid DomainPropertyId
 			{
 				[global::System.Diagnostics.DebuggerStepThrough]
 				get
 				{
-					return labelAlignmentDomainPropertyId;
+					return labelPositionDomainPropertyId;
 				}
 			}
 			
@@ -3437,10 +3002,10 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed TextAlignment GetValue(Field element)
+			public override sealed PosicionTituloEnum GetValue(Field element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.labelAlignmentPropertyStorage;
+				return element.labelPositionPropertyStorage;
 			}
 		
 			/// <summary>
@@ -3448,74 +3013,74 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Field element, TextAlignment newValue)
+			public override sealed void SetValue(Field element, PosicionTituloEnum newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				TextAlignment oldValue = GetValue(element);
+				PosicionTituloEnum oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
-					element.labelAlignmentPropertyStorage = newValue;
+					element.labelPositionPropertyStorage = newValue;
 					ValueChanged(element, oldValue, newValue);
 				}
 			}
 		}
 		
 		#endregion
-		#region placeholder domain property code
+		#region labelText domain property code
 		
 		/// <summary>
-		/// placeholder domain property Id.
+		/// labelText domain property Id.
 		/// </summary>
-		public static readonly global::System.Guid placeholderDomainPropertyId = new global::System.Guid(0x9bdc66b1, 0x3d73, 0x4fd7, 0x8b, 0x00, 0x24, 0x0a, 0xe2, 0xf6, 0x0d, 0xb2);
+		public static readonly global::System.Guid labelTextDomainPropertyId = new global::System.Guid(0x72d1a13b, 0x21ed, 0x49c4, 0x90, 0xe3, 0xe9, 0xfe, 0x06, 0x21, 0xba, 0x3b);
 		
 		/// <summary>
-		/// Storage for placeholder
+		/// Storage for labelText
 		/// </summary>
-		private global::System.String placeholderPropertyStorage = string.Empty;
+		private global::System.String labelTextPropertyStorage = string.Empty;
 		
 		/// <summary>
-		/// Gets or sets the value of placeholder domain property.
-		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.Field.Placeholder
+		/// Gets or sets the value of labelText domain property.
+		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.Field.Label Text
 		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.Field/placeholder.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.Field/placeholder.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainObjectId("9bdc66b1-3d73-4fd7-8b00-240ae2f60db2")]
-		public global::System.String placeholder
+		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.Field/labelText.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.Field/labelText.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("72d1a13b-21ed-49c4-90e3-e9fe0621ba3b")]
+		public global::System.String labelText
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return placeholderPropertyStorage;
+				return labelTextPropertyStorage;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				placeholderPropertyHandler.Instance.SetValue(this, value);
+				labelTextPropertyHandler.Instance.SetValue(this, value);
 			}
 		}
 		/// <summary>
-		/// Value handler for the Field.placeholder domain property.
+		/// Value handler for the Field.labelText domain property.
 		/// </summary>
-		internal sealed partial class placeholderPropertyHandler : DslModeling::DomainPropertyValueHandler<Field, global::System.String>
+		internal sealed partial class labelTextPropertyHandler : DslModeling::DomainPropertyValueHandler<Field, global::System.String>
 		{
-			private placeholderPropertyHandler() { }
+			private labelTextPropertyHandler() { }
 		
 			/// <summary>
-			/// Gets the singleton instance of the Field.placeholder domain property value handler.
+			/// Gets the singleton instance of the Field.labelText domain property value handler.
 			/// </summary>
-			public static readonly placeholderPropertyHandler Instance = new placeholderPropertyHandler();
+			public static readonly labelTextPropertyHandler Instance = new labelTextPropertyHandler();
 		
 			/// <summary>
-			/// Gets the Id of the Field.placeholder domain property.
+			/// Gets the Id of the Field.labelText domain property.
 			/// </summary>
 			public sealed override global::System.Guid DomainPropertyId
 			{
 				[global::System.Diagnostics.DebuggerStepThrough]
 				get
 				{
-					return placeholderDomainPropertyId;
+					return labelTextDomainPropertyId;
 				}
 			}
 			
@@ -3527,7 +3092,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			public override sealed global::System.String GetValue(Field element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.placeholderPropertyStorage;
+				return element.labelTextPropertyStorage;
 			}
 		
 			/// <summary>
@@ -3543,94 +3108,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
-					element.placeholderPropertyStorage = newValue;
-					ValueChanged(element, oldValue, newValue);
-				}
-			}
-		}
-		
-		#endregion
-		#region required domain property code
-		
-		/// <summary>
-		/// required domain property Id.
-		/// </summary>
-		public static readonly global::System.Guid requiredDomainPropertyId = new global::System.Guid(0xc4b4023c, 0x3e80, 0x453a, 0xa4, 0xfb, 0x76, 0x15, 0x0b, 0x94, 0xcc, 0xb8);
-		
-		/// <summary>
-		/// Storage for required
-		/// </summary>
-		private global::System.Boolean requiredPropertyStorage;
-		
-		/// <summary>
-		/// Gets or sets the value of required domain property.
-		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.Field.Required
-		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.Field/required.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.Field/required.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainObjectId("c4b4023c-3e80-453a-a4fb-76150b94ccb8")]
-		public global::System.Boolean required
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return requiredPropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				requiredPropertyHandler.Instance.SetValue(this, value);
-			}
-		}
-		/// <summary>
-		/// Value handler for the Field.required domain property.
-		/// </summary>
-		internal sealed partial class requiredPropertyHandler : DslModeling::DomainPropertyValueHandler<Field, global::System.Boolean>
-		{
-			private requiredPropertyHandler() { }
-		
-			/// <summary>
-			/// Gets the singleton instance of the Field.required domain property value handler.
-			/// </summary>
-			public static readonly requiredPropertyHandler Instance = new requiredPropertyHandler();
-		
-			/// <summary>
-			/// Gets the Id of the Field.required domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return requiredDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed global::System.Boolean GetValue(Field element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.requiredPropertyStorage;
-			}
-		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Field element, global::System.Boolean newValue)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-		
-				global::System.Boolean oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					ValueChanging(element, oldValue, newValue);
-					element.requiredPropertyStorage = newValue;
+					element.labelTextPropertyStorage = newValue;
 					ValueChanged(element, oldValue, newValue);
 				}
 			}

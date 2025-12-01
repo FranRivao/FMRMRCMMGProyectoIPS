@@ -2130,7 +2130,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			#endregion
 			
 			// Read properties serialized as XML attributes.
-			ReadPropertiesFromAttributes(serializationContext, element, reader);
+			base.ReadPropertiesFromAttributes(serializationContext, element, reader);
 	
 			// Read nested XML elements.
 			if (!serializationContext.Result.Failed)
@@ -2162,112 +2162,6 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			DslModeling::SerializationUtilities.Skip(reader);
 		}
 		
-	
-		/// <summary>
-		/// This method deserializes all properties that are serialized as XML attributes.
-		/// </summary>
-		/// <remarks>
-		/// Because this method only handles properties serialized as XML attributes, the passed-in reader shouldn't be moved inside this method.
-		/// The caller will guarantee that the reader is positioned on the open XML tag of the current element being deserialized.
-		/// </remarks>
-		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">In-memory Atributo instance that will get the deserialized data.</param>
-		/// <param name="reader">XmlReader to read serialized data from.</param>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
-		protected override void ReadPropertiesFromAttributes(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlReader reader)
-		{
-			// Always call the base class so any extensions are deserialized
-			base.ReadPropertiesFromAttributes(serializationContext, element, reader);
-	
-			Atributo instanceOfAtributo = element as Atributo;
-			global::System.Diagnostics.Debug.Assert(instanceOfAtributo != null, "Expecting an instance of Atributo");
-	
-			// colorTitulo
-			if (!serializationContext.Result.Failed)
-			{
-				string attribcolorTitulo = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "colorTitulo");
-				if (attribcolorTitulo != null)
-				{
-					global::System.String valueOfcolorTitulo;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribcolorTitulo, out valueOfcolorTitulo))
-					{
-						instanceOfAtributo.colorTitulo = valueOfcolorTitulo;
-					}
-					else
-					{	// Invalid property value, ignored.
-						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "colorTitulo", typeof(global::System.String), attribcolorTitulo);
-					}
-				}
-			}
-			// tamañoTitulo
-			if (!serializationContext.Result.Failed)
-			{
-				string attribtamañoTitulo = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "tamañoTitulo");
-				if (attribtamañoTitulo != null)
-				{
-					global::System.Int16 valueOftamañoTitulo;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.Int16>(serializationContext, attribtamañoTitulo, out valueOftamañoTitulo))
-					{
-						instanceOfAtributo.tamañoTitulo = valueOftamañoTitulo;
-					}
-					else
-					{	// Invalid property value, ignored.
-						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "tamañoTitulo", typeof(global::System.Int16), attribtamañoTitulo);
-					}
-				}
-			}
-			// alineacionTitulo
-			if (!serializationContext.Result.Failed)
-			{
-				string attribalineacionTitulo = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "alineacionTitulo");
-				if (attribalineacionTitulo != null)
-				{
-					PosicionTituloEnum valueOfalineacionTitulo;
-					if (DslModeling::SerializationUtilities.TryGetValue<PosicionTituloEnum>(serializationContext, attribalineacionTitulo, out valueOfalineacionTitulo))
-					{
-						instanceOfAtributo.alineacionTitulo = valueOfalineacionTitulo;
-					}
-					else
-					{	// Invalid property value, ignored.
-						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "alineacionTitulo", typeof(PosicionTituloEnum), attribalineacionTitulo);
-					}
-				}
-			}
-			// fuenteTitulo
-			if (!serializationContext.Result.Failed)
-			{
-				string attribfuenteTitulo = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "fuenteTitulo");
-				if (attribfuenteTitulo != null)
-				{
-					FuentesEnum valueOffuenteTitulo;
-					if (DslModeling::SerializationUtilities.TryGetValue<FuentesEnum>(serializationContext, attribfuenteTitulo, out valueOffuenteTitulo))
-					{
-						instanceOfAtributo.fuenteTitulo = valueOffuenteTitulo;
-					}
-					else
-					{	// Invalid property value, ignored.
-						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "fuenteTitulo", typeof(FuentesEnum), attribfuenteTitulo);
-					}
-				}
-			}
-			// formatoVisualizacion
-			if (!serializationContext.Result.Failed)
-			{
-				string attribformatoVisualizacion = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "formatoVisualizacion");
-				if (attribformatoVisualizacion != null)
-				{
-					global::System.String valueOfformatoVisualizacion;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribformatoVisualizacion, out valueOfformatoVisualizacion))
-					{
-						instanceOfAtributo.formatoVisualizacion = valueOfformatoVisualizacion;
-					}
-					else
-					{	// Invalid property value, ignored.
-						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "formatoVisualizacion", typeof(global::System.String), attribformatoVisualizacion);
-					}
-				}
-			}
-		}
 	
 		#region TryCreateInstance
 		/// <summary>
@@ -2637,7 +2531,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			// Write out element Id.
 			writer.WriteAttributeString("Id", element.Id.ToString("D", global::System.Globalization.CultureInfo.CurrentCulture));
 	
-			WritePropertiesAsAttributes(serializationContext, element, writer);
+			base.WritePropertiesAsAttributes(serializationContext, element, writer);
 	
 			// Write out any extension data if this is the root element
 			if (rootElementSettings != null && !serializationContext.Result.Failed)
@@ -2652,75 +2546,6 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			}
 	
 			writer.WriteEndElement();
-		}
-	
-		/// <summary>
-		/// Write all properties that need to be serialized as XML attributes.
-		/// </summary>
-		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">Atributo instance to be serialized.</param>
-		/// <param name="writer">XmlWriter to write serialized data to.</param> 
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
-		protected override void WritePropertiesAsAttributes(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlWriter writer)
-		{
-			// Always call the base class so any extensions are serialized
-			base.WritePropertiesAsAttributes(serializationContext, element, writer);
-	
-			Atributo instanceOfAtributo = element as Atributo;
-			global::System.Diagnostics.Debug.Assert(instanceOfAtributo != null, "Expecting an instance of Atributo");
-	
-			// colorTitulo
-			if (!serializationContext.Result.Failed)
-			{
-				global::System.String propValue = instanceOfAtributo.colorTitulo;
-				if (!serializationContext.Result.Failed)
-				{
-					if (!string.IsNullOrEmpty(propValue))
-						FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "colorTitulo", propValue);
-	
-				}
-			}
-			// tamañoTitulo
-			if (!serializationContext.Result.Failed)
-			{
-				global::System.Int16 propValue = instanceOfAtributo.tamañoTitulo;
-				string serializedPropValue = DslModeling::SerializationUtilities.GetString<global::System.Int16>(serializationContext, propValue);
-				if (!serializationContext.Result.Failed)
-				{
-					FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "tamañoTitulo", serializedPropValue);
-				}
-			}
-			// alineacionTitulo
-			if (!serializationContext.Result.Failed)
-			{
-				PosicionTituloEnum propValue = instanceOfAtributo.alineacionTitulo;
-				string serializedPropValue = DslModeling::SerializationUtilities.GetString<PosicionTituloEnum>(serializationContext, propValue);
-				if (!serializationContext.Result.Failed)
-				{
-					FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "alineacionTitulo", serializedPropValue);
-				}
-			}
-			// fuenteTitulo
-			if (!serializationContext.Result.Failed)
-			{
-				FuentesEnum propValue = instanceOfAtributo.fuenteTitulo;
-				string serializedPropValue = DslModeling::SerializationUtilities.GetString<FuentesEnum>(serializationContext, propValue);
-				if (!serializationContext.Result.Failed)
-				{
-					FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "fuenteTitulo", serializedPropValue);
-				}
-			}
-			// formatoVisualizacion
-			if (!serializationContext.Result.Failed)
-			{
-				global::System.String propValue = instanceOfAtributo.formatoVisualizacion;
-				if (!serializationContext.Result.Failed)
-				{
-					if (!string.IsNullOrEmpty(propValue))
-						FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "formatoVisualizacion", propValue);
-	
-				}
-			}
 		}
 		#endregion
 	
@@ -5250,23 +5075,6 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			Portal instanceOfPortal = element as Portal;
 			global::System.Diagnostics.Debug.Assert(instanceOfPortal != null, "Expecting an instance of Portal");
 	
-			// backgroundColor
-			if (!serializationContext.Result.Failed)
-			{
-				string attribbackgroundColor = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "backgroundColor");
-				if (attribbackgroundColor != null)
-				{
-					global::System.String valueOfbackgroundColor;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribbackgroundColor, out valueOfbackgroundColor))
-					{
-						instanceOfPortal.backgroundColor = valueOfbackgroundColor;
-					}
-					else
-					{	// Invalid property value, ignored.
-						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "backgroundColor", typeof(global::System.String), attribbackgroundColor);
-					}
-				}
-			}
 			// titleText
 			if (!serializationContext.Result.Failed)
 			{
@@ -5307,14 +5115,14 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 				string attribtitleFontFamily = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "titleFontFamily");
 				if (attribtitleFontFamily != null)
 				{
-					global::System.String valueOftitleFontFamily;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribtitleFontFamily, out valueOftitleFontFamily))
+					FuentesEnum valueOftitleFontFamily;
+					if (DslModeling::SerializationUtilities.TryGetValue<FuentesEnum>(serializationContext, attribtitleFontFamily, out valueOftitleFontFamily))
 					{
 						instanceOfPortal.titleFontFamily = valueOftitleFontFamily;
 					}
 					else
 					{	// Invalid property value, ignored.
-						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "titleFontFamily", typeof(global::System.String), attribtitleFontFamily);
+						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "titleFontFamily", typeof(FuentesEnum), attribtitleFontFamily);
 					}
 				}
 			}
@@ -5335,20 +5143,37 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 					}
 				}
 			}
-			// titleAlignment
+			// titlePosition
 			if (!serializationContext.Result.Failed)
 			{
-				string attribtitleAlignment = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "titleAlignment");
-				if (attribtitleAlignment != null)
+				string attribtitlePosition = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "titlePosition");
+				if (attribtitlePosition != null)
 				{
-					TextAlignment valueOftitleAlignment;
-					if (DslModeling::SerializationUtilities.TryGetValue<TextAlignment>(serializationContext, attribtitleAlignment, out valueOftitleAlignment))
+					PosicionTituloEnum valueOftitlePosition;
+					if (DslModeling::SerializationUtilities.TryGetValue<PosicionTituloEnum>(serializationContext, attribtitlePosition, out valueOftitlePosition))
 					{
-						instanceOfPortal.titleAlignment = valueOftitleAlignment;
+						instanceOfPortal.titlePosition = valueOftitlePosition;
 					}
 					else
 					{	// Invalid property value, ignored.
-						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "titleAlignment", typeof(TextAlignment), attribtitleAlignment);
+						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "titlePosition", typeof(PosicionTituloEnum), attribtitlePosition);
+					}
+				}
+			}
+			// titleFormat
+			if (!serializationContext.Result.Failed)
+			{
+				string attribtitleFormat = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "titleFormat");
+				if (attribtitleFormat != null)
+				{
+					VisualizacionEnum valueOftitleFormat;
+					if (DslModeling::SerializationUtilities.TryGetValue<VisualizacionEnum>(serializationContext, attribtitleFormat, out valueOftitleFormat))
+					{
+						instanceOfPortal.titleFormat = valueOftitleFormat;
+					}
+					else
+					{	// Invalid property value, ignored.
+						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "titleFormat", typeof(VisualizacionEnum), attribtitleFormat);
 					}
 				}
 			}
@@ -5863,17 +5688,6 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			Portal instanceOfPortal = element as Portal;
 			global::System.Diagnostics.Debug.Assert(instanceOfPortal != null, "Expecting an instance of Portal");
 	
-			// backgroundColor
-			if (!serializationContext.Result.Failed)
-			{
-				global::System.String propValue = instanceOfPortal.backgroundColor;
-				if (!serializationContext.Result.Failed)
-				{
-					if (!string.IsNullOrEmpty(propValue))
-						FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "backgroundColor", propValue);
-	
-				}
-			}
 			// titleText
 			if (!serializationContext.Result.Failed)
 			{
@@ -5899,12 +5713,11 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			// titleFontFamily
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfPortal.titleFontFamily;
+				FuentesEnum propValue = instanceOfPortal.titleFontFamily;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<FuentesEnum>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					if (!string.IsNullOrEmpty(propValue))
-						FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "titleFontFamily", propValue);
-	
+					FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "titleFontFamily", serializedPropValue);
 				}
 			}
 			// titleFontSize
@@ -5917,14 +5730,24 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 					FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "titleFontSize", serializedPropValue);
 				}
 			}
-			// titleAlignment
+			// titlePosition
 			if (!serializationContext.Result.Failed)
 			{
-				TextAlignment propValue = instanceOfPortal.titleAlignment;
-				string serializedPropValue = DslModeling::SerializationUtilities.GetString<TextAlignment>(serializationContext, propValue);
+				PosicionTituloEnum propValue = instanceOfPortal.titlePosition;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<PosicionTituloEnum>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "titleAlignment", serializedPropValue);
+					FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "titlePosition", serializedPropValue);
+				}
+			}
+			// titleFormat
+			if (!serializationContext.Result.Failed)
+			{
+				VisualizacionEnum propValue = instanceOfPortal.titleFormat;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<VisualizacionEnum>(serializationContext, propValue);
+				if (!serializationContext.Result.Failed)
+				{
+					FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "titleFormat", serializedPropValue);
 				}
 			}
 		}
@@ -6198,14 +6021,14 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 				string attribtitleFontFamily = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "titleFontFamily");
 				if (attribtitleFontFamily != null)
 				{
-					global::System.String valueOftitleFontFamily;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribtitleFontFamily, out valueOftitleFontFamily))
+					FuentesEnum valueOftitleFontFamily;
+					if (DslModeling::SerializationUtilities.TryGetValue<FuentesEnum>(serializationContext, attribtitleFontFamily, out valueOftitleFontFamily))
 					{
 						instanceOfPage.titleFontFamily = valueOftitleFontFamily;
 					}
 					else
 					{	// Invalid property value, ignored.
-						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "titleFontFamily", typeof(global::System.String), attribtitleFontFamily);
+						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "titleFontFamily", typeof(FuentesEnum), attribtitleFontFamily);
 					}
 				}
 			}
@@ -6226,37 +6049,37 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 					}
 				}
 			}
-			// titleAlignment
+			// titlePosition
 			if (!serializationContext.Result.Failed)
 			{
-				string attribtitleAlignment = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "titleAlignment");
-				if (attribtitleAlignment != null)
+				string attribtitlePosition = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "titlePosition");
+				if (attribtitlePosition != null)
 				{
-					TextAlignment valueOftitleAlignment;
-					if (DslModeling::SerializationUtilities.TryGetValue<TextAlignment>(serializationContext, attribtitleAlignment, out valueOftitleAlignment))
+					PosicionTituloEnum valueOftitlePosition;
+					if (DslModeling::SerializationUtilities.TryGetValue<PosicionTituloEnum>(serializationContext, attribtitlePosition, out valueOftitlePosition))
 					{
-						instanceOfPage.titleAlignment = valueOftitleAlignment;
+						instanceOfPage.titlePosition = valueOftitlePosition;
 					}
 					else
 					{	// Invalid property value, ignored.
-						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "titleAlignment", typeof(TextAlignment), attribtitleAlignment);
+						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "titlePosition", typeof(PosicionTituloEnum), attribtitlePosition);
 					}
 				}
 			}
-			// additionalCSS
+			// titleText
 			if (!serializationContext.Result.Failed)
 			{
-				string attribadditionalCSS = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "additionalCSS");
-				if (attribadditionalCSS != null)
+				string attribtitleText = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "titleText");
+				if (attribtitleText != null)
 				{
-					global::System.String valueOfadditionalCSS;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribadditionalCSS, out valueOfadditionalCSS))
+					global::System.String valueOftitleText;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribtitleText, out valueOftitleText))
 					{
-						instanceOfPage.additionalCSS = valueOfadditionalCSS;
+						instanceOfPage.titleText = valueOftitleText;
 					}
 					else
 					{	// Invalid property value, ignored.
-						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "additionalCSS", typeof(global::System.String), attribadditionalCSS);
+						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "titleText", typeof(global::System.String), attribtitleText);
 					}
 				}
 			}
@@ -6785,12 +6608,11 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			// titleFontFamily
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfPage.titleFontFamily;
+				FuentesEnum propValue = instanceOfPage.titleFontFamily;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<FuentesEnum>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					if (!string.IsNullOrEmpty(propValue))
-						FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "titleFontFamily", propValue);
-	
+					FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "titleFontFamily", serializedPropValue);
 				}
 			}
 			// titleFontSize
@@ -6803,24 +6625,24 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 					FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "titleFontSize", serializedPropValue);
 				}
 			}
-			// titleAlignment
+			// titlePosition
 			if (!serializationContext.Result.Failed)
 			{
-				TextAlignment propValue = instanceOfPage.titleAlignment;
-				string serializedPropValue = DslModeling::SerializationUtilities.GetString<TextAlignment>(serializationContext, propValue);
+				PosicionTituloEnum propValue = instanceOfPage.titlePosition;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<PosicionTituloEnum>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "titleAlignment", serializedPropValue);
+					FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "titlePosition", serializedPropValue);
 				}
 			}
-			// additionalCSS
+			// titleText
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfPage.additionalCSS;
+				global::System.String propValue = instanceOfPage.titleText;
 				if (!serializationContext.Result.Failed)
 				{
 					if (!string.IsNullOrEmpty(propValue))
-						FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "additionalCSS", propValue);
+						FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "titleText", propValue);
 	
 				}
 			}
@@ -7095,14 +6917,14 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 				string attriblabelFontFamily = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "labelFontFamily");
 				if (attriblabelFontFamily != null)
 				{
-					global::System.String valueOflabelFontFamily;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attriblabelFontFamily, out valueOflabelFontFamily))
+					FuentesEnum valueOflabelFontFamily;
+					if (DslModeling::SerializationUtilities.TryGetValue<FuentesEnum>(serializationContext, attriblabelFontFamily, out valueOflabelFontFamily))
 					{
 						instanceOfField.labelFontFamily = valueOflabelFontFamily;
 					}
 					else
 					{	// Invalid property value, ignored.
-						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "labelFontFamily", typeof(global::System.String), attriblabelFontFamily);
+						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "labelFontFamily", typeof(FuentesEnum), attriblabelFontFamily);
 					}
 				}
 			}
@@ -7123,54 +6945,37 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 					}
 				}
 			}
-			// labelAlignment
+			// labelPosition
 			if (!serializationContext.Result.Failed)
 			{
-				string attriblabelAlignment = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "labelAlignment");
-				if (attriblabelAlignment != null)
+				string attriblabelPosition = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "labelPosition");
+				if (attriblabelPosition != null)
 				{
-					TextAlignment valueOflabelAlignment;
-					if (DslModeling::SerializationUtilities.TryGetValue<TextAlignment>(serializationContext, attriblabelAlignment, out valueOflabelAlignment))
+					PosicionTituloEnum valueOflabelPosition;
+					if (DslModeling::SerializationUtilities.TryGetValue<PosicionTituloEnum>(serializationContext, attriblabelPosition, out valueOflabelPosition))
 					{
-						instanceOfField.labelAlignment = valueOflabelAlignment;
+						instanceOfField.labelPosition = valueOflabelPosition;
 					}
 					else
 					{	// Invalid property value, ignored.
-						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "labelAlignment", typeof(TextAlignment), attriblabelAlignment);
+						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "labelPosition", typeof(PosicionTituloEnum), attriblabelPosition);
 					}
 				}
 			}
-			// placeholder
+			// labelText
 			if (!serializationContext.Result.Failed)
 			{
-				string attribplaceholder = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "placeholder");
-				if (attribplaceholder != null)
+				string attriblabelText = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "labelText");
+				if (attriblabelText != null)
 				{
-					global::System.String valueOfplaceholder;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribplaceholder, out valueOfplaceholder))
+					global::System.String valueOflabelText;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attriblabelText, out valueOflabelText))
 					{
-						instanceOfField.placeholder = valueOfplaceholder;
+						instanceOfField.labelText = valueOflabelText;
 					}
 					else
 					{	// Invalid property value, ignored.
-						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "placeholder", typeof(global::System.String), attribplaceholder);
-					}
-				}
-			}
-			// required
-			if (!serializationContext.Result.Failed)
-			{
-				string attribrequired = FMRMRCMMGProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "required");
-				if (attribrequired != null)
-				{
-					global::System.Boolean valueOfrequired;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.Boolean>(serializationContext, attribrequired, out valueOfrequired))
-					{
-						instanceOfField.required = valueOfrequired;
-					}
-					else
-					{	// Invalid property value, ignored.
-						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "required", typeof(global::System.Boolean), attribrequired);
+						FMRMRCMMGProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "labelText", typeof(global::System.String), attriblabelText);
 					}
 				}
 			}
@@ -7590,12 +7395,11 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			// labelFontFamily
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfField.labelFontFamily;
+				FuentesEnum propValue = instanceOfField.labelFontFamily;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<FuentesEnum>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					if (!string.IsNullOrEmpty(propValue))
-						FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "labelFontFamily", propValue);
-	
+					FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "labelFontFamily", serializedPropValue);
 				}
 			}
 			// labelFontSize
@@ -7608,35 +7412,25 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 					FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "labelFontSize", serializedPropValue);
 				}
 			}
-			// labelAlignment
+			// labelPosition
 			if (!serializationContext.Result.Failed)
 			{
-				TextAlignment propValue = instanceOfField.labelAlignment;
-				string serializedPropValue = DslModeling::SerializationUtilities.GetString<TextAlignment>(serializationContext, propValue);
+				PosicionTituloEnum propValue = instanceOfField.labelPosition;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<PosicionTituloEnum>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "labelAlignment", serializedPropValue);
+					FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "labelPosition", serializedPropValue);
 				}
 			}
-			// placeholder
+			// labelText
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfField.placeholder;
+				global::System.String propValue = instanceOfField.labelText;
 				if (!serializationContext.Result.Failed)
 				{
 					if (!string.IsNullOrEmpty(propValue))
-						FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "placeholder", propValue);
+						FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "labelText", propValue);
 	
-				}
-			}
-			// required
-			if (!serializationContext.Result.Failed)
-			{
-				global::System.Boolean propValue = instanceOfField.required;
-				string serializedPropValue = DslModeling::SerializationUtilities.GetString<global::System.Boolean>(serializationContext, propValue);
-				if (!serializationContext.Result.Failed)
-				{
-					FMRMRCMMGProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "required", serializedPropValue);
 				}
 			}
 		}

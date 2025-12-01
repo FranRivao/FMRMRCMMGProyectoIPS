@@ -179,16 +179,6 @@
             <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <!-- Property: colorTitulo -->
-        <xsd:attribute name="colorTitulo" type="xsd:string" />
-        <!-- Property: tamañoTitulo -->
-        <xsd:attribute name="tamañoTitulo" type="xsd:string" />
-        <!-- Property: alineacionTitulo -->
-        <xsd:attribute name="alineacionTitulo" type="PosicionTituloEnum" />
-        <!-- Property: fuenteTitulo -->
-        <xsd:attribute name="fuenteTitulo" type="FuentesEnum" />
-        <!-- Property: formatoVisualizacion -->
-        <xsd:attribute name="formatoVisualizacion" type="xsd:string" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -365,18 +355,18 @@
             <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <!-- Property: backgroundColor -->
-        <xsd:attribute name="backgroundColor" type="xsd:string" />
         <!-- Property: titleText -->
         <xsd:attribute name="titleText" type="xsd:string" />
         <!-- Property: titleColor -->
         <xsd:attribute name="titleColor" type="xsd:string" />
         <!-- Property: titleFontFamily -->
-        <xsd:attribute name="titleFontFamily" type="xsd:string" />
+        <xsd:attribute name="titleFontFamily" type="FuentesEnum" />
         <!-- Property: titleFontSize -->
         <xsd:attribute name="titleFontSize" type="xsd:string" />
-        <!-- Property: titleAlignment -->
-        <xsd:attribute name="titleAlignment" type="TextAlignment" />
+        <!-- Property: titlePosition -->
+        <xsd:attribute name="titlePosition" type="PosicionTituloEnum" />
+        <!-- Property: titleFormat -->
+        <xsd:attribute name="titleFormat" type="VisualizacionEnum" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -424,13 +414,13 @@
         <!-- Property: titleColor -->
         <xsd:attribute name="titleColor" type="xsd:string" />
         <!-- Property: titleFontFamily -->
-        <xsd:attribute name="titleFontFamily" type="xsd:string" />
+        <xsd:attribute name="titleFontFamily" type="FuentesEnum" />
         <!-- Property: titleFontSize -->
         <xsd:attribute name="titleFontSize" type="xsd:string" />
-        <!-- Property: titleAlignment -->
-        <xsd:attribute name="titleAlignment" type="TextAlignment" />
-        <!-- Property: additionalCSS -->
-        <xsd:attribute name="additionalCSS" type="xsd:string" />
+        <!-- Property: titlePosition -->
+        <xsd:attribute name="titlePosition" type="PosicionTituloEnum" />
+        <!-- Property: titleText -->
+        <xsd:attribute name="titleText" type="xsd:string" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -461,15 +451,13 @@
         <!-- Property: labelColor -->
         <xsd:attribute name="labelColor" type="xsd:string" />
         <!-- Property: labelFontFamily -->
-        <xsd:attribute name="labelFontFamily" type="xsd:string" />
+        <xsd:attribute name="labelFontFamily" type="FuentesEnum" />
         <!-- Property: labelFontSize -->
         <xsd:attribute name="labelFontSize" type="xsd:string" />
-        <!-- Property: labelAlignment -->
-        <xsd:attribute name="labelAlignment" type="TextAlignment" />
-        <!-- Property: placeholder -->
-        <xsd:attribute name="placeholder" type="xsd:string" />
-        <!-- Property: required -->
-        <xsd:attribute name="required" type="xsd:boolean" />
+        <!-- Property: labelPosition -->
+        <xsd:attribute name="labelPosition" type="PosicionTituloEnum" />
+        <!-- Property: labelText -->
+        <xsd:attribute name="labelText" type="xsd:string" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>

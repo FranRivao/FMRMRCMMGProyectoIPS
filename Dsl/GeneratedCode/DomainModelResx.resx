@@ -229,46 +229,6 @@
     <value>Atributo</value>
     <comment>DisplayName for DomainClass &apos;Atributo&apos;</comment>
   </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Atributo/colorTitulo.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Atributo.Color Titulo</value>
-    <comment>Description for DomainProperty &apos;colorTitulo&apos; on DomainClass &apos;Atributo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Atributo/colorTitulo.DisplayName" xml:space="preserve">
-    <value>Color Titulo</value>
-    <comment>DisplayName for DomainProperty &apos;colorTitulo&apos; on DomainClass &apos;Atributo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Atributo/tamañoTitulo.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Atributo.Tamaño Titulo</value>
-    <comment>Description for DomainProperty &apos;tamañoTitulo&apos; on DomainClass &apos;Atributo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Atributo/tamañoTitulo.DisplayName" xml:space="preserve">
-    <value>Tamaño Titulo</value>
-    <comment>DisplayName for DomainProperty &apos;tamañoTitulo&apos; on DomainClass &apos;Atributo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Atributo/alineacionTitulo.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Atributo.Alineacion Titulo</value>
-    <comment>Description for DomainProperty &apos;alineacionTitulo&apos; on DomainClass &apos;Atributo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Atributo/alineacionTitulo.DisplayName" xml:space="preserve">
-    <value>Alineacion Titulo</value>
-    <comment>DisplayName for DomainProperty &apos;alineacionTitulo&apos; on DomainClass &apos;Atributo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Atributo/fuenteTitulo.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Atributo.Fuente Titulo</value>
-    <comment>Description for DomainProperty &apos;fuenteTitulo&apos; on DomainClass &apos;Atributo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Atributo/fuenteTitulo.DisplayName" xml:space="preserve">
-    <value>Fuente Titulo</value>
-    <comment>DisplayName for DomainProperty &apos;fuenteTitulo&apos; on DomainClass &apos;Atributo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Atributo/formatoVisualizacion.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Atributo.Formato Visualizacion</value>
-    <comment>Description for DomainProperty &apos;formatoVisualizacion&apos; on DomainClass &apos;Atributo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Atributo/formatoVisualizacion.DisplayName" xml:space="preserve">
-    <value>Formato Visualizacion</value>
-    <comment>DisplayName for DomainProperty &apos;formatoVisualizacion&apos; on DomainClass &apos;Atributo&apos;</comment>
-  </data>
   <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Relacion.Description" xml:space="preserve">
     <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Relacion</value>
     <comment>Description for DomainClass &apos;Relacion&apos;</comment>
@@ -317,14 +277,6 @@
     <value>Portal</value>
     <comment>DisplayName for DomainClass &apos;Portal&apos;</comment>
   </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Portal/backgroundColor.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Portal.Background Color</value>
-    <comment>Description for DomainProperty &apos;backgroundColor&apos; on DomainClass &apos;Portal&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Portal/backgroundColor.DisplayName" xml:space="preserve">
-    <value>Background Color</value>
-    <comment>DisplayName for DomainProperty &apos;backgroundColor&apos; on DomainClass &apos;Portal&apos;</comment>
-  </data>
   <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Portal/titleText.Description" xml:space="preserve">
     <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Portal.Title Text</value>
     <comment>Description for DomainProperty &apos;titleText&apos; on DomainClass &apos;Portal&apos;</comment>
@@ -357,13 +309,21 @@
     <value>Title Font Size</value>
     <comment>DisplayName for DomainProperty &apos;titleFontSize&apos; on DomainClass &apos;Portal&apos;</comment>
   </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Portal/titleAlignment.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Portal.Title Alignment</value>
-    <comment>Description for DomainProperty &apos;titleAlignment&apos; on DomainClass &apos;Portal&apos;</comment>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Portal/titlePosition.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Portal.Title Position</value>
+    <comment>Description for DomainProperty &apos;titlePosition&apos; on DomainClass &apos;Portal&apos;</comment>
   </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Portal/titleAlignment.DisplayName" xml:space="preserve">
-    <value>Title Alignment</value>
-    <comment>DisplayName for DomainProperty &apos;titleAlignment&apos; on DomainClass &apos;Portal&apos;</comment>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Portal/titlePosition.DisplayName" xml:space="preserve">
+    <value>Title Position</value>
+    <comment>DisplayName for DomainProperty &apos;titlePosition&apos; on DomainClass &apos;Portal&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Portal/titleFormat.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Portal.Title Format</value>
+    <comment>Description for DomainProperty &apos;titleFormat&apos; on DomainClass &apos;Portal&apos;</comment>
+  </data>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Portal/titleFormat.DisplayName" xml:space="preserve">
+    <value>Title Format</value>
+    <comment>DisplayName for DomainProperty &apos;titleFormat&apos; on DomainClass &apos;Portal&apos;</comment>
   </data>
   <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Page.Description" xml:space="preserve">
     <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Page</value>
@@ -397,21 +357,21 @@
     <value>Title Font Size</value>
     <comment>DisplayName for DomainProperty &apos;titleFontSize&apos; on DomainClass &apos;Page&apos;</comment>
   </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Page/titleAlignment.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Page.Title Alignment</value>
-    <comment>Description for DomainProperty &apos;titleAlignment&apos; on DomainClass &apos;Page&apos;</comment>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Page/titlePosition.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Page.Title Position</value>
+    <comment>Description for DomainProperty &apos;titlePosition&apos; on DomainClass &apos;Page&apos;</comment>
   </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Page/titleAlignment.DisplayName" xml:space="preserve">
-    <value>Title Alignment</value>
-    <comment>DisplayName for DomainProperty &apos;titleAlignment&apos; on DomainClass &apos;Page&apos;</comment>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Page/titlePosition.DisplayName" xml:space="preserve">
+    <value>Title Position</value>
+    <comment>DisplayName for DomainProperty &apos;titlePosition&apos; on DomainClass &apos;Page&apos;</comment>
   </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Page/additionalCSS.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Page.Additional CSS</value>
-    <comment>Description for DomainProperty &apos;additionalCSS&apos; on DomainClass &apos;Page&apos;</comment>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Page/titleText.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Page.Title Text</value>
+    <comment>Description for DomainProperty &apos;titleText&apos; on DomainClass &apos;Page&apos;</comment>
   </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Page/additionalCSS.DisplayName" xml:space="preserve">
-    <value>Additional CSS</value>
-    <comment>DisplayName for DomainProperty &apos;additionalCSS&apos; on DomainClass &apos;Page&apos;</comment>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Page/titleText.DisplayName" xml:space="preserve">
+    <value>Title Text</value>
+    <comment>DisplayName for DomainProperty &apos;titleText&apos; on DomainClass &apos;Page&apos;</comment>
   </data>
   <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Field.Description" xml:space="preserve">
     <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Field</value>
@@ -445,29 +405,21 @@
     <value>Label Font Size</value>
     <comment>DisplayName for DomainProperty &apos;labelFontSize&apos; on DomainClass &apos;Field&apos;</comment>
   </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Field/labelAlignment.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Field.Label Alignment</value>
-    <comment>Description for DomainProperty &apos;labelAlignment&apos; on DomainClass &apos;Field&apos;</comment>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Field/labelPosition.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Field.Label Position</value>
+    <comment>Description for DomainProperty &apos;labelPosition&apos; on DomainClass &apos;Field&apos;</comment>
   </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Field/labelAlignment.DisplayName" xml:space="preserve">
-    <value>Label Alignment</value>
-    <comment>DisplayName for DomainProperty &apos;labelAlignment&apos; on DomainClass &apos;Field&apos;</comment>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Field/labelPosition.DisplayName" xml:space="preserve">
+    <value>Label Position</value>
+    <comment>DisplayName for DomainProperty &apos;labelPosition&apos; on DomainClass &apos;Field&apos;</comment>
   </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Field/placeholder.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Field.Placeholder</value>
-    <comment>Description for DomainProperty &apos;placeholder&apos; on DomainClass &apos;Field&apos;</comment>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Field/labelText.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Field.Label Text</value>
+    <comment>Description for DomainProperty &apos;labelText&apos; on DomainClass &apos;Field&apos;</comment>
   </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Field/placeholder.DisplayName" xml:space="preserve">
-    <value>Placeholder</value>
-    <comment>DisplayName for DomainProperty &apos;placeholder&apos; on DomainClass &apos;Field&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Field/required.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Field.Required</value>
-    <comment>Description for DomainProperty &apos;required&apos; on DomainClass &apos;Field&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Field/required.DisplayName" xml:space="preserve">
-    <value>Required</value>
-    <comment>DisplayName for DomainProperty &apos;required&apos; on DomainClass &apos;Field&apos;</comment>
+  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Field/labelText.DisplayName" xml:space="preserve">
+    <value>Label Text</value>
+    <comment>DisplayName for DomainProperty &apos;labelText&apos; on DomainClass &apos;Field&apos;</comment>
   </data>
   <data name="UPM_IPS.FMRMRCMMGProyectoIPS.ElementosWeb.Description" xml:space="preserve">
     <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.ElementosWeb</value>

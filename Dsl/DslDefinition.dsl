@@ -84,33 +84,6 @@
       <BaseClass>
         <DomainClassMoniker Name="Elemento" />
       </BaseClass>
-      <Properties>
-        <DomainProperty Id="835588bf-a041-4feb-a0ef-7b2ef0513583" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Atributo.Color Titulo" Name="colorTitulo" DisplayName="Color Titulo">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="d0c8f608-7bad-476f-9caf-4be1d01da5ab" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Atributo.Tamaño Titulo" Name="tamañoTitulo" DisplayName="Tamaño Titulo">
-          <Type>
-            <ExternalTypeMoniker Name="/System/Int16" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="e08a94ff-7bd2-4273-bfe2-03a7b81f0ce3" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Atributo.Alineacion Titulo" Name="alineacionTitulo" DisplayName="Alineacion Titulo">
-          <Type>
-            <DomainEnumerationMoniker Name="PosicionTituloEnum" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="5c0c48dd-3c3e-4d60-ae50-261b81c78545" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Atributo.Fuente Titulo" Name="fuenteTitulo" DisplayName="Fuente Titulo">
-          <Type>
-            <DomainEnumerationMoniker Name="FuentesEnum" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="d9ba8e9e-4d02-4f7b-9d0a-c84b2e2f2062" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Atributo.Formato Visualizacion" Name="formatoVisualizacion" DisplayName="Formato Visualizacion">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-      </Properties>
     </DomainClass>
     <DomainClass Id="f199dab1-e960-43df-a3b8-ad53816ee47a" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Relacion" Name="Relacion" DisplayName="Relacion" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS">
       <BaseClass>
@@ -141,11 +114,6 @@
         <DomainClassMoniker Name="ElementosWeb" />
       </BaseClass>
       <Properties>
-        <DomainProperty Id="d8614fe2-6098-49a2-b685-455ca4390ec5" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Portal.Background Color" Name="backgroundColor" DisplayName="Background Color">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
         <DomainProperty Id="628216c2-ecb6-4cda-aaa7-c57f70e2d9ac" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Portal.Title Text" Name="titleText" DisplayName="Title Text">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
@@ -158,12 +126,22 @@
         </DomainProperty>
         <DomainProperty Id="18e507eb-b4a0-48a1-a9e6-1f18174f83e7" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Portal.Title Font Family" Name="titleFontFamily" DisplayName="Title Font Family">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <DomainEnumerationMoniker Name="FuentesEnum" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="220806c3-ac91-44c3-b76b-399570876324" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Portal.Title Font Size" Name="titleFontSize" DisplayName="Title Font Size">
           <Type>
             <ExternalTypeMoniker Name="/System/Int16" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="115d21de-003f-4d86-86fb-6c62c3d618dc" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Portal.Title Position" Name="titlePosition" DisplayName="Title Position">
+          <Type>
+            <DomainEnumerationMoniker Name="PosicionTituloEnum" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="a3ae277d-25ec-4646-b143-23f37a1604b5" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Portal.Background Color" Name="backgroundColor" DisplayName="Background Color">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
       </Properties>
@@ -180,7 +158,7 @@
         </DomainProperty>
         <DomainProperty Id="76a1d6fd-b66d-456e-b354-e9a328ac44df" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Page.Title Font Family" Name="titleFontFamily" DisplayName="Title Font Family">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <DomainEnumerationMoniker Name="FuentesEnum" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="acd75d8d-a486-4b70-8de8-0b9436d7ca77" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Page.Title Font Size" Name="titleFontSize" DisplayName="Title Font Size">
@@ -188,7 +166,12 @@
             <ExternalTypeMoniker Name="/System/Int16" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="f97ede96-bdcd-4a79-8cc2-82bcd789b1bd" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Page.Additional CSS" Name="additionalCSS" DisplayName="Additional CSS">
+        <DomainProperty Id="0018167a-3fc1-4ede-bcb1-2cefe9a8944a" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Page.Title Position" Name="titlePosition" DisplayName="Title Position">
+          <Type>
+            <DomainEnumerationMoniker Name="PosicionTituloEnum" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="6e5035e0-475b-488c-81dc-74da7d92579d" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Page.Title Text" Name="titleText" DisplayName="Title Text">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
@@ -207,7 +190,7 @@
         </DomainProperty>
         <DomainProperty Id="a020fb36-92c4-4814-89be-f7e89d37a57f" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Field.Label Font Family" Name="labelFontFamily" DisplayName="Label Font Family">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <DomainEnumerationMoniker Name="FuentesEnum" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="15097892-eeb1-4cbf-a891-ef5c100a0635" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Field.Label Font Size" Name="labelFontSize" DisplayName="Label Font Size">
@@ -215,14 +198,19 @@
             <ExternalTypeMoniker Name="/System/Int16" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="9bdc66b1-3d73-4fd7-8b00-240ae2f60db2" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Field.Placeholder" Name="placeholder" DisplayName="Placeholder">
+        <DomainProperty Id="7748d270-81ef-40b4-a7d6-e970b791ab24" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Field.Label Position" Name="labelPosition" DisplayName="Label Position">
+          <Type>
+            <DomainEnumerationMoniker Name="PosicionTituloEnum" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="72d1a13b-21ed-49c4-90e3-e9fe0621ba3b" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Field.Label Text" Name="labelText" DisplayName="Label Text">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="c4b4023c-3e80-453a-a4fb-76150b94ccb8" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Field.Required" Name="required" DisplayName="Required">
+        <DomainProperty Id="c56d1bf6-6c10-433c-98b1-e177002443c4" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Field.Label Format" Name="labelFormat" DisplayName="Label Format">
           <Type>
-            <ExternalTypeMoniker Name="/System/Boolean" />
+            <DomainEnumerationMoniker Name="VisualizacionEnum" />
           </Type>
         </DomainProperty>
       </Properties>
@@ -525,23 +513,6 @@
       </XmlClassData>
       <XmlClassData TypeName="Atributo" MonikerAttributeName="" SerializeId="true" MonikerElementName="atributoMoniker" ElementName="atributo" MonikerTypeName="AtributoMoniker">
         <DomainClassMoniker Name="Atributo" />
-        <ElementData>
-          <XmlPropertyData XmlName="colorTitulo">
-            <DomainPropertyMoniker Name="Atributo/colorTitulo" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="tamañoTitulo">
-            <DomainPropertyMoniker Name="Atributo/tamañoTitulo" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="alineacionTitulo">
-            <DomainPropertyMoniker Name="Atributo/alineacionTitulo" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="fuenteTitulo">
-            <DomainPropertyMoniker Name="Atributo/fuenteTitulo" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="formatoVisualizacion">
-            <DomainPropertyMoniker Name="Atributo/formatoVisualizacion" />
-          </XmlPropertyData>
-        </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="MetaforaAtributo" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaAtributoMoniker" ElementName="metaforaAtributo" MonikerTypeName="MetaforaAtributoMoniker">
         <GeometryShapeMoniker Name="MetaforaAtributo" />
@@ -612,9 +583,6 @@
       <XmlClassData TypeName="Portal" MonikerAttributeName="" SerializeId="true" MonikerElementName="portalMoniker" ElementName="portal" MonikerTypeName="PortalMoniker">
         <DomainClassMoniker Name="Portal" />
         <ElementData>
-          <XmlPropertyData XmlName="backgroundColor">
-            <DomainPropertyMoniker Name="Portal/backgroundColor" />
-          </XmlPropertyData>
           <XmlPropertyData XmlName="titleText">
             <DomainPropertyMoniker Name="Portal/titleText" />
           </XmlPropertyData>
@@ -630,6 +598,12 @@
           <XmlRelationshipData UseFullForm="true" RoleElementName="paged">
             <DomainRelationshipMoniker Name="PortalReferencesPaged" />
           </XmlRelationshipData>
+          <XmlPropertyData XmlName="titlePosition">
+            <DomainPropertyMoniker Name="Portal/titlePosition" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="backgroundColor">
+            <DomainPropertyMoniker Name="Portal/backgroundColor" />
+          </XmlPropertyData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="Page" MonikerAttributeName="" SerializeId="true" MonikerElementName="pageMoniker" ElementName="page" MonikerTypeName="PageMoniker">
@@ -644,12 +618,15 @@
           <XmlPropertyData XmlName="titleFontSize">
             <DomainPropertyMoniker Name="Page/titleFontSize" />
           </XmlPropertyData>
-          <XmlPropertyData XmlName="additionalCSS">
-            <DomainPropertyMoniker Name="Page/additionalCSS" />
-          </XmlPropertyData>
           <XmlRelationshipData UseFullForm="true" RoleElementName="fielded">
             <DomainRelationshipMoniker Name="PageReferencesFielded" />
           </XmlRelationshipData>
+          <XmlPropertyData XmlName="titlePosition">
+            <DomainPropertyMoniker Name="Page/titlePosition" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="titleText">
+            <DomainPropertyMoniker Name="Page/titleText" />
+          </XmlPropertyData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="Field" MonikerAttributeName="" SerializeId="true" MonikerElementName="fieldMoniker" ElementName="field" MonikerTypeName="FieldMoniker">
@@ -664,11 +641,14 @@
           <XmlPropertyData XmlName="labelFontSize">
             <DomainPropertyMoniker Name="Field/labelFontSize" />
           </XmlPropertyData>
-          <XmlPropertyData XmlName="placeholder">
-            <DomainPropertyMoniker Name="Field/placeholder" />
+          <XmlPropertyData XmlName="labelPosition">
+            <DomainPropertyMoniker Name="Field/labelPosition" />
           </XmlPropertyData>
-          <XmlPropertyData XmlName="required">
-            <DomainPropertyMoniker Name="Field/required" />
+          <XmlPropertyData XmlName="labelText">
+            <DomainPropertyMoniker Name="Field/labelText" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="labelFormat">
+            <DomainPropertyMoniker Name="Field/labelFormat" />
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>
