@@ -239,16 +239,6 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
-			if(element is global::UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged)
-			{
-				global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorPortalPage newShape = new global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorPortalPage(this.Partition);
-				return newShape;
-			}
-			if(element is global::UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded)
-			{
-				global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorPageField newShape = new global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorPageField(this.Partition);
-				return newShape;
-			}
 			if(element is global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1)
 			{
 				global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadRelacion newShape = new global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadRelacion(this.Partition);
@@ -267,6 +257,16 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			if(element is global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey)
 			{
 				global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadAtributoKey newShape = new global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadAtributoKey(this.Partition);
+				return newShape;
+			}
+			if(element is global::UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged)
+			{
+				global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorPortalPage newShape = new global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorPortalPage(this.Partition);
+				return newShape;
+			}
+			if(element is global::UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded)
+			{
+				global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorPageField newShape = new global::UPM_IPS.FMRMRCMMGProyectoIPS.ConectorPageField(this.Partition);
 				return newShape;
 			}
 			return base.CreateChildShape(element);
@@ -687,12 +687,12 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.Portal), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.Page), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.Field), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributo), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed partial class FixUpDiagram : FixUpDiagramBase
 		{
 			[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
@@ -917,12 +917,12 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		/// <summary>
 		/// Reroute a connector when the role players of its underlying relationship change
 		/// </summary>
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributo), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.RelacionReferencesAtributoRelacion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesAtributoKey), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed class ConnectorRolePlayerChanged : DslModeling::RolePlayerChangeRule
 		{
 			/// <summary>

@@ -613,6 +613,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 					{
 						global::UPM_IPS.FMRMRCMMGProyectoIPS.Portal sourcePortal = (global::UPM_IPS.FMRMRCMMGProyectoIPS.Portal)candidateSource;
 						global::UPM_IPS.FMRMRCMMGProyectoIPS.Page targetPage = (global::UPM_IPS.FMRMRCMMGProyectoIPS.Page)candidateTarget;
+						if(targetPage == null || global::UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged.GetLinkToPortal(targetPage) != null) return false;
 						if(targetPage == null || sourcePortal == null || global::UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged.GetLinks(sourcePortal, targetPage).Count > 0) return false;
 						return true;
 					}
@@ -743,6 +744,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 					{
 						global::UPM_IPS.FMRMRCMMGProyectoIPS.Page sourcePage = (global::UPM_IPS.FMRMRCMMGProyectoIPS.Page)candidateSource;
 						global::UPM_IPS.FMRMRCMMGProyectoIPS.Field targetField = (global::UPM_IPS.FMRMRCMMGProyectoIPS.Field)candidateTarget;
+						if(targetField == null || global::UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded.GetLinkToPage(targetField) != null) return false;
 						if(targetField == null || sourcePage == null || global::UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded.GetLinks(sourcePage, targetField).Count > 0) return false;
 						return true;
 					}

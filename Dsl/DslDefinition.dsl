@@ -238,14 +238,14 @@
         </DomainProperty>
       </Properties>
       <Source>
-        <DomainRole Id="4f9a326e-578b-486e-85e5-421d7582cb11" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1.Entidad" Name="Entidad" DisplayName="Entidad" PropertyName="Relacion" PropertyDisplayName="Relacion">
+        <DomainRole Id="4f9a326e-578b-486e-85e5-421d7582cb11" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1.Entidad" Name="Entidad" DisplayName="Entidad" PropertyName="Relacion" Multiplicity="OneMany" PropertyDisplayName="Relacion">
           <RolePlayer>
             <DomainClassMoniker Name="Entidad" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="4aca916a-50ce-4b5a-8fac-334ff36acc9c" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1.Relacion" Name="Relacion" DisplayName="Relacion" PropertyName="Entidad" PropertyDisplayName="Entidad">
+        <DomainRole Id="4aca916a-50ce-4b5a-8fac-334ff36acc9c" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1.Relacion" Name="Relacion" DisplayName="Relacion" PropertyName="Entidad" Multiplicity="OneMany" PropertyDisplayName="Entidad">
           <RolePlayer>
             <DomainClassMoniker Name="Relacion" />
           </RolePlayer>
@@ -302,14 +302,14 @@
     </DomainRelationship>
     <DomainRelationship Id="a220121e-0023-4acc-b780-3adf1351a213" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged" Name="PortalReferencesPaged" DisplayName="Portal References Paged" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS">
       <Source>
-        <DomainRole Id="8219b8ea-204c-4dbc-b470-5459cb4d8b38" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged.Portal" Name="Portal" DisplayName="Portal" PropertyName="Paged" PropertyDisplayName="Paged">
+        <DomainRole Id="8219b8ea-204c-4dbc-b470-5459cb4d8b38" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged.Portal" Name="Portal" DisplayName="Portal" PropertyName="Paged" Multiplicity="OneMany" PropertyDisplayName="Paged">
           <RolePlayer>
             <DomainClassMoniker Name="Portal" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="eee0fa3d-2ce7-4b5d-9487-9639c508706e" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged.Page" Name="Page" DisplayName="Page" PropertyName="Portals" PropertyDisplayName="Portals">
+        <DomainRole Id="eee0fa3d-2ce7-4b5d-9487-9639c508706e" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged.Page" Name="Page" DisplayName="Page" PropertyName="Portal" Multiplicity="One" PropertyDisplayName="Portal">
           <RolePlayer>
             <DomainClassMoniker Name="Page" />
           </RolePlayer>
@@ -318,14 +318,14 @@
     </DomainRelationship>
     <DomainRelationship Id="aa479095-ec3a-47dc-976b-ca012860c8c2" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded" Name="PageReferencesFielded" DisplayName="Page References Fielded" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS">
       <Source>
-        <DomainRole Id="ddb2e6c6-3517-430a-a318-ed620ce3b544" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded.Page" Name="Page" DisplayName="Page" PropertyName="Fielded" PropertyDisplayName="Fielded">
+        <DomainRole Id="ddb2e6c6-3517-430a-a318-ed620ce3b544" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded.Page" Name="Page" DisplayName="Page" PropertyName="Fielded" Multiplicity="OneMany" PropertyDisplayName="Fielded">
           <RolePlayer>
             <DomainClassMoniker Name="Page" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="f1c8fe6d-a100-4d69-beed-8f15277ea753" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded.Field" Name="Field" DisplayName="Field" PropertyName="Paged" PropertyDisplayName="Paged">
+        <DomainRole Id="f1c8fe6d-a100-4d69-beed-8f15277ea753" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded.Field" Name="Field" DisplayName="Field" PropertyName="Page" Multiplicity="One" PropertyDisplayName="Page">
           <RolePlayer>
             <DomainClassMoniker Name="Field" />
           </RolePlayer>
@@ -334,7 +334,7 @@
     </DomainRelationship>
     <DomainRelationship Id="d84a285f-6b12-4ad9-a28a-b546012dbd08" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementosWebbed" Name="TapizHasElementosWebbed" DisplayName="Tapiz Has Elementos Webbed" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" IsEmbedding="true">
       <Source>
-        <DomainRole Id="5871ed2f-e8b4-4412-8321-dbf789c9164f" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementosWebbed.Tapiz" Name="Tapiz" DisplayName="Tapiz" PropertyName="ElementosWebbed" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Elementos Webbed">
+        <DomainRole Id="5871ed2f-e8b4-4412-8321-dbf789c9164f" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementosWebbed.Tapiz" Name="Tapiz" DisplayName="Tapiz" PropertyName="ElementosWebbed" Multiplicity="OneMany" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Elementos Webbed">
           <RolePlayer>
             <DomainClassMoniker Name="Tapiz" />
           </RolePlayer>
@@ -936,14 +936,6 @@
     </ShapeMaps>
     <ConnectorMaps>
       <ConnectorMap>
-        <ConnectorMoniker Name="ConectorPortalPage" />
-        <DomainRelationshipMoniker Name="PortalReferencesPaged" />
-      </ConnectorMap>
-      <ConnectorMap>
-        <ConnectorMoniker Name="ConectorPageField" />
-        <DomainRelationshipMoniker Name="PageReferencesFielded" />
-      </ConnectorMap>
-      <ConnectorMap>
         <ConnectorMoniker Name="ConectorEntidadRelacion" />
         <DomainRelationshipMoniker Name="EntidadReferencesRelacion1" />
         <DecoratorMap>
@@ -966,6 +958,14 @@
       <ConnectorMap>
         <ConnectorMoniker Name="ConectorEntidadAtributoKey" />
         <DomainRelationshipMoniker Name="EntidadReferencesAtributoKey" />
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="ConectorPortalPage" />
+        <DomainRelationshipMoniker Name="PortalReferencesPaged" />
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="ConectorPageField" />
+        <DomainRelationshipMoniker Name="PageReferencesFielded" />
       </ConnectorMap>
     </ConnectorMaps>
   </Diagram>

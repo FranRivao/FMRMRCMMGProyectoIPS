@@ -405,7 +405,7 @@
         <metaforePageMoniker Id="580ccd33-e9ec-4430-9fd5-e46720794032" />
       </nodes>
     </conectorPortalPage>
-    <conectorPortalPage Id="bb144ca8-bb4d-41e9-a1b7-e6a9cda9072b" edgePoints="[(24.5 : 1.875); (24.5 : 6)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <conectorPortalPage Id="bb144ca8-bb4d-41e9-a1b7-e6a9cda9072b" edgePoints="[(24.5 : 1.875); (24.5 : 6)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <portalReferencesPagedMoniker Id="c2cc7245-e5b0-4242-868a-1c7bbbe909c4" />
       <nodes>
         <metaforaPortalMoniker Id="94bb76f1-16df-4eb7-b0bb-d6e90807a96c" />
@@ -440,14 +440,14 @@
         <metaforaFieldMoniker Id="1b367cbe-00e7-4964-9fed-75fd67a657f5" />
       </nodes>
     </conectorPageField>
-    <conectorPageField Id="fb361005-cd01-4be2-b183-5380ea050f7e" edgePoints="[(20.2812525 : 6.625); (20.2812525 : 7.7047043864433)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <conectorPageField Id="fb361005-cd01-4be2-b183-5380ea050f7e" edgePoints="[(20.2812525 : 6.625); (20.2812525 : 7.7047043864433)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <pageReferencesFieldedMoniker Id="13eed075-4bf5-40a1-bc5e-25df8552985d" />
       <nodes>
         <metaforePageMoniker Id="580ccd33-e9ec-4430-9fd5-e46720794032" />
         <metaforaFieldMoniker Id="68db99e8-42ec-4290-8aa6-24594e0bc6c1" />
       </nodes>
     </conectorPageField>
-    <conectorPageField Id="6a713b6a-43a0-4b27-b842-320848ccd063" edgePoints="[(23.875 : 6.8125); (23.0854685623498 : 6.8125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <conectorPageField Id="6a713b6a-43a0-4b27-b842-320848ccd063" edgePoints="[(23.875 : 6.8125); (23.0854685623498 : 6.8125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <pageReferencesFieldedMoniker Id="de83e09f-f5af-4254-917a-9f81c8fb5f67" />
       <nodes>
         <metaforePageMoniker Id="e8ea1b2a-f8e8-499d-9efe-aed88b8ff30a" />
@@ -468,7 +468,7 @@
         <metaforaFieldMoniker Id="ac124a03-056e-4a4e-9645-c6d3d53230cc" />
       </nodes>
     </conectorPageField>
-    <conectorPageField Id="c89a42b9-0304-4cde-8f97-0a2c0a1f898d" edgePoints="[(24.65625 : 7); (24.65625 : 9.64673998819796)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <conectorPageField Id="c89a42b9-0304-4cde-8f97-0a2c0a1f898d" edgePoints="[(24.65625 : 7); (24.65625 : 9.64673998819796)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <pageReferencesFieldedMoniker Id="b3f425c2-6346-4c7c-ae1a-11d3b767c585" />
       <nodes>
         <metaforePageMoniker Id="e8ea1b2a-f8e8-499d-9efe-aed88b8ff30a" />
@@ -482,14 +482,14 @@
         <metaforaFieldMoniker Id="0a0f9a18-49da-496f-b4bf-ac6c55d759a0" />
       </nodes>
     </conectorPageField>
-    <conectorPageField Id="41f347db-076b-440c-a6f8-8e20c8e2f9f1" edgePoints="[(33.6875 : 6.875); (33.6875 : 8.21888356896629)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <conectorPageField Id="41f347db-076b-440c-a6f8-8e20c8e2f9f1" edgePoints="[(33.6875 : 6.875); (33.6875 : 8.21888356896629)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <pageReferencesFieldedMoniker Id="f8f97a59-a686-4e07-a401-94620bf48d3c" />
       <nodes>
         <metaforePageMoniker Id="5fa7944c-d4a0-48ec-b1de-4cf20625193c" />
         <metaforaFieldMoniker Id="40ee4d4e-0257-46ae-88ce-72a259fbd1c7" />
       </nodes>
     </conectorPageField>
-    <conectorPageField Id="93ce8c18-a12b-44e6-abf6-2e54e79491bc" edgePoints="[(34.5625 : 6.875); (34.5625 : 8.46888356896629)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <conectorPageField Id="93ce8c18-a12b-44e6-abf6-2e54e79491bc" edgePoints="[(34.5625 : 6.875); (34.5625 : 8.46888356896629)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <pageReferencesFieldedMoniker Id="3d71d52f-b9d3-4539-9258-249fc22efb3e" />
       <nodes>
         <metaforePageMoniker Id="5fa7944c-d4a0-48ec-b1de-4cf20625193c" />
@@ -503,14 +503,14 @@
         <metaforaFieldMoniker Id="c40a0723-e5b7-4535-8ff6-8a171069b9ce" />
       </nodes>
     </conectorPageField>
-    <conectorPageField Id="3d55bf6f-f159-4c1e-825a-3632dedb3516" edgePoints="[(27.9375 : 6.75); (27.9375 : 7.79547032855685)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <conectorPageField Id="3d55bf6f-f159-4c1e-825a-3632dedb3516" edgePoints="[(27.9375 : 6.75); (27.9375 : 7.79547032855685)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <pageReferencesFieldedMoniker Id="aa6d155a-0db6-4960-a447-117fc6144b76" />
       <nodes>
         <metaforePageMoniker Id="f2562ad4-7dd3-4401-9137-04c7b437b5a0" />
         <metaforaFieldMoniker Id="b4203f23-3f28-4bdb-8c7a-7b74d2ccdeb5" />
       </nodes>
     </conectorPageField>
-    <conectorPageField Id="a2e67cc1-0977-40c3-b74b-b35258f1378c" edgePoints="[(31.0625 : 6.75); (31.0625 : 7.42047032855685)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <conectorPageField Id="a2e67cc1-0977-40c3-b74b-b35258f1378c" edgePoints="[(31.0625 : 6.75); (31.0625 : 7.42047032855685)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <pageReferencesFieldedMoniker Id="0432c1d9-064a-44e0-abb2-8693c9c4f42a" />
       <nodes>
         <metaforePageMoniker Id="6d0ee170-e972-4e6d-883d-707a9d0b61bb" />

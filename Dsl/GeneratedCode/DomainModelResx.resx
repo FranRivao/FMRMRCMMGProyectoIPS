@@ -626,7 +626,7 @@
     <comment>DisplayName for DomainRole &apos;Page&apos; on DomainRelationship &apos;PortalReferencesPaged&apos;</comment>
   </data>
   <data name="UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged/Page.PropertyDisplayName" xml:space="preserve">
-    <value>Portals</value>
+    <value>Portal</value>
     <comment>PropertyDisplayName for DomainRole &apos;Page&apos; on DomainRelationship &apos;PortalReferencesPaged&apos;</comment>
   </data>
   <data name="UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded.Description" xml:space="preserve">
@@ -658,7 +658,7 @@
     <comment>DisplayName for DomainRole &apos;Field&apos; on DomainRelationship &apos;PageReferencesFielded&apos;</comment>
   </data>
   <data name="UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded/Field.PropertyDisplayName" xml:space="preserve">
-    <value>Paged</value>
+    <value>Page</value>
     <comment>PropertyDisplayName for DomainRole &apos;Field&apos; on DomainRelationship &apos;PageReferencesFielded&apos;</comment>
   </data>
   <data name="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementosWebbed.Description" xml:space="preserve">

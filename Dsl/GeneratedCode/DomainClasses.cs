@@ -2087,18 +2087,22 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		}
 		
 		#endregion
-		#region Portals opposite domain role accessor
-		
+		#region Portal opposite domain role accessor
 		/// <summary>
-		/// Gets a list of Portals.
+		/// Gets or sets Portal.
 		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged.Page
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Portal> Portals
+		public virtual Portal Portal
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Portal>, Portal>(global::UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged.PageDomainRoleId);
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged.PageDomainRoleId) as Portal;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged.PageDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -2680,18 +2684,22 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		}
 		
 		#endregion
-		#region Paged opposite domain role accessor
-		
+		#region Page opposite domain role accessor
 		/// <summary>
-		/// Gets a list of Paged.
+		/// Gets or sets Page.
 		/// Description for UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded.Field
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Page> Paged
+		public virtual Page Page
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Page>, Page>(global::UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded.FieldDomainRoleId);
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded.FieldDomainRoleId) as Page;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded.FieldDomainRoleId, value);
 			}
 		}
 		#endregion

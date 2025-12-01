@@ -336,7 +336,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		/// </summary>
 		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1/Entidad.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1/Entidad.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Relacion", PropertyDisplayNameKey="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1/Entidad.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Relacion", PropertyDisplayNameKey="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1/Entidad.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.OneMany)]
 		[DslModeling::DomainObjectId("4f9a326e-578b-486e-85e5-421d7582cb11")]
 		public virtual Entidad Entidad
 		{
@@ -377,7 +377,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		/// </summary>
 		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1/Relacion.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1/Relacion.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Entidad", PropertyDisplayNameKey="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1/Relacion.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Entidad", PropertyDisplayNameKey="UPM_IPS.FMRMRCMMGProyectoIPS.EntidadReferencesRelacion1/Relacion.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.OneMany)]
 		[DslModeling::DomainObjectId("4aca916a-50ce-4b5a-8fac-334ff36acc9c")]
 		public virtual Relacion Relacion
 		{
@@ -1384,7 +1384,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		/// </summary>
 		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged/Portal.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged/Portal.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Paged", PropertyDisplayNameKey="UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged/Portal.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Paged", PropertyDisplayNameKey="UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged/Portal.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.OneMany)]
 		[DslModeling::DomainObjectId("8219b8ea-204c-4dbc-b470-5459cb4d8b38")]
 		public virtual Portal Portal
 		{
@@ -1401,15 +1401,25 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		}
 				
 		#endregion
-		#region Static methods to access Portals of a Page
+		#region Static methods to access Portal of a Page
 		/// <summary>
-		/// Gets a list of Portals.
+		/// Gets Portal.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<Portal> GetPortals(Page element)
+		public static Portal GetPortal(Page element)
 		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<Portal>, Portal>(element, PageDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, PageDomainRoleId) as Portal;
+		}
+		
+		/// <summary>
+		/// Sets Portal.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetPortal(Page element, Portal newPortal)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, PageDomainRoleId, newPortal);
 		}
 		#endregion
 		#region Page domain role code
@@ -1425,7 +1435,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		/// </summary>
 		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged/Page.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged/Page.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Portals", PropertyDisplayNameKey="UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged/Page.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Portal", PropertyDisplayNameKey="UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged/Page.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("eee0fa3d-2ce7-4b5d-9487-9639c508706e")]
 		public virtual Page Page
 		{
@@ -1466,13 +1476,22 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		#endregion
 		#region Page link accessor
 		/// <summary>
-		/// Get the list of PortalReferencesPaged links to a Page.
+		/// Get the PortalReferencesPaged link to a Page.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged> GetLinksToPortals ( global::UPM_IPS.FMRMRCMMGProyectoIPS.Page pageInstance )
+		public static global::UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged GetLinkToPortal (global::UPM_IPS.FMRMRCMMGProyectoIPS.Page pageInstance)
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged>(pageInstance, global::UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged.PageDomainRoleId);
+			global::System.Collections.Generic.IList<global::UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged>(pageInstance, global::UPM_IPS.FMRMRCMMGProyectoIPS.PortalReferencesPaged.PageDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Page not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
 		}
 		#endregion
 		#region PortalReferencesPaged instance accessors
@@ -1604,7 +1623,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		/// </summary>
 		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded/Page.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded/Page.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Fielded", PropertyDisplayNameKey="UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded/Page.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Fielded", PropertyDisplayNameKey="UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded/Page.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.OneMany)]
 		[DslModeling::DomainObjectId("ddb2e6c6-3517-430a-a318-ed620ce3b544")]
 		public virtual Page Page
 		{
@@ -1621,15 +1640,25 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		}
 				
 		#endregion
-		#region Static methods to access Paged of a Field
+		#region Static methods to access Page of a Field
 		/// <summary>
-		/// Gets a list of Paged.
+		/// Gets Page.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<Page> GetPaged(Field element)
+		public static Page GetPage(Field element)
 		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<Page>, Page>(element, FieldDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, FieldDomainRoleId) as Page;
+		}
+		
+		/// <summary>
+		/// Sets Page.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetPage(Field element, Page newPage)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, FieldDomainRoleId, newPage);
 		}
 		#endregion
 		#region Field domain role code
@@ -1645,7 +1674,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		/// </summary>
 		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded/Field.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded/Field.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Paged", PropertyDisplayNameKey="UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded/Field.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Page", PropertyDisplayNameKey="UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded/Field.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("f1c8fe6d-a100-4d69-beed-8f15277ea753")]
 		public virtual Field Field
 		{
@@ -1686,13 +1715,22 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		#endregion
 		#region Field link accessor
 		/// <summary>
-		/// Get the list of PageReferencesFielded links to a Field.
+		/// Get the PageReferencesFielded link to a Field.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded> GetLinksToPaged ( global::UPM_IPS.FMRMRCMMGProyectoIPS.Field fieldInstance )
+		public static global::UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded GetLinkToPage (global::UPM_IPS.FMRMRCMMGProyectoIPS.Field fieldInstance)
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded>(fieldInstance, global::UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded.FieldDomainRoleId);
+			global::System.Collections.Generic.IList<global::UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded>(fieldInstance, global::UPM_IPS.FMRMRCMMGProyectoIPS.PageReferencesFielded.FieldDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Field not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
 		}
 		#endregion
 		#region PageReferencesFielded instance accessors
@@ -1824,7 +1862,7 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		/// </summary>
 		[DslDesign::DisplayNameResource("UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementosWebbed/Tapiz.DisplayName", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementosWebbed/Tapiz.Description", typeof(global::UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel), "UPM_IPS.FMRMRCMMGProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "ElementosWebbed", PropertyDisplayNameKey="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementosWebbed/Tapiz.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "ElementosWebbed", PropertyDisplayNameKey="UPM_IPS.FMRMRCMMGProyectoIPS.TapizHasElementosWebbed/Tapiz.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.OneMany)]
 		[DslModeling::DomainObjectId("5871ed2f-e8b4-4412-8321-dbf789c9164f")]
 		public virtual Tapiz Tapiz
 		{

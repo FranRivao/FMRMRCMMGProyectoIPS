@@ -26,13 +26,13 @@
             </xsd:complexType>
           </xsd:element>
           <!-- Relationship: TapizHasElementosWebbed -->
-          <xsd:element name="elementosWebbed" minOccurs="0" maxOccurs="1">
+          <xsd:element name="elementosWebbed" minOccurs="1" maxOccurs="1">
             <xsd:annotation>
               <xsd:documentation>Instances of TapizHasElementosWebbed</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element ref="tapizHasElementosWebbed" minOccurs="0" maxOccurs="unbounded">
+                <xsd:element ref="tapizHasElementosWebbed" minOccurs="1" maxOccurs="unbounded">
                   <xsd:annotation>
                     <xsd:documentation>[Instance of TapizHasElementosWebbed needs to be serialized in full-form]</xsd:documentation>
                   </xsd:annotation>
@@ -96,13 +96,13 @@
             </xsd:complexType>
           </xsd:element>
           <!-- Relationship: EntidadReferencesRelacion1 -->
-          <xsd:element name="relacion" minOccurs="0" maxOccurs="1">
+          <xsd:element name="relacion" minOccurs="1" maxOccurs="1">
             <xsd:annotation>
               <xsd:documentation>Instances of EntidadReferencesRelacion1</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element ref="entidadReferencesRelacion1" minOccurs="0" maxOccurs="unbounded">
+                <xsd:element ref="entidadReferencesRelacion1" minOccurs="1" maxOccurs="unbounded">
                   <xsd:annotation>
                     <xsd:documentation>[Instance of EntidadReferencesRelacion1 needs to be serialized in full-form]</xsd:documentation>
                   </xsd:annotation>
@@ -322,13 +322,13 @@
       <xsd:extension base="ElementosWeb">
         <xsd:sequence minOccurs="0" maxOccurs="1">
           <!-- Relationship: PortalReferencesPaged -->
-          <xsd:element name="paged" minOccurs="0" maxOccurs="1">
+          <xsd:element name="paged" minOccurs="1" maxOccurs="1">
             <xsd:annotation>
               <xsd:documentation>Instances of PortalReferencesPaged</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element ref="portalReferencesPaged" minOccurs="0" maxOccurs="unbounded">
+                <xsd:element ref="portalReferencesPaged" minOccurs="1" maxOccurs="unbounded">
                   <xsd:annotation>
                     <xsd:documentation>[Instance of PortalReferencesPaged needs to be serialized in full-form]</xsd:documentation>
                   </xsd:annotation>
@@ -378,13 +378,13 @@
       <xsd:extension base="ElementosWeb">
         <xsd:sequence minOccurs="0" maxOccurs="1">
           <!-- Relationship: PageReferencesFielded -->
-          <xsd:element name="fielded" minOccurs="0" maxOccurs="1">
+          <xsd:element name="fielded" minOccurs="1" maxOccurs="1">
             <xsd:annotation>
               <xsd:documentation>Instances of PageReferencesFielded</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element ref="pageReferencesFielded" minOccurs="0" maxOccurs="unbounded">
+                <xsd:element ref="pageReferencesFielded" minOccurs="1" maxOccurs="unbounded">
                   <xsd:annotation>
                     <xsd:documentation>[Instance of PageReferencesFielded needs to be serialized in full-form]</xsd:documentation>
                   </xsd:annotation>

@@ -13,6 +13,30 @@ using DslValidation = global::Microsoft.VisualStudio.Modeling.Validation;
 namespace UPM_IPS.FMRMRCMMGProyectoIPS
 {
 	[DslValidation::ValidationState(DslValidation::ValidationState.Enabled)]
+	public partial class Tapiz
+	{
+		/// <summary>
+		/// Checks that the relationships that have a multiplicity of One or OneMany do actually have a link.
+		/// </summary>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "Generated code.")]
+		[DslValidation::ValidationMethod(DslValidation::ValidationCategories.Open | DslValidation::ValidationCategories.Save | DslValidation::ValidationCategories.Menu)]
+		private void ValidateTapizMultiplicity (DslValidation::ValidationContext context)
+		{
+			if (this.ElementosWebbed.Count == 0)
+			{
+				context.LogViolation(DslValidation::ViolationType.Error,
+					string.Format(global::System.Globalization.CultureInfo.CurrentCulture, 
+						UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel.SingletonResourceManager.GetString("MinimumMultiplicityMissingLink"), 
+						"Tapiz", "", "ElementosWebbed"),
+						"DSL0001", this);
+			}
+		} // ValidateTapizMultiplicity
+	} // class Tapiz
+} // UPM_IPS.FMRMRCMMGProyectoIPS
+
+namespace UPM_IPS.FMRMRCMMGProyectoIPS
+{
+	[DslValidation::ValidationState(DslValidation::ValidationState.Enabled)]
 	public partial class Entidad
 	{
 		/// <summary>
@@ -22,6 +46,14 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		[DslValidation::ValidationMethod(DslValidation::ValidationCategories.Open | DslValidation::ValidationCategories.Save | DslValidation::ValidationCategories.Menu)]
 		private void ValidateEntidadMultiplicity (DslValidation::ValidationContext context)
 		{
+			if (this.Relacion.Count == 0)
+			{
+				context.LogViolation(DslValidation::ViolationType.Error,
+					string.Format(global::System.Globalization.CultureInfo.CurrentCulture, 
+						UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel.SingletonResourceManager.GetString("MinimumMultiplicityMissingLink"), 
+						"Entidad", "", "Relacion"),
+						"DSL0001", this);
+			}
 			if (this.AtributoKey == null)
 			{
 				context.LogViolation(DslValidation::ViolationType.Error,
@@ -56,6 +88,30 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			}
 		} // ValidateAtributoMultiplicity
 	} // class Atributo
+} // UPM_IPS.FMRMRCMMGProyectoIPS
+
+namespace UPM_IPS.FMRMRCMMGProyectoIPS
+{
+	[DslValidation::ValidationState(DslValidation::ValidationState.Enabled)]
+	public partial class Relacion
+	{
+		/// <summary>
+		/// Checks that the relationships that have a multiplicity of One or OneMany do actually have a link.
+		/// </summary>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "Generated code.")]
+		[DslValidation::ValidationMethod(DslValidation::ValidationCategories.Open | DslValidation::ValidationCategories.Save | DslValidation::ValidationCategories.Menu)]
+		private void ValidateRelacionMultiplicity (DslValidation::ValidationContext context)
+		{
+			if (this.Entidad.Count == 0)
+			{
+				context.LogViolation(DslValidation::ViolationType.Error,
+					string.Format(global::System.Globalization.CultureInfo.CurrentCulture, 
+						UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel.SingletonResourceManager.GetString("MinimumMultiplicityMissingLink"), 
+						"Relacion", "", "Entidad"),
+						"DSL0001", this);
+			}
+		} // ValidateRelacionMultiplicity
+	} // class Relacion
 } // UPM_IPS.FMRMRCMMGProyectoIPS
 
 namespace UPM_IPS.FMRMRCMMGProyectoIPS
@@ -104,6 +160,86 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			}
 		} // ValidateAtributoRelacionMultiplicity
 	} // class AtributoRelacion
+} // UPM_IPS.FMRMRCMMGProyectoIPS
+
+namespace UPM_IPS.FMRMRCMMGProyectoIPS
+{
+	[DslValidation::ValidationState(DslValidation::ValidationState.Enabled)]
+	public partial class Portal
+	{
+		/// <summary>
+		/// Checks that the relationships that have a multiplicity of One or OneMany do actually have a link.
+		/// </summary>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "Generated code.")]
+		[DslValidation::ValidationMethod(DslValidation::ValidationCategories.Open | DslValidation::ValidationCategories.Save | DslValidation::ValidationCategories.Menu)]
+		private void ValidatePortalMultiplicity (DslValidation::ValidationContext context)
+		{
+			if (this.Paged.Count == 0)
+			{
+				context.LogViolation(DslValidation::ViolationType.Error,
+					string.Format(global::System.Globalization.CultureInfo.CurrentCulture, 
+						UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel.SingletonResourceManager.GetString("MinimumMultiplicityMissingLink"), 
+						"Portal", "", "Paged"),
+						"DSL0001", this);
+			}
+		} // ValidatePortalMultiplicity
+	} // class Portal
+} // UPM_IPS.FMRMRCMMGProyectoIPS
+
+namespace UPM_IPS.FMRMRCMMGProyectoIPS
+{
+	[DslValidation::ValidationState(DslValidation::ValidationState.Enabled)]
+	public partial class Page
+	{
+		/// <summary>
+		/// Checks that the relationships that have a multiplicity of One or OneMany do actually have a link.
+		/// </summary>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "Generated code.")]
+		[DslValidation::ValidationMethod(DslValidation::ValidationCategories.Open | DslValidation::ValidationCategories.Save | DslValidation::ValidationCategories.Menu)]
+		private void ValidatePageMultiplicity (DslValidation::ValidationContext context)
+		{
+			if (this.Portal == null)
+			{
+				context.LogViolation(DslValidation::ViolationType.Error,
+					string.Format(global::System.Globalization.CultureInfo.CurrentCulture, 
+						UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel.SingletonResourceManager.GetString("MinimumMultiplicityMissingLink"), 
+						"Page", "", "Portal"),
+						"DSL0001", this);
+			}
+			if (this.Fielded.Count == 0)
+			{
+				context.LogViolation(DslValidation::ViolationType.Error,
+					string.Format(global::System.Globalization.CultureInfo.CurrentCulture, 
+						UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel.SingletonResourceManager.GetString("MinimumMultiplicityMissingLink"), 
+						"Page", "", "Fielded"),
+						"DSL0001", this);
+			}
+		} // ValidatePageMultiplicity
+	} // class Page
+} // UPM_IPS.FMRMRCMMGProyectoIPS
+
+namespace UPM_IPS.FMRMRCMMGProyectoIPS
+{
+	[DslValidation::ValidationState(DslValidation::ValidationState.Enabled)]
+	public partial class Field
+	{
+		/// <summary>
+		/// Checks that the relationships that have a multiplicity of One or OneMany do actually have a link.
+		/// </summary>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "Generated code.")]
+		[DslValidation::ValidationMethod(DslValidation::ValidationCategories.Open | DslValidation::ValidationCategories.Save | DslValidation::ValidationCategories.Menu)]
+		private void ValidateFieldMultiplicity (DslValidation::ValidationContext context)
+		{
+			if (this.Page == null)
+			{
+				context.LogViolation(DslValidation::ViolationType.Error,
+					string.Format(global::System.Globalization.CultureInfo.CurrentCulture, 
+						UPM_IPS.FMRMRCMMGProyectoIPS.FMRMRCMMGProyectoIPSDomainModel.SingletonResourceManager.GetString("MinimumMultiplicityMissingLink"), 
+						"Field", "", "Page"),
+						"DSL0001", this);
+			}
+		} // ValidateFieldMultiplicity
+	} // class Field
 } // UPM_IPS.FMRMRCMMGProyectoIPS
 
 	
