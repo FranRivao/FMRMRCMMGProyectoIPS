@@ -925,6 +925,10 @@
     <value>Metafore Page</value>
     <comment>DisplayName for DomainClass &apos;MetaforePage&apos;</comment>
   </data>
+  <data name="MetaforePagetitleTextDecDefaultText" xml:space="preserve">
+    <value>titleTextDec</value>
+    <comment>Text decorator default text</comment>
+  </data>
   <data name="UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaField.Description" xml:space="preserve">
     <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaField</value>
     <comment>Description for DomainClass &apos;MetaforaField&apos;</comment>
@@ -932,6 +936,10 @@
   <data name="UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaField.DisplayName" xml:space="preserve">
     <value>Metafora Field</value>
     <comment>DisplayName for DomainClass &apos;MetaforaField&apos;</comment>
+  </data>
+  <data name="MetaforaFieldlabelTextDecDefaultText" xml:space="preserve">
+    <value>labelTextDec</value>
+    <comment>Text decorator default text</comment>
   </data>
   <data name="UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadAtributo.Description" xml:space="preserve">
     <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadAtributo</value>

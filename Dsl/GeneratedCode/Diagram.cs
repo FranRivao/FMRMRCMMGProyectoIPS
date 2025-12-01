@@ -283,6 +283,8 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 			global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaEntidad.DecoratorsInitialized += MetaforaEntidadDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaRelacion.DecoratorsInitialized += MetaforaRelacionDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaPortal.DecoratorsInitialized += MetaforaPortalDecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforePage.DecoratorsInitialized += MetaforePageDecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaField.DecoratorsInitialized += MetaforaFieldDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaAtributo.DecoratorsInitialized += MetaforaAtributoDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaAtributoRelacion.DecoratorsInitialized += MetaforaAtributoRelacionDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaAtributoKey.DecoratorsInitialized += MetaforaAtributoKeyDecoratorMap.OnDecoratorsInitialized;
@@ -340,6 +342,42 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 				
 				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.FMRMRCMMGProyectoIPS.Portal.titleTextDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "titleTextDec").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for MetaforePage.
+		/// </summary>
+		internal static partial class MetaforePageDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for MetaforePage.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.FMRMRCMMGProyectoIPS.Page.titleTextDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "titleTextDec").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for MetaforaField.
+		/// </summary>
+		internal static partial class MetaforaFieldDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for MetaforaField.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.FMRMRCMMGProyectoIPS.Field.labelTextDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "labelTextDec").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
 		

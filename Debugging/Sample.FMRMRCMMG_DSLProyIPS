@@ -234,22 +234,22 @@
     <tapizHasElementosWebbed Id="5154f811-8d34-4298-adbc-a1772aeb6a1b">
       <portal Id="504629d1-2939-4e68-a29e-182ea2f9014d" titleText="SISTEMA RED BANCARIA" titleColor="662E23" titleFontFamily="Arial" titleFontSize="18" titlePosition="Derecha" backgroundColor="F54927">
         <paged>
-          <portalReferencesPaged Id="f4591ffe-07ea-4b5c-8aa8-252a446d90a4">
+          <portalReferencesPaged Id="a95ef072-2875-4393-8357-76ff4c8af168">
             <pageMoniker Id="e904041c-8f57-4fcd-a73e-a658e04ada44" />
           </portalReferencesPaged>
-          <portalReferencesPaged Id="cced6fe8-603f-48c1-886a-a31f89de012f">
+          <portalReferencesPaged Id="554d6c47-48b1-4589-9781-3fbb85ff68ad">
             <pageMoniker Id="90b0562a-b40c-46d5-a998-900a5c90d8bf" />
           </portalReferencesPaged>
-          <portalReferencesPaged Id="31d8693e-2fcb-46cf-bcf9-c468f03acaf0">
+          <portalReferencesPaged Id="c2cc7245-e5b0-4242-868a-1c7bbbe909c4">
             <pageMoniker Id="0e185053-6637-4674-97e4-b6d9d08deb64" />
           </portalReferencesPaged>
-          <portalReferencesPaged Id="db059cf0-4a2d-44a0-b713-302f3402c897">
+          <portalReferencesPaged Id="96adb0fe-afe9-46c9-94cf-a75a9ae64d0f">
             <pageMoniker Id="bf033e68-074c-466c-affc-8dd468f84086" />
           </portalReferencesPaged>
-          <portalReferencesPaged Id="090dc1d7-bbfe-483a-b866-1c7fcfda5f11">
+          <portalReferencesPaged Id="57d5061f-fe6c-454f-8905-57de531e3bc7">
             <pageMoniker Id="65096276-fffe-49ea-8e6d-3cf3572d52e0" />
           </portalReferencesPaged>
-          <portalReferencesPaged Id="5754c2c5-a29d-40b4-becb-debe11e497e7">
+          <portalReferencesPaged Id="8e8c4480-4084-4249-ac20-0e45de1160cb">
             <pageMoniker Id="edfba211-b1df-4602-a710-ccd5964f1290" />
           </portalReferencesPaged>
         </paged>
@@ -258,19 +258,19 @@
     <tapizHasElementosWebbed Id="e90e5f3f-62b3-4d85-9bb0-06a6f5ee4273">
       <page Id="0e185053-6637-4674-97e4-b6d9d08deb64" titleColor="7E0EC5" titleFontFamily="Arial" titleFontSize="14" titlePosition="Izquierda" titleText="Tarjeta">
         <fielded>
-          <pageReferencesFielded Id="e0d5ff6e-df5d-4254-ab0d-527a84d43845">
+          <pageReferencesFielded Id="de83e09f-f5af-4254-917a-9f81c8fb5f67">
             <fieldMoniker Id="59b48909-7ac3-44a9-991a-2d1cc5d92c65" />
           </pageReferencesFielded>
-          <pageReferencesFielded Id="48bf480e-c6d0-4917-ad94-0a14341b9a69">
+          <pageReferencesFielded Id="ed4dbd78-2695-48a4-981b-198f3d8fd065">
             <fieldMoniker Id="021eaefa-aaf3-4561-a194-723b99cd4a07" />
           </pageReferencesFielded>
-          <pageReferencesFielded Id="57b65f17-bb71-4d14-bf42-c1d76c400f8c">
+          <pageReferencesFielded Id="0bdcb76d-d186-4a66-96d9-00514da26483">
             <fieldMoniker Id="77c58f1d-cafa-45a0-b8ea-a3d9c541f048" />
           </pageReferencesFielded>
-          <pageReferencesFielded Id="03f84fa9-9f92-4d9a-b958-047aeb527cc8">
+          <pageReferencesFielded Id="b3f425c2-6346-4c7c-ae1a-11d3b767c585">
             <fieldMoniker Id="4ed6e075-77a5-40b7-b0a1-338c43ecc023" />
           </pageReferencesFielded>
-          <pageReferencesFielded Id="8a535132-af8a-45cb-a7a3-e346a8df2d8b">
+          <pageReferencesFielded Id="b98911d1-af3a-41cd-abda-dfd5e8ad55b6">
             <fieldMoniker Id="47682f1f-24d6-4545-84e5-e4222f4285c8" />
           </pageReferencesFielded>
         </fielded>
@@ -288,10 +288,10 @@
     <tapizHasElementosWebbed Id="abac2710-a96f-4380-9225-57a61000117f">
       <page Id="90b0562a-b40c-46d5-a998-900a5c90d8bf" titleColor="7E0EC5" titleFontFamily="Arial" titleFontSize="14" titlePosition="Izquierda" titleText="Banco">
         <fielded>
-          <pageReferencesFielded Id="584eb031-8f14-4296-bcc1-e6a112c1bb59">
+          <pageReferencesFielded Id="993dbf8c-df92-42d1-96ab-e28a27bf50d2">
             <fieldMoniker Id="71186f63-aa70-4dd1-9333-cd1a7eba53a8" />
           </pageReferencesFielded>
-          <pageReferencesFielded Id="b0adacbc-72d8-425d-af82-02fe60686a3b">
+          <pageReferencesFielded Id="13eed075-4bf5-40a1-bc5e-25df8552985d">
             <fieldMoniker Id="160e00d1-8ada-4506-94ed-d92baaddf1d9" />
           </pageReferencesFielded>
         </fielded>
@@ -300,7 +300,7 @@
     <tapizHasElementosWebbed Id="54332651-c4ef-4e63-a323-bb1972b34d6b">
       <page Id="bf033e68-074c-466c-affc-8dd468f84086" titleColor="7E0EC5" titleFontFamily="Arial" titleFontSize="14" titlePosition="Izquierda" titleText="Cuenta">
         <fielded>
-          <pageReferencesFielded Id="b16a3a48-c834-4d68-b7bb-b48b74c5a0d4">
+          <pageReferencesFielded Id="aa6d155a-0db6-4960-a447-117fc6144b76">
             <fieldMoniker Id="25b86ff2-ede9-4a06-b04f-d2dad40bec0d" />
           </pageReferencesFielded>
         </fielded>
@@ -309,7 +309,7 @@
     <tapizHasElementosWebbed Id="56e34891-42ae-490d-8ebb-02f166802117">
       <page Id="65096276-fffe-49ea-8e6d-3cf3572d52e0" titleColor="7E0EC5" titleFontFamily="Arial" titleFontSize="14" titlePosition="Izquierda" titleText="Cajero">
         <fielded>
-          <pageReferencesFielded Id="f1e58136-6f87-447a-89e4-94f51a2c2202">
+          <pageReferencesFielded Id="0432c1d9-064a-44e0-abb2-8693c9c4f42a">
             <fieldMoniker Id="5032b498-4109-486f-aec0-c2713b2ad3f5" />
           </pageReferencesFielded>
         </fielded>
@@ -330,13 +330,13 @@
     <tapizHasElementosWebbed Id="e7e92efd-daa2-4b73-a9bd-1b53288e9ed4">
       <page Id="edfba211-b1df-4602-a710-ccd5964f1290" titleColor="7E0EC5" titleFontFamily="Arial" titleFontSize="14" titlePosition="Izquierda" titleText="Movimiento">
         <fielded>
-          <pageReferencesFielded Id="5ac3d527-070a-4b9a-80c1-e531c7ed7d64">
+          <pageReferencesFielded Id="f8f97a59-a686-4e07-a401-94620bf48d3c">
             <fieldMoniker Id="14657d6a-2cdd-4205-9477-bcc8dd096c27" />
           </pageReferencesFielded>
-          <pageReferencesFielded Id="f8e2ac71-f3a0-4778-b85b-f7672875f0e8">
+          <pageReferencesFielded Id="3d71d52f-b9d3-4539-9258-249fc22efb3e">
             <fieldMoniker Id="7a1cba0b-3573-475b-b952-2bd7e2fda75a" />
           </pageReferencesFielded>
-          <pageReferencesFielded Id="db8fc338-2326-4e50-b938-10ad26cdfb11">
+          <pageReferencesFielded Id="9c82eba9-d5b7-4159-a40b-13001731c76c">
             <fieldMoniker Id="82f41452-b5b3-40d5-a4e5-ea8bafb596aa" />
           </pageReferencesFielded>
         </fielded>

@@ -433,11 +433,19 @@
     </GeometryShape>
     <GeometryShape Id="6e0ab175-799c-4be7-a0fe-1c70626a1830" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaPortal" Name="MetaforaPortal" DisplayName="Metafora Portal" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Metafora Portal" FillColor="Orchid" OutlineColor="MediumVioletRed" InitialHeight="1" FillGradientMode="ForwardDiagonal" Geometry="Rectangle">
       <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="titleTextDec" DisplayName="Title Text Dec" DefaultText="titleTextDec" FontStyle="Bold" FontSize="9" />
+        <TextDecorator Name="titleTextDec" DisplayName="Title Text Dec" DefaultText="titleTextDec" FontStyle="Bold" FontSize="10" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="6e9a3b05-2041-4072-8de2-86384baf6e98" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.MetaforePage" Name="MetaforePage" DisplayName="Metafore Page" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Metafore Page" FillColor="RoyalBlue" OutlineColor="LightGray" InitialHeight="1" FillGradientMode="Vertical" Geometry="RoundedRectangle" />
-    <GeometryShape Id="3969b08c-5727-495c-bf1e-489f0d07cede" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaField" Name="MetaforaField" DisplayName="Metafora Field" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Metafora Field" OutlineColor="Tomato" InitialHeight="1" FillGradientMode="BackwardDiagonal" Geometry="Ellipse" />
+    <GeometryShape Id="6e9a3b05-2041-4072-8de2-86384baf6e98" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.MetaforePage" Name="MetaforePage" DisplayName="Metafore Page" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Metafore Page" FillColor="RoyalBlue" OutlineColor="LightGray" InitialHeight="1" FillGradientMode="Vertical" Geometry="RoundedRectangle">
+      <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="titleTextDec" DisplayName="Title Text Dec" DefaultText="titleTextDec" FontSize="9" />
+      </ShapeHasDecorators>
+    </GeometryShape>
+    <GeometryShape Id="3969b08c-5727-495c-bf1e-489f0d07cede" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.MetaforaField" Name="MetaforaField" DisplayName="Metafora Field" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Metafora Field" OutlineColor="Tomato" InitialHeight="1" FillGradientMode="BackwardDiagonal" Geometry="Ellipse">
+      <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="labelTextDec" DisplayName="Label Text Dec" DefaultText="labelTextDec" />
+      </ShapeHasDecorators>
+    </GeometryShape>
   </Shapes>
   <Connectors>
     <Connector Id="7b518e40-fc7c-4385-8e1b-ca221cb38292" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadAtributo" Name="ConectorEntidadAtributo" DisplayName="Conector Entidad Atributo" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Conector Entidad Atributo" DashStyle="Dot" RoutingStyle="Straight" />
@@ -448,8 +456,8 @@
     </Connector>
     <Connector Id="af824879-0c61-467e-bc1f-400e060654e3" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.ConectorEntidadAtributoKey" Name="ConectorEntidadAtributoKey" DisplayName="Conector Entidad Atributo Key" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Conector Entidad Atributo Key" Color="Red" Thickness="0.05" RoutingStyle="Straight" />
     <Connector Id="f8510ae7-75e1-425a-b024-577f1319defd" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.ConectorRelacionAtributoRelacion" Name="ConectorRelacionAtributoRelacion" DisplayName="Conector Relacion Atributo Relacion" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Conector Relacion Atributo Relacion" Color="Navy" RoutingStyle="Straight" />
-    <Connector Id="99ce57cb-ca6a-4d13-9c25-0e5e72ae584d" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.ConectorPortalPage" Name="ConectorPortalPage" DisplayName="Conector Portal Page" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Conector Portal Page" />
-    <Connector Id="ae631b7a-b206-4e05-9603-0e849b3e0cab" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.ConectorPageField" Name="ConectorPageField" DisplayName="Conector Page Field" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Conector Page Field" />
+    <Connector Id="99ce57cb-ca6a-4d13-9c25-0e5e72ae584d" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.ConectorPortalPage" Name="ConectorPortalPage" DisplayName="Conector Portal Page" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Conector Portal Page" Color="RoyalBlue" Thickness="0.04" RoutingStyle="Straight" />
+    <Connector Id="ae631b7a-b206-4e05-9603-0e849b3e0cab" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.ConectorPageField" Name="ConectorPageField" DisplayName="Conector Page Field" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS" FixedTooltipText="Conector Page Field" Color="Tomato" Thickness="0.04" RoutingStyle="Straight" />
   </Connectors>
   <XmlSerializationBehavior Name="FMRMRCMMGProyectoIPSSerializationBehavior" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS">
     <ClassData>
@@ -855,6 +863,14 @@
         <ParentElementPath>
           <DomainPath>TapizHasElementosWebbed.Tapiz/!Tapiz</DomainPath>
         </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="MetaforePage/titleTextDec" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Page/titleText" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
         <GeometryShapeMoniker Name="MetaforePage" />
       </ShapeMap>
       <ShapeMap>
@@ -862,6 +878,14 @@
         <ParentElementPath>
           <DomainPath>TapizHasElementosWebbed.Tapiz/!Tapiz</DomainPath>
         </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="MetaforaField/labelTextDec" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Field/labelText" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
         <GeometryShapeMoniker Name="MetaforaField" />
       </ShapeMap>
       <ShapeMap>
