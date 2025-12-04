@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.10318</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{fd40d291-f4d9-4f25-a4d3-372cd9f6a142}</ProjectGuid>
+    <ProjectGuid>{FD40D291-F4D9-4F25-A4D3-372CD9F6A142}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Debugging</RootNamespace>
@@ -74,6 +74,15 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FMRMRCMMGProyectoIPSReportVB.tt</DependentUpon>
+    </Content>
+    <Content Include="Informe.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Informe.txt</LastGenOutput>
+    </Content>
+    <Content Include="Informe.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Informe.tt</DependentUpon>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

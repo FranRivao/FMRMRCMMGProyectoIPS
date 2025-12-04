@@ -1,0 +1,6 @@
+﻿<#@ template
+inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTra
+nsformation"#>
+<#@ output extension=".txt" #>
+<#@ FMRMRCMMGProyectoIPS processor="FMRMRCMMGProyectoIPSDirectiveProcessor"
+requires="fileName='Sample.FMRMRCMMG_DSLProyIPS'" #>

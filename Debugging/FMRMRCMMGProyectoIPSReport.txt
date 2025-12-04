@@ -1,5 +1,16 @@
 ﻿
 Generated material. Generating code in C#.
 
-	ExampleElement1
-	ExampleElement2
+	Red Bancaria
+				nombre : Alfanumerico
+		
+	
+	Banco
+				nombre : Fecha
+				porcentaje : Fecha
+		
+	
+	Cajero
+				saldoDisponible : Fecha
+		
+	
