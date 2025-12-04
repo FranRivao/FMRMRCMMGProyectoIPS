@@ -7,20 +7,22 @@ Generated material. Generating code in C#.
 <#
   // When you change the DSL Definition, some of the code below may not work.
 
-  foreach (Entidad element in this.Tapiz.Elementoes)
-  {
+foreach (Elemento e in this.Tapiz.Elementoes)
+{
+    var element = e as Entidad;
+    if (element == null)
+        continue;   // o manejarlo de otra forma
+
 #>
-	<#= element.nombre #>
-	<#
-		foreach (Atributo attr in element.Atributo)
-		{	
-	#>
-			<#= attr.nombre #> : <#= attr.tipoDato #>
-	<#
-		}
-	#>
-	
-	
-<#   
-  }
+    <#= element.nombre #>
+            <#= "Primary key: " + element.AtributoKey.nombre #> : <#= element.AtributoKey.tipoDato #>
+<#
+    foreach (Atributo attr in element.Atributo)
+    {
 #>
+            <#= attr.nombre #> : <#= attr.tipoDato #>
+<#
+    }
+}
+#>
+

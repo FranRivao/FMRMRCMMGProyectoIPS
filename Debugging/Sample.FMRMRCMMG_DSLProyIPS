@@ -97,43 +97,6 @@
     <tapizHasElementoes Id="954fbce3-7f4d-44ce-a8ba-65291542fbf2">
       <relacion Id="c55c5bea-f79b-4e3e-a8fe-ba19e919cac2" nombre="provee" />
     </tapizHasElementoes>
-    <tapizHasElementoes Id="f562a3ee-1f7d-4c31-b7d3-0fc13f580e7f">
-      <entidad Id="482f6821-e309-4eda-a410-9f808f3f9923" nombre="Tarjeta" alineacionTitulo="Izquierda" fuenteTitulo="Arial">
-        <atributo>
-          <entidadReferencesAtributo Id="70290b71-62e0-4945-bd67-25372c91f0ba">
-            <atributoMoniker Id="0e6f9bcd-ac31-4eb7-b239-c44e7139cc97" />
-          </entidadReferencesAtributo>
-          <entidadReferencesAtributo Id="d004d9a8-bc66-408e-930e-8c0ae57c2ef0">
-            <atributoMoniker Id="61659cf4-769a-4a52-aec5-71cc18ceb00f" />
-          </entidadReferencesAtributo>
-          <entidadReferencesAtributo Id="4e1ad9a7-265b-49ad-bc2f-35f09bed52f0">
-            <atributoMoniker Id="67c1d3fa-10c8-4a1f-900c-9586ab9eed06" />
-          </entidadReferencesAtributo>
-          <entidadReferencesAtributo Id="340e0203-69e3-4504-89cc-bd83e8290fb7">
-            <atributoMoniker Id="8b0888df-d323-4cdd-bff5-2e6a515a094e" />
-          </entidadReferencesAtributo>
-          <entidadReferencesAtributo Id="c66fa802-1042-43c5-af30-9a9a5e9c5d22">
-            <atributoMoniker Id="07130441-ce8b-415d-8364-f40ae9b46141" />
-          </entidadReferencesAtributo>
-        </atributo>
-        <relacion>
-          <entidadReferencesRelacion1 Id="a0e6ce61-dc37-4e7f-b92f-0f96dc91ee93" cardinalidad="ceroAn">
-            <relacionMoniker Id="dec83117-3cab-4032-9aed-3c69467f0cf3" />
-          </entidadReferencesRelacion1>
-          <entidadReferencesRelacion1 Id="2d18845b-38eb-496a-ac35-6a2836e9b419" cardinalidad="ceroAuno">
-            <relacionMoniker Id="2198bea1-9fac-45d6-bbae-10ee44a18232" />
-          </entidadReferencesRelacion1>
-          <entidadReferencesRelacion1 Id="c0f46168-4bcc-4844-817a-d47c46c771bf" cardinalidad="unoAuno">
-            <relacionMoniker Id="5f389ef1-213e-4d80-9930-174c8c4cebd1" />
-          </entidadReferencesRelacion1>
-        </relacion>
-        <atributoKey>
-          <entidadReferencesAtributoKey Id="e84fb977-2398-4ed1-aefe-e47d5bf85d07">
-            <atributoKeyMoniker Id="d894fa1f-9bce-4d8d-a3ff-a965a462ee7b" />
-          </entidadReferencesAtributoKey>
-        </atributoKey>
-      </entidad>
-    </tapizHasElementoes>
     <tapizHasElementoes Id="16b40663-0638-4eff-9365-b733b9337aad">
       <relacion Id="382824d3-7b82-4730-8b0e-ef6a2442a446" nombre="tiene" />
     </tapizHasElementoes>
@@ -189,31 +152,6 @@
     <tapizHasElementoes Id="d23aff65-0545-4e66-9745-fbe8b39bb6be">
       <atributo Id="e6d97e8e-3248-4a60-8cd3-ed20fa370995" nombre="saldo" tipoDato="Fecha" esNulo="false" admiteRepetidos="false" />
     </tapizHasElementoes>
-    <tapizHasElementoes Id="cdcdc8f7-72a5-4b25-8c8d-1eddf6a1dac2">
-      <entidad Id="0b1693d8-645d-4ab7-8be9-d6503eb4e224" nombre="Movimiento" alineacionTitulo="Izquierda" fuenteTitulo="Arial">
-        <atributo>
-          <entidadReferencesAtributo Id="5cd880e2-3600-49b4-8d94-e25e07815084">
-            <atributoMoniker Id="6c12f138-b6c6-47a6-b6a0-8ce5ac6630dc" />
-          </entidadReferencesAtributo>
-          <entidadReferencesAtributo Id="1213a8bd-c642-43bb-b44f-16a5d5c1b8e5">
-            <atributoMoniker Id="d8fa5c97-fd70-4f3f-a073-3ab00172d596" />
-          </entidadReferencesAtributo>
-          <entidadReferencesAtributo Id="0adf46c4-f13c-4f67-a34a-66d5991ffaa2">
-            <atributoMoniker Id="b217ea4b-e6a9-4600-98f2-3253f5ebafa5" />
-          </entidadReferencesAtributo>
-        </atributo>
-        <relacion>
-          <entidadReferencesRelacion1 Id="af26d424-d8e6-4590-b81e-6af83dbabc69" cardinalidad="ceroAn">
-            <relacionMoniker Id="5f389ef1-213e-4d80-9930-174c8c4cebd1" />
-          </entidadReferencesRelacion1>
-        </relacion>
-        <atributoKey>
-          <entidadReferencesAtributoKey Id="c5db5e7d-7639-4e33-ab8a-a65e0f7968e5">
-            <atributoKeyMoniker Id="2484d793-bfc1-424b-93f3-0fefe05b23c8" />
-          </entidadReferencesAtributoKey>
-        </atributoKey>
-      </entidad>
-    </tapizHasElementoes>
     <tapizHasElementoes Id="3eef427f-ede9-4c4f-bf44-a133e2851427">
       <relacion Id="5f389ef1-213e-4d80-9930-174c8c4cebd1" nombre="realiza" />
     </tapizHasElementoes>
@@ -228,6 +166,68 @@
     </tapizHasElementoes>
     <tapizHasElementoes Id="dba30a3d-bcc7-4586-b31d-6c435eb34a5f">
       <atributo Id="6c12f138-b6c6-47a6-b6a0-8ce5ac6630dc" nombre="concepto" tipoDato="Fecha" esNulo="false" admiteRepetidos="false" />
+    </tapizHasElementoes>
+    <tapizHasElementoes Id="33068117-48fc-4af3-977c-4eeef0934f1a">
+      <entidad Id="8a8ae785-a143-4e36-9ba6-fcbacb3451f2" nombre="Tarjeta" alineacionTitulo="Izquierda" fuenteTitulo="Arial">
+        <atributo>
+          <entidadReferencesAtributo Id="8434c719-8bc9-4d93-a61a-75df6385bd08">
+            <atributoMoniker Id="07130441-ce8b-415d-8364-f40ae9b46141" />
+          </entidadReferencesAtributo>
+          <entidadReferencesAtributo Id="df6dec39-5d74-4b35-849c-76f7d45dc33b">
+            <atributoMoniker Id="0e6f9bcd-ac31-4eb7-b239-c44e7139cc97" />
+          </entidadReferencesAtributo>
+          <entidadReferencesAtributo Id="b7ac5fe1-34d9-4cb0-97e4-5a75caf5bcf9">
+            <atributoMoniker Id="8b0888df-d323-4cdd-bff5-2e6a515a094e" />
+          </entidadReferencesAtributo>
+          <entidadReferencesAtributo Id="cfdc84f9-6232-40dd-beea-61c8617384b1">
+            <atributoMoniker Id="61659cf4-769a-4a52-aec5-71cc18ceb00f" />
+          </entidadReferencesAtributo>
+          <entidadReferencesAtributo Id="5dcec62b-8113-49b9-9891-44a48582ea5e">
+            <atributoMoniker Id="67c1d3fa-10c8-4a1f-900c-9586ab9eed06" />
+          </entidadReferencesAtributo>
+        </atributo>
+        <relacion>
+          <entidadReferencesRelacion1 Id="687ffcc8-4ffc-4145-a045-608927abedfa" cardinalidad="ceroAn">
+            <relacionMoniker Id="2198bea1-9fac-45d6-bbae-10ee44a18232" />
+          </entidadReferencesRelacion1>
+          <entidadReferencesRelacion1 Id="cd26bc64-adda-4252-92ff-4a6c7e9ec724" cardinalidad="ceroAn">
+            <relacionMoniker Id="dec83117-3cab-4032-9aed-3c69467f0cf3" />
+          </entidadReferencesRelacion1>
+          <entidadReferencesRelacion1 Id="a8b8b982-e734-4ca7-8217-57f77bade162" cardinalidad="ceroAn">
+            <relacionMoniker Id="5f389ef1-213e-4d80-9930-174c8c4cebd1" />
+          </entidadReferencesRelacion1>
+        </relacion>
+        <atributoKey>
+          <entidadReferencesAtributoKey Id="a3e2b375-f011-4780-a1e6-ea8e860419a6">
+            <atributoKeyMoniker Id="d894fa1f-9bce-4d8d-a3ff-a965a462ee7b" />
+          </entidadReferencesAtributoKey>
+        </atributoKey>
+      </entidad>
+    </tapizHasElementoes>
+    <tapizHasElementoes Id="b444d9b5-a50e-4610-9e6f-e3190b3abeef">
+      <entidad Id="57c97ba5-d973-432d-b61b-f241165e1f10" nombre="Movimiento" alineacionTitulo="Izquierda" fuenteTitulo="Arial">
+        <atributo>
+          <entidadReferencesAtributo Id="ea48ba96-b067-42a2-ac0a-64acf1bf73bd">
+            <atributoMoniker Id="6c12f138-b6c6-47a6-b6a0-8ce5ac6630dc" />
+          </entidadReferencesAtributo>
+          <entidadReferencesAtributo Id="216ae242-928b-4964-b463-65630baf42ad">
+            <atributoMoniker Id="d8fa5c97-fd70-4f3f-a073-3ab00172d596" />
+          </entidadReferencesAtributo>
+          <entidadReferencesAtributo Id="48117bac-93e8-4895-b76f-5b88dfa86660">
+            <atributoMoniker Id="b217ea4b-e6a9-4600-98f2-3253f5ebafa5" />
+          </entidadReferencesAtributo>
+        </atributo>
+        <relacion>
+          <entidadReferencesRelacion1 Id="87e00755-aabb-4d52-a6ab-3658eb28d2dc" cardinalidad="ceroAn">
+            <relacionMoniker Id="5f389ef1-213e-4d80-9930-174c8c4cebd1" />
+          </entidadReferencesRelacion1>
+        </relacion>
+        <atributoKey>
+          <entidadReferencesAtributoKey Id="f1856ad3-d40a-4ed8-a85d-728dddfd1065">
+            <atributoKeyMoniker Id="2484d793-bfc1-424b-93f3-0fefe05b23c8" />
+          </entidadReferencesAtributoKey>
+        </atributoKey>
+      </entidad>
     </tapizHasElementoes>
   </elementoes>
   <elementosWebbed>
