@@ -45,7 +45,7 @@
 
         <div class="campo">
             <label for="varnombre">nombre:</label>
-            <input type="text" name="varnombre" id="varnombre"  required />
+            <input type="text" name="varnombre" id="varnombre"   />
         </div>
         <br/>
         <input type="submit" value="Alta" />
@@ -147,11 +147,11 @@
 
         <div class="campo">
             <label for="varnombre">nombre:</label>
-            <input type="date" name="varnombre" id="varnombre"  required />
+            <input type="text" name="varnombre" id="varnombre"  required />
         </div>
         <div class="campo">
             <label for="varporcentaje">porcentaje:</label>
-            <input type="date" name="varporcentaje" id="varporcentaje"  required />
+            <input type="number" name="varporcentaje" id="varporcentaje"  required />
         </div>
         <br/>
         <input type="submit" value="Alta" />
@@ -256,7 +256,7 @@
 
         <div class="campo">
             <label for="varsaldoDisponible">saldoDisponible:</label>
-            <input type="date" name="varsaldoDisponible" id="varsaldoDisponible"  required />
+            <input type="number" name="varsaldoDisponible" id="varsaldoDisponible" step='any' required />
         </div>
         <br/>
         <input type="submit" value="Alta" />
@@ -358,7 +358,7 @@
 
         <div class="campo">
             <label for="varsaldo">saldo:</label>
-            <input type="date" name="varsaldo" id="varsaldo"  required />
+            <input type="number" name="varsaldo" id="varsaldo" step='any' required />
         </div>
         <br/>
         <input type="submit" value="Alta" />
@@ -460,7 +460,7 @@
 
         <div class="campo">
             <label for="varsaldoActual">saldoActual:</label>
-            <input type="date" name="varsaldoActual" id="varsaldoActual"  required />
+            <input type="number" name="varsaldoActual" id="varsaldoActual" step='any' required />
         </div>
         <div class="campo">
             <label for="varfechaCaducidad">fechaCaducidad:</label>
@@ -468,15 +468,15 @@
         </div>
         <div class="campo">
             <label for="varimporteMaximo">importeMaximo:</label>
-            <input type="date" name="varimporteMaximo" id="varimporteMaximo"  required />
+            <input type="number" name="varimporteMaximo" id="varimporteMaximo" step='any' required />
         </div>
         <div class="campo">
             <label for="varestado">estado:</label>
-            <input type="date" name="varestado" id="varestado"  required />
+            <input type="number" name="varestado" id="varestado"  required />
         </div>
         <div class="campo">
             <label for="varpin">pin:</label>
-            <input type="date" name="varpin" id="varpin"  required />
+            <input type="number" name="varpin" id="varpin"  required />
         </div>
         <br/>
         <input type="submit" value="Alta" />
@@ -590,7 +590,7 @@
 
         <div class="campo">
             <label for="varconcepto">concepto:</label>
-            <input type="date" name="varconcepto" id="varconcepto"  required />
+            <input type="text" name="varconcepto" id="varconcepto"  required />
         </div>
         <div class="campo">
             <label for="varfecha">fecha:</label>
@@ -598,7 +598,7 @@
         </div>
         <div class="campo">
             <label for="varcantidad">cantidad:</label>
-            <input type="date" name="varcantidad" id="varcantidad"  required />
+            <input type="number" name="varcantidad" id="varcantidad" step='any' required />
         </div>
         <br/>
         <input type="submit" value="Alta" />

@@ -25,14 +25,14 @@ foreach (Elemento e in this.Tapiz.Elementoes)
     if (entidad == null) continue;
 #>
 -- Tabla: <#= entidad.nombre #>
-CREATE TABLE IF NOT EXISTS <#= entidad.nombre #> (
+CREATE TABLE IF NOT EXISTS <#= NormalizarNombre(entidad.nombre) #> (
     <# 
         // CLAVE PRIMARIA
         if (entidad.AtributoKey != null) {
             // Nota: Forzamos longitud 20 si es 0, para evitar errores en SQL con VARCHAR(0)
             int lenPk = (entidad.AtributoKey.longitud > 0) ? entidad.AtributoKey.longitud : 20;
     #>
-    <#= entidad.AtributoKey.nombre #> <#= GetSqlType(entidad.AtributoKey.tipoDato, lenPk) #> NOT NULL,
+    <#= NormalizarNombre(entidad.AtributoKey.nombre) #> <#= GetSqlType(entidad.AtributoKey.tipoDato, lenPk) #> NOT NULL,
     <# } #>
 
     <#
@@ -42,12 +42,12 @@ CREATE TABLE IF NOT EXISTS <#= entidad.nombre #> (
             string nullStr = (attr.esNulo) ? "NULL" : "NOT NULL"; 
             string uniqueStr = (!attr.admiteRepetidos) ? "UNIQUE" : "";         
     #>
-    <#= attr.nombre #> <#= GetSqlType(attr.tipoDato, attr.longitud) #> <#= nullStr #> <#= uniqueStr #>,
+    <#= NormalizarNombre(attr.nombre) #> <#= GetSqlType(attr.tipoDato, attr.longitud) #> <#= nullStr #> <#= uniqueStr #>,
     <#
         }
     #>
     <# if (entidad.AtributoKey != null) { #>
-    PRIMARY KEY (<#= entidad.AtributoKey.nombre #>)
+    PRIMARY KEY (<#= NormalizarNombre(entidad.AtributoKey.nombre) #>)
     <# } #>
 );
 
@@ -87,23 +87,23 @@ foreach (Elemento e in this.Tapiz.Elementoes)
             // Validamos que ambas entidades tengan Clave Primaria definida para poder crear la FK
             if (ent1.AtributoKey != null && ent2.AtributoKey != null) {
 #>
--- Tabla Relación N:M: <#= rel.nombre #>
-CREATE TABLE IF NOT EXISTS <#= rel.nombre #> (
+-- Tabla Relación N:M: <#= NormalizarNombre(rel.nombre) #>
+CREATE TABLE IF NOT EXISTS <#= NormalizarNombre(rel.nombre) #> (
     -- Claves foráneas
-    <#= ent1.nombre #>_FK <#= GetSqlType(ent1.AtributoKey.tipoDato, 20) #> NOT NULL,
-    <#= ent2.nombre #>_FK <#= GetSqlType(ent2.AtributoKey.tipoDato, 20) #> NOT NULL,
+    <#= NormalizarNombre(ent1.nombre) #>_FK <#= GetSqlType(ent1.AtributoKey.tipoDato, 20) #> NOT NULL,
+    <#= NormalizarNombre(ent2.nombre) #>_FK <#= GetSqlType(ent2.AtributoKey.tipoDato, 20) #> NOT NULL,
     
     <# 
         // Atributos de la relación
         foreach(AtributoRelacion attrRel in rel.AtributoRelacion) {
             string nullStrRel = (attrRel.esNulo) ? "NULL" : "NOT NULL";
     #>
-    <#= attrRel.nombre #> <#= GetSqlType(attrRel.tipoDato, attrRel.longitud) #> <#= nullStrRel #>,
+    <#= NormalizarNombre(attrRel.nombre) #> <#= GetSqlType(attrRel.tipoDato, attrRel.longitud) #> <#= nullStrRel #>,
     <# } #>
 
-    FOREIGN KEY (<#= ent1.nombre #>_FK) REFERENCES <#= ent1.nombre #>(<#= ent1.AtributoKey.nombre #>),
-    FOREIGN KEY (<#= ent2.nombre #>_FK) REFERENCES <#= ent2.nombre #>(<#= ent2.AtributoKey.nombre #>),
-    PRIMARY KEY (<#= ent1.nombre #>_FK, <#= ent2.nombre #>_FK)
+    FOREIGN KEY (<#= NormalizarNombre(ent1.nombre) #>_FK) REFERENCES <#= NormalizarNombre(ent1.nombre) #>(<#= NormalizarNombre(ent1.AtributoKey.nombre) #>),
+    FOREIGN KEY (<#= NormalizarNombre(ent2.nombre) #>_FK) REFERENCES <#= NormalizarNombre(ent2.nombre) #>(<#= NormalizarNombre(ent2.AtributoKey.nombre) #>),
+    PRIMARY KEY (<#= NormalizarNombre(ent1.nombre) #>_FK, <#= NormalizarNombre(ent2.nombre) #>_FK)
 );
 <#
             }
@@ -128,4 +128,34 @@ private string GetSqlType(TipoDatoEnum tipo, int longitud)
         default: return "VARCHAR(255)";
     }
 }
+#>
+
+<#+
+  // Función para normalizar nombres a camelCase (incluyendo espacios)
+  private string NormalizarNombre(string nombre)
+  {
+      if (string.IsNullOrEmpty(nombre))
+          return "campo";
+      
+      // Eliminar caracteres especiales excepto espacios y guiones bajos
+      nombre = System.Text.RegularExpressions.Regex.Replace(nombre, "[^a-zA-Z0-9_ ]", "");
+      
+      // Dividir por espacios, guiones bajos o cambios de mayúsculas
+      var partes = System.Text.RegularExpressions.Regex.Split(nombre, @"[\s_]+|(?=[A-Z])")
+          .Where(p => ! string.IsNullOrEmpty(p))
+          .ToList();
+      
+      if (partes.Count == 0)
+          return "campo";
+      
+      // Primera parte en minúsculas, resto capitalizadas
+      var resultado = partes[0].ToLower();
+      
+      for (int i = 1; i < partes.Count; i++)
+      {
+          resultado += char.ToUpper(partes[i][0]) + partes[i].Substring(1).ToLower();
+      }
+      
+      return resultado;
+  }
 #>
