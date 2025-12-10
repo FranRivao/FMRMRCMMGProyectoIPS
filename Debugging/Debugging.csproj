@@ -46,7 +46,7 @@
     </None>
     <None Include="FMRMRCMMGProyectoIPSReport.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>FMRMRCMMGProyectoIPSReport.txt</LastGenOutput>
+      <LastGenOutput>FMRMRCMMGProyectoIPSReport.sql</LastGenOutput>
     </None>
     <None Include="FMRMRCMMGProyectoIPSReportVB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -65,7 +65,7 @@
     <Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="FMRMRCMMGProyectoIPSReport.txt">
+    <Content Include="FMRMRCMMGProyectoIPSReport.sql">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FMRMRCMMGProyectoIPSReport.tt</DependentUpon>

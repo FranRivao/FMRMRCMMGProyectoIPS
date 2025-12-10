@@ -1,28 +1,131 @@
 ﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
-<#@ output extension=".txt" #>
+<#@ output extension=".sql" #>
 <#@ FMRMRCMMGProyectoIPS processor="FMRMRCMMGProyectoIPSDirectiveProcessor" requires="fileName='Sample.FMRMRCMMG_DSLProyIPS'" #>
-
-Generated material. Generating code in C#.
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="Microsoft.VisualStudio.Modeling" #>
 
 <#
-  // When you change the DSL Definition, some of the code below may not work.
+    // NOMBRE DE LA BD (Fijo, ya que Tapiz no tiene propiedad nombre)
+    string dbName = "GestionMat"; 
+#>
+-- Generación automática: SQL
+-- Base de Datos: <#= dbName #>
 
+CREATE DATABASE IF NOT EXISTS <#= dbName #>;
+USE <#= dbName #>;
+
+<#
+// --------------------------------------------------------
+// 1. TABLAS DE ENTIDADES
+// --------------------------------------------------------
 foreach (Elemento e in this.Tapiz.Elementoes)
 {
-    var element = e as Entidad;
-    if (element == null)
-        continue;   // o manejarlo de otra forma
+    var entidad = e as Entidad;
+    if (entidad == null) continue;
+#>
+-- Tabla: <#= entidad.nombre #>
+CREATE TABLE IF NOT EXISTS <#= entidad.nombre #> (
+    <# 
+        // CLAVE PRIMARIA
+        if (entidad.AtributoKey != null) {
+            // Nota: Forzamos longitud 20 si es 0, para evitar errores en SQL con VARCHAR(0)
+            int lenPk = (entidad.AtributoKey.longitud > 0) ? entidad.AtributoKey.longitud : 20;
+    #>
+    <#= entidad.AtributoKey.nombre #> <#= GetSqlType(entidad.AtributoKey.tipoDato, lenPk) #> NOT NULL,
+    <# } #>
 
-#>
-    <#= element.nombre #>
-            <#= "Primary key: " + element.AtributoKey.nombre #> : <#= element.AtributoKey.tipoDato #>
+    <#
+        // ATRIBUTOS
+        foreach (Atributo attr in entidad.Atributo)
+        {
+            string nullStr = (attr.esNulo) ? "NULL" : "NOT NULL"; 
+            string uniqueStr = (!attr.admiteRepetidos) ? "UNIQUE" : "";         
+    #>
+    <#= attr.nombre #> <#= GetSqlType(attr.tipoDato, attr.longitud) #> <#= nullStr #> <#= uniqueStr #>,
+    <#
+        }
+    #>
+    <# if (entidad.AtributoKey != null) { #>
+    PRIMARY KEY (<#= entidad.AtributoKey.nombre #>)
+    <# } #>
+);
+
 <#
-    foreach (Atributo attr in element.Atributo)
+} 
+
+// --------------------------------------------------------
+// 2. TABLAS DE RELACIONES (Solo N:M)
+// --------------------------------------------------------
+foreach (Elemento e in this.Tapiz.Elementoes)
+{
+    var rel = e as Relacion;
+    if (rel == null) continue;
+
+    // MAGIA: Recuperamos los enlaces que conectan esta relación con las entidades
+    // Usamos DomainRoleInfo porque 'Relacion' no tiene una lista directa de Links, solo de Elementos.
+    var links = DomainRoleInfo.GetElementLinks<EntidadReferencesRelacion1>(rel, EntidadReferencesRelacion1.RelacionDomainRoleId);
+    
+    // Una relación binaria debe tener exactamente 2 conexiones
+    if (links.Count == 2) 
     {
+        var link1 = links[0];
+        var link2 = links[1];
+        
+        // Obtenemos las entidades de los extremos
+        var ent1 = link1.Entidad;
+        var ent2 = link2.Entidad;
+
+        // VERIFICAR CARDINALIDAD N:M
+        // Enum Cardinalidad: ceroAn=0, ceroAuno=1, unoAn=2, unoAuno=3
+        // Consideramos "Muchos" si es ceroAn (0) o unoAn (2)
+        bool esMuchos1 = (link1.cardinalidad == Cardinalidad.ceroAn || link1.cardinalidad == Cardinalidad.unoAn);
+        bool esMuchos2 = (link2.cardinalidad == Cardinalidad.ceroAn || link2.cardinalidad == Cardinalidad.unoAn);
+
+        if (esMuchos1 && esMuchos2)
+        {
+            // Validamos que ambas entidades tengan Clave Primaria definida para poder crear la FK
+            if (ent1.AtributoKey != null && ent2.AtributoKey != null) {
 #>
-            <#= attr.nombre #> : <#= attr.tipoDato #>
+-- Tabla Relación N:M: <#= rel.nombre #>
+CREATE TABLE IF NOT EXISTS <#= rel.nombre #> (
+    -- Claves foráneas
+    <#= ent1.nombre #>_FK <#= GetSqlType(ent1.AtributoKey.tipoDato, 20) #> NOT NULL,
+    <#= ent2.nombre #>_FK <#= GetSqlType(ent2.AtributoKey.tipoDato, 20) #> NOT NULL,
+    
+    <# 
+        // Atributos de la relación
+        foreach(AtributoRelacion attrRel in rel.AtributoRelacion) {
+            string nullStrRel = (attrRel.esNulo) ? "NULL" : "NOT NULL";
+    #>
+    <#= attrRel.nombre #> <#= GetSqlType(attrRel.tipoDato, attrRel.longitud) #> <#= nullStrRel #>,
+    <# } #>
+
+    FOREIGN KEY (<#= ent1.nombre #>_FK) REFERENCES <#= ent1.nombre #>(<#= ent1.AtributoKey.nombre #>),
+    FOREIGN KEY (<#= ent2.nombre #>_FK) REFERENCES <#= ent2.nombre #>(<#= ent2.AtributoKey.nombre #>),
+    PRIMARY KEY (<#= ent1.nombre #>_FK, <#= ent2.nombre #>_FK)
+);
 <#
+            }
+        }
     }
 }
 #>
 
+<#+
+// HELPER PARA TIPOS DE DATOS
+private string GetSqlType(TipoDatoEnum tipo, int longitud)
+{
+    // Ajuste de seguridad: si longitud es 0 o menor, ponemos 255 por defecto para evitar error SQL
+    string len = (longitud > 0) ? longitud.ToString() : "255";
+
+    switch (tipo)
+    {
+        case TipoDatoEnum.Entero: return "INTEGER";
+        case TipoDatoEnum.Real: return "FLOAT";
+        case TipoDatoEnum.Fecha: return "DATE";
+        case TipoDatoEnum.Alfanumerico: return "VARCHAR(" + len + ")";
+        default: return "VARCHAR(255)";
+    }
+}
+#>
