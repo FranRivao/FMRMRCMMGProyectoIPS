@@ -48,9 +48,14 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>FMRMRCMMGProyectoIPSReport.sql</LastGenOutput>
     </None>
+    <None Include="FMRMRCMMGProyectoIPSReportVB.php">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FMRMRCMMGProyectoIPSReportVB.tt</DependentUpon>
+    </None>
     <None Include="FMRMRCMMGProyectoIPSReportVB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>FMRMRCMMGProyectoIPSReportVB.txt</LastGenOutput>
+      <LastGenOutput>FMRMRCMMGProyectoIPSReportVB.php</LastGenOutput>
     </None>
     <None Include="Sample.FMRMRCMMG_DSLProyIPS" />
     <None Include="Sample.FMRMRCMMG_DSLProyIPS.diagram">
@@ -69,11 +74,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FMRMRCMMGProyectoIPSReport.tt</DependentUpon>
-    </Content>
-    <Content Include="FMRMRCMMGProyectoIPSReportVB.txt">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FMRMRCMMGProyectoIPSReportVB.tt</DependentUpon>
     </Content>
     <Content Include="Informe.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

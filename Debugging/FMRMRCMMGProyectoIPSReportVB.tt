@@ -1,16 +1,179 @@
-﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" language="VB" #>
-<#@ output extension=".txt" #>
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
+<#@ output extension=".php" #>
 <#@ FMRMRCMMGProyectoIPS processor="FMRMRCMMGProyectoIPSDirectiveProcessor" requires="fileName='Sample.FMRMRCMMG_DSLProyIPS'" #>
 
-Generated material. Generating code in VB.
-
+<# 
+    // CONFIGURACIÓN: Nombre de la BD (fijo porque Tapiz no tiene propiedad nombre)
+    string dbName = "GestionMat";
+#>
 
 <#
-  Rem When you change the DSL Definition, some of the code below may not work.
+// Iteramos por cada entidad del modelo para generar su página PHP
+foreach (Elemento e in this.Tapiz.Elementoes)
+{
+    var ent = e as Entidad;
+    // Saltamos si no es entidad o si no tiene clave primaria (necesaria para el funcionamiento)
+    if (ent == null || ent.AtributoKey == null) continue;
 
-  For Each element As ExampleElement In Me.ExampleModel.Elements
+    // 1. Lógica para convertir tus Enums de estilo a CSS válido
+    string align = "left";
+    if (ent.alineacionTitulo == PosicionTituloEnum.Centro) align = "center";
+    if (ent.alineacionTitulo == PosicionTituloEnum.Derecha) align = "right";
+    
+    // Tratamiento simple del tamaño (si viene número o texto)
+    string fontSize = ent.tamañoTitulo; 
+    // Si el usuario solo puso un número, le añadimos "px" para que funcione en CSS, si no, lo dejamos igual
+    int n;
+    if (int.TryParse(fontSize, out n)) fontSize += "px";
+
+    // Nombre del campo del formulario para la PK
+    string pkInputName = "var" + ent.AtributoKey.nombre;
 #>
-	<#= element.Name #>
-<#    
-  Next
+<html>
+<head>
+    <title>Gestión de <#= ent.nombre #></title>
+    <style>
+        /* Estilos generales */
+        body { font-family: sans-serif; background-color: #B8D1F1; padding: 20px; }
+        
+        /* Estilos dinámicos desde el modelo DSL */
+        h1.titulo-entidad {
+            color: <#= ent.colorTitulo #>;
+            font-family: '<#= ent.fuenteTitulo #>';
+            font-size: <#= fontSize #>;
+            text-align: <#= align #>;
+            margin-bottom: 30px;
+        }
+
+        /* Estilo básico de formulario */
+        form { background: white; padding: 20px; border-radius: 8px; max-width: 600px; margin: 0 auto; }
+        div.campo { margin-bottom: 15px; }
+        label { display: inline-block; width: 150px; font-weight: bold; }
+        input { padding: 5px; width: 250px; }
+        input[type="submit"] { 
+            background-color: #4CAF50; color: white; border: none; 
+            padding: 10px 20px; cursor: pointer; width: auto; 
+        }
+    </style>
+</head>
+<body>
+
+<?php
+    // COMPROBACIÓN: ¿Se ha enviado el formulario?
+    // Verificamos si existe la variable de la PK en el POST
+    if (!isset($_POST['<#= pkInputName #>'])) {
+?>
+    <h1 class="titulo-entidad"><#= ent.nombre #></h1>
+    
+    <form action="<#= ent.nombre #>.php" method="post">
+        
+        <div class="campo">
+            <label for="<#= pkInputName #>"><#= ent.AtributoKey.nombre #> (PK):</label>
+            <input type="text" name="<#= pkInputName #>" id="<#= pkInputName #>" required />
+        </div>
+
+<#
+        // Generar inputs para el resto de atributos
+        foreach (Atributo attr in ent.Atributo)
+        {
+            // Mapeo de TipoDatoEnum a HTML Input Type
+            string inputType = "text";
+            string stepAttr = ""; // Necesario para números reales (decimales)
+            
+            if (attr.tipoDato == TipoDatoEnum.Entero) inputType = "number";
+            if (attr.tipoDato == TipoDatoEnum.Real) { 
+                inputType = "number"; 
+                stepAttr = "step='any'"; 
+            }
+            if (attr.tipoDato == TipoDatoEnum.Fecha) inputType = "date";
+
+            // Gestión de Nulos: Si esNulo es false, añadimos 'required'
+            string requiredAttr = (attr.esNulo) ? "" : "required";
+            
+            string inputName = "var" + attr.nombre;
+#>
+        <div class="campo">
+            <label for="<#= inputName #>"><#= attr.nombre #>:</label>
+            <input type="<#= inputType #>" name="<#= inputName #>" id="<#= inputName #>" <#= stepAttr #> <#= requiredAttr #> />
+        </div>
+<#
+        }
+#>
+        <br/>
+        <input type="submit" value="Alta" />
+    </form>
+
+<?php
+    } else {
+        // LÓGICA: PROCESAR EL INSERT EN MYSQL
+        
+        // 1. Conexión
+        $link = mysqli_connect("localhost", "root", "");
+        if (!$link) {
+            die("Error de conexión: " . mysqli_connect_error());
+        }
+        
+        // 2. Selección de BD
+        if (!mysqli_select_db($link, "<#= dbName #>")) {
+            die("Error: No se encuentra la base de datos '<#= dbName #>'. Asegúrate de haber ejecutado el SQL.");
+        }
+
+        // 3. Recogida de datos del POST
+        $<#= ent.AtributoKey.nombre #> = $_POST['<#= pkInputName #>'];
+<#
+        foreach (Atributo attr in ent.Atributo)
+        {
+#>
+        $<#= attr.nombre #> = $_POST['var<#= attr.nombre #>'];
+<#
+        }
+#>
+
+        // 4. Construcción de la Query
+        $query = "INSERT INTO <#= ent.nombre #> (";
+        // (Lista de nombres de columnas)
+        $query .= "<#= ent.AtributoKey.nombre #>";
+<#
+        foreach (Atributo attr in ent.Atributo) {
+#>
+        $query .= ", <#= attr.nombre #>";
+<#
+        }
+#>
+        $query .= ") VALUES (";
+        
+        // (Lista de valores)
+        // Nota: Ponemos comillas simples '$var' a todo para simplificar. MySQL hace la conversión implícita.
+        $query .= "'$" . "<#= ent.AtributoKey.nombre #>" . "'";
+<#
+        foreach (Atributo attr in ent.Atributo) {
+#>
+        $query .= ", '$" . "<#= attr.nombre #>" . "'";
+<#
+        }
+#>
+        $query .= ")";
+
+        // 5. Ejecución y Feedback
+        if (mysqli_query($link, $query)) {
+            echo "<h2>Registro insertado correctamente en <#= ent.nombre #>.</h2>";
+        } else {
+            echo "<h2 style='color:red'>Error al insertar: " . mysqli_error($link) . "</h2>";
+            echo "<p>Query intentada: " . $query . "</p>";
+        }
+
+        mysqli_close($link);
+        
+        echo "<br><a href='<#= ent.nombre #>.php'>Volver al formulario</a>";
+    }
+?>
+</body>
+</html>
+
+<#
+    // Separador visual para cuando abras el fichero generado
+    WriteLine("");
+    WriteLine("");
+    WriteLine("");
+}
 #>
