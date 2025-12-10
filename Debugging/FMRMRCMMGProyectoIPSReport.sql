@@ -1,24 +1,24 @@
 ﻿
 -- Generación automática: SQL
--- Base de Datos: GestionMat
+-- Base de Datos: RedBancaria
 
-CREATE DATABASE IF NOT EXISTS GestionMat;
-USE GestionMat;
+CREATE DATABASE IF NOT EXISTS RedBancaria;
+USE RedBancaria;
 
 -- Tabla: Red Bancaria
 CREATE TABLE IF NOT EXISTS Red Bancaria (
-        id DATE NOT NULL,
+        id INTEGER NOT NULL,
     
-        nombre VARCHAR(255) NOT NULL UNIQUE,
+        nombre VARCHAR(255) NULL UNIQUE,
             PRIMARY KEY (id)
     );
 
 -- Tabla: Banco
 CREATE TABLE IF NOT EXISTS Banco (
-        id DATE NOT NULL,
+        id INTEGER NOT NULL,
     
-        nombre DATE NOT NULL UNIQUE,
-        porcentaje DATE NOT NULL UNIQUE,
+        nombre VARCHAR(255) NOT NULL UNIQUE,
+        porcentaje INTEGER NOT NULL UNIQUE,
             PRIMARY KEY (id)
     );
 
@@ -32,9 +32,9 @@ CREATE TABLE IF NOT EXISTS Cajero (
 
 -- Tabla: Cuenta
 CREATE TABLE IF NOT EXISTS Cuenta (
-        numero DATE NOT NULL,
+        numero INTEGER NOT NULL,
     
-        saldo DATE NOT NULL UNIQUE,
+        saldo FLOAT NOT NULL UNIQUE,
             PRIMARY KEY (numero)
     );
 
@@ -42,21 +42,21 @@ CREATE TABLE IF NOT EXISTS Cuenta (
 CREATE TABLE IF NOT EXISTS Tarjeta (
         id DATE NOT NULL,
     
-        saldoActual DATE NOT NULL UNIQUE,
+        saldoActual FLOAT NOT NULL UNIQUE,
         fechaCaducidad DATE NOT NULL UNIQUE,
-        importeMaximo DATE NOT NULL UNIQUE,
-        estado DATE NOT NULL UNIQUE,
-        pin DATE NOT NULL UNIQUE,
+        importeMaximo FLOAT NOT NULL UNIQUE,
+        estado INTEGER NOT NULL UNIQUE,
+        pin INTEGER NOT NULL UNIQUE,
             PRIMARY KEY (id)
     );
 
 -- Tabla: Movimiento
 CREATE TABLE IF NOT EXISTS Movimiento (
-        id DATE NOT NULL,
+        id INTEGER NOT NULL,
     
-        concepto DATE NOT NULL UNIQUE,
+        concepto VARCHAR(255) NOT NULL UNIQUE,
         fecha DATE NOT NULL UNIQUE,
-        cantidad DATE NOT NULL UNIQUE,
+        cantidad FLOAT NOT NULL UNIQUE,
             PRIMARY KEY (id)
     );
 
@@ -75,7 +75,7 @@ CREATE TABLE IF NOT EXISTS accede (
 CREATE TABLE IF NOT EXISTS realiza (
     -- Claves foráneas
     Tarjeta_FK DATE NOT NULL,
-    Movimiento_FK DATE NOT NULL,
+    Movimiento_FK INTEGER NOT NULL,
     
     
     FOREIGN KEY (Tarjeta_FK) REFERENCES Tarjeta(id),

@@ -7,7 +7,7 @@
 
 <#
     // NOMBRE DE LA BD (Fijo, ya que Tapiz no tiene propiedad nombre)
-    string dbName = "GestionMat"; 
+    string dbName = "RedBancaria"; 
 #>
 -- Generación automática: SQL
 -- Base de Datos: <#= dbName #>
