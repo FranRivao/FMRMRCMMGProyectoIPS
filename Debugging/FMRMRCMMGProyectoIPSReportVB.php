@@ -62,8 +62,8 @@
         }
         
         // 2. Selección de BD
-        if (!mysqli_select_db($link, "GestionMat")) {
-            die("Error: No se encuentra la base de datos 'GestionMat'. Asegúrate de haber ejecutado el SQL.");
+        if (!mysqli_select_db($link, "RedBancaria")) {
+            die("Error: No se encuentra la base de datos 'RedBancaria'. Asegúrate de haber ejecutado el SQL.");
         }
 
         // 3. Recogida de datos del POST
@@ -71,7 +71,7 @@
         $nombre = $_POST['varnombre'];
 
         // 4. Construcción de la Query
-        $query = "INSERT INTO Red Bancaria (";
+        $query = "INSERT INTO `Red Bancaria` ("; 
         // (Lista de nombres de columnas)
         $query .= "id";
         $query .= ", nombre";
@@ -79,8 +79,8 @@
         
         // (Lista de valores)
         // Nota: Ponemos comillas simples '$var' a todo para simplificar. MySQL hace la conversión implícita.
-        $query .= "'$" . "id" . "'";
-        $query .= ", '$" . "nombre" . "'";
+        $query .= "'" . $id . "'";
+        $query .= ", '" . $nombre . "'";
         $query .= ")";
 
         // 5. Ejecución y Feedback
@@ -168,8 +168,8 @@
         }
         
         // 2. Selección de BD
-        if (!mysqli_select_db($link, "GestionMat")) {
-            die("Error: No se encuentra la base de datos 'GestionMat'. Asegúrate de haber ejecutado el SQL.");
+        if (!mysqli_select_db($link, "RedBancaria")) {
+            die("Error: No se encuentra la base de datos 'RedBancaria'. Asegúrate de haber ejecutado el SQL.");
         }
 
         // 3. Recogida de datos del POST
@@ -178,7 +178,7 @@
         $porcentaje = $_POST['varporcentaje'];
 
         // 4. Construcción de la Query
-        $query = "INSERT INTO Banco (";
+        $query = "INSERT INTO `Banco` ("; 
         // (Lista de nombres de columnas)
         $query .= "id";
         $query .= ", nombre";
@@ -187,9 +187,9 @@
         
         // (Lista de valores)
         // Nota: Ponemos comillas simples '$var' a todo para simplificar. MySQL hace la conversión implícita.
-        $query .= "'$" . "id" . "'";
-        $query .= ", '$" . "nombre" . "'";
-        $query .= ", '$" . "porcentaje" . "'";
+        $query .= "'" . $id . "'";
+        $query .= ", '" . $nombre . "'";
+        $query .= ", '" . $porcentaje . "'";
         $query .= ")";
 
         // 5. Ejecución y Feedback
@@ -273,8 +273,8 @@
         }
         
         // 2. Selección de BD
-        if (!mysqli_select_db($link, "GestionMat")) {
-            die("Error: No se encuentra la base de datos 'GestionMat'. Asegúrate de haber ejecutado el SQL.");
+        if (!mysqli_select_db($link, "RedBancaria")) {
+            die("Error: No se encuentra la base de datos 'RedBancaria'. Asegúrate de haber ejecutado el SQL.");
         }
 
         // 3. Recogida de datos del POST
@@ -282,7 +282,7 @@
         $saldoDisponible = $_POST['varsaldoDisponible'];
 
         // 4. Construcción de la Query
-        $query = "INSERT INTO Cajero (";
+        $query = "INSERT INTO `Cajero` ("; 
         // (Lista de nombres de columnas)
         $query .= "id";
         $query .= ", saldoDisponible";
@@ -290,8 +290,8 @@
         
         // (Lista de valores)
         // Nota: Ponemos comillas simples '$var' a todo para simplificar. MySQL hace la conversión implícita.
-        $query .= "'$" . "id" . "'";
-        $query .= ", '$" . "saldoDisponible" . "'";
+        $query .= "'" . $id . "'";
+        $query .= ", '" . $saldoDisponible . "'";
         $query .= ")";
 
         // 5. Ejecución y Feedback
@@ -375,8 +375,8 @@
         }
         
         // 2. Selección de BD
-        if (!mysqli_select_db($link, "GestionMat")) {
-            die("Error: No se encuentra la base de datos 'GestionMat'. Asegúrate de haber ejecutado el SQL.");
+        if (!mysqli_select_db($link, "RedBancaria")) {
+            die("Error: No se encuentra la base de datos 'RedBancaria'. Asegúrate de haber ejecutado el SQL.");
         }
 
         // 3. Recogida de datos del POST
@@ -384,7 +384,7 @@
         $saldo = $_POST['varsaldo'];
 
         // 4. Construcción de la Query
-        $query = "INSERT INTO Cuenta (";
+        $query = "INSERT INTO `Cuenta` ("; 
         // (Lista de nombres de columnas)
         $query .= "numero";
         $query .= ", saldo";
@@ -392,8 +392,8 @@
         
         // (Lista de valores)
         // Nota: Ponemos comillas simples '$var' a todo para simplificar. MySQL hace la conversión implícita.
-        $query .= "'$" . "numero" . "'";
-        $query .= ", '$" . "saldo" . "'";
+        $query .= "'" . $numero . "'";
+        $query .= ", '" . $saldo . "'";
         $query .= ")";
 
         // 5. Ejecución y Feedback
@@ -493,8 +493,8 @@
         }
         
         // 2. Selección de BD
-        if (!mysqli_select_db($link, "GestionMat")) {
-            die("Error: No se encuentra la base de datos 'GestionMat'. Asegúrate de haber ejecutado el SQL.");
+        if (!mysqli_select_db($link, "RedBancaria")) {
+            die("Error: No se encuentra la base de datos 'RedBancaria'. Asegúrate de haber ejecutado el SQL.");
         }
 
         // 3. Recogida de datos del POST
@@ -506,7 +506,7 @@
         $pin = $_POST['varpin'];
 
         // 4. Construcción de la Query
-        $query = "INSERT INTO Tarjeta (";
+        $query = "INSERT INTO `Tarjeta` ("; 
         // (Lista de nombres de columnas)
         $query .= "id";
         $query .= ", saldoActual";
@@ -518,12 +518,12 @@
         
         // (Lista de valores)
         // Nota: Ponemos comillas simples '$var' a todo para simplificar. MySQL hace la conversión implícita.
-        $query .= "'$" . "id" . "'";
-        $query .= ", '$" . "saldoActual" . "'";
-        $query .= ", '$" . "fechaCaducidad" . "'";
-        $query .= ", '$" . "importeMaximo" . "'";
-        $query .= ", '$" . "estado" . "'";
-        $query .= ", '$" . "pin" . "'";
+        $query .= "'" . $id . "'";
+        $query .= ", '" . $saldoActual . "'";
+        $query .= ", '" . $fechaCaducidad . "'";
+        $query .= ", '" . $importeMaximo . "'";
+        $query .= ", '" . $estado . "'";
+        $query .= ", '" . $pin . "'";
         $query .= ")";
 
         // 5. Ejecución y Feedback
@@ -615,8 +615,8 @@
         }
         
         // 2. Selección de BD
-        if (!mysqli_select_db($link, "GestionMat")) {
-            die("Error: No se encuentra la base de datos 'GestionMat'. Asegúrate de haber ejecutado el SQL.");
+        if (!mysqli_select_db($link, "RedBancaria")) {
+            die("Error: No se encuentra la base de datos 'RedBancaria'. Asegúrate de haber ejecutado el SQL.");
         }
 
         // 3. Recogida de datos del POST
@@ -626,7 +626,7 @@
         $cantidad = $_POST['varcantidad'];
 
         // 4. Construcción de la Query
-        $query = "INSERT INTO Movimiento (";
+        $query = "INSERT INTO `Movimiento` ("; 
         // (Lista de nombres de columnas)
         $query .= "id";
         $query .= ", concepto";
@@ -636,10 +636,10 @@
         
         // (Lista de valores)
         // Nota: Ponemos comillas simples '$var' a todo para simplificar. MySQL hace la conversión implícita.
-        $query .= "'$" . "id" . "'";
-        $query .= ", '$" . "concepto" . "'";
-        $query .= ", '$" . "fecha" . "'";
-        $query .= ", '$" . "cantidad" . "'";
+        $query .= "'" . $id . "'";
+        $query .= ", '" . $concepto . "'";
+        $query .= ", '" . $fecha . "'";
+        $query .= ", '" . $cantidad . "'";
         $query .= ")";
 
         // 5. Ejecución y Feedback
