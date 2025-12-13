@@ -232,7 +232,7 @@
   </elementoes>
   <elementosWebbed>
     <tapizHasElementosWebbed Id="5154f811-8d34-4298-adbc-a1772aeb6a1b">
-      <portal Id="504629d1-2939-4e68-a29e-182ea2f9014d" titleText="SISTEMA RED BANCARIA" titleColor="662E23" titleFontFamily="Arial" titleFontSize="18" titlePosition="Derecha" backgroundColor="F54927">
+      <portal Id="504629d1-2939-4e68-a29e-182ea2f9014d" titleText="SISTEMA RED BANCARIA" titleColor="662E23" titleFontFamily="Arial" titleFontSize="18" titlePosition="Centro" backgroundColor="F54927">
         <paged>
           <portalReferencesPaged Id="a95ef072-2875-4393-8357-76ff4c8af168">
             <pageMoniker Id="e904041c-8f57-4fcd-a73e-a658e04ada44" />
@@ -256,7 +256,7 @@
       </portal>
     </tapizHasElementosWebbed>
     <tapizHasElementosWebbed Id="e90e5f3f-62b3-4d85-9bb0-06a6f5ee4273">
-      <page Id="0e185053-6637-4674-97e4-b6d9d08deb64" titleColor="7E0EC5" titleFontFamily="Arial" titleFontSize="14" titlePosition="Izquierda" titleText="Tarjeta">
+      <page Id="0e185053-6637-4674-97e4-b6d9d08deb64" titleColor="98B711" titleFontFamily="Arial" titleFontSize="14" titlePosition="Izquierda" titleText="Tarjeta">
         <fielded>
           <pageReferencesFielded Id="de83e09f-f5af-4254-917a-9f81c8fb5f67">
             <fieldMoniker Id="59b48909-7ac3-44a9-991a-2d1cc5d92c65" />
@@ -277,7 +277,7 @@
       </page>
     </tapizHasElementosWebbed>
     <tapizHasElementosWebbed Id="723628dc-b56b-42c8-88c4-f0ca240f4966">
-      <page Id="e904041c-8f57-4fcd-a73e-a658e04ada44" titleColor="7E0EC5" titleFontFamily="Arial" titleFontSize="14" titlePosition="Izquierda" titleText="Red Bancaria">
+      <page Id="e904041c-8f57-4fcd-a73e-a658e04ada44" titleColor="1199B7" titleFontFamily="Arial" titleFontSize="14" titlePosition="Izquierda" titleText="Red Bancaria">
         <fielded>
           <pageReferencesFielded Id="e88d19a4-aa2a-4ac4-8583-3cda1c69da29">
             <fieldMoniker Id="a75e43a0-d6d1-4273-93b4-88d3e17b970c" />
@@ -286,7 +286,7 @@
       </page>
     </tapizHasElementosWebbed>
     <tapizHasElementosWebbed Id="abac2710-a96f-4380-9225-57a61000117f">
-      <page Id="90b0562a-b40c-46d5-a998-900a5c90d8bf" titleColor="7E0EC5" titleFontFamily="Arial" titleFontSize="14" titlePosition="Izquierda" titleText="Banco">
+      <page Id="90b0562a-b40c-46d5-a998-900a5c90d8bf" titleColor="7E0EC5" titleFontFamily="Verdana" titleFontSize="14" titlePosition="Centro" titleText="Banco">
         <fielded>
           <pageReferencesFielded Id="993dbf8c-df92-42d1-96ab-e28a27bf50d2">
             <fieldMoniker Id="71186f63-aa70-4dd1-9333-cd1a7eba53a8" />
@@ -298,7 +298,7 @@
       </page>
     </tapizHasElementosWebbed>
     <tapizHasElementosWebbed Id="54332651-c4ef-4e63-a323-bb1972b34d6b">
-      <page Id="bf033e68-074c-466c-affc-8dd468f84086" titleColor="7E0EC5" titleFontFamily="Arial" titleFontSize="14" titlePosition="Izquierda" titleText="Cuenta">
+      <page Id="bf033e68-074c-466c-affc-8dd468f84086" titleColor="15FE97" titleFontFamily="Arial" titleFontSize="14" titlePosition="Izquierda" titleText="Cuenta">
         <fielded>
           <pageReferencesFielded Id="aa6d155a-0db6-4960-a447-117fc6144b76">
             <fieldMoniker Id="25b86ff2-ede9-4a06-b04f-d2dad40bec0d" />
@@ -307,7 +307,7 @@
       </page>
     </tapizHasElementosWebbed>
     <tapizHasElementosWebbed Id="56e34891-42ae-490d-8ebb-02f166802117">
-      <page Id="65096276-fffe-49ea-8e6d-3cf3572d52e0" titleColor="7E0EC5" titleFontFamily="Arial" titleFontSize="14" titlePosition="Izquierda" titleText="Cajero">
+      <page Id="65096276-fffe-49ea-8e6d-3cf3572d52e0" titleColor="F2FE15" titleFontFamily="Arial" titleFontSize="14" titlePosition="Izquierda" titleText="Cajero">
         <fielded>
           <pageReferencesFielded Id="0432c1d9-064a-44e0-abb2-8693c9c4f42a">
             <fieldMoniker Id="5032b498-4109-486f-aec0-c2713b2ad3f5" />
@@ -328,7 +328,7 @@
       <field Id="59b48909-7ac3-44a9-991a-2d1cc5d92c65" labelColor="C57F0E" labelFontFamily="Arial" labelFontSize="12" labelPosition="Izquierda" labelText="saldoActual" labelFormat="areaDeTexto" />
     </tapizHasElementosWebbed>
     <tapizHasElementosWebbed Id="e7e92efd-daa2-4b73-a9bd-1b53288e9ed4">
-      <page Id="edfba211-b1df-4602-a710-ccd5964f1290" titleColor="7E0EC5" titleFontFamily="Arial" titleFontSize="14" titlePosition="Izquierda" titleText="Movimiento">
+      <page Id="edfba211-b1df-4602-a710-ccd5964f1290" titleColor="A5BE9E" titleFontFamily="Arial" titleFontSize="14" titlePosition="Izquierda" titleText="Movimiento">
         <fielded>
           <pageReferencesFielded Id="f8f97a59-a686-4e07-a401-94620bf48d3c">
             <fieldMoniker Id="14657d6a-2cdd-4205-9477-bcc8dd096c27" />

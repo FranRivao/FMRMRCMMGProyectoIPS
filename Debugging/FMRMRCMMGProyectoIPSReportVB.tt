@@ -1,179 +1,290 @@
-﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" hostspecific="true" language="C#" #>
 <#@ output extension=".php" #>
 <#@ FMRMRCMMGProyectoIPS processor="FMRMRCMMGProyectoIPSDirectiveProcessor" requires="fileName='Sample.FMRMRCMMG_DSLProyIPS'" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="Microsoft.CSharp" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="Microsoft.VisualStudio.TextTemplating" #>
 
 <# 
-    // CONFIGURACIÓN: Nombre de la BD (fijo porque Tapiz no tiene propiedad nombre)
+    // 1. INICIALIZACIÓN DEL GESTOR (Usando dynamic para evitar errores de versión)
+    var manager = Manager.Create(Host, GenerationEnvironment); 
     string dbName = "redBancaria";
+
+    // 2. OBTENER DATOS DEL PORTAL (Diseño Global)
+    var portal = this.Tapiz.ElementosWebbed.OfType<Portal>().FirstOrDefault();
+
+    // Valores por defecto para el Portal (Fondo y Título Global)
+    string bodyBgColor = "#f0f2f5"; // Color por defecto si no hay portal
+    string portalTitleHtml = "";    // Si hay portal, generaremos un encabezado global
+    
+    if (portal != null) {
+        // Mapeo de propiedades del Portal
+        bodyBgColor = !string.IsNullOrEmpty(portal.backgroundColor) ? "#" + portal.backgroundColor : "#f0f2f5";
+        
+        // Estilos del título del Portal
+        string pAlign = GetCssAlign(portal.titlePosition);
+        string pColor = !string.IsNullOrEmpty(portal.titleColor) ? "#" +portal.titleColor : "#333";
+        string pFont = portal.titleFontFamily.ToString();
+        string pSize = portal.titleFontSize + "px";
+        
+        // Generamos el HTML del encabezado global
+        portalTitleHtml = $@"
+        <div style='text-align:{pAlign}; margin-bottom:20px; border-bottom:2px solid #ccc; padding:10px;'>
+            <h1 style='color:{pColor}; font-family:""{pFont}""; font-size:{pSize}; margin:0;'>
+                {portal.titleText}
+            </h1>
+        </div>";
+    }
 #>
 
 <#
-// Iteramos por cada entidad del modelo para generar su página PHP
+// 3. RECORRER ENTIDADES PARA GENERAR PÁGINAS INDIVIDUALES
 foreach (Elemento e in this.Tapiz.Elementoes)
 {
     var ent = e as Entidad;
-    // Saltamos si no es entidad o si no tiene clave primaria (necesaria para el funcionamiento)
     if (ent == null || ent.AtributoKey == null) continue;
 
-    // 1. Lógica para convertir tus Enums de estilo a CSS válido
-    string align = "left";
-    if (ent.alineacionTitulo == PosicionTituloEnum.Centro) align = "center";
-    if (ent.alineacionTitulo == PosicionTituloEnum.Derecha) align = "right";
+    // Iniciamos fichero
+    manager.StartNewFile(ent.nombre + ".php");
     
-    // Tratamiento simple del tamaño (si viene número o texto)
-    string fontSize = ent.tamañoTitulo; 
-    // Si el usuario solo puso un número, le añadimos "px" para que funcione en CSS, si no, lo dejamos igual
-    int n;
-    if (int.TryParse(fontSize, out n)) fontSize += "px";
+    // 4. BUSCAR LA 'PAGE' ASOCIADA (ElementoWeb)
+    // Asumimos que se relacionan por el nombre/título. 
+    // Buscamos una Page cuyo titleText sea igual al nombre de la Entidad.
+    var page = this.Tapiz.ElementosWebbed.OfType<Page>()
+                   .FirstOrDefault(p => p.titleText == ent.nombre);
 
-    // Nombre del campo del formulario para la PK
+    // Variables de estilo para el título de la Entidad (H2)
+    // Usamos valores por defecto, y si encontramos la Page, los sobrescribimos.
+    string pageTitleText = ent.nombre;
+    string h2Align = "left";
+    string h2Color = "#1a2980";
+    string h2Font = "Arial";
+    string h2Size = "24px";
+
+    if (page != null) {
+        // Si existe el elemento Page, usamos sus datos
+        pageTitleText = page.titleText; // Texto del nombre de la página
+        h2Align = GetCssAlign(page.titlePosition);
+        h2Color = !string.IsNullOrEmpty(page.titleColor) ? "#" +page.titleColor : "#1a2980";
+        h2Font = page.titleFontFamily.ToString();
+        h2Size = page.titleFontSize > 0 ? page.titleFontSize + "px" : "24px";
+    }
+
     string pkInputName = "var" + ent.AtributoKey.nombre;
 #>
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
     <title>Gestión de <#= ent.nombre #></title>
     <style>
-        /* Estilos generales */
-        body { font-family: sans-serif; background-color: #B8D1F1; padding: 20px; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: <#= bodyBgColor #>; /* Color del background del Portal */
+            margin: 0; padding: 20px;
+            display: flex; flex-direction: column; align-items: center;
+        }
+        .contenedor { width: 100%; max-width: 800px; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
         
-        /* Estilos dinámicos desde el modelo DSL */
-        h1.titulo-entidad {
-            color: <#= ent.colorTitulo #>;
-            font-family: '<#= ent.fuenteTitulo #>';
-            font-size: <#= fontSize #>;
-            text-align: <#= align #>;
-            margin-bottom: 30px;
+        /* Estilo específico para el título de esta Página (sacado del elemento Page) */
+        h2.titulo-pagina {
+            text-align: <#= h2Align #>;
+            color: <#= h2Color #>;
+            font-family: '<#= h2Font #>', sans-serif;
+            font-size: <#= h2Size #>;
+            margin-top: 0; padding-bottom: 10px; border-bottom: 1px solid #eee;
         }
 
-        /* Estilo básico de formulario */
-        form { background: white; padding: 20px; border-radius: 8px; max-width: 600px; margin: 0 auto; }
-        div.campo { margin-bottom: 15px; }
-        label { display: inline-block; width: 150px; font-weight: bold; }
-        input { padding: 5px; width: 250px; }
-        input[type="submit"] { 
-            background-color: #4CAF50; color: white; border: none; 
-            padding: 10px 20px; cursor: pointer; width: auto; 
+        /* Estilos de formulario genéricos */
+        .form-group { margin-bottom: 15px; }
+        label { display: block; font-weight: bold; margin-bottom: 5px; color: #555; }
+        input[type="text"], input[type="number"], input[type="date"], select {
+            width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;
         }
+        input[type="submit"] {
+            background-color: #28a745; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; width: 100%;
+        }
+        input[type="submit"]:hover { background-color: #218838; }
+        .mensaje { padding: 15px; margin-top: 20px; border-radius: 5px; text-align: center; }
+        .exito { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .error { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+        a.volver { display: block; text-align: center; margin-top: 15px; color: #007bff; text-decoration: none; }
     </style>
 </head>
 <body>
 
-<?php
-    // COMPROBACIÓN: ¿Se ha enviado el formulario?
-    // Verificamos si existe la variable de la PK en el POST
-    if (!isset($_POST['<#= pkInputName #>'])) {
-?>
-    <h1 class="titulo-entidad"><#= ent.nombre #></h1>
-    
-    <form action="<#= ent.nombre #>.php" method="post">
-        
-        <div class="campo">
-            <label for="<#= pkInputName #>"><#= ent.AtributoKey.nombre #> (PK):</label>
-            <input type="text" name="<#= pkInputName #>" id="<#= pkInputName #>" required />
-        </div>
+    <#= portalTitleHtml #>
 
-<#
-        // Generar inputs para el resto de atributos
-        foreach (Atributo attr in ent.Atributo)
-        {
-            // Mapeo de TipoDatoEnum a HTML Input Type
-            string inputType = "text";
-            string stepAttr = ""; // Necesario para números reales (decimales)
+    <div class="contenedor">
+        
+        <h2 class="titulo-pagina"><#= pageTitleText #></h2>
+
+    <?php
+        // LOGICA PHP
+        if (!isset($_POST['<#= pkInputName #>'])) {
+    ?>
+        <form action="<#= ent.nombre #>.php" method="post">
             
-            if (attr.tipoDato == TipoDatoEnum.Entero) inputType = "number";
-            if (attr.tipoDato == TipoDatoEnum.Real) { 
-                inputType = "number"; 
-                stepAttr = "step='any'"; 
+            <div class="form-group">
+                <label for="<#= pkInputName #>"><#= ent.AtributoKey.nombre #> (PK)</label>
+                <input type="text" name="<#= pkInputName #>" id="<#= pkInputName #>" required />
+            </div>
+
+    <#
+            foreach (Atributo attr in ent.Atributo)
+            {
+                string inputType = "text";
+                string stepAttr = "";
+                
+                if (attr.tipoDato == TipoDatoEnum.Entero) inputType = "number";
+                if (attr.tipoDato == TipoDatoEnum.Real) { inputType = "number"; stepAttr = "step='any'"; }
+                if (attr.tipoDato == TipoDatoEnum.Fecha) inputType = "date";
+
+                string requiredAttr = (attr.esNulo) ? "" : "required";
+                string inputName = "var" + attr.nombre;
+    #>
+            <div class="form-group">
+                <label for="<#= inputName #>"><#= attr.nombre #></label>
+                <input type="<#= inputType #>" name="<#= inputName #>" id="<#= inputName #>" <#= stepAttr #> <#= requiredAttr #> />
+            </div>
+    <#
             }
-            if (attr.tipoDato == TipoDatoEnum.Fecha) inputType = "date";
+    #>
+            <input type="submit" value="Dar de Alta" />
+        </form>
 
-            // Gestión de Nulos: Si esNulo es false, añadimos 'required'
-            string requiredAttr = (attr.esNulo) ? "" : "required";
-            
-            string inputName = "var" + attr.nombre;
-#>
-        <div class="campo">
-            <label for="<#= inputName #>"><#= attr.nombre #>:</label>
-            <input type="<#= inputType #>" name="<#= inputName #>" id="<#= inputName #>" <#= stepAttr #> <#= requiredAttr #> />
-        </div>
-<#
-        }
-#>
-        <br/>
-        <input type="submit" value="Alta" />
-    </form>
-
-<?php
-    } else {
-        // LÓGICA: PROCESAR EL INSERT EN MYSQL
-        
-        // 1. Conexión
-        $link = mysqli_connect("localhost", "root", "");
-        if (!$link) {
-            die("Error de conexión: " . mysqli_connect_error());
-        }
-        
-        // 2. Selección de BD
-        if (!mysqli_select_db($link, "<#= dbName #>")) {
-            die("Error: No se encuentra la base de datos '<#= dbName #>'. Asegúrate de haber ejecutado el SQL.");
-        }
-
-        // 3. Recogida de datos del POST
-        $<#= ent.AtributoKey.nombre #> = $_POST['<#= pkInputName #>'];
-<#
-        foreach (Atributo attr in ent.Atributo)
-        {
-#>
-        $<#= attr.nombre #> = $_POST['var<#= attr.nombre #>'];
-<#
-        }
-#>
-
-        // 4. Construcción de la Query
-        $query = "INSERT INTO `<#= ent.nombre #>` (";
-        // (Lista de nombres de columnas)
-        $query .= "<#= ent.AtributoKey.nombre #>";
-<#
-        foreach (Atributo attr in ent.Atributo) {
-#>
-        $query .= ", <#= attr.nombre #>";
-<#
-        }
-#>
-        $query .= ") VALUES (";
-        
-        // (Lista de valores)
-        // Nota: Ponemos comillas simples '$var' a todo para simplificar. MySQL hace la conversión implícita.
-        $query .= "'" . $<#= ent.AtributoKey.nombre #> . "'";
-<#
-        foreach (Atributo attr in ent.Atributo) {
-#>
-        $query .= ", '" . $<#= attr.nombre #> . "'";
-<#
-        }
-#>
-        $query .= ")";
-
-        // 5. Ejecución y Feedback
-        if (mysqli_query($link, $query)) {
-            echo "<h2>Registro insertado correctamente en <#= ent.nombre #>.</h2>";
+    <?php
         } else {
-            echo "<h2 style='color:red'>Error al insertar: " . mysqli_error($link) . "</h2>";
-            echo "<p>Query intentada: " . $query . "</p>";
-        }
+            // PROCESAMIENTO PHP
+            $link = mysqli_connect("localhost", "root", "");
+            if (!$link) die("<div class='mensaje error'>Error de conexión: " . mysqli_connect_error() . "</div>");
+            
+            if (!mysqli_select_db($link, "<#= dbName #>")) {
+                die("<div class='mensaje error'>Error: No existe la base de datos <#= dbName #></div>");
+            }
 
-        mysqli_close($link);
-        
-        echo "<br><a href='<#= ent.nombre #>.php'>Volver al formulario</a>";
-    }
-?>
+            $<#= ent.AtributoKey.nombre #> = $_POST['<#= pkInputName #>'];
+    <#
+            foreach (Atributo attr in ent.Atributo) {
+    #>
+            $<#= attr.nombre #> = $_POST['var<#= attr.nombre #>'];
+    <#      } #>
+
+            $query = "INSERT INTO `<#= ent.nombre #>` (";
+            $query .= "<#= ent.AtributoKey.nombre #>";
+    <#      foreach (Atributo attr in ent.Atributo) { #>
+            $query .= ", <#= attr.nombre #>";
+    <#      } #>
+            $query .= ") VALUES (";
+            
+            $query .= "'" . $<#= ent.AtributoKey.nombre #> . "'";
+    <#      foreach (Atributo attr in ent.Atributo) { #>
+            $query .= ", '" . $<#= attr.nombre #> . "'";
+    <#      } #>
+            $query .= ")";
+
+            if (mysqli_query($link, $query)) {
+                echo "<div class='mensaje exito'>Registro insertado correctamente en <strong><#= ent.nombre #></strong>.</div>";
+            } else {
+                echo "<div class='mensaje error'>Error al insertar: " . mysqli_error($link) . "</div>";
+            }
+
+            mysqli_close($link);
+            echo "<a href='<#= ent.nombre #>.php' class='volver'>Volver al formulario</a>";
+        }
+    ?>
+    </div>
 </body>
 </html>
-
 <#
-    // Separador visual para cuando abras el fichero generado
-    WriteLine("");
-    WriteLine("");
-    WriteLine("");
+} 
+manager.Process(true);
+#>
+
+<#+
+// FUNCIÓN AUXILIAR PARA CONVERTIR ENUM A CSS ALIGN
+private string GetCssAlign(PosicionTituloEnum pos)
+{
+    if (pos == PosicionTituloEnum.Centro) return "center";
+    if (pos == PosicionTituloEnum.Derecha) return "right";
+    return "left";
+}
+
+// CLASE MANAGER (DYNAMIC PARA EVITAR ERRORES DE REFERENCIA)
+public class Manager
+{
+    private Block currentBlock;
+    private List<Block> files = new List<Block>();
+    private Block footer = new Block();
+    private Block header = new Block();
+    private dynamic host;
+    private StringBuilder template;
+    protected List<string> generatedFileNames = new List<string>();
+
+    public static Manager Create(object host, StringBuilder template) {
+        return new Manager(host, template);
+    }
+
+    private Manager(object host, StringBuilder template) {
+        this.host = host;
+        this.template = template;
+    }
+
+    public void StartNewFile(string name) {
+        if (name == null) throw new ArgumentNullException("name");
+        CurrentBlock = new Block { Name = name };
+    }
+
+    public void EndBlock() {
+        if (CurrentBlock == null) return;
+        CurrentBlock.Length = template.Length - CurrentBlock.Start;
+        if (CurrentBlock != header && CurrentBlock != footer) files.Add(CurrentBlock);
+        currentBlock = null;
+    }
+
+    public void Process(bool split) {
+        if (split) {
+            EndBlock();
+            string headerText = template.ToString(header.Start, header.Length);
+            string footerText = template.ToString(footer.Start, footer.Length);
+            string outputPath = Path.GetDirectoryName((string)host.TemplateFile);
+            files.Reverse();
+            foreach (Block block in files) {
+                string fileName = Path.Combine(outputPath, block.Name);
+                string content = headerText + template.ToString(block.Start, block.Length) + footerText;
+                generatedFileNames.Add(fileName);
+                CreateFile(fileName, content);
+                template.Remove(block.Start, block.Length);
+            }
+        }
+    }
+
+    protected void CreateFile(string fileName, string content) {
+        if (IsFileContentDifferent(fileName, content)) {
+            File.WriteAllText(fileName, content);
+        }
+    }
+
+    protected bool IsFileContentDifferent(string fileName, string newContent) {
+        return !(File.Exists(fileName) && File.ReadAllText(fileName) == newContent);
+    }
+
+    private Block CurrentBlock {
+        get { return currentBlock; }
+        set {
+            if (currentBlock != null) EndBlock();
+            if (value != null) value.Start = template.Length;
+            currentBlock = value;
+        }
+    }
+
+    private class Block {
+        public string Name;
+        public int Start, Length;
+    }
 }
 #>
