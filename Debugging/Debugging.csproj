@@ -44,6 +44,15 @@
       <SubType>
       </SubType>
     </None>
+    <None Include="Banco.php">
+      <DependentUpon>FMRMRCMMGProyectoIPSReportVB.tt</DependentUpon>
+    </None>
+    <None Include="Cajero.php">
+      <DependentUpon>FMRMRCMMGProyectoIPSReportVB.tt</DependentUpon>
+    </None>
+    <None Include="Cuenta.php">
+      <DependentUpon>FMRMRCMMGProyectoIPSReportVB.tt</DependentUpon>
+    </None>
     <None Include="FMRMRCMMGProyectoIPSReport.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>FMRMRCMMGProyectoIPSReport.sql</LastGenOutput>
@@ -57,9 +66,18 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>FMRMRCMMGProyectoIPSReportVB.php</LastGenOutput>
     </None>
+    <None Include="Movimiento.php">
+      <DependentUpon>FMRMRCMMGProyectoIPSReportVB.tt</DependentUpon>
+    </None>
+    <None Include="Red Bancaria.php">
+      <DependentUpon>FMRMRCMMGProyectoIPSReportVB.tt</DependentUpon>
+    </None>
     <None Include="Sample.FMRMRCMMG_DSLProyIPS" />
     <None Include="Sample.FMRMRCMMG_DSLProyIPS.diagram">
       <DependentUpon>Sample.FMRMRCMMG_DSLProyIPS</DependentUpon>
+    </None>
+    <None Include="Tarjeta.php">
+      <DependentUpon>FMRMRCMMGProyectoIPSReportVB.tt</DependentUpon>
     </None>
     <None Include="Test.FMRMRCMMG_DSLProyIPS" />
     <None Include="Test.FMRMRCMMG_DSLProyIPS.diagram">
