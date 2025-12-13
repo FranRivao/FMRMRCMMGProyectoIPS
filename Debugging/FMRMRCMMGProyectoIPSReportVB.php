@@ -62,8 +62,8 @@
         }
         
         // 2. Selección de BD
-        if (!mysqli_select_db($link, "GestionMat")) {
-            die("Error: No se encuentra la base de datos 'GestionMat'. Asegúrate de haber ejecutado el SQL.");
+        if (!mysqli_select_db($link, "redBancaria")) {
+            die("Error: No se encuentra la base de datos 'redBancaria'. Asegúrate de haber ejecutado el SQL.");
         }
 
         // 3. Recogida de datos del POST
@@ -168,8 +168,8 @@
         }
         
         // 2. Selección de BD
-        if (!mysqli_select_db($link, "GestionMat")) {
-            die("Error: No se encuentra la base de datos 'GestionMat'. Asegúrate de haber ejecutado el SQL.");
+        if (!mysqli_select_db($link, "redBancaria")) {
+            die("Error: No se encuentra la base de datos 'redBancaria'. Asegúrate de haber ejecutado el SQL.");
         }
 
         // 3. Recogida de datos del POST
@@ -273,8 +273,8 @@
         }
         
         // 2. Selección de BD
-        if (!mysqli_select_db($link, "GestionMat")) {
-            die("Error: No se encuentra la base de datos 'GestionMat'. Asegúrate de haber ejecutado el SQL.");
+        if (!mysqli_select_db($link, "redBancaria")) {
+            die("Error: No se encuentra la base de datos 'redBancaria'. Asegúrate de haber ejecutado el SQL.");
         }
 
         // 3. Recogida de datos del POST
@@ -375,8 +375,8 @@
         }
         
         // 2. Selección de BD
-        if (!mysqli_select_db($link, "GestionMat")) {
-            die("Error: No se encuentra la base de datos 'GestionMat'. Asegúrate de haber ejecutado el SQL.");
+        if (!mysqli_select_db($link, "redBancaria")) {
+            die("Error: No se encuentra la base de datos 'redBancaria'. Asegúrate de haber ejecutado el SQL.");
         }
 
         // 3. Recogida de datos del POST
@@ -493,8 +493,8 @@
         }
         
         // 2. Selección de BD
-        if (!mysqli_select_db($link, "GestionMat")) {
-            die("Error: No se encuentra la base de datos 'GestionMat'. Asegúrate de haber ejecutado el SQL.");
+        if (!mysqli_select_db($link, "redBancaria")) {
+            die("Error: No se encuentra la base de datos 'redBancaria'. Asegúrate de haber ejecutado el SQL.");
         }
 
         // 3. Recogida de datos del POST
@@ -615,8 +615,8 @@
         }
         
         // 2. Selección de BD
-        if (!mysqli_select_db($link, "GestionMat")) {
-            die("Error: No se encuentra la base de datos 'GestionMat'. Asegúrate de haber ejecutado el SQL.");
+        if (!mysqli_select_db($link, "redBancaria")) {
+            die("Error: No se encuentra la base de datos 'redBancaria'. Asegúrate de haber ejecutado el SQL.");
         }
 
         // 3. Recogida de datos del POST

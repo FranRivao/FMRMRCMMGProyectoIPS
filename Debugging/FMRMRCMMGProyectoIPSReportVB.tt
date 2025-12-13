@@ -4,7 +4,7 @@
 
 <# 
     // CONFIGURACIÓN: Nombre de la BD (fijo porque Tapiz no tiene propiedad nombre)
-    string dbName = "GestionMat";
+    string dbName = "redBancaria";
 #>
 
 <#
