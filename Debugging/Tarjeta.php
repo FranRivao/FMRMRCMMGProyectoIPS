@@ -87,7 +87,13 @@
     <?php
         } else {
             // PROCESAMIENTO PHP
-            $link = mysqli_connect("localhost", "root", "");
+            $link = mysqli_connect(
+                    "localhost",
+                    "root", // usuario
+                    "1234", // password
+                    "", // nombre base de datos vacio porque se setea despues
+                    3307 // puerto
+                );
             if (!$link) die("<div class='mensaje error'>Error de conexión: " . mysqli_connect_error() . "</div>");
             
             if (!mysqli_select_db($link, "redBancaria")) {
