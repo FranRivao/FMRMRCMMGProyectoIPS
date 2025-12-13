@@ -11,7 +11,17 @@
             display: flex; flex-direction: column; align-items: center;
         }
         .contenedor { width: 100%; max-width: 800px; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        
+        .menu-entidades {
+            margin-bottom: 20px;
+            background: #f6f6f6;
+            padding: 12px 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        }
+        .menu-entidades ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap;}
+        .menu-entidades li { margin-right: 15px; }
+        .menu-entidades a { color: #1a2980; text-decoration: none; font-weight: bold;}
+        .menu-entidades a:hover { text-decoration: underline; }
         /* Estilo específico para el título de esta Página (sacado del elemento Page) */
         h2.titulo-pagina {
             text-align: left;
@@ -38,7 +48,16 @@
     </style>
 </head>
 <body>
-
+    <nav class="menu-entidades">
+      <ul>
+            <li><a href="Red Bancaria.php">Red Bancaria</a></li>
+            <li><a href="Banco.php">Banco</a></li>
+            <li><a href="Cajero.php">Cajero</a></li>
+            <li><a href="Cuenta.php">Cuenta</a></li>
+            <li><a href="Tarjeta.php">Tarjeta</a></li>
+            <li><a href="Movimiento.php">Movimiento</a></li>
+          </ul>
+    </nav>
     
         <div style='text-align:center; margin-bottom:20px; border-bottom:2px solid #ccc; padding:10px;'>
             <h1 style='color:#662E23; font-family:"Arial"; font-size:18px; margin:0;'>
@@ -80,8 +99,8 @@
                 );
             if (!$link) die("<div class='mensaje error'>Error de conexión: " . mysqli_connect_error() . "</div>");
             
-            if (!mysqli_select_db($link, "redBancaria")) {
-                die("<div class='mensaje error'>Error: No existe la base de datos redBancaria</div>");
+            if (!mysqli_select_db($link, "redbancaria")) {
+                die("<div class='mensaje error'>Error: No existe la base de datos redbancaria</div>");
             }
 
             $id = $_POST['varid'];

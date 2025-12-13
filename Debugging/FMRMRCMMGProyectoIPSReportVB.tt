@@ -13,7 +13,7 @@
 <# 
     // 1. INICIALIZACIÓN DEL GESTOR (Usando dynamic para evitar errores de versión)
     var fileManager=EntityFrameworkTemplateFileManager.Create(this); 
-    string dbName = "redBancaria";
+    string dbName = "redbancaria";
 
     // 2. OBTENER DATOS DEL PORTAL (Diseño Global)
     var portal = this.Tapiz.ElementosWebbed.OfType<Portal>().FirstOrDefault();
@@ -41,9 +41,7 @@
         </div>";
     }
 #>
-
 <#
-// 3. RECORRER ENTIDADES PARA GENERAR PÁGINAS INDIVIDUALES
 foreach (Elemento e in this.Tapiz.Elementoes)
 {
     var ent = e as Entidad;
@@ -90,7 +88,17 @@ foreach (Elemento e in this.Tapiz.Elementoes)
             display: flex; flex-direction: column; align-items: center;
         }
         .contenedor { width: 100%; max-width: 800px; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        
+        .menu-entidades {
+            margin-bottom: 20px;
+            background: #f6f6f6;
+            padding: 12px 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        }
+        .menu-entidades ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap;}
+        .menu-entidades li { margin-right: 15px; }
+        .menu-entidades a { color: #1a2980; text-decoration: none; font-weight: bold;}
+        .menu-entidades a:hover { text-decoration: underline; }
         /* Estilo específico para el título de esta Página (sacado del elemento Page) */
         h2.titulo-pagina {
             text-align: <#= h2Align #>;
@@ -117,7 +125,17 @@ foreach (Elemento e in this.Tapiz.Elementoes)
     </style>
 </head>
 <body>
-
+    <nav class="menu-entidades">
+      <ul>
+    <#
+    foreach(var otraEnt in this.Tapiz.Elementoes.OfType<Entidad>()) {
+    #>
+        <li><a href="<#= otraEnt.nombre #>.php"><#= otraEnt.nombre #></a></li>
+    <#
+    }
+    #>
+      </ul>
+    </nav>
     <#= portalTitleHtml #>
 
     <div class="contenedor">
@@ -220,4 +238,5 @@ private string GetCssAlign(PosicionTituloEnum pos)
     if (pos == PosicionTituloEnum.Derecha) return "right";
     return "left";
 }
+
 #>
