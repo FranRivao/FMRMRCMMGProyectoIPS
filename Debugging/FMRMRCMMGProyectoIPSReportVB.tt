@@ -130,7 +130,7 @@ foreach (Elemento e in this.Tapiz.Elementoes)
 #>
 
         // 4. Construcción de la Query
-        $query = "INSERT INTO <#= ent.nombre #> (";
+        $query = "INSERT INTO `<#= ent.nombre #>` (";
         // (Lista de nombres de columnas)
         $query .= "<#= ent.AtributoKey.nombre #>";
 <#
@@ -144,11 +144,11 @@ foreach (Elemento e in this.Tapiz.Elementoes)
         
         // (Lista de valores)
         // Nota: Ponemos comillas simples '$var' a todo para simplificar. MySQL hace la conversión implícita.
-        $query .= "'$" . "<#= ent.AtributoKey.nombre #>" . "'";
+        $query .= "'" . $<#= ent.AtributoKey.nombre #> . "'";
 <#
         foreach (Atributo attr in ent.Atributo) {
 #>
-        $query .= ", '$" . "<#= attr.nombre #>" . "'";
+        $query .= ", '" . $<#= attr.nombre #> . "'";
 <#
         }
 #>
