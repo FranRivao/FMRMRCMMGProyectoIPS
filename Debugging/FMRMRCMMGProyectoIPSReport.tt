@@ -6,8 +6,7 @@
 <#@ import namespace="Microsoft.VisualStudio.Modeling" #>
 
 <#
-    // NOMBRE DE LA BD (Fijo, ya que Tapiz no tiene propiedad nombre)
-    string dbName = "RedBancaria"; 
+    string dbName = "redbancaria"; 
 #>
 -- Generación automática: SQL
 -- Base de Datos: <#= dbName #>
@@ -16,9 +15,6 @@ CREATE DATABASE IF NOT EXISTS <#= dbName #>;
 USE <#= dbName #>;
 
 <#
-// --------------------------------------------------------
-// 1. TABLAS DE ENTIDADES
-// --------------------------------------------------------
 foreach (Elemento e in this.Tapiz.Elementoes)
 {
     var entidad = e as Entidad;
@@ -53,10 +49,9 @@ CREATE TABLE IF NOT EXISTS <#= NormalizarNombre(entidad.nombre) #> (
 
 <#
 } 
+#>
 
-// --------------------------------------------------------
-// 2. TABLAS DE RELACIONES (Solo N:M)
-// --------------------------------------------------------
+<#
 foreach (Elemento e in this.Tapiz.Elementoes)
 {
     var rel = e as Relacion;
@@ -111,6 +106,10 @@ CREATE TABLE IF NOT EXISTS <#= NormalizarNombre(rel.nombre) #> (
     }
 }
 #>
+
+DROP USER IF EXISTS 'appuser'@'localhost';
+CREATE USER 'appuser'@'localhost' IDENTIFIED BY '1234';
+GRANT ALL PRIVILEGES ON redbancaria.* TO 'appuser'@'localhost';
 
 <#+
 // HELPER PARA TIPOS DE DATOS

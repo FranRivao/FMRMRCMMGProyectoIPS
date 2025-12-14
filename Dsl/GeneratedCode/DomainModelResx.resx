@@ -141,38 +141,6 @@
     <value>Entidad</value>
     <comment>DisplayName for DomainClass &apos;Entidad&apos;</comment>
   </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Entidad/colorTitulo.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Entidad.Color Titulo</value>
-    <comment>Description for DomainProperty &apos;colorTitulo&apos; on DomainClass &apos;Entidad&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Entidad/colorTitulo.DisplayName" xml:space="preserve">
-    <value>Color Titulo</value>
-    <comment>DisplayName for DomainProperty &apos;colorTitulo&apos; on DomainClass &apos;Entidad&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Entidad/tamañoTitulo.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Entidad.Tamaño Titulo</value>
-    <comment>Description for DomainProperty &apos;tamañoTitulo&apos; on DomainClass &apos;Entidad&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Entidad/tamañoTitulo.DisplayName" xml:space="preserve">
-    <value>Tamaño Titulo</value>
-    <comment>DisplayName for DomainProperty &apos;tamañoTitulo&apos; on DomainClass &apos;Entidad&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Entidad/alineacionTitulo.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Entidad.Alineacion Titulo</value>
-    <comment>Description for DomainProperty &apos;alineacionTitulo&apos; on DomainClass &apos;Entidad&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Entidad/alineacionTitulo.DisplayName" xml:space="preserve">
-    <value>Alineacion Titulo</value>
-    <comment>DisplayName for DomainProperty &apos;alineacionTitulo&apos; on DomainClass &apos;Entidad&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Entidad/fuenteTitulo.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Entidad.Fuente Titulo</value>
-    <comment>Description for DomainProperty &apos;fuenteTitulo&apos; on DomainClass &apos;Entidad&apos;</comment>
-  </data>
-  <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Entidad/fuenteTitulo.DisplayName" xml:space="preserve">
-    <value>Fuente Titulo</value>
-    <comment>DisplayName for DomainProperty &apos;fuenteTitulo&apos; on DomainClass &apos;Entidad&apos;</comment>
-  </data>
   <data name="UPM_IPS.FMRMRCMMGProyectoIPS.Atributo.Description" xml:space="preserve">
     <value>Description for UPM_IPS.FMRMRCMMGProyectoIPS.Atributo</value>
     <comment>Description for DomainClass &apos;Atributo&apos;</comment>

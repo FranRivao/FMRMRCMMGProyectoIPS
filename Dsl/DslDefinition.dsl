@@ -25,28 +25,6 @@
       <BaseClass>
         <DomainClassMoniker Name="Elemento" />
       </BaseClass>
-      <Properties>
-        <DomainProperty Id="6acdec1a-8cdc-4693-bc8e-0bfe30898a90" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Entidad.Color Titulo" Name="colorTitulo" DisplayName="Color Titulo">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="3d755ed2-09ee-448e-a3dc-fda9e1a5be2d" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Entidad.Tamaño Titulo" Name="tamañoTitulo" DisplayName="Tamaño Titulo">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="b8b522b4-62aa-4492-9436-50e8237dbc40" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Entidad.Alineacion Titulo" Name="alineacionTitulo" DisplayName="Alineacion Titulo">
-          <Type>
-            <DomainEnumerationMoniker Name="PosicionTituloEnum" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="3c868f2e-3acf-4507-8806-f7a31bdbf27d" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Entidad.Fuente Titulo" Name="fuenteTitulo" DisplayName="Fuente Titulo">
-          <Type>
-            <DomainEnumerationMoniker Name="FuentesEnum" />
-          </Type>
-        </DomainProperty>
-      </Properties>
     </DomainClass>
     <DomainClass Id="995157d2-720f-4224-9529-acb6d4eac32e" Description="Description for UPM_IPS.FMRMRCMMGProyectoIPS.Atributo" Name="Atributo" DisplayName="Atributo" Namespace="UPM_IPS.FMRMRCMMGProyectoIPS">
       <BaseClass>
@@ -487,18 +465,6 @@
           <XmlRelationshipData UseFullForm="true" RoleElementName="atributoKey">
             <DomainRelationshipMoniker Name="EntidadReferencesAtributoKey" />
           </XmlRelationshipData>
-          <XmlPropertyData XmlName="colorTitulo">
-            <DomainPropertyMoniker Name="Entidad/colorTitulo" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="tamañoTitulo">
-            <DomainPropertyMoniker Name="Entidad/tamañoTitulo" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="alineacionTitulo">
-            <DomainPropertyMoniker Name="Entidad/alineacionTitulo" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="fuenteTitulo">
-            <DomainPropertyMoniker Name="Entidad/fuenteTitulo" />
-          </XmlPropertyData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="MetaforaEntidad" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaEntidadMoniker" ElementName="metaforaEntidad" MonikerTypeName="MetaforaEntidadMoniker">

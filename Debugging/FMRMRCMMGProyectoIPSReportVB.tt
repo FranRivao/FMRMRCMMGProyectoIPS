@@ -108,7 +108,7 @@ foreach (Elemento e in this.Tapiz.Elementoes)
             margin-top: 0; padding-bottom: 10px; border-bottom: 1px solid #eee;
         }
 
-        /* Estilos de formulario genéricos */
+        /* Estilos de formulario */
         .form-group { margin-bottom: 15px; }
         label { display: block; font-weight: bold; margin-bottom: 5px; color: #555; }
         input[type="text"], input[type="number"], input[type="date"], select {
@@ -129,11 +129,11 @@ foreach (Elemento e in this.Tapiz.Elementoes)
       <ul>
     <#
     foreach(var otraEnt in this.Tapiz.Elementoes.OfType<Entidad>()) {
-    #>
+#>
         <li><a href="<#= otraEnt.nombre #>.php"><#= otraEnt.nombre #></a></li>
     <#
     }
-    #>
+#>
       </ul>
     </nav>
     <#= portalTitleHtml #>
@@ -147,7 +147,6 @@ foreach (Elemento e in this.Tapiz.Elementoes)
         if (!isset($_POST['<#= pkInputName #>'])) {
     ?>
         <form action="<#= ent.nombre #>.php" method="post">
-            
             <div class="form-group">
                 <label for="<#= pkInputName #>"><#= ent.AtributoKey.nombre #> (PK)</label>
                 <input type="text" name="<#= pkInputName #>" id="<#= pkInputName #>" required />
@@ -156,6 +155,13 @@ foreach (Elemento e in this.Tapiz.Elementoes)
     <#
             foreach (Atributo attr in ent.Atributo)
             {
+                var field  = this.Tapiz.ElementosWebbed.OfType<Field>()
+                    .FirstOrDefault(f => f.labelText == attr.nombre);
+                string labelColor = string.IsNullOrEmpty(field.labelColor) ? "#555" : ("#" + field.labelColor);
+                string labelFont = field.labelFontFamily.ToString();
+                string labelSize = field.labelFontSize > 0 ? field.labelFontSize + "px" : "24px";
+                string labelAlign = GetCssAlign(field.labelPosition); // Utiliza tu función auxiliar para esto
+                
                 string inputType = "text";
                 string stepAttr = "";
                 
@@ -165,14 +171,22 @@ foreach (Elemento e in this.Tapiz.Elementoes)
 
                 string requiredAttr = (attr.esNulo) ? "" : "required";
                 string inputName = "var" + attr.nombre;
-    #>
+#>
+            <style>
+                    label.estilo {
+                        text-align: <#= labelAlign #>;
+                        color: <#= labelColor #>;
+                        font-family: '<#= labelFont #>', sans-serif;
+                        font-size: <#= labelSize #>;
+                    }
+            </style>
             <div class="form-group">
-                <label for="<#= inputName #>"><#= attr.nombre #></label>
+                <label for="<#= inputName #>" class="estilo"><#= attr.nombre #></label>
                 <input type="<#= inputType #>" name="<#= inputName #>" id="<#= inputName #>" <#= stepAttr #> <#= requiredAttr #> />
             </div>
     <#
             }
-    #>
+#>
             <input type="submit" value="Dar de Alta" />
         </form>
 
@@ -181,7 +195,7 @@ foreach (Elemento e in this.Tapiz.Elementoes)
             // PROCESAMIENTO PHP
             $link = mysqli_connect(
                     "localhost",
-                    "root", // usuario
+                    "appuser", // usuario
                     "1234", // password
                     "", // nombre base de datos vacio porque se setea despues
                     3307 // puerto
@@ -195,20 +209,20 @@ foreach (Elemento e in this.Tapiz.Elementoes)
             $<#= ent.AtributoKey.nombre #> = $_POST['<#= pkInputName #>'];
     <#
             foreach (Atributo attr in ent.Atributo) {
-    #>
-            $<#= attr.nombre #> = $_POST['var<#= attr.nombre #>'];
+#>
+            $<#= attr.nombre #> = $_POST['var<#= NormalizarNombre(attr.nombre) #>'];
     <#      } #>
 
-            $query = "INSERT INTO `<#= ent.nombre #>` (";
-            $query .= "<#= ent.AtributoKey.nombre #>";
+            $query = "INSERT INTO `<#= NormalizarNombre(ent.nombre) #>` (";
+            $query .= "<#= NormalizarNombre(ent.AtributoKey.nombre) #>";
     <#      foreach (Atributo attr in ent.Atributo) { #>
-            $query .= ", <#= attr.nombre #>";
+            $query .= ", <#= NormalizarNombre(attr.nombre) #>";
     <#      } #>
             $query .= ") VALUES (";
             
-            $query .= "'" . $<#= ent.AtributoKey.nombre #> . "'";
+            $query .= "'" . $<#= NormalizarNombre(ent.AtributoKey.nombre) #> . "'";
     <#      foreach (Atributo attr in ent.Atributo) { #>
-            $query .= ", '" . $<#= attr.nombre #> . "'";
+            $query .= ", '" . $<#= NormalizarNombre(attr.nombre) #> . "'";
     <#      } #>
             $query .= ")";
 
@@ -238,5 +252,30 @@ private string GetCssAlign(PosicionTituloEnum pos)
     if (pos == PosicionTituloEnum.Derecha) return "right";
     return "left";
 }
-
+  private string NormalizarNombre(string nombre)
+  {
+      if (string.IsNullOrEmpty(nombre))
+          return "campo";
+      
+      // Eliminar caracteres especiales excepto espacios y guiones bajos
+      nombre = System.Text.RegularExpressions.Regex.Replace(nombre, "[^a-zA-Z0-9_ ]", "");
+      
+      // Dividir por espacios, guiones bajos o cambios de mayúsculas
+      var partes = System.Text.RegularExpressions.Regex.Split(nombre, @"[\s_]+|(?=[A-Z])")
+          .Where(p => ! string.IsNullOrEmpty(p))
+          .ToList();
+      
+      if (partes.Count == 0)
+          return "campo";
+      
+      // Primera parte en minúsculas, resto capitalizadas
+      var resultado = partes[0].ToLower();
+      
+      for (int i = 1; i < partes.Count; i++)
+      {
+          resultado += char.ToUpper(partes[i][0]) + partes[i].Substring(1).ToLower();
+      }
+      
+      return resultado;
+  }
 #>

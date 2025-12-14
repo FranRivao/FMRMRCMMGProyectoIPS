@@ -6,7 +6,7 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #F54927; /* Color del background del Portal */
+            background-color: #FF913D; /* Color del background del Portal */
             margin: 0; padding: 20px;
             display: flex; flex-direction: column; align-items: center;
         }
@@ -24,14 +24,14 @@
         .menu-entidades a:hover { text-decoration: underline; }
         /* Estilo específico para el título de esta Página (sacado del elemento Page) */
         h2.titulo-pagina {
-            text-align: left;
+            text-align: right;
             color: #A5BE9E;
             font-family: 'Arial', sans-serif;
             font-size: 14px;
             margin-top: 0; padding-bottom: 10px; border-bottom: 1px solid #eee;
         }
 
-        /* Estilos de formulario genéricos */
+        /* Estilos de formulario */
         .form-group { margin-bottom: 15px; }
         label { display: block; font-weight: bold; margin-bottom: 5px; color: #555; }
         input[type="text"], input[type="number"], input[type="date"], select {
@@ -60,7 +60,7 @@
     </nav>
     
         <div style='text-align:center; margin-bottom:20px; border-bottom:2px solid #ccc; padding:10px;'>
-            <h1 style='color:#662E23; font-family:"Arial"; font-size:18px; margin:0;'>
+            <h1 style='color:#FFFFFF; font-family:"Tahoma"; font-size:18px; margin:0;'>
                 SISTEMA RED BANCARIA
             </h1>
         </div>
@@ -74,22 +74,45 @@
         if (!isset($_POST['varid'])) {
     ?>
         <form action="Movimiento.php" method="post">
-            
             <div class="form-group">
                 <label for="varid">id (PK)</label>
                 <input type="text" name="varid" id="varid" required />
             </div>
 
-                <div class="form-group">
-                <label for="varconcepto">concepto</label>
+                <style>
+                    label.estilo {
+                        text-align: left;
+                        color: #C57F0E;
+                        font-family: 'Arial', sans-serif;
+                        font-size: 12px;
+                    }
+            </style>
+            <div class="form-group">
+                <label for="varconcepto" class="estilo">concepto</label>
                 <input type="text" name="varconcepto" id="varconcepto"  required />
             </div>
-                <div class="form-group">
-                <label for="varfecha">fecha</label>
+                <style>
+                    label.estilo {
+                        text-align: left;
+                        color: #C57F0E;
+                        font-family: 'Arial', sans-serif;
+                        font-size: 12px;
+                    }
+            </style>
+            <div class="form-group">
+                <label for="varfecha" class="estilo">fecha</label>
                 <input type="date" name="varfecha" id="varfecha"  required />
             </div>
-                <div class="form-group">
-                <label for="varcantidad">cantidad</label>
+                <style>
+                    label.estilo {
+                        text-align: left;
+                        color: #C57F0E;
+                        font-family: 'Arial', sans-serif;
+                        font-size: 12px;
+                    }
+            </style>
+            <div class="form-group">
+                <label for="varcantidad" class="estilo">cantidad</label>
                 <input type="number" name="varcantidad" id="varcantidad" step='any' required />
             </div>
                 <input type="submit" value="Dar de Alta" />
@@ -100,7 +123,7 @@
             // PROCESAMIENTO PHP
             $link = mysqli_connect(
                     "localhost",
-                    "root", // usuario
+                    "appuser", // usuario
                     "1234", // password
                     "", // nombre base de datos vacio porque se setea despues
                     3307 // puerto
@@ -116,7 +139,7 @@
                 $fecha = $_POST['varfecha'];
                 $cantidad = $_POST['varcantidad'];
     
-            $query = "INSERT INTO `Movimiento` (";
+            $query = "INSERT INTO `movimiento` (";
             $query .= "id";
                 $query .= ", concepto";
                 $query .= ", fecha";

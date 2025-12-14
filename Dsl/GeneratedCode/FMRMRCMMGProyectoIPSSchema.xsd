@@ -132,14 +132,6 @@
             <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <!-- Property: colorTitulo -->
-        <xsd:attribute name="colorTitulo" type="xsd:string" />
-        <!-- Property: tamañoTitulo -->
-        <xsd:attribute name="tamañoTitulo" type="xsd:string" />
-        <!-- Property: alineacionTitulo -->
-        <xsd:attribute name="alineacionTitulo" type="PosicionTituloEnum" />
-        <!-- Property: fuenteTitulo -->
-        <xsd:attribute name="fuenteTitulo" type="FuentesEnum" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>

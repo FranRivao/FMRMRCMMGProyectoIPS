@@ -1,9 +1,9 @@
 ﻿
 -- Generación automática: SQL
--- Base de Datos: RedBancaria
+-- Base de Datos: redbancaria
 
-CREATE DATABASE IF NOT EXISTS RedBancaria;
-USE RedBancaria;
+CREATE DATABASE IF NOT EXISTS redbancaria;
+USE redbancaria;
 
 -- Tabla: Red Bancaria
 CREATE TABLE IF NOT EXISTS redBancaria (
@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS redBancaria (
 CREATE TABLE IF NOT EXISTS banco (
         id INTEGER NOT NULL,
     
-        nombre VARCHAR(255) NOT NULL UNIQUE,
+        nombre VARCHAR(200) NOT NULL UNIQUE,
         porcentaje INTEGER NOT NULL UNIQUE,
             PRIMARY KEY (id)
     );
@@ -54,11 +54,12 @@ CREATE TABLE IF NOT EXISTS tarjeta (
 CREATE TABLE IF NOT EXISTS movimiento (
         id INTEGER NOT NULL,
     
-        concepto VARCHAR(255) NOT NULL UNIQUE,
+        concepto VARCHAR(240) NOT NULL UNIQUE,
         fecha DATE NOT NULL UNIQUE,
         cantidad FLOAT NOT NULL UNIQUE,
             PRIMARY KEY (id)
     );
+
 
 -- Tabla Relación N:M: accede
 CREATE TABLE IF NOT EXISTS accede (
@@ -82,4 +83,8 @@ CREATE TABLE IF NOT EXISTS realiza (
     FOREIGN KEY (movimiento_FK) REFERENCES movimiento(id),
     PRIMARY KEY (tarjeta_FK, movimiento_FK)
 );
+
+DROP USER IF EXISTS 'appuser'@'localhost';
+CREATE USER 'appuser'@'localhost' IDENTIFIED BY '1234';
+GRANT ALL PRIVILEGES ON redbancaria.* TO 'appuser'@'localhost';
 

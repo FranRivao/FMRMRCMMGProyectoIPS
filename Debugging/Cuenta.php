@@ -6,7 +6,7 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #F54927; /* Color del background del Portal */
+            background-color: #FF913D; /* Color del background del Portal */
             margin: 0; padding: 20px;
             display: flex; flex-direction: column; align-items: center;
         }
@@ -31,7 +31,7 @@
             margin-top: 0; padding-bottom: 10px; border-bottom: 1px solid #eee;
         }
 
-        /* Estilos de formulario genéricos */
+        /* Estilos de formulario */
         .form-group { margin-bottom: 15px; }
         label { display: block; font-weight: bold; margin-bottom: 5px; color: #555; }
         input[type="text"], input[type="number"], input[type="date"], select {
@@ -60,7 +60,7 @@
     </nav>
     
         <div style='text-align:center; margin-bottom:20px; border-bottom:2px solid #ccc; padding:10px;'>
-            <h1 style='color:#662E23; font-family:"Arial"; font-size:18px; margin:0;'>
+            <h1 style='color:#FFFFFF; font-family:"Tahoma"; font-size:18px; margin:0;'>
                 SISTEMA RED BANCARIA
             </h1>
         </div>
@@ -74,14 +74,21 @@
         if (!isset($_POST['varnumero'])) {
     ?>
         <form action="Cuenta.php" method="post">
-            
             <div class="form-group">
                 <label for="varnumero">numero (PK)</label>
                 <input type="text" name="varnumero" id="varnumero" required />
             </div>
 
-                <div class="form-group">
-                <label for="varsaldo">saldo</label>
+                <style>
+                    label.estilo {
+                        text-align: left;
+                        color: #C57F0E;
+                        font-family: 'Arial', sans-serif;
+                        font-size: 12px;
+                    }
+            </style>
+            <div class="form-group">
+                <label for="varsaldo" class="estilo">saldo</label>
                 <input type="number" name="varsaldo" id="varsaldo" step='any' required />
             </div>
                 <input type="submit" value="Dar de Alta" />
@@ -92,7 +99,7 @@
             // PROCESAMIENTO PHP
             $link = mysqli_connect(
                     "localhost",
-                    "root", // usuario
+                    "appuser", // usuario
                     "1234", // password
                     "", // nombre base de datos vacio porque se setea despues
                     3307 // puerto
@@ -106,7 +113,7 @@
             $numero = $_POST['varnumero'];
                 $saldo = $_POST['varsaldo'];
     
-            $query = "INSERT INTO `Cuenta` (";
+            $query = "INSERT INTO `cuenta` (";
             $query .= "numero";
                 $query .= ", saldo";
                 $query .= ") VALUES (";

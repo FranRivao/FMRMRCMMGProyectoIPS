@@ -2,7 +2,7 @@
 <tapiz xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="2ea417be-3bd0-42fe-a5f2-125af54914ce" xmlns="http://schemas.microsoft.com/dsltools/FMRMRCMMGProyectoIPS">
   <elementoes>
     <tapizHasElementoes Id="ae127dde-59ad-4b1e-a860-2ce5b174338e">
-      <entidad Id="8285f836-a7d2-47f5-8ef1-bc2bb3d7734a" nombre="Red Bancaria" alineacionTitulo="Izquierda" fuenteTitulo="Arial">
+      <entidad Id="8285f836-a7d2-47f5-8ef1-bc2bb3d7734a" nombre="Red Bancaria">
         <atributo>
           <entidadReferencesAtributo Id="73cd5fb9-84e4-47ba-ba82-471747c4a0b6">
             <atributoMoniker Id="9f82bd00-5566-4a6a-bdc8-fbe6dfc29b94" />
@@ -21,7 +21,7 @@
       </entidad>
     </tapizHasElementoes>
     <tapizHasElementoes Id="f909173c-a7dd-4c33-badc-1f10f8712c4e">
-      <entidad Id="257d9b33-7a9d-4e28-aa3b-cc27ba8c49d7" nombre="Banco" alineacionTitulo="Izquierda" fuenteTitulo="Arial">
+      <entidad Id="257d9b33-7a9d-4e28-aa3b-cc27ba8c49d7" nombre="Banco">
         <atributo>
           <entidadReferencesAtributo Id="06a61b34-80ff-40e2-8837-a1a95ad6d6fb">
             <atributoMoniker Id="e4f6ad3d-270c-4890-8991-0b016a10e506" />
@@ -49,7 +49,7 @@
       </entidad>
     </tapizHasElementoes>
     <tapizHasElementoes Id="c69b83f1-e71d-4abd-a349-9155b2ee92c2">
-      <entidad Id="a4844e94-a171-4bcd-a286-80c8679e7a14" nombre="Cajero" alineacionTitulo="Izquierda" fuenteTitulo="Arial">
+      <entidad Id="a4844e94-a171-4bcd-a286-80c8679e7a14" nombre="Cajero">
         <atributo>
           <entidadReferencesAtributo Id="9a60efcd-3ee1-491d-baaf-c9b4340aee09">
             <atributoMoniker Id="7eec3634-ef89-43c9-86b3-5d0d9c60b09e" />
@@ -77,7 +77,7 @@
       <atributoKey Id="7ed695ee-77a1-40eb-a86a-e2c84b8b36ee" nombre="id" tipoDato="Entero" esNulo="false" admiteRepetidos="false" />
     </tapizHasElementoes>
     <tapizHasElementoes Id="4e37d113-2d92-47d2-b4dc-c22776508c1c">
-      <atributo Id="e4f6ad3d-270c-4890-8991-0b016a10e506" nombre="nombre" tipoDato="Alfanumerico" esNulo="false" admiteRepetidos="false" />
+      <atributo Id="e4f6ad3d-270c-4890-8991-0b016a10e506" nombre="nombre" tipoDato="Alfanumerico" esNulo="false" admiteRepetidos="false" longitud="200" />
     </tapizHasElementoes>
     <tapizHasElementoes Id="97fbd44d-9bfa-4075-aff0-2798d17a1e04">
       <atributo Id="d96b3c4c-d7aa-4923-af5a-32e3fea38333" nombre="porcentaje" tipoDato="Entero" esNulo="false" admiteRepetidos="false" />
@@ -122,7 +122,7 @@
       <atributo Id="07130441-ce8b-415d-8364-f40ae9b46141" nombre="saldoActual" tipoDato="Real" esNulo="false" admiteRepetidos="false" />
     </tapizHasElementoes>
     <tapizHasElementoes Id="93cff1b6-61fd-4e2b-97c0-72469cc24c0c">
-      <entidad Id="b1645832-c852-40d2-adec-dcfd51d014a8" nombre="Cuenta" alineacionTitulo="Izquierda" fuenteTitulo="Arial">
+      <entidad Id="b1645832-c852-40d2-adec-dcfd51d014a8" nombre="Cuenta">
         <atributo>
           <entidadReferencesAtributo Id="c0028121-84b1-417f-b721-34795e80aa32">
             <atributoMoniker Id="e6d97e8e-3248-4a60-8cd3-ed20fa370995" />
@@ -165,10 +165,10 @@
       <atributo Id="d8fa5c97-fd70-4f3f-a073-3ab00172d596" nombre="fecha" tipoDato="Fecha" esNulo="false" admiteRepetidos="false" />
     </tapizHasElementoes>
     <tapizHasElementoes Id="dba30a3d-bcc7-4586-b31d-6c435eb34a5f">
-      <atributo Id="6c12f138-b6c6-47a6-b6a0-8ce5ac6630dc" nombre="concepto" tipoDato="Alfanumerico" esNulo="false" admiteRepetidos="false" />
+      <atributo Id="6c12f138-b6c6-47a6-b6a0-8ce5ac6630dc" nombre="concepto" tipoDato="Alfanumerico" esNulo="false" admiteRepetidos="false" longitud="240" />
     </tapizHasElementoes>
     <tapizHasElementoes Id="33068117-48fc-4af3-977c-4eeef0934f1a">
-      <entidad Id="8a8ae785-a143-4e36-9ba6-fcbacb3451f2" nombre="Tarjeta" alineacionTitulo="Izquierda" fuenteTitulo="Arial">
+      <entidad Id="8a8ae785-a143-4e36-9ba6-fcbacb3451f2" nombre="Tarjeta">
         <atributo>
           <entidadReferencesAtributo Id="8434c719-8bc9-4d93-a61a-75df6385bd08">
             <atributoMoniker Id="07130441-ce8b-415d-8364-f40ae9b46141" />
@@ -205,7 +205,7 @@
       </entidad>
     </tapizHasElementoes>
     <tapizHasElementoes Id="b444d9b5-a50e-4610-9e6f-e3190b3abeef">
-      <entidad Id="57c97ba5-d973-432d-b61b-f241165e1f10" nombre="Movimiento" alineacionTitulo="Izquierda" fuenteTitulo="Arial">
+      <entidad Id="57c97ba5-d973-432d-b61b-f241165e1f10" nombre="Movimiento">
         <atributo>
           <entidadReferencesAtributo Id="ea48ba96-b067-42a2-ac0a-64acf1bf73bd">
             <atributoMoniker Id="6c12f138-b6c6-47a6-b6a0-8ce5ac6630dc" />
@@ -232,7 +232,7 @@
   </elementoes>
   <elementosWebbed>
     <tapizHasElementosWebbed Id="5154f811-8d34-4298-adbc-a1772aeb6a1b">
-      <portal Id="504629d1-2939-4e68-a29e-182ea2f9014d" titleText="SISTEMA RED BANCARIA" titleColor="662E23" titleFontFamily="Arial" titleFontSize="18" titlePosition="Centro" backgroundColor="F54927">
+      <portal Id="504629d1-2939-4e68-a29e-182ea2f9014d" titleText="SISTEMA RED BANCARIA" titleColor="FFFFFF" titleFontFamily="Tahoma" titleFontSize="18" titlePosition="Centro" backgroundColor="FF913D">
         <paged>
           <portalReferencesPaged Id="a95ef072-2875-4393-8357-76ff4c8af168">
             <pageMoniker Id="e904041c-8f57-4fcd-a73e-a658e04ada44" />
@@ -256,7 +256,7 @@
       </portal>
     </tapizHasElementosWebbed>
     <tapizHasElementosWebbed Id="e90e5f3f-62b3-4d85-9bb0-06a6f5ee4273">
-      <page Id="0e185053-6637-4674-97e4-b6d9d08deb64" titleColor="98B711" titleFontFamily="Arial" titleFontSize="14" titlePosition="Izquierda" titleText="Tarjeta">
+      <page Id="0e185053-6637-4674-97e4-b6d9d08deb64" titleColor="98B711" titleFontFamily="Arial" titleFontSize="14" titlePosition="Centro" titleText="Tarjeta">
         <fielded>
           <pageReferencesFielded Id="de83e09f-f5af-4254-917a-9f81c8fb5f67">
             <fieldMoniker Id="59b48909-7ac3-44a9-991a-2d1cc5d92c65" />
@@ -307,7 +307,7 @@
       </page>
     </tapizHasElementosWebbed>
     <tapizHasElementosWebbed Id="56e34891-42ae-490d-8ebb-02f166802117">
-      <page Id="65096276-fffe-49ea-8e6d-3cf3572d52e0" titleColor="F2FE15" titleFontFamily="Arial" titleFontSize="14" titlePosition="Izquierda" titleText="Cajero">
+      <page Id="65096276-fffe-49ea-8e6d-3cf3572d52e0" titleColor="DE0707" titleFontFamily="Arial" titleFontSize="14" titlePosition="Derecha" titleText="Cajero">
         <fielded>
           <pageReferencesFielded Id="0432c1d9-064a-44e0-abb2-8693c9c4f42a">
             <fieldMoniker Id="5032b498-4109-486f-aec0-c2713b2ad3f5" />
@@ -328,7 +328,7 @@
       <field Id="59b48909-7ac3-44a9-991a-2d1cc5d92c65" labelColor="C57F0E" labelFontFamily="Arial" labelFontSize="12" labelPosition="Izquierda" labelText="saldoActual" labelFormat="areaDeTexto" />
     </tapizHasElementosWebbed>
     <tapizHasElementosWebbed Id="e7e92efd-daa2-4b73-a9bd-1b53288e9ed4">
-      <page Id="edfba211-b1df-4602-a710-ccd5964f1290" titleColor="A5BE9E" titleFontFamily="Arial" titleFontSize="14" titlePosition="Izquierda" titleText="Movimiento">
+      <page Id="edfba211-b1df-4602-a710-ccd5964f1290" titleColor="A5BE9E" titleFontFamily="Arial" titleFontSize="14" titlePosition="Derecha" titleText="Movimiento">
         <fielded>
           <pageReferencesFielded Id="f8f97a59-a686-4e07-a401-94620bf48d3c">
             <fieldMoniker Id="14657d6a-2cdd-4205-9477-bcc8dd096c27" />
@@ -358,7 +358,7 @@
       <field Id="25b86ff2-ede9-4a06-b04f-d2dad40bec0d" labelColor="C57F0E" labelFontFamily="Arial" labelFontSize="12" labelPosition="Izquierda" labelText="saldo" labelFormat="areaDeTexto" />
     </tapizHasElementosWebbed>
     <tapizHasElementosWebbed Id="65c089f7-e300-4d81-b88d-b5d6b5d335c9">
-      <field Id="5032b498-4109-486f-aec0-c2713b2ad3f5" labelColor="C57F0E" labelFontFamily="Arial" labelFontSize="12" labelPosition="Izquierda" labelText="saldoDisponible" labelFormat="areaDeTexto" />
+      <field Id="5032b498-4109-486f-aec0-c2713b2ad3f5" labelColor="FF00E4" labelFontFamily="Arial" labelFontSize="12" labelPosition="Izquierda" labelText="saldoDisponible" labelFormat="areaDeTexto" />
     </tapizHasElementosWebbed>
     <tapizHasElementosWebbed Id="58f82058-b46a-44dd-ad0e-fe826feb1b80">
       <field Id="82f41452-b5b3-40d5-a4e5-ea8bafb596aa" labelColor="C57F0E" labelFontFamily="Arial" labelFontSize="12" labelPosition="Izquierda" labelText="cantidad" labelFormat="areaDeTexto" />

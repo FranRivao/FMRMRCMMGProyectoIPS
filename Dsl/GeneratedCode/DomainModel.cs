@@ -116,10 +116,6 @@ namespace UPM_IPS.FMRMRCMMGProyectoIPS
 		{
 			return new DomainMemberInfo[]
 			{
-				new DomainMemberInfo(typeof(Entidad), "colorTitulo", Entidad.colorTituloDomainPropertyId, typeof(Entidad.colorTituloPropertyHandler)),
-				new DomainMemberInfo(typeof(Entidad), "tamañoTitulo", Entidad.tamañoTituloDomainPropertyId, typeof(Entidad.tamañoTituloPropertyHandler)),
-				new DomainMemberInfo(typeof(Entidad), "alineacionTitulo", Entidad.alineacionTituloDomainPropertyId, typeof(Entidad.alineacionTituloPropertyHandler)),
-				new DomainMemberInfo(typeof(Entidad), "fuenteTitulo", Entidad.fuenteTituloDomainPropertyId, typeof(Entidad.fuenteTituloPropertyHandler)),
 				new DomainMemberInfo(typeof(Elemento), "nombre", Elemento.nombreDomainPropertyId, typeof(Elemento.nombrePropertyHandler)),
 				new DomainMemberInfo(typeof(Portal), "titleText", Portal.titleTextDomainPropertyId, typeof(Portal.titleTextPropertyHandler)),
 				new DomainMemberInfo(typeof(Portal), "titleColor", Portal.titleColorDomainPropertyId, typeof(Portal.titleColorPropertyHandler)),
