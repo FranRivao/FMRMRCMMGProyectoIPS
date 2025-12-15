@@ -121,7 +121,7 @@ private string GetSqlType(TipoDatoEnum tipo, int longitud)
     switch (tipo)
     {
         case TipoDatoEnum.Entero: return "INTEGER";
-        case TipoDatoEnum.Real: return "FLOAT";
+        case TipoDatoEnum.Real: return "DOUBLE"; 
         case TipoDatoEnum.Fecha: return "DATE";
         case TipoDatoEnum.Alfanumerico: return "VARCHAR(" + len + ")";
         default: return "VARCHAR(255)";

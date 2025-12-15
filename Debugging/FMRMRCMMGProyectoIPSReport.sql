@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS banco (
 CREATE TABLE IF NOT EXISTS cajero (
         id INTEGER NOT NULL,
     
-        saldoDisponible FLOAT NOT NULL UNIQUE,
+        saldoDisponible DOUBLE NOT NULL UNIQUE,
             PRIMARY KEY (id)
     );
 
@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS cajero (
 CREATE TABLE IF NOT EXISTS cuenta (
         numero INTEGER NOT NULL,
     
-        saldo FLOAT NOT NULL UNIQUE,
+        saldo DOUBLE NOT NULL UNIQUE,
             PRIMARY KEY (numero)
     );
 
@@ -42,9 +42,9 @@ CREATE TABLE IF NOT EXISTS cuenta (
 CREATE TABLE IF NOT EXISTS tarjeta (
         id DATE NOT NULL,
     
-        saldoActual FLOAT NOT NULL UNIQUE,
+        saldoActual DOUBLE NOT NULL UNIQUE,
         fechaCaducidad DATE NOT NULL UNIQUE,
-        importeMaximo FLOAT NOT NULL UNIQUE,
+        importeMaximo DOUBLE NOT NULL UNIQUE,
         estado INTEGER NOT NULL UNIQUE,
         pin INTEGER NOT NULL UNIQUE,
             PRIMARY KEY (id)
@@ -56,7 +56,7 @@ CREATE TABLE IF NOT EXISTS movimiento (
     
         concepto VARCHAR(240) NOT NULL UNIQUE,
         fecha DATE NOT NULL UNIQUE,
-        cantidad FLOAT NOT NULL UNIQUE,
+        cantidad DOUBLE NOT NULL UNIQUE,
             PRIMARY KEY (id)
     );
 
