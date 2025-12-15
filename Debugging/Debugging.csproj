@@ -45,39 +45,39 @@
       </SubType>
     </None>
     <None Include="Banco.php">
-      <DependentUpon>FMRMRCMMGProyectoIPSReportVB.tt</DependentUpon>
+      <DependentUpon>paginaWeb.tt</DependentUpon>
     </None>
     <None Include="Cajero.php">
-      <DependentUpon>FMRMRCMMGProyectoIPSReportVB.tt</DependentUpon>
+      <DependentUpon>paginaWeb.tt</DependentUpon>
     </None>
     <None Include="Cuenta.php">
-      <DependentUpon>FMRMRCMMGProyectoIPSReportVB.tt</DependentUpon>
+      <DependentUpon>paginaWeb.tt</DependentUpon>
     </None>
-    <None Include="FMRMRCMMGProyectoIPSReport.tt">
+    <None Include="baseDeDatos.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>FMRMRCMMGProyectoIPSReport.sql</LastGenOutput>
+      <LastGenOutput>baseDeDatos.sql</LastGenOutput>
     </None>
-    <None Include="FMRMRCMMGProyectoIPSReportVB.php">
+    <None Include="paginaWeb.php">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>FMRMRCMMGProyectoIPSReportVB.tt</DependentUpon>
+      <DependentUpon>paginaWeb.tt</DependentUpon>
     </None>
-    <None Include="FMRMRCMMGProyectoIPSReportVB.tt">
+    <None Include="paginaWeb.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>FMRMRCMMGProyectoIPSReportVB.php</LastGenOutput>
+      <LastGenOutput>paginaWeb.php</LastGenOutput>
     </None>
     <None Include="Movimiento.php">
-      <DependentUpon>FMRMRCMMGProyectoIPSReportVB.tt</DependentUpon>
+      <DependentUpon>paginaWeb.tt</DependentUpon>
     </None>
     <None Include="Red Bancaria.php">
-      <DependentUpon>FMRMRCMMGProyectoIPSReportVB.tt</DependentUpon>
+      <DependentUpon>paginaWeb.tt</DependentUpon>
     </None>
     <None Include="Sample.FMRMRCMMG_DSLProyIPS" />
     <None Include="Sample.FMRMRCMMG_DSLProyIPS.diagram">
       <DependentUpon>Sample.FMRMRCMMG_DSLProyIPS</DependentUpon>
     </None>
     <None Include="Tarjeta.php">
-      <DependentUpon>FMRMRCMMGProyectoIPSReportVB.tt</DependentUpon>
+      <DependentUpon>paginaWeb.tt</DependentUpon>
     </None>
     <None Include="Test.FMRMRCMMG_DSLProyIPS" />
     <None Include="Test.FMRMRCMMG_DSLProyIPS.diagram">
@@ -88,10 +88,10 @@
     <Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="FMRMRCMMGProyectoIPSReport.sql">
+    <Content Include="baseDeDatos.sql">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>FMRMRCMMGProyectoIPSReport.tt</DependentUpon>
+      <DependentUpon>baseDeDatos.tt</DependentUpon>
     </Content>
     <Content Include="Informe.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
