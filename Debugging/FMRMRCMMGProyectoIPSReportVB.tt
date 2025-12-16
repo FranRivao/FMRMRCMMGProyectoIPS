@@ -11,22 +11,28 @@
 <#@ include file="EF.utility.CS.ttinclude" #>
 
 <# 
+    // 1. INICIALIZACIÓN DEL GESTOR (Usando dynamic para evitar errores de versión)
     var fileManager=EntityFrameworkTemplateFileManager.Create(this); 
     string dbName = "redbancaria";
 
+    // 2. OBTENER DATOS DEL PORTAL (Diseño Global)
     var portal = this.Tapiz.ElementosWebbed.OfType<Portal>().FirstOrDefault();
 
-    string bodyBgColor = "#f0f2f5"; 
-    string portalTitleHtml = "";  
+    // Valores por defecto para el Portal (Fondo y Título Global)
+    string bodyBgColor = "#f0f2f5"; // Color por defecto si no hay portal
+    string portalTitleHtml = "";    // Si hay portal, generaremos un encabezado global
     
     if (portal != null) {
+        // Mapeo de propiedades del Portal
         bodyBgColor = !string.IsNullOrEmpty(portal.backgroundColor) ? "#" + portal.backgroundColor : "#f0f2f5";
         
+        // Estilos del título del Portal
         string pAlign = GetCssAlign(portal.titlePosition);
         string pColor = !string.IsNullOrEmpty(portal.titleColor) ? "#" +portal.titleColor : "#333";
         string pFont = portal.titleFontFamily.ToString();
         string pSize = portal.titleFontSize + "px";
         
+        // Generamos el HTML del encabezado global
         portalTitleHtml = $@"
         <div style='text-align:{pAlign}; margin-bottom:20px; border-bottom:2px solid #ccc; padding:10px;'>
             <h1 style='color:{pColor}; font-family:""{pFont}""; font-size:{pSize}; margin:0;'>
@@ -41,11 +47,17 @@ foreach (Elemento e in this.Tapiz.Elementoes)
     var ent = e as Entidad;
     if (ent == null || ent.AtributoKey == null) continue;
 
+    // Iniciamos fichero
     fileManager.StartNewFile(ent.nombre + ".php");
     
+    // 4. BUSCAR LA 'PAGE' ASOCIADA (ElementoWeb)
+    // Asumimos que se relacionan por el nombre/título. 
+    // Buscamos una Page cuyo titleText sea igual al nombre de la Entidad.
     var page = this.Tapiz.ElementosWebbed.OfType<Page>()
                    .FirstOrDefault(p => p.titleText == ent.nombre);
 
+    // Variables de estilo para el título de la Entidad (H2)
+    // Usamos valores por defecto, y si encontramos la Page, los sobrescribimos.
     string pageTitleText = ent.nombre;
     string h2Align = "left";
     string h2Color = "#1a2980";
@@ -53,7 +65,8 @@ foreach (Elemento e in this.Tapiz.Elementoes)
     string h2Size = "24px";
 
     if (page != null) {
-        pageTitleText = page.titleText;
+        // Si existe el elemento Page, usamos sus datos
+        pageTitleText = page.titleText; // Texto del nombre de la página
         h2Align = GetCssAlign(page.titlePosition);
         h2Color = !string.IsNullOrEmpty(page.titleColor) ? "#" +page.titleColor : "#1a2980";
         h2Font = page.titleFontFamily.ToString();
@@ -147,7 +160,7 @@ foreach (Elemento e in this.Tapiz.Elementoes)
                 string labelColor = string.IsNullOrEmpty(field.labelColor) ? "#555" : ("#" + field.labelColor);
                 string labelFont = field.labelFontFamily.ToString();
                 string labelSize = field.labelFontSize > 0 ? field.labelFontSize + "px" : "24px";
-                string labelAlign = GetCssAlign(field.labelPosition);
+                string labelAlign = GetCssAlign(field.labelPosition); // Utiliza tu función auxiliar para esto
                 
                 string inputType = "text";
                 string stepAttr = "";
@@ -232,6 +245,7 @@ fileManager.Process();
 #>
 
 <#+
+// FUNCIÓN AUXILIAR PARA CONVERTIR ENUM A CSS ALIGN
 private string GetCssAlign(PosicionTituloEnum pos)
 {
     if (pos == PosicionTituloEnum.Centro) return "center";
@@ -243,8 +257,10 @@ private string GetCssAlign(PosicionTituloEnum pos)
       if (string.IsNullOrEmpty(nombre))
           return "campo";
       
+      // Eliminar caracteres especiales excepto espacios y guiones bajos
       nombre = System.Text.RegularExpressions.Regex.Replace(nombre, "[^a-zA-Z0-9_ ]", "");
       
+      // Dividir por espacios, guiones bajos o cambios de mayúsculas
       var partes = System.Text.RegularExpressions.Regex.Split(nombre, @"[\s_]+|(?=[A-Z])")
           .Where(p => ! string.IsNullOrEmpty(p))
           .ToList();
@@ -252,6 +268,7 @@ private string GetCssAlign(PosicionTituloEnum pos)
       if (partes.Count == 0)
           return "campo";
       
+      // Primera parte en minúsculas, resto capitalizadas
       var resultado = partes[0].ToLower();
       
       for (int i = 1; i < partes.Count; i++)
