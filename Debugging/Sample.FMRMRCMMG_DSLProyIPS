@@ -71,16 +71,16 @@
       </entidad>
     </tapizHasElementoes>
     <tapizHasElementoes Id="e34b98f9-53d4-400f-8e66-463fe95dd511">
-      <atributo Id="9f82bd00-5566-4a6a-bdc8-fbe6dfc29b94" nombre="nombre" tipoDato="Alfanumerico" esNulo="true" admiteRepetidos="false" longitud="255" />
+      <atributo Id="9f82bd00-5566-4a6a-bdc8-fbe6dfc29b94" nombre="nombre" tipoDato="Alfanumerico" esNulo="false" admiteRepetidos="false" longitud="255" />
     </tapizHasElementoes>
     <tapizHasElementoes Id="561c6beb-91a2-4c2c-abfb-d83a994d49ad">
       <atributoKey Id="7ed695ee-77a1-40eb-a86a-e2c84b8b36ee" nombre="id" tipoDato="Entero" esNulo="false" admiteRepetidos="false" />
     </tapizHasElementoes>
     <tapizHasElementoes Id="4e37d113-2d92-47d2-b4dc-c22776508c1c">
-      <atributo Id="e4f6ad3d-270c-4890-8991-0b016a10e506" nombre="nombre" tipoDato="Alfanumerico" esNulo="false" admiteRepetidos="false" longitud="200" />
+      <atributo Id="e4f6ad3d-270c-4890-8991-0b016a10e506" nombre="nombre" tipoDato="Alfanumerico" esNulo="false" admiteRepetidos="true" longitud="200" />
     </tapizHasElementoes>
     <tapizHasElementoes Id="97fbd44d-9bfa-4075-aff0-2798d17a1e04">
-      <atributo Id="d96b3c4c-d7aa-4923-af5a-32e3fea38333" nombre="porcentaje" tipoDato="Entero" esNulo="false" admiteRepetidos="false" />
+      <atributo Id="d96b3c4c-d7aa-4923-af5a-32e3fea38333" nombre="porcentaje" tipoDato="Entero" esNulo="false" admiteRepetidos="true" />
     </tapizHasElementoes>
     <tapizHasElementoes Id="8f287924-3b9a-4e4b-bfb6-4d331f566361">
       <atributoKey Id="992407b0-1402-47c2-b6f8-c3532ae15f10" nombre="id" tipoDato="Entero" esNulo="false" admiteRepetidos="false" />
@@ -92,7 +92,7 @@
       <atributoKey Id="89ca8372-c0c3-4647-8faf-bac64695c056" nombre="id" tipoDato="Entero" esNulo="false" admiteRepetidos="false" />
     </tapizHasElementoes>
     <tapizHasElementoes Id="11bf3102-17f2-48f4-a0c3-892501ae04e4">
-      <atributo Id="7eec3634-ef89-43c9-86b3-5d0d9c60b09e" nombre="saldoDisponible" tipoDato="Real" esNulo="false" admiteRepetidos="false" />
+      <atributo Id="7eec3634-ef89-43c9-86b3-5d0d9c60b09e" nombre="saldoDisponible" tipoDato="Real" esNulo="false" admiteRepetidos="true" />
     </tapizHasElementoes>
     <tapizHasElementoes Id="954fbce3-7f4d-44ce-a8ba-65291542fbf2">
       <relacion Id="c55c5bea-f79b-4e3e-a8fe-ba19e919cac2" nombre="provee" />
@@ -104,22 +104,22 @@
       <relacion Id="dec83117-3cab-4032-9aed-3c69467f0cf3" nombre="accede" />
     </tapizHasElementoes>
     <tapizHasElementoes Id="3360bce0-45cd-4056-85a2-144aadc661be">
-      <atributoKey Id="d894fa1f-9bce-4d8d-a3ff-a965a462ee7b" nombre="id" tipoDato="Fecha" esNulo="false" admiteRepetidos="false" />
+      <atributoKey Id="d894fa1f-9bce-4d8d-a3ff-a965a462ee7b" nombre="id" tipoDato="Entero" esNulo="false" admiteRepetidos="false" />
     </tapizHasElementoes>
     <tapizHasElementoes Id="edcaebb1-0379-4379-916c-0406b3aa73d6">
-      <atributo Id="0e6f9bcd-ac31-4eb7-b239-c44e7139cc97" nombre="fechaCaducidad" tipoDato="Fecha" esNulo="false" admiteRepetidos="false" />
+      <atributo Id="0e6f9bcd-ac31-4eb7-b239-c44e7139cc97" nombre="fechaCaducidad" tipoDato="Fecha" esNulo="false" admiteRepetidos="true" />
     </tapizHasElementoes>
     <tapizHasElementoes Id="42589449-7756-4d4a-b871-8f8902707351">
-      <atributo Id="67c1d3fa-10c8-4a1f-900c-9586ab9eed06" nombre="pin" tipoDato="Entero" esNulo="false" admiteRepetidos="false" />
+      <atributo Id="67c1d3fa-10c8-4a1f-900c-9586ab9eed06" nombre="pin" tipoDato="Entero" esNulo="false" admiteRepetidos="true" />
     </tapizHasElementoes>
     <tapizHasElementoes Id="d83546c7-b7fc-4c49-9cd4-a8e86690ea89">
-      <atributo Id="8b0888df-d323-4cdd-bff5-2e6a515a094e" nombre="importeMaximo" tipoDato="Real" esNulo="false" admiteRepetidos="false" />
+      <atributo Id="8b0888df-d323-4cdd-bff5-2e6a515a094e" nombre="importeMaximo" tipoDato="Real" esNulo="false" admiteRepetidos="true" />
     </tapizHasElementoes>
     <tapizHasElementoes Id="5cd7d85b-94aa-460d-b9b5-8704a38946a8">
-      <atributo Id="61659cf4-769a-4a52-aec5-71cc18ceb00f" nombre="estado" tipoDato="Entero" esNulo="false" admiteRepetidos="false" />
+      <atributo Id="61659cf4-769a-4a52-aec5-71cc18ceb00f" nombre="estado" tipoDato="Entero" esNulo="false" admiteRepetidos="true" />
     </tapizHasElementoes>
     <tapizHasElementoes Id="daa0c5fa-a9ff-44a5-a08a-f179d9e42346">
-      <atributo Id="07130441-ce8b-415d-8364-f40ae9b46141" nombre="saldoActual" tipoDato="Real" esNulo="false" admiteRepetidos="false" />
+      <atributo Id="07130441-ce8b-415d-8364-f40ae9b46141" nombre="saldoActual" tipoDato="Real" esNulo="false" admiteRepetidos="true" />
     </tapizHasElementoes>
     <tapizHasElementoes Id="93cff1b6-61fd-4e2b-97c0-72469cc24c0c">
       <entidad Id="b1645832-c852-40d2-adec-dcfd51d014a8" nombre="Cuenta">
@@ -150,7 +150,7 @@
       <atributoKey Id="efe88014-4b20-4bfa-aa94-5004f61fc227" nombre="numero" tipoDato="Entero" esNulo="false" admiteRepetidos="false" />
     </tapizHasElementoes>
     <tapizHasElementoes Id="d23aff65-0545-4e66-9745-fbe8b39bb6be">
-      <atributo Id="e6d97e8e-3248-4a60-8cd3-ed20fa370995" nombre="saldo" tipoDato="Real" esNulo="false" admiteRepetidos="false" />
+      <atributo Id="e6d97e8e-3248-4a60-8cd3-ed20fa370995" nombre="saldo" tipoDato="Real" esNulo="false" admiteRepetidos="true" />
     </tapizHasElementoes>
     <tapizHasElementoes Id="3eef427f-ede9-4c4f-bf44-a133e2851427">
       <relacion Id="5f389ef1-213e-4d80-9930-174c8c4cebd1" nombre="realiza" />
@@ -159,13 +159,13 @@
       <atributoKey Id="2484d793-bfc1-424b-93f3-0fefe05b23c8" nombre="id" tipoDato="Entero" esNulo="false" admiteRepetidos="false" />
     </tapizHasElementoes>
     <tapizHasElementoes Id="ab7c8353-cc6e-4644-84ce-e26d423d8ce4">
-      <atributo Id="b217ea4b-e6a9-4600-98f2-3253f5ebafa5" nombre="cantidad" tipoDato="Real" esNulo="false" admiteRepetidos="false" />
+      <atributo Id="b217ea4b-e6a9-4600-98f2-3253f5ebafa5" nombre="cantidad" tipoDato="Real" esNulo="false" admiteRepetidos="true" />
     </tapizHasElementoes>
     <tapizHasElementoes Id="ae9f2826-b8d4-49c4-ae52-fdd18bf4eeba">
-      <atributo Id="d8fa5c97-fd70-4f3f-a073-3ab00172d596" nombre="fecha" tipoDato="Fecha" esNulo="false" admiteRepetidos="false" />
+      <atributo Id="d8fa5c97-fd70-4f3f-a073-3ab00172d596" nombre="fecha" tipoDato="Fecha" esNulo="false" admiteRepetidos="true" />
     </tapizHasElementoes>
     <tapizHasElementoes Id="dba30a3d-bcc7-4586-b31d-6c435eb34a5f">
-      <atributo Id="6c12f138-b6c6-47a6-b6a0-8ce5ac6630dc" nombre="concepto" tipoDato="Alfanumerico" esNulo="false" admiteRepetidos="false" longitud="240" />
+      <atributo Id="6c12f138-b6c6-47a6-b6a0-8ce5ac6630dc" nombre="concepto" tipoDato="Alfanumerico" esNulo="false" admiteRepetidos="true" longitud="240" />
     </tapizHasElementoes>
     <tapizHasElementoes Id="33068117-48fc-4af3-977c-4eeef0934f1a">
       <entidad Id="8a8ae785-a143-4e36-9ba6-fcbacb3451f2" nombre="Tarjeta">
@@ -232,7 +232,7 @@
   </elementoes>
   <elementosWebbed>
     <tapizHasElementosWebbed Id="5154f811-8d34-4298-adbc-a1772aeb6a1b">
-      <portal Id="504629d1-2939-4e68-a29e-182ea2f9014d" titleText="SISTEMA RED BANCARIA" titleColor="FFFFFF" titleFontFamily="Tahoma" titleFontSize="18" titlePosition="Centro" backgroundColor="FF913D">
+      <portal Id="504629d1-2939-4e68-a29e-182ea2f9014d" titleText="SISTEMA RED BANCARIA" titleColor="000000" titleFontFamily="Tahoma" titleFontSize="18" titlePosition="Centro" backgroundColor="D2FFCF">
         <paged>
           <portalReferencesPaged Id="a95ef072-2875-4393-8357-76ff4c8af168">
             <pageMoniker Id="e904041c-8f57-4fcd-a73e-a658e04ada44" />
@@ -256,7 +256,7 @@
       </portal>
     </tapizHasElementosWebbed>
     <tapizHasElementosWebbed Id="e90e5f3f-62b3-4d85-9bb0-06a6f5ee4273">
-      <page Id="0e185053-6637-4674-97e4-b6d9d08deb64" titleColor="98B711" titleFontFamily="Arial" titleFontSize="14" titlePosition="Centro" titleText="Tarjeta">
+      <page Id="0e185053-6637-4674-97e4-b6d9d08deb64" titleColor="EFFF00" titleFontFamily="Arial" titleFontSize="14" titlePosition="Centro" titleText="Tarjeta">
         <fielded>
           <pageReferencesFielded Id="de83e09f-f5af-4254-917a-9f81c8fb5f67">
             <fieldMoniker Id="59b48909-7ac3-44a9-991a-2d1cc5d92c65" />
@@ -298,7 +298,7 @@
       </page>
     </tapizHasElementosWebbed>
     <tapizHasElementosWebbed Id="54332651-c4ef-4e63-a323-bb1972b34d6b">
-      <page Id="bf033e68-074c-466c-affc-8dd468f84086" titleColor="15FE97" titleFontFamily="Arial" titleFontSize="14" titlePosition="Izquierda" titleText="Cuenta">
+      <page Id="bf033e68-074c-466c-affc-8dd468f84086" titleColor="EB2FCE" titleFontFamily="Arial" titleFontSize="14" titlePosition="Izquierda" titleText="Cuenta">
         <fielded>
           <pageReferencesFielded Id="aa6d155a-0db6-4960-a447-117fc6144b76">
             <fieldMoniker Id="25b86ff2-ede9-4a06-b04f-d2dad40bec0d" />
@@ -355,7 +355,7 @@
       <field Id="021eaefa-aaf3-4561-a194-723b99cd4a07" labelColor="C57F0E" labelFontFamily="Arial" labelFontSize="12" labelPosition="Izquierda" labelText="fechaCaducidad" labelFormat="areaDeTexto" />
     </tapizHasElementosWebbed>
     <tapizHasElementosWebbed Id="1a80064b-df2f-41cb-9774-93dfd20ccf7c">
-      <field Id="25b86ff2-ede9-4a06-b04f-d2dad40bec0d" labelColor="C57F0E" labelFontFamily="Arial" labelFontSize="12" labelPosition="Izquierda" labelText="saldo" labelFormat="areaDeTexto" />
+      <field Id="25b86ff2-ede9-4a06-b04f-d2dad40bec0d" labelColor="C57F0E" labelFontFamily="Arial" labelFontSize="12" labelPosition="Derecha" labelText="saldo" labelFormat="areaDeTexto" />
     </tapizHasElementosWebbed>
     <tapizHasElementosWebbed Id="65c089f7-e300-4d81-b88d-b5d6b5d335c9">
       <field Id="5032b498-4109-486f-aec0-c2713b2ad3f5" labelColor="FF00E4" labelFontFamily="Arial" labelFontSize="12" labelPosition="Izquierda" labelText="saldoDisponible" labelFormat="areaDeTexto" />

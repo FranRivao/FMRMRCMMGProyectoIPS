@@ -41,10 +41,9 @@ foreach (Elemento e in this.Tapiz.Elementoes)
     var ent = e as Entidad;
     if (ent == null || ent.AtributoKey == null) continue;
 
-    fileManager.StartNewFile(ent.nombre + ".php");
-    
+    fileManager.StartNewFile("estilo" + ent.nombre + ".css");   
     var page = this.Tapiz.ElementosWebbed.OfType<Page>()
-                   .FirstOrDefault(p => p.titleText == ent.nombre);
+                    .FirstOrDefault(p => p.titleText == ent.nombre);
 
     string pageTitleText = ent.nombre;
     string h2Align = "left";
@@ -57,59 +56,210 @@ foreach (Elemento e in this.Tapiz.Elementoes)
         h2Align = GetCssAlign(page.titlePosition);
         h2Color = !string.IsNullOrEmpty(page.titleColor) ? "#" +page.titleColor : "#1a2980";
         h2Font = page.titleFontFamily.ToString();
-        h2Size = page.titleFontSize > 0 ? page.titleFontSize + "px" : "24px";
+        h2Size = page.titleFontSize > 0 ? page.titleFontSize + "px" : "14px";
     }
+#>
 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, <#= bodyBgColor #>, #0f0f17);
+    margin: 0;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    backdrop-filter: blur(8px);
+}
+
+/* CONTENEDOR PRINCIPAL */
+.contenedor {
+    width: 100%;
+    max-width: 950px;
+    padding: 40px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.15);
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* MENÚ DE ENTIDADES */
+.menu-entidades {
+    margin-bottom: 25px;
+    padding: 15px 20px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.menu-entidades ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu-entidades li {
+    margin: 0 15px;
+}
+
+.menu-entidades a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    font-size: 1.1em;
+}
+
+.menu-entidades a:hover {
+    color: #b3d9ff;
+    text-shadow: 0 0 8px #FFFFFF;
+}
+
+/* TITULO DE PAGINA */
+h2.titulo-pagina {
+    text-align: <#= h2Align #>;
+    color: <#= h2Color #>;
+    font-family: '<#= h2Font #>', sans-serif;
+    font-size: <#= h2Size #>;
+    margin-top: 0;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    text-shadow: 0 0 10px rgba(255,255,255,0.4);
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* BOTONES GENERALES */
+.btn {
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary { background: #007bff; color: white; }
+.btn-primary:hover { background: #0056b3; box-shadow: 0 0 10px #007bff; }
+
+.btn-success { background: #28a745; color: white; }
+.btn-success:hover { background: #218838; box-shadow: 0 0 10px #28a745; }
+
+.btn-danger { background: #dc3545; color: white; }
+.btn-danger:hover { background: #c82333; box-shadow: 0 0 10px #dc3545; }
+
+.btn-warning { background: #ffc107; color: #333; }
+.btn-warning:hover { background: #e0a800; box-shadow: 0 0 10px #ffc107; }
+
+/* TABLA */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    color: #e8eeff;
+    background: rgba(0,0,0,0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+th {
+    background: rgba(255,255,255,0.1);
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+tr:hover {
+    background: rgba(255,255,255,0.05);
+}
+
+/* FORMULARIO */
+.form-group {
+    margin-bottom: 22px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #dfe6ff;
+    letter-spacing: 0.5px;
+}
+
+/* INPUTS FUTURISTAS */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.25);
+    background: rgba(255,255,255,0.07);
+    color: #e8eeff;
+    font-size: 15px;
+    transition: 0.3s;
+    backdrop-filter: blur(6px);
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: none;
+    border-color: #FFFFFF;
+    box-shadow: 0 0 12px #FFFFFF;
+}
+
+input[readonly] {
+    background: rgba(0,0,0,0.3);
+    color: #aaa;
+    border-color: rgba(255,255,255,0.1);
+}
+
+/* MENSAJES */
+.mensaje {
+    padding: 18px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    backdrop-filter: blur(6px);
+}
+
+.exito { background: rgba(0,255,150,0.15); color: #00ff9d; border: 1px solid rgba(0,255,150,0.3); }
+.error { background: rgba(255,0,80,0.15); color: #ff4d6d; border: 1px solid rgba(255,0,80,0.3); }
+
+/* ANIMACIONES */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+<#
+    fileManager.StartNewFile(ent.nombre + ".php");
+
+    string pkVarName = NormalizarNombre(ent.AtributoKey.nombre);
     string pkInputName = "var" + ent.AtributoKey.nombre;
+    string tableName = NormalizarNombre(ent.nombre);
 #>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Gestión de <#= ent.nombre #></title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: <#= bodyBgColor #>; /* Color del background del Portal */
-            margin: 0; padding: 20px;
-            display: flex; flex-direction: column; align-items: center;
-        }
-        .contenedor { width: 100%; max-width: 800px; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        .menu-entidades {
-            margin-bottom: 20px;
-            background: #f6f6f6;
-            padding: 12px 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
-        }
-        .menu-entidades ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap;}
-        .menu-entidades li { margin-right: 15px; }
-        .menu-entidades a { color: #1a2980; text-decoration: none; font-weight: bold;}
-        .menu-entidades a:hover { text-decoration: underline; }
-        /* Estilo específico para el título de esta Página (sacado del elemento Page) */
-        h2.titulo-pagina {
-            text-align: <#= h2Align #>;
-            color: <#= h2Color #>;
-            font-family: '<#= h2Font #>', sans-serif;
-            font-size: <#= h2Size #>;
-            margin-top: 0; padding-bottom: 10px; border-bottom: 1px solid #eee;
-        }
-
-        /* Estilos de formulario */
-        .form-group { margin-bottom: 15px; }
-        label { display: block; font-weight: bold; margin-bottom: 5px; color: #555; }
-        input[type="text"], input[type="number"], input[type="date"], select {
-            width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;
-        }
-        input[type="submit"] {
-            background-color: #28a745; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; width: 100%;
-        }
-        input[type="submit"]:hover { background-color: #218838; }
-        .mensaje { padding: 15px; margin-top: 20px; border-radius: 5px; text-align: center; }
-        .exito { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
-        .error { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
-        a.volver { display: block; text-align: center; margin-top: 15px; color: #007bff; text-decoration: none; }
-    </style>
+    <link rel="stylesheet" href="estilo<#= ent.nombre #>.css">
 </head>
 <body>
     <nav class="menu-entidades">
@@ -120,34 +270,196 @@ foreach (Elemento e in this.Tapiz.Elementoes)
         <li><a href="<#= otraEnt.nombre #>.php"><#= otraEnt.nombre #></a></li>
     <#
     }
+    foreach(var rel in this.Tapiz.Elementoes.OfType<Relacion>()) {
+        var links = DomainRoleInfo.GetElementLinks<EntidadReferencesRelacion1>(rel, EntidadReferencesRelacion1.RelacionDomainRoleId);
+
+        if (links.Count == 2) 
+        {
+            var link1 = links[0];
+            var link2 = links[1];
+        
+            var ent1 = link1.Entidad;
+            var ent2 = link2.Entidad;
+
+            bool esMuchos1 = (link1.cardinalidad == Cardinalidad.ceroAn || link1.cardinalidad == Cardinalidad.unoAn);
+            bool esMuchos2 = (link2.cardinalidad == Cardinalidad.ceroAn || link2.cardinalidad == Cardinalidad.unoAn);
+
+            if (esMuchos1 && esMuchos2)
+            {
+#>
+        <li><a href="<#= NormalizarNombre(rel.nombre) #>.php"><#= rel.nombre #></a></li>
+    <#  
+            } 
+        }
+    }
 #>
       </ul>
     </nav>
+
     <#= portalTitleHtml #>
 
     <div class="contenedor">
-        
-        <h2 class="titulo-pagina"><#= pageTitleText #></h2>
-
+    
     <?php
-        // LOGICA PHP
-        if (!isset($_POST['<#= pkInputName #>'])) {
+        // --- CONEXIÓN BASE DE DATOS ---
+        $link = mysqli_connect("localhost", "appuser", "1234", "", 3307);
+        if (!$link) die("<div class='mensaje error'>Error de conexión: " . mysqli_connect_error() . "</div>");
+        if (!mysqli_select_db($link, "<#= dbName #>")) die("<div class='mensaje error'>Error DB: " . mysqli_error($link) . "</div>");
+
+        // --- CONTROLADOR DE ACCIONES ---
+        $action = isset($_GET['action']) ? $_GET['action'] : 'list';
+        $msg = "";
+        
+        // --- LÓGICA GUARDAR (INSERT / UPDATE) ---
+        if ($action == 'save' && $_SERVER['REQUEST_METHOD'] == 'POST') {
+            $is_edit = isset($_POST['is_edit']) && $_POST['is_edit'] == '1';
+            
+            // Recoger PK
+            $<#= pkVarName #> = mysqli_real_escape_string($link, $_POST['<#= pkInputName #>']);
+            
+            // Recoger Atributos
+            <# foreach (Atributo attr in ent.Atributo) { #>
+            $<#= NormalizarNombre(attr.nombre) #> = mysqli_real_escape_string($link, $_POST['var<#= NormalizarNombre(attr.nombre) #>']);
+            <# } #>
+
+            if ($is_edit) {
+                $query = "UPDATE `<#= tableName #>` SET ";
+                <# 
+                bool first = true;
+                foreach (Atributo attr in ent.Atributo) { 
+                    if (!first) { 
+                #>
+                $query .= ", ";
+                <#  } #>
+                $query .= "<#= NormalizarNombre(attr.nombre) #> = '$<#= NormalizarNombre(attr.nombre) #>'";
+                <# 
+                    first = false;
+                } 
+                #>
+                $query .= " WHERE <#= pkVarName #> = '$<#= pkVarName #>'";
+                
+                if (mysqli_query($link, $query)) {
+                    $msg = "<div class='mensaje exito'>Registro actualizado correctamente.</div>";
+                    $action = 'list';
+                } else {
+                    $msg = "<div class='mensaje error'>Error al actualizar: " . mysqli_error($link) . " <br>Query: " . $query . "</div>";
+                }
+            } else {
+                $query = "INSERT INTO `<#= tableName #>` (<#= pkVarName #>";
+                <# foreach (Atributo attr in ent.Atributo) { #>
+                $query .= ", <#= NormalizarNombre(attr.nombre) #>";
+                <# } #>
+                $query .= ") VALUES ('$<#= pkVarName #>'";
+                <# foreach (Atributo attr in ent.Atributo) { #>
+                $query .= ", '$<#= NormalizarNombre(attr.nombre) #>'";
+                <# } #>
+                $query .= ")";
+
+                if (mysqli_query($link, $query)) {
+                    $msg = "<div class='mensaje exito'>Registro creado correctamente.</div>";
+                    $action = 'list';
+                } else {
+                    $msg = "<div class='mensaje error'>Error al crear: " . mysqli_error($link) . "</div>";
+                }
+            }
+        }
+
+        // --- LÓGICA ELIMINAR ---
+        if ($action == 'delete' && isset($_GET['id'])) {
+            $id = mysqli_real_escape_string($link, $_GET['id']);
+            $query = "DELETE FROM `<#= tableName #>` WHERE <#= pkVarName #> = '$id'";
+            if (mysqli_query($link, $query)) {
+                $msg = "<div class='mensaje exito'>Registro eliminado.</div>";
+            } else {
+                $msg = "<div class='mensaje error'>Error al eliminar: " . mysqli_error($link) . "</div>";
+            }
+            $action = 'list';
+        }
+
+        if ($msg != "") echo $msg;
     ?>
-        <form action="<#= ent.nombre #>.php" method="post">
+
+    <?php 
+    if ($action == 'list') { 
+    ?>
+        <h2 class="titulo-pagina">
+            <#= pageTitleText #>
+        </h2>
+        <a href="?action=form" class="btn btn-success">NUEVO +</a>
+        <table>
+            <thead>
+                <tr>
+                    <th><#= ent.AtributoKey.nombre #></th>
+                    <# foreach (Atributo attr in ent.Atributo) { #>
+                    <th><#= attr.nombre #></th>
+                    <# } #>
+                    <th style="text-align:right;">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                $res = mysqli_query($link, "SELECT * FROM `<#= tableName #>`");
+                while ($row = mysqli_fetch_assoc($res)) {
+                    echo "<tr>";
+                    echo "<td>" . $row['<#= pkVarName #>'] . "</td>";
+                    <# foreach (Atributo attr in ent.Atributo) { #>
+                    echo "<td>" . $row['<#= NormalizarNombre(attr.nombre) #>'] . "</td>";
+                    <# } #>
+                    echo "<td style='text-align:right;'>";
+                    echo "<a href='?action=form&id=" . $row['<#= pkVarName #>'] . "' class='btn btn-warning' style='margin-right:5px;'>Editar</a>";
+                    echo "<a href='?action=delete&id=" . $row['<#= pkVarName #>'] . "' class='btn btn-danger' onclick='return confirm(\"¿Seguro?\");'>Eliminar</a>";
+                    echo "</td>";
+                    echo "</tr>";
+                }
+                ?>
+            </tbody>
+        </table>
+
+    <?php 
+    } elseif ($action == 'form') { 
+        $is_edit = false;
+        
+        $val_<#= pkVarName #> = "";
+        <# foreach (Atributo attr in ent.Atributo) { #>
+        $val_<#= NormalizarNombre(attr.nombre) #> = "";
+        <# } #>
+
+        if (isset($_GET['id'])) {
+            $is_edit = true;
+            $id = mysqli_real_escape_string($link, $_GET['id']);
+            $res = mysqli_query($link, "SELECT * FROM `<#= tableName #>` WHERE <#= pkVarName #>='$id'");
+            if ($row = mysqli_fetch_assoc($res)) {
+                $val_<#= pkVarName #> = $row['<#= pkVarName #>'];
+                <# foreach (Atributo attr in ent.Atributo) { #>
+                $val_<#= NormalizarNombre(attr.nombre) #> = $row['<#= NormalizarNombre(attr.nombre) #>'];
+                <# } #>
+            }
+        }
+    ?>
+        <h2 class="titulo-pagina">
+            <?php echo $is_edit ? "Editar Registro" : "Nuevo Registro"; ?>
+            <a href="?action=list" class="btn btn-primary">Volver al Listado</a>
+        </h2>
+
+        <form action="?action=save" method="post">
+            <input type="hidden" name="is_edit" value="<?php echo $is_edit ? '1' : '0'; ?>">
+
             <div class="form-group">
                 <label for="<#= pkInputName #>"><#= ent.AtributoKey.nombre #> (PK)</label>
-                <input type="text" name="<#= pkInputName #>" id="<#= pkInputName #>" required />
+                <input type="text" name="<#= pkInputName #>" id="<#= pkInputName #>" 
+                       value="<?php echo $val_<#= pkVarName #>; ?>" 
+                       <?php echo $is_edit ? 'readonly' : 'required'; ?> />
             </div>
 
-    <#
+            <#
             foreach (Atributo attr in ent.Atributo)
             {
                 var field  = this.Tapiz.ElementosWebbed.OfType<Field>()
                     .FirstOrDefault(f => f.labelText == attr.nombre);
-                string labelColor = string.IsNullOrEmpty(field.labelColor) ? "#555" : ("#" + field.labelColor);
-                string labelFont = field.labelFontFamily.ToString();
-                string labelSize = field.labelFontSize > 0 ? field.labelFontSize + "px" : "24px";
-                string labelAlign = GetCssAlign(field.labelPosition);
+                string labelColor = field != null && !string.IsNullOrEmpty(field.labelColor) ? "#" + field.labelColor : "#dfe6ff";
+                string labelFont = field != null ? field.labelFontFamily.ToString() : "inherit";
+                string labelSize = field != null && field.labelFontSize > 0 ? field.labelFontSize + "px" : "16px";
+                string labelAlign = field != null ? GetCssAlign(field.labelPosition) : "left";
                 
                 string inputType = "text";
                 string stepAttr = "";
@@ -157,77 +469,472 @@ foreach (Elemento e in this.Tapiz.Elementoes)
                 if (attr.tipoDato == TipoDatoEnum.Fecha) inputType = "date";
 
                 string requiredAttr = (attr.esNulo) ? "" : "required";
-                string inputName = "var" + attr.nombre;
+                string inputName = "var" + NormalizarNombre(attr.nombre);
+                string valVarName = "val_" + NormalizarNombre(attr.nombre);
 #>
             <style>
-                    label.estilo {
-                        text-align: <#= labelAlign #>;
-                        color: <#= labelColor #>;
-                        font-family: '<#= labelFont #>', sans-serif;
-                        font-size: <#= labelSize #>;
-                    }
+                label.lbl-<#= NormalizarNombre(attr.nombre) #> {
+                    text-align: <#= labelAlign #>;
+                    color: <#= labelColor #>;
+                    font-family: '<#= labelFont #>', sans-serif;
+                    font-size: <#= labelSize #>;
+                }
             </style>
             <div class="form-group">
-                <label for="<#= inputName #>" class="estilo"><#= attr.nombre #></label>
-                <input type="<#= inputType #>" name="<#= inputName #>" id="<#= inputName #>" <#= stepAttr #> <#= requiredAttr #> />
+                <label for="<#= inputName #>" class="lbl-<#= NormalizarNombre(attr.nombre) #>"><#= attr.nombre #></label>
+                <input type="<#= inputType #>" name="<#= inputName #>" id="<#= inputName #>" 
+                       value="<?php echo $<#= valVarName #>; ?>"
+                       <#= stepAttr #> <#= requiredAttr #> />
             </div>
-    <#
-            }
-#>
-            <input type="submit" value="Dar de Alta" />
+            <# } #>
+
+            <input type="submit" class="btn btn-success" style="width:100%; margin-top:10px;" 
+                   value="<?php echo $is_edit ? 'Actualizar Datos' : 'Guardar Nuevo'; ?>" />
         </form>
-
-    <?php
-        } else {
-            // PROCESAMIENTO PHP
-            $link = mysqli_connect(
-                    "localhost",
-                    "appuser", // usuario
-                    "1234", // password
-                    "", // nombre base de datos vacio porque se setea despues
-                    3307 // puerto
-                );
-            if (!$link) die("<div class='mensaje error'>Error de conexión: " . mysqli_connect_error() . "</div>");
-            
-            if (!mysqli_select_db($link, "<#= dbName #>")) {
-                die("<div class='mensaje error'>Error: No existe la base de datos <#= dbName #></div>");
-            }
-
-            $<#= ent.AtributoKey.nombre #> = $_POST['<#= pkInputName #>'];
-    <#
-            foreach (Atributo attr in ent.Atributo) {
-#>
-            $<#= attr.nombre #> = $_POST['var<#= NormalizarNombre(attr.nombre) #>'];
-    <#      } #>
-
-            $query = "INSERT INTO `<#= NormalizarNombre(ent.nombre) #>` (";
-            $query .= "<#= NormalizarNombre(ent.AtributoKey.nombre) #>";
-    <#      foreach (Atributo attr in ent.Atributo) { #>
-            $query .= ", <#= NormalizarNombre(attr.nombre) #>";
-    <#      } #>
-            $query .= ") VALUES (";
-            
-            $query .= "'" . $<#= NormalizarNombre(ent.AtributoKey.nombre) #> . "'";
-    <#      foreach (Atributo attr in ent.Atributo) { #>
-            $query .= ", '" . $<#= NormalizarNombre(attr.nombre) #> . "'";
-    <#      } #>
-            $query .= ")";
-
-            if (mysqli_query($link, $query)) {
-                echo "<div class='mensaje exito'>Registro insertado correctamente en <strong><#= ent.nombre #></strong>.</div>";
-            } else {
-                echo "<div class='mensaje error'>Error al insertar: " . mysqli_error($link) . "</div>";
-            }
-
-            mysqli_close($link);
-            echo "<a href='<#= ent.nombre #>.php' class='volver'>Volver al formulario</a>";
-        }
+    <?php 
+    } // Fin del bloque formulario
+    
+    mysqli_close($link);
     ?>
+    
     </div>
 </body>
 </html>
 <#
-} 
+}
+// GENERAR PHP PARA RELACIONES MUCHOS-A-MUCHOS
+foreach(var rel in this.Tapiz. Elementoes.OfType<Relacion>()) {
+    var links = DomainRoleInfo.GetElementLinks<EntidadReferencesRelacion1>(rel, EntidadReferencesRelacion1.RelacionDomainRoleId);
+
+    if (links.Count == 2) {
+        var link1 = links[0];
+        var link2 = links[1];
+        
+        var ent1 = link1.Entidad;
+        var ent2 = link2.Entidad;
+        
+        string ent1Name = ent1.nombre;
+        string ent2Name = ent2.nombre;
+        string relName = rel.nombre;
+        string relTableName = NormalizarNombre(rel.nombre);
+        string ent1TableName = NormalizarNombre(ent1Name);
+        string ent2TableName = NormalizarNombre(ent2Name);
+        
+        string atributoKey1 = NormalizarNombre(ent1.AtributoKey.nombre);
+        string atributoKey2= NormalizarNombre(ent2.AtributoKey.nombre);
+        string pk1VarName = NormalizarNombre(ent1.nombre) + "_FK";
+        string pk2VarName = NormalizarNombre(ent2.nombre) + "_FK";
+
+        bool esMuchos1 = (link1.cardinalidad == Cardinalidad. ceroAn || link1.cardinalidad == Cardinalidad.unoAn);
+        bool esMuchos2 = (link2.cardinalidad == Cardinalidad.ceroAn || link2.cardinalidad == Cardinalidad.unoAn);
+
+        if (esMuchos1 && esMuchos2) {
+            fileManager.StartNewFile("estilo" + rel.nombre + ".css");
+            var relPage = this.Tapiz.ElementosWebbed.OfType<Page>()
+                .FirstOrDefault(p => p.titleText == relName);
+
+            string relPageTitleText = relName;
+            string relH2Align = "left";
+            string relH2Color = "#FFFFFF";
+            string relH2Font = "Arial";
+            string relH2Size = "14px";
+
+            if (relPage != null) {
+                relPageTitleText = relPage.titleText;
+                relH2Align = GetCssAlign(relPage.titlePosition);
+                relH2Color = ! string.IsNullOrEmpty(relPage.titleColor) ? "#" + relPage.titleColor :  "#FFFFFF";
+                relH2Font = relPage. titleFontFamily.ToString();
+                relH2Size = relPage.titleFontSize > 0 ? relPage.titleFontSize + "px" : "14px";
+            }
+#>
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background:  linear-gradient(135deg, <#= bodyBgColor #>, #0f0f17);
+                margin: 0;
+                padding: 40px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                min-height: 100vh;
+                backdrop-filter: blur(8px);
+            }
+
+            .contenedor {
+                width: 100%;
+                max-width: 950px;
+                padding: 40px;
+                border-radius: 18px;
+                background: rgba(255, 255, 255, 0.08);
+                box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+                backdrop-filter: blur(12px);
+                border: 1px solid rgba(255,255,255,0.15);
+                animation: fadeIn 0.8s ease-out;
+            }
+
+            .menu-entidades {
+                margin-bottom: 25px;
+                padding: 15px 20px;
+                border-radius: 12px;
+                background: rgba(255,255,255,0.05);
+                backdrop-filter: blur(10px);
+                box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            }
+
+            .menu-entidades ul {
+                list-style: none;
+                margin: 0;
+                padding:  0;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .menu-entidades li {
+                margin: 0 15px;
+            }
+
+            .menu-entidades a {
+                color: #FFFFFF;
+                text-decoration:  none;
+                font-weight: bold;
+                transition: 0.3s;
+                font-size: 1.1em;
+            }
+
+            .menu-entidades a:hover {
+                color: #b3d9ff;
+                text-shadow: 0 0 8px #FFFFFF;
+            }
+
+            h2.titulo-pagina {
+                text-align: <#= relH2Align #>;
+                color: <#= relH2Color #>;
+                font-family: '<#= relH2Font #>', sans-serif;
+                font-size: <#= relH2Size #>;
+                margin-top: 0;
+                padding-bottom: 12px;
+                border-bottom:  1px solid rgba(255,255,255,0.2);
+                text-shadow: 0 0 10px rgba(255,255,255,0.4);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .btn {
+                text-decoration: none;
+                padding: 8px 16px;
+                border-radius: 8px;
+                font-weight: bold;
+                transition: 0.3s;
+                display: inline-block;
+                border: none;
+                cursor: pointer;
+            }
+
+            .btn-primary { background: #007bff; color: white; }
+            .btn-primary:hover { background: #0056b3; box-shadow: 0 0 10px #007bff; }
+
+            .btn-success { background: #28a745; color: white; }
+            .btn-success:hover { background:  #218838; box-shadow: 0 0 10px #28a745; }
+
+            .btn-danger { background: #dc3545; color: white; }
+            .btn-danger:hover { background: #c82333; box-shadow: 0 0 10px #dc3545; }
+
+            .btn-warning { background: #ffc107; color:  #333; }
+            .btn-warning:hover { background: #e0a800; box-shadow:  0 0 10px #ffc107; }
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+                color: #FFFFFF;
+                background: rgba(0,0,0,0.2);
+                border-radius: 10px;
+                overflow: hidden;
+            }
+
+            th, td {
+                padding: 15px;
+                text-align:  left;
+                border-bottom:  1px solid rgba(255,255,255,0.1);
+            }
+
+            th {
+                background: rgba(255,255,255,0.1);
+                color: #FFFFFF;
+                text-transform: uppercase;
+                font-size: 0.9em;
+            }
+
+            tr:hover {
+                background: rgba(255,255,255,0.05);
+            }
+
+            .form-group {
+                margin-bottom: 22px;
+            }
+
+            label {
+                display: block;
+                font-weight: bold;
+                margin-bottom: 6px;
+                color: #616161;
+                letter-spacing: 0.5px;
+            }
+
+            input[type="text"],
+            input[type="number"],
+            input[type="date"],
+            select {
+                width: 100%;
+                padding: 12px;
+                border-radius: 10px;
+                border: 1px solid rgba(255,255,255,0.25);
+                background: rgba(96,96,96,0.07);
+                color: #616161;
+                font-size: 15px;
+                transition: 0.3s;
+                backdrop-filter: blur(6px);
+                box-sizing: border-box;
+            }
+
+            input:focus,
+            select:focus {
+                outline: none;
+                border-color: #616161;
+                box-shadow:  0 0 12px #616161;
+            }
+
+            input[readonly] {
+                background: rgba(0,0,0,0.3);
+                color: #aaa;
+                border-color: rgba(255,255,255,0.1);
+            }
+
+            .mensaje {
+                padding: 18px;
+                margin-bottom: 20px;
+                border-radius: 10px;
+                text-align: center;
+                font-weight: bold;
+                backdrop-filter: blur(6px);
+            }
+
+            .exito { background: rgba(0,255,150,0.15); color: #00ff9d; border:  1px solid rgba(0,255,150,0.3); }
+            .error { background: rgba(255,0,80,0.15); color: #ff4d6d; border: 1px solid rgba(255,0,80,0.3); }
+
+            @keyframes fadeIn {
+                from { opacity: 0; transform:  translateY(15px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+    <#
+            fileManager.StartNewFile(relTableName + ".php");
+#>
+<! DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de <#= relName #></title>
+    <link rel="stylesheet" href="estilo<#= rel.nombre #>.css">
+</head>
+<body>
+    <nav class="menu-entidades">
+        <ul>
+            <#
+            foreach(var otraEnt in this.Tapiz. Elementoes.OfType<Entidad>()) {
+#>
+            <li><a href="<#= otraEnt.nombre #>.php"><#= otraEnt.nombre #></a></li>
+            <#
+            }
+            foreach(var relNav in this.Tapiz. Elementoes.OfType<Relacion>()) {
+                var linksNav = DomainRoleInfo. GetElementLinks<EntidadReferencesRelacion1>(relNav, EntidadReferencesRelacion1.RelacionDomainRoleId);
+                if (linksNav.Count == 2) {
+                    var link1Nav = linksNav[0];
+                    var link2Nav = linksNav[1];
+                    bool esMuchos1Nav = (link1Nav.cardinalidad == Cardinalidad.ceroAn || link1Nav.cardinalidad == Cardinalidad.unoAn);
+                    bool esMuchos2Nav = (link2Nav.cardinalidad == Cardinalidad.ceroAn || link2Nav.cardinalidad == Cardinalidad.unoAn);
+                    if (esMuchos1Nav && esMuchos2Nav) {
+#>
+            <li><a href="<#= NormalizarNombre(relNav.nombre) #>.php"><#= relNav.nombre #></a></li>
+            <#  
+                    }
+                }
+            }
+#>
+        </ul>
+    </nav>
+    <#= portalTitleHtml #>
+
+    <div class="contenedor">
+    
+    <?php
+        $link = mysqli_connect("localhost", "appuser", "1234", "", 3307);
+        if (!$link) die("<div class='mensaje error'>Error de conexión:  " . mysqli_connect_error() . "</div>");
+        if (!mysqli_select_db($link, "<#= dbName #>")) die("<div class='mensaje error'>Error DB: " . mysqli_error($link) . "</div>");
+
+        $action = isset($_GET['action']) ? $_GET['action'] : 'list';
+        $msg = "";
+        
+        if ($action == 'save' && $_SERVER['REQUEST_METHOD'] == 'POST') {
+            $pk1Val = mysqli_real_escape_string($link, $_POST['<#= pk1VarName #>']);
+            $pk2Val = mysqli_real_escape_string($link, $_POST['<#= pk2VarName #>']);
+
+            $is_edit = isset($_POST['is_edit']) && $_POST['is_edit'] == '1';
+
+            if ($is_edit) {
+                $old_id1 = mysqli_real_escape_string($link, $_POST['old_<#= pk1VarName #>']);
+                $old_id2 = mysqli_real_escape_string($link, $_POST['old_<#= pk2VarName #>']);
+                
+                $query = "DELETE FROM `<#= relTableName #>` WHERE <#= pk1VarName #> = '$old_id1' AND <#= pk2VarName #> = '$old_id2'";
+                mysqli_query($link, $query);
+                
+                $query = "INSERT INTO `<#= relTableName #>` (<#= pk1VarName #>, <#= pk2VarName #>) VALUES ('$pk1Val', '$pk2Val')";
+                
+                if (mysqli_query($link, $query)) {
+                    $msg = "<div class='mensaje exito'>Relación actualizada correctamente. </div>";
+                    $action = 'list';
+                } else {
+                    $msg = "<div class='mensaje error'>Error al actualizar:  " . mysqli_error($link) . "</div>";
+                }
+            } else {
+                $query = "INSERT INTO `<#= relTableName #>` (<#= pk1VarName #>, <#= pk2VarName #>) VALUES ('$pk1Val', '$pk2Val')";
+
+                if (mysqli_query($link, $query)) {
+                    $msg = "<div class='mensaje exito'>Relación creada correctamente.</div>";
+                    $action = 'list';
+                } else {
+                    $msg = "<div class='mensaje error'>Error al crear: " . mysqli_error($link) . "</div>";
+                }
+            }
+        }
+
+        if ($action == 'delete' && isset($_GET['id1']) && isset($_GET['id2'])) {
+            $id1 = mysqli_real_escape_string($link, $_GET['id1']);
+            $id2 = mysqli_real_escape_string($link, $_GET['id2']);
+            $query = "DELETE FROM `<#= relTableName #>` WHERE <#= pk1VarName #> = '$id1' AND <#= pk2VarName #> = '$id2'";
+            if (mysqli_query($link, $query)) {
+                $msg = "<div class='mensaje exito'>Relación eliminada. </div>";
+            } else {
+                $msg = "<div class='mensaje error'>Error al eliminar: " . mysqli_error($link) . "</div>";
+            }
+            $action = 'list';
+        }
+
+        if ($msg != "") echo $msg;
+    ?>
+
+        <?php 
+    if ($action == 'list') { 
+    ?>
+        <h2 class="titulo-pagina">
+            <span><#= relPageTitleText #></span>
+        </h2>
+        <a href="? action=form" class="btn btn-success">NUEVO +</a>
+        <table>
+            <thead>
+                <tr>
+                    <th><#= ent1Name #></th>
+                    <th><#= ent2Name #></th>
+                    <th style="text-align: right;">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                $res = mysqli_query($link, "SELECT * FROM `<#= relTableName #>`");
+                while ($row = mysqli_fetch_assoc($res)) {
+                    echo "<tr>";
+                    echo "<td>" . $row['<#= pk1VarName #>'] .  "</td>";
+                    echo "<td>" . $row['<#= pk2VarName #>'] . "</td>";
+                    echo "<td style='text-align: right;'>";
+                    echo "<a href='?action=form&id1=" . $row['<#= pk1VarName #>'] . "&id2=" . $row['<#= pk2VarName #>'] . "' class='btn btn-warning' style='margin-right: 5px;'>Editar</a>";
+                    echo "<a href='?action=delete&id1=" . $row['<#= pk1VarName #>'] . "&id2=" . $row['<#= pk2VarName #>'] . "' class='btn btn-danger' onclick='return confirm(\"¿Seguro?\");'>Eliminar</a>";
+                    echo "</td>";
+                    echo "</tr>";
+                }
+                ?>
+            </tbody>
+        </table>
+    <?php 
+    }
+    ?>
+
+    <?php 
+    if ($action == 'form') { 
+        $is_edit = false;
+        $val_<#= pk1VarName #> = "";
+        $val_<#= pk2VarName #> = "";
+        $old_val_<#= pk1VarName #> = "";
+        $old_val_<#= pk2VarName #> = "";
+
+        if (isset($_GET['id1']) && isset($_GET['id2'])) {
+            $is_edit = true;
+            $id1 = mysqli_real_escape_string($link, $_GET['id1']);
+            $id2 = mysqli_real_escape_string($link, $_GET['id2']);
+            $res = mysqli_query($link, "SELECT * FROM `<#= relTableName #>` WHERE <#= pk1VarName #>='$id1' AND <#= pk2VarName #>='$id2'");
+            if ($row = mysqli_fetch_assoc($res)) {
+                $val_<#= pk1VarName #> = $row['<#= pk1VarName #>'];
+                $val_<#= pk2VarName #> = $row['<#= pk2VarName #>'];
+                $old_val_<#= pk1VarName #> = $row['<#= pk1VarName #>'];
+                $old_val_<#= pk2VarName #> = $row['<#= pk2VarName #>'];
+            }
+        }
+    ?>
+        <h2 class="titulo-pagina">
+            <span><?php echo $is_edit ? "Editar Relación" : "Nueva Relación"; ?></span>
+            <a href="?action=list" class="btn btn-primary">Volver al Listado</a>
+        </h2>
+
+        <form action="? action=save" method="post">
+            <input type="hidden" name="is_edit" value="<?php echo $is_edit ? '1' : '0'; ?>">
+            <?php if ($is_edit) { ?>
+                <input type="hidden" name="old_<#= pk1VarName #>" value="<?php echo $old_val_<#= pk1VarName #>; ?>">
+                <input type="hidden" name="old_<#= pk2VarName #>" value="<?php echo $old_val_<#= pk2VarName #>; ?>">
+            <?php } ?>
+
+            <div class="form-group">
+                <label for="<#= pk1VarName #>"><#= ent1Name #></label>
+                <select name="<#= pk1VarName #>" id="<#= pk1VarName #>" required>
+                    <option value="">-- Seleccionar --</option>
+                    <?php
+                    $res = mysqli_query($link, "SELECT <#= atributoKey1 #> FROM `<#= ent1TableName #>`");
+                    while ($row = mysqli_fetch_assoc($res)) {
+                        $selected = ($row['<#= atributoKey1 #>'] == $val_<#= atributoKey1 #>) ? 'selected' : '';
+                        echo "<option value='" . $row['<#= atributoKey1 #>'] . "' $selected>" . $row['<#= atributoKey1 #>'] .  "</option>";
+                    }
+                    ?>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="<#= pk2VarName #>"><#= ent2Name #></label>
+                <select name="<#= pk2VarName #>" id="<#= pk2VarName #>" required>
+                    <option value="">-- Seleccionar --</option>
+                    <?php
+                    $res = mysqli_query($link, "SELECT <#= atributoKey2 #> FROM `<#= ent2TableName #>`");
+                    while ($row = mysqli_fetch_assoc($res)) {
+                        $selected = ($row['<#= atributoKey2 #>'] == $val_<#= atributoKey2 #>) ? 'selected' : '';
+                        echo "<option value='" . $row['<#= atributoKey2 #>'] . "' $selected>" . $row['<#= atributoKey2 #>'] . "</option>";
+                    }
+                    ?>
+                </select>
+            </div>
+
+            <input type="submit" class="btn btn-success" style="width: 100%; margin-top: 10px;" 
+                   value="<?php echo $is_edit ? 'Actualizar Relación' : 'Guardar Nueva'; ?>" />
+        </form>
+    <?php 
+    }
+    
+    mysqli_close($link);
+    ?>
+    
+    </div>
+</body>
+</html>
+<#
+        } 
+    } 
+}
 fileManager.Process();
 #>
 

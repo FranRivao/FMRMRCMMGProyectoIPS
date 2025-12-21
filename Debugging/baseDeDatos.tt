@@ -84,8 +84,8 @@ CREATE TABLE IF NOT EXISTS <#= NormalizarNombre(rel.nombre) #> (
     <#= NormalizarNombre(attrRel.nombre) #> <#= GetSqlType(attrRel.tipoDato, attrRel.longitud) #> <#= nullStrRel #>,
     <# } #>
 
-    FOREIGN KEY (<#= NormalizarNombre(ent1.nombre) #>_FK) REFERENCES <#= NormalizarNombre(ent1.nombre) #>(<#= NormalizarNombre(ent1.AtributoKey.nombre) #>),
-    FOREIGN KEY (<#= NormalizarNombre(ent2.nombre) #>_FK) REFERENCES <#= NormalizarNombre(ent2.nombre) #>(<#= NormalizarNombre(ent2.AtributoKey.nombre) #>),
+    FOREIGN KEY (<#= NormalizarNombre(ent1.nombre) #>_FK) REFERENCES <#= NormalizarNombre(ent1.nombre) #>(<#= NormalizarNombre(ent1.AtributoKey.nombre) #>) ON DELETE CASCADE,
+    FOREIGN KEY (<#= NormalizarNombre(ent2.nombre) #>_FK) REFERENCES <#= NormalizarNombre(ent2.nombre) #>(<#= NormalizarNombre(ent2.AtributoKey.nombre) #>) ON DELETE CASCADE,
     PRIMARY KEY (<#= NormalizarNombre(ent1.nombre) #>_FK, <#= NormalizarNombre(ent2.nombre) #>_FK)
 );
 <#
@@ -107,7 +107,7 @@ private string GetSqlType(TipoDatoEnum tipo, int longitud)
     switch (tipo)
     {
         case TipoDatoEnum.Entero: return "INTEGER";
-        case TipoDatoEnum.Real: return "FLOAT";
+        case TipoDatoEnum.Real: return "DOUBLE";
         case TipoDatoEnum.Fecha: return "DATE";
         case TipoDatoEnum.Alfanumerico: return "VARCHAR(" + len + ")";
         default: return "VARCHAR(255)";

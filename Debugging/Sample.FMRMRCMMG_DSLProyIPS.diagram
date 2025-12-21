@@ -433,7 +433,7 @@
         <metaforaAtributoMoniker Id="8493ccf7-9481-4d1b-b466-93d4b503be76" />
       </nodes>
     </conectorEntidadAtributo>
-    <conectorEntidadAtributo Id="a8fd4a22-a7b3-4aef-92cc-f3a428aa6940" edgePoints="[(6.38264884464487 : 11.8549574729586); (6.66987300436328 : 11.7728934273248 : JumpStart); (6.83012699563674 : 11.7271065726752 : JumpEnd); (7.87988455155926 : 11.4271758424116)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <conectorEntidadAtributo Id="a8fd4a22-a7b3-4aef-92cc-f3a428aa6940" edgePoints="[(6.38264884464487 : 11.8549574729586); (7.87988455155926 : 11.4271758424116)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <entidadReferencesAtributoMoniker Id="cfdc84f9-6232-40dd-beea-61c8617384b1" />
       <nodes>
         <metaforaEntidadMoniker Id="ec770be3-4eeb-4a10-9f35-63c1580af63d" />

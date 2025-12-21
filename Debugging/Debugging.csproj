@@ -44,6 +44,9 @@
       <SubType>
       </SubType>
     </None>
+    <None Include="accede.php">
+      <DependentUpon>paginaWeb.tt</DependentUpon>
+    </None>
     <None Include="Banco.php">
       <DependentUpon>paginaWeb.tt</DependentUpon>
     </None>
@@ -69,6 +72,9 @@
     <None Include="Movimiento.php">
       <DependentUpon>paginaWeb.tt</DependentUpon>
     </None>
+    <None Include="realiza.php">
+      <DependentUpon>paginaWeb.tt</DependentUpon>
+    </None>
     <None Include="Red Bancaria.php">
       <DependentUpon>paginaWeb.tt</DependentUpon>
     </None>
@@ -92,6 +98,30 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>baseDeDatos.tt</DependentUpon>
+    </Content>
+    <Content Include="estiloaccede.css">
+      <DependentUpon>paginaWeb.tt</DependentUpon>
+    </Content>
+    <Content Include="estiloBanco.css">
+      <DependentUpon>paginaWeb.tt</DependentUpon>
+    </Content>
+    <Content Include="estiloCajero.css">
+      <DependentUpon>paginaWeb.tt</DependentUpon>
+    </Content>
+    <Content Include="estiloCuenta.css">
+      <DependentUpon>paginaWeb.tt</DependentUpon>
+    </Content>
+    <Content Include="estiloMovimiento.css">
+      <DependentUpon>paginaWeb.tt</DependentUpon>
+    </Content>
+    <Content Include="estilorealiza.css">
+      <DependentUpon>paginaWeb.tt</DependentUpon>
+    </Content>
+    <Content Include="estiloRed Bancaria.css">
+      <DependentUpon>paginaWeb.tt</DependentUpon>
+    </Content>
+    <Content Include="estiloTarjeta.css">
+      <DependentUpon>paginaWeb.tt</DependentUpon>
     </Content>
     <Content Include="Informe.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

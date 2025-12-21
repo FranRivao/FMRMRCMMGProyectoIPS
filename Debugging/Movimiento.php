@@ -3,49 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Gestión de Movimiento</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #FF913D; /* Color del background del Portal */
-            margin: 0; padding: 20px;
-            display: flex; flex-direction: column; align-items: center;
-        }
-        .contenedor { width: 100%; max-width: 800px; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        .menu-entidades {
-            margin-bottom: 20px;
-            background: #f6f6f6;
-            padding: 12px 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
-        }
-        .menu-entidades ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap;}
-        .menu-entidades li { margin-right: 15px; }
-        .menu-entidades a { color: #1a2980; text-decoration: none; font-weight: bold;}
-        .menu-entidades a:hover { text-decoration: underline; }
-        /* Estilo específico para el título de esta Página (sacado del elemento Page) */
-        h2.titulo-pagina {
-            text-align: right;
-            color: #A5BE9E;
-            font-family: 'Arial', sans-serif;
-            font-size: 14px;
-            margin-top: 0; padding-bottom: 10px; border-bottom: 1px solid #eee;
-        }
-
-        /* Estilos de formulario */
-        .form-group { margin-bottom: 15px; }
-        label { display: block; font-weight: bold; margin-bottom: 5px; color: #555; }
-        input[type="text"], input[type="number"], input[type="date"], select {
-            width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;
-        }
-        input[type="submit"] {
-            background-color: #28a745; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; width: 100%;
-        }
-        input[type="submit"]:hover { background-color: #218838; }
-        .mensaje { padding: 15px; margin-top: 20px; border-radius: 5px; text-align: center; }
-        .exito { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
-        .error { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
-        a.volver { display: block; text-align: center; margin-top: 15px; color: #007bff; text-decoration: none; }
-    </style>
+    <link rel="stylesheet" href="estiloMovimiento.css">
 </head>
 <body>
     <nav class="menu-entidades">
@@ -56,112 +14,216 @@
             <li><a href="Cuenta.php">Cuenta</a></li>
             <li><a href="Tarjeta.php">Tarjeta</a></li>
             <li><a href="Movimiento.php">Movimiento</a></li>
+            <li><a href="accede.php">accede</a></li>
+            <li><a href="realiza.php">realiza</a></li>
           </ul>
     </nav>
+
     
         <div style='text-align:center; margin-bottom:20px; border-bottom:2px solid #ccc; padding:10px;'>
-            <h1 style='color:#FFFFFF; font-family:"Tahoma"; font-size:18px; margin:0;'>
+            <h1 style='color:#000000; font-family:"Tahoma"; font-size:18px; margin:0;'>
                 SISTEMA RED BANCARIA
             </h1>
         </div>
 
     <div class="contenedor">
-        
-        <h2 class="titulo-pagina">Movimiento</h2>
-
-    <?php
-        // LOGICA PHP
-        if (!isset($_POST['varid'])) {
-    ?>
-        <form action="Movimiento.php" method="post">
-            <div class="form-group">
-                <label for="varid">id (PK)</label>
-                <input type="text" name="varid" id="varid" required />
-            </div>
-
-                <style>
-                    label.estilo {
-                        text-align: left;
-                        color: #C57F0E;
-                        font-family: 'Arial', sans-serif;
-                        font-size: 12px;
-                    }
-            </style>
-            <div class="form-group">
-                <label for="varconcepto" class="estilo">concepto</label>
-                <input type="text" name="varconcepto" id="varconcepto"  required />
-            </div>
-                <style>
-                    label.estilo {
-                        text-align: left;
-                        color: #C57F0E;
-                        font-family: 'Arial', sans-serif;
-                        font-size: 12px;
-                    }
-            </style>
-            <div class="form-group">
-                <label for="varfecha" class="estilo">fecha</label>
-                <input type="date" name="varfecha" id="varfecha"  required />
-            </div>
-                <style>
-                    label.estilo {
-                        text-align: left;
-                        color: #C57F0E;
-                        font-family: 'Arial', sans-serif;
-                        font-size: 12px;
-                    }
-            </style>
-            <div class="form-group">
-                <label for="varcantidad" class="estilo">cantidad</label>
-                <input type="number" name="varcantidad" id="varcantidad" step='any' required />
-            </div>
-                <input type="submit" value="Dar de Alta" />
-        </form>
-
-    <?php
-        } else {
-            // PROCESAMIENTO PHP
-            $link = mysqli_connect(
-                    "localhost",
-                    "appuser", // usuario
-                    "1234", // password
-                    "", // nombre base de datos vacio porque se setea despues
-                    3307 // puerto
-                );
-            if (!$link) die("<div class='mensaje error'>Error de conexión: " . mysqli_connect_error() . "</div>");
-            
-            if (!mysqli_select_db($link, "redbancaria")) {
-                die("<div class='mensaje error'>Error: No existe la base de datos redbancaria</div>");
-            }
-
-            $id = $_POST['varid'];
-                $concepto = $_POST['varconcepto'];
-                $fecha = $_POST['varfecha'];
-                $cantidad = $_POST['varcantidad'];
     
-            $query = "INSERT INTO `movimiento` (";
-            $query .= "id";
-                $query .= ", concepto";
-                $query .= ", fecha";
-                $query .= ", cantidad";
-                $query .= ") VALUES (";
+    <?php
+        // --- CONEXIÓN BASE DE DATOS ---
+        $link = mysqli_connect("localhost", "appuser", "1234", "", 3307);
+        if (!$link) die("<div class='mensaje error'>Error de conexión: " . mysqli_connect_error() . "</div>");
+        if (!mysqli_select_db($link, "redbancaria")) die("<div class='mensaje error'>Error DB: " . mysqli_error($link) . "</div>");
+
+        // --- CONTROLADOR DE ACCIONES ---
+        $action = isset($_GET['action']) ? $_GET['action'] : 'list';
+        $msg = "";
+        
+        // --- LÓGICA GUARDAR (INSERT / UPDATE) ---
+        if ($action == 'save' && $_SERVER['REQUEST_METHOD'] == 'POST') {
+            $is_edit = isset($_POST['is_edit']) && $_POST['is_edit'] == '1';
             
-            $query .= "'" . $id . "'";
-                $query .= ", '" . $concepto . "'";
-                $query .= ", '" . $fecha . "'";
-                $query .= ", '" . $cantidad . "'";
-                $query .= ")";
-
-            if (mysqli_query($link, $query)) {
-                echo "<div class='mensaje exito'>Registro insertado correctamente en <strong>Movimiento</strong>.</div>";
+            // Recoger PK
+            $id = mysqli_real_escape_string($link, $_POST['varid']);
+            
+            // Recoger Atributos
+                        $concepto = mysqli_real_escape_string($link, $_POST['varconcepto']);
+                        $fecha = mysqli_real_escape_string($link, $_POST['varfecha']);
+                        $cantidad = mysqli_real_escape_string($link, $_POST['varcantidad']);
+            
+            if ($is_edit) {
+                $query = "UPDATE `movimiento` SET ";
+                                $query .= "concepto = '$concepto'";
+                                $query .= ", ";
+                                $query .= "fecha = '$fecha'";
+                                $query .= ", ";
+                                $query .= "cantidad = '$cantidad'";
+                                $query .= " WHERE id = '$id'";
+                
+                if (mysqli_query($link, $query)) {
+                    $msg = "<div class='mensaje exito'>Registro actualizado correctamente.</div>";
+                    $action = 'list';
+                } else {
+                    $msg = "<div class='mensaje error'>Error al actualizar: " . mysqli_error($link) . " <br>Query: " . $query . "</div>";
+                }
             } else {
-                echo "<div class='mensaje error'>Error al insertar: " . mysqli_error($link) . "</div>";
-            }
+                $query = "INSERT INTO `movimiento` (id";
+                                $query .= ", concepto";
+                                $query .= ", fecha";
+                                $query .= ", cantidad";
+                                $query .= ") VALUES ('$id'";
+                                $query .= ", '$concepto'";
+                                $query .= ", '$fecha'";
+                                $query .= ", '$cantidad'";
+                                $query .= ")";
 
-            mysqli_close($link);
-            echo "<a href='Movimiento.php' class='volver'>Volver al formulario</a>";
+                if (mysqli_query($link, $query)) {
+                    $msg = "<div class='mensaje exito'>Registro creado correctamente.</div>";
+                    $action = 'list';
+                } else {
+                    $msg = "<div class='mensaje error'>Error al crear: " . mysqli_error($link) . "</div>";
+                }
+            }
+        }
+
+        // --- LÓGICA ELIMINAR ---
+        if ($action == 'delete' && isset($_GET['id'])) {
+            $id = mysqli_real_escape_string($link, $_GET['id']);
+            $query = "DELETE FROM `movimiento` WHERE id = '$id'";
+            if (mysqli_query($link, $query)) {
+                $msg = "<div class='mensaje exito'>Registro eliminado.</div>";
+            } else {
+                $msg = "<div class='mensaje error'>Error al eliminar: " . mysqli_error($link) . "</div>";
+            }
+            $action = 'list';
+        }
+
+        if ($msg != "") echo $msg;
+    ?>
+
+    <?php 
+    if ($action == 'list') { 
+    ?>
+        <h2 class="titulo-pagina">
+            Movimiento
+        </h2>
+        <a href="?action=form" class="btn btn-success">NUEVO +</a>
+        <table>
+            <thead>
+                <tr>
+                    <th>id</th>
+                                        <th>concepto</th>
+                                        <th>fecha</th>
+                                        <th>cantidad</th>
+                                        <th style="text-align:right;">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                $res = mysqli_query($link, "SELECT * FROM `movimiento`");
+                while ($row = mysqli_fetch_assoc($res)) {
+                    echo "<tr>";
+                    echo "<td>" . $row['id'] . "</td>";
+                                        echo "<td>" . $row['concepto'] . "</td>";
+                                        echo "<td>" . $row['fecha'] . "</td>";
+                                        echo "<td>" . $row['cantidad'] . "</td>";
+                                        echo "<td style='text-align:right;'>";
+                    echo "<a href='?action=form&id=" . $row['id'] . "' class='btn btn-warning' style='margin-right:5px;'>Editar</a>";
+                    echo "<a href='?action=delete&id=" . $row['id'] . "' class='btn btn-danger' onclick='return confirm(\"¿Seguro?\");'>Eliminar</a>";
+                    echo "</td>";
+                    echo "</tr>";
+                }
+                ?>
+            </tbody>
+        </table>
+
+    <?php 
+    } elseif ($action == 'form') { 
+        $is_edit = false;
+        
+        $val_id = "";
+                $val_concepto = "";
+                $val_fecha = "";
+                $val_cantidad = "";
+        
+        if (isset($_GET['id'])) {
+            $is_edit = true;
+            $id = mysqli_real_escape_string($link, $_GET['id']);
+            $res = mysqli_query($link, "SELECT * FROM `movimiento` WHERE id='$id'");
+            if ($row = mysqli_fetch_assoc($res)) {
+                $val_id = $row['id'];
+                                $val_concepto = $row['concepto'];
+                                $val_fecha = $row['fecha'];
+                                $val_cantidad = $row['cantidad'];
+                            }
         }
     ?>
+        <h2 class="titulo-pagina">
+            <?php echo $is_edit ? "Editar Registro" : "Nuevo Registro"; ?>
+            <a href="?action=list" class="btn btn-primary">Volver al Listado</a>
+        </h2>
+
+        <form action="?action=save" method="post">
+            <input type="hidden" name="is_edit" value="<?php echo $is_edit ? '1' : '0'; ?>">
+
+            <div class="form-group">
+                <label for="varid">id (PK)</label>
+                <input type="text" name="varid" id="varid" 
+                       value="<?php echo $val_id; ?>" 
+                       <?php echo $is_edit ? 'readonly' : 'required'; ?> />
+            </div>
+
+                        <style>
+                label.lbl-concepto {
+                    text-align: left;
+                    color: #C57F0E;
+                    font-family: 'Arial', sans-serif;
+                    font-size: 12px;
+                }
+            </style>
+            <div class="form-group">
+                <label for="varconcepto" class="lbl-concepto">concepto</label>
+                <input type="text" name="varconcepto" id="varconcepto" 
+                       value="<?php echo $val_concepto; ?>"
+                        required />
+            </div>
+                        <style>
+                label.lbl-fecha {
+                    text-align: left;
+                    color: #C57F0E;
+                    font-family: 'Arial', sans-serif;
+                    font-size: 12px;
+                }
+            </style>
+            <div class="form-group">
+                <label for="varfecha" class="lbl-fecha">fecha</label>
+                <input type="date" name="varfecha" id="varfecha" 
+                       value="<?php echo $val_fecha; ?>"
+                        required />
+            </div>
+                        <style>
+                label.lbl-cantidad {
+                    text-align: left;
+                    color: #C57F0E;
+                    font-family: 'Arial', sans-serif;
+                    font-size: 12px;
+                }
+            </style>
+            <div class="form-group">
+                <label for="varcantidad" class="lbl-cantidad">cantidad</label>
+                <input type="number" name="varcantidad" id="varcantidad" 
+                       value="<?php echo $val_cantidad; ?>"
+                       step='any' required />
+            </div>
+            
+            <input type="submit" class="btn btn-success" style="width:100%; margin-top:10px;" 
+                   value="<?php echo $is_edit ? 'Actualizar Datos' : 'Guardar Nuevo'; ?>" />
+        </form>
+    <?php 
+    } // Fin del bloque formulario
+    
+    mysqli_close($link);
+    ?>
+    
     </div>
 </body>
 </html>

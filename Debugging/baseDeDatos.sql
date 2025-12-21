@@ -9,7 +9,7 @@ USE redbancaria;
 CREATE TABLE IF NOT EXISTS redBancaria (
         id INTEGER NOT NULL,
     
-        nombre VARCHAR(255) NULL UNIQUE,
+        nombre VARCHAR(255) NOT NULL UNIQUE,
             PRIMARY KEY (id)
     );
 
@@ -17,8 +17,8 @@ CREATE TABLE IF NOT EXISTS redBancaria (
 CREATE TABLE IF NOT EXISTS banco (
         id INTEGER NOT NULL,
     
-        nombre VARCHAR(200) NOT NULL UNIQUE,
-        porcentaje INTEGER NOT NULL UNIQUE,
+        nombre VARCHAR(200) NOT NULL ,
+        porcentaje INTEGER NOT NULL ,
             PRIMARY KEY (id)
     );
 
@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS banco (
 CREATE TABLE IF NOT EXISTS cajero (
         id INTEGER NOT NULL,
     
-        saldoDisponible FLOAT NOT NULL UNIQUE,
+        saldoDisponible DOUBLE NOT NULL ,
             PRIMARY KEY (id)
     );
 
@@ -34,19 +34,19 @@ CREATE TABLE IF NOT EXISTS cajero (
 CREATE TABLE IF NOT EXISTS cuenta (
         numero INTEGER NOT NULL,
     
-        saldo FLOAT NOT NULL UNIQUE,
+        saldo DOUBLE NOT NULL ,
             PRIMARY KEY (numero)
     );
 
 -- Tabla: Tarjeta
 CREATE TABLE IF NOT EXISTS tarjeta (
-        id DATE NOT NULL,
+        id INTEGER NOT NULL,
     
-        saldoActual FLOAT NOT NULL UNIQUE,
-        fechaCaducidad DATE NOT NULL UNIQUE,
-        importeMaximo FLOAT NOT NULL UNIQUE,
-        estado INTEGER NOT NULL UNIQUE,
-        pin INTEGER NOT NULL UNIQUE,
+        saldoActual DOUBLE NOT NULL ,
+        fechaCaducidad DATE NOT NULL ,
+        importeMaximo DOUBLE NOT NULL ,
+        estado INTEGER NOT NULL ,
+        pin INTEGER NOT NULL ,
             PRIMARY KEY (id)
     );
 
@@ -54,9 +54,9 @@ CREATE TABLE IF NOT EXISTS tarjeta (
 CREATE TABLE IF NOT EXISTS movimiento (
         id INTEGER NOT NULL,
     
-        concepto VARCHAR(240) NOT NULL UNIQUE,
-        fecha DATE NOT NULL UNIQUE,
-        cantidad FLOAT NOT NULL UNIQUE,
+        concepto VARCHAR(240) NOT NULL ,
+        fecha DATE NOT NULL ,
+        cantidad DOUBLE NOT NULL ,
             PRIMARY KEY (id)
     );
 
@@ -65,22 +65,22 @@ CREATE TABLE IF NOT EXISTS movimiento (
 CREATE TABLE IF NOT EXISTS accede (
     -- Claves foráneas
     cajero_FK INTEGER NOT NULL,
-    tarjeta_FK DATE NOT NULL,
+    tarjeta_FK INTEGER NOT NULL,
     
     
-    FOREIGN KEY (cajero_FK) REFERENCES cajero(id),
-    FOREIGN KEY (tarjeta_FK) REFERENCES tarjeta(id),
+    FOREIGN KEY (cajero_FK) REFERENCES cajero(id) ON DELETE CASCADE,
+    FOREIGN KEY (tarjeta_FK) REFERENCES tarjeta(id) ON DELETE CASCADE,
     PRIMARY KEY (cajero_FK, tarjeta_FK)
 );
 -- Tabla Relación N:M: realiza
 CREATE TABLE IF NOT EXISTS realiza (
     -- Claves foráneas
-    tarjeta_FK DATE NOT NULL,
+    tarjeta_FK INTEGER NOT NULL,
     movimiento_FK INTEGER NOT NULL,
     
     
-    FOREIGN KEY (tarjeta_FK) REFERENCES tarjeta(id),
-    FOREIGN KEY (movimiento_FK) REFERENCES movimiento(id),
+    FOREIGN KEY (tarjeta_FK) REFERENCES tarjeta(id) ON DELETE CASCADE,
+    FOREIGN KEY (movimiento_FK) REFERENCES movimiento(id) ON DELETE CASCADE,
     PRIMARY KEY (tarjeta_FK, movimiento_FK)
 );
 
